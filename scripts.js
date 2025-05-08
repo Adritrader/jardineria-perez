@@ -1,5 +1,5 @@
 // --- CONTACT FORM SUBMISSION ---
-const form = document.getElementById('formulario');
+/*const form = document.getElementById('formulario');
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -27,21 +27,21 @@ form.addEventListener('submit', (event) => {
     alert('Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo.');
   });
 });
-
+*/
 // --- RESPONSIVE MENU ---
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
 menuToggle.addEventListener('click', () => {
   navLinks.classList.toggle('active');
-  navLinks.style.display = navLinks.classList.contains('active') ? 'flex' : 'none';
+  navLinks.style.display = navLinks.classList.contains('active') ? 'flex' : '';
 });
 
 // --- CLOSE MENU ON LINK CLICK (mobile) ---
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('active');
-    navLinks.style.display = 'none';
+    
   });
 });
 
@@ -53,23 +53,25 @@ AOS.init({
   mirror: false
 });
 
-// --- BACK TO TOP BUTTON ---
-const backToTopBtn = document.getElementById('backToTop');
+// Get the button:
+let mybutton = document.getElementById("myBtn");
 
-window.addEventListener('scroll', () => {
-  if (window.pageYOffset > 300) {
-    backToTopBtn.style.display = 'block';
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
   } else {
-    backToTopBtn.style.display = 'none';
+    mybutton.style.display = "none";
   }
-});
+}
 
-backToTopBtn.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
 
 // --- RESPONSIVE IMAGES ---
 window.addEventListener('resize', () => {
