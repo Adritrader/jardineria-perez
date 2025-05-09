@@ -43,8 +43,16 @@ h1, h2, h3, h4 {
 }
 
 .container {
-  width: 100%; /* Allow full width */
+  width: 90%; /* Allow full width */
+  max-width: 1200px;
   padding: 0 20px; /* Add padding for better spacing */
+  margin: 0 auto;
+}
+
+.container-urbanizaciones {
+  width: 90%; /* Allow full width */
+  padding: 0 20px; /* Add padding for better spacing */
+  margin: 0 auto;
 }
 
 .section {
@@ -59,7 +67,7 @@ h1, h2, h3, h4 {
 
 /* HERO SECTION */
 .hero {
-  background: url('./images/cover.jpg') center/cover no-repeat;
+  background: url('./images/fondonuevo.jpeg') center/cover no-repeat;
   height: 100vh;
   position: relative;
   display: flex;
@@ -309,10 +317,11 @@ h1, h2, h3, h4 {
 }
 
 .urbanizaciones-grid {
+  
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem !important;
-  justify-items: stretch;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  gap: 2rem;
+
 }
 
 .urbanizacion-card {
@@ -429,6 +438,7 @@ h1, h2, h3, h4 {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-top: 100px;
 }
 
 .info-item {
@@ -477,6 +487,17 @@ h1, h2, h3, h4 {
   color: #666;
   text-align: center;
 }
+
+
+.info-item a {
+
+  text-decoration: none;
+  color: #333;
+  
+  
+}
+
+
 
 /* FOOTER */
 .footer {
@@ -576,6 +597,12 @@ h1, h2, h3, h4 {
       grid-template-columns: 1fr;
   }
 
+  .container {
+    width: 100%; /* Allow full width */
+    padding: 0 auto; /* Add padding for better spacing */
+    margin: 0 auto;
+  }
+
   .hero h1 {
       font-size: 2.5rem;
   }
@@ -625,7 +652,70 @@ h1, h2, h3, h4 {
       margin-top: 1rem;
   }
 
+  .hero .overlay {
+  position: relative;
+  z-index: 2;
+  margin-top: 10rem;
+  max-width: 800px;
+}
+
+.container-urbanizaciones {
+  width: 100%; /* Allow full width */
+  padding: 0 !important; /* Add padding for better spacing */
+  margin: 0 auto;
+}
+
+.testimonials {
+  background-color: #f9fbfc;
+
+  padding: 0px !important;
   
+}
+
+.testimonials-grid {
+
+  padding: 2rem;
+
+}
+
+.services-grid {
+
+  padding: 2rem;
+
+}
+
+.section {
+  padding: 15px !important;
+  margin-top: 20px;
+}
+  
+.content img {
+
+  height: 50%;
+  width: 50%;
+
+}
+
+.hero .tagline {
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  font-style: italic;
+}
+
+.social-icons {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  
+  margin-top: 20px;
+}
+
 }
 
 
@@ -653,6 +743,7 @@ h1, h2, h3, h4 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+  padding: 2rem;
 }
 
 .urbanizacion-card {
@@ -753,7 +844,7 @@ h1, h2, h3, h4 {
 }
 
 .cookie-text a {
-  color: rgb(109, 0, 63);
+  color: rgba(0, 102, 51, 0.8);
   text-decoration: none;
 }
 
