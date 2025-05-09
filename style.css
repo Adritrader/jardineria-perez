@@ -43,9 +43,8 @@ h1, h2, h3, h4 {
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  
+  width: 100%; /* Allow full width */
+  padding: 0 20px; /* Add padding for better spacing */
 }
 
 .section {
@@ -720,5 +719,54 @@ h1, h2, h3, h4 {
   color: #00c896;
 }
 
+.cookie-container {
+  position: fixed;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+}
 
+.cookie-box {
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  padding: 20px 20px 20px 20px; /* Ajuste para dejar espacio a la cruz */
+  max-width: 80%;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Necesario para posicionar la cruz */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.cookie-text {
+  font-size: 19px;
+  font-weight: 500;
+  color: black;
+  line-height: 1.5;
+  margin: 0;
+  padding-right: 30px; /* Espacio para que el texto no toque la cruz */
+}
+
+.cookie-text a {
+  color: rgb(109, 0, 63);
+  text-decoration: none;
+}
+
+.cookie-close {
+  position: absolute;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.cookie-close:hover {
+  opacity: 1;
+}

@@ -28,7 +28,23 @@ form.addEventListener('submit', (event) => {
   });
 });
 */
+
+
+
+function closeCookie() {
+  document.getElementById("cookieBox").style.display = "none";
+  localStorage.setItem("cookiesAccepted", "true");
+}
+
+// Al cargar la página, comprobamos si ya aceptó
+window.onload = function () {
+  if (localStorage.getItem("cookiesAccepted") === "true") {
+    document.getElementById("cookieBox").style.display = "none";
+  }
+};
+
 // --- RESPONSIVE MENU ---
+
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 

@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /formularios/
+Allow: /
+
+# Evita indexar URLs con parámetros (si los usas)
+Disallow: /*?*
+
+# Permitir recursos importantes
+Allow: *.css
+Allow: *.js
+
+Sitemap: https://jardineriaperez.surge.sh/sitemap.xml

@@ -229,7 +229,7 @@
               <a href="mailto:jardineriaperez83@gmail.com"><i class="fa fa-envelope"></i></a>
             </div>
           </div>
-          <form id="formulario" data-aos="fade-left" action="https://formsubmit.co/jardineriaperez83@gmail.com" method="POST">
+          <form id="formulario" data-aos="fade-left" action="https://formsubmit.co/adri_denia_123@hotmail.com" method="POST">
             <input type="hidden" name="_next" value="https://jardineriaperez.surge.sh/" />
             <input type="hidden" name="_captcha" value="false" />
             <label for="nombre">Nombre Completo</label>
@@ -298,6 +298,32 @@
         <p>&copy; 2025 Jardinería Pérez · Todos los derechos reservados</p>
       </div>
     </div>
+    <div class="cookie-container">
+      <div class="cookie-box" id="cookieBox">
+        <!-- Cruz en la esquina superior derecha -->
+        <img src="./images/icona_creu.svg" alt="cerrar" class="cookie-close" onclick="closeCookie()">
+    
+        <!-- Texto centrado -->
+        <p class="cookie-text">
+          Usamos cookies propias y de terceros para mejorar nuestros servicios.
+          Si continuas navegando en esta página, aceptas nuestra
+          <a href="./legal/cookies.html">política de cookies</a>.
+        </p>
+      </div>
+    </div>
+    
+    <script>
+      function closeCookie() {
+        document.getElementById("cookieBox").style.display = "none";
+        localStorage.setItem("cookiesAccepted", "true");
+      }
+    
+      window.onload = function () {
+        if (localStorage.getItem("cookiesAccepted") === "true") {
+          document.getElementById("cookieBox").style.display = "none";
+        }
+      };
+    </script>
   </footer>
   <button onclick=topFunction() id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
   <!-- JS -->
