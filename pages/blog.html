@@ -1,42 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Blog de Jardinería Pérez en Dénia (Marina Alta, Alicante): consejos prácticos sobre jardinería, riego, tipos de jardines y más." />
-  <meta name="keywords" content="Jardinería Pérez, jardinería en Denia, mantenimiento de jardines, consejos de jardinería, Marina Alta, Alicante" />
-  <meta name="author" content="Jardinería Pérez" />
-  <meta property="og:title" content="Blog de Jardinería | Jardinería Pérez" />
-  <meta property="og:description" content="Consejos y trucos para cuidar tu jardín en Dénia (Marina Alta, Alicante)." />
+    <!-- SEO básico -->
+  <meta name="description" content="Jardinería Pérez en Denia: expertos en diseño de jardines, mantenimiento y limpieza de piscinas. Servicios profesionales y personalizados para hogares y negocios en Denia y Marina Alta." />
+  <meta name="keywords" content="jardinería en Denia, jardineria en Denia, jardineria perez Denia, jardinero en Denia, piscinas en Denia, poda de palmeras en Denia, mantenimiento jardines Denia, diseño de jardines Denia, poda árboles Denia, poda palmeras Denia, instalación sistemas de riego Denia, riego automático Denia, control de plagas jardines Denia, fertilización césped Denia, césped artificial Denia, jardineros profesionales Denia, jardinería ecológica Denia, limpieza de jardines Denia, plantación de arbustos Denia, poda de setos Denia, jardinería sostenible Denia, piscinas en Denia, mantenimiento piscinas Denia, limpieza de piscinas Denia, reparación piscinas Denia, puesta a punto piscinas Denia, análisis agua piscinas Denia, cloración piscinas Denia, depuración piscinas Denia, tratamientos agua piscinas Denia, piscina desmontable Denia, piscina enterrada Denia, servicios jardinería Marina Alta, jardinero profesional Marina Alta, mantenimiento jardines Marina Alta, poda palmeras Marina Alta, diseño jardines Marina Alta, riego jardines Marina Alta, limpieza piscinas Marina Alta, mantenimiento piscinas Marina Alta, jardinero para comunidades Denia, mantenimiento zonas verdes Denia, poda árboles frutales Denia, instalación iluminación jardines Denia, diseño paisajístico Denia, césped natural Denia, tratamientos fitosanitarios Denia, desbroce terrenos Denia" />
+  <meta name="author" content="Adrián Garcia" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="es" />
+  <link rel="canonical" href="https://jardineriaperez.netlify.app/" />
+  <meta name="copyright" content="Jardinería Pérez" />
+  <meta name="distribution" content="global" />
+  <meta name="rating" content="general" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- Verificación -->
+  <meta name="google-site-verification" content="anr3IBOs-XBDGYR5qFMN6UVd81KS8ycec0jJvkKsyGs" />
+
+  <!-- Open Graph (para compartir en redes) -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="Jardinería Pérez" />
+  <meta property="og:title" content="Jardinería Pérez | Mantenimiento de Jardines y Piscinas" />
+  <meta property="og:description" content="Cuidado integral de jardines y piscinas durante todo el año. Poda, limpieza, riego inteligente y mantenimiento profesional." />
+  <meta property="og:url" content="https://jardineriaperez.netlify.app" />
+  <meta property="og:image" content="https://jardineriaperez.netlify.app/images/logo-pequeño.png" />
 
-  <link rel="stylesheet" href="../style.css" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jardinería Pérez | Jardines y Piscinas en Dénia y Marina Alta" />
+  <meta name="twitter:description" content="Diseño, mantenimiento y limpieza de jardines y piscinas todo el año. Profesionales en Dénia y Marina Alta." />
+  <meta name="twitter:image" content="https://jardineriaperez.netlify.app/images/logo-pequeño.png" />
+
+  <!-- Íconos -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  <title>Blog de Jardinería | Jardinería Pérez</title>
+  <link rel="icon" href="images/logo-pequeño.png" sizes="32x32" />
+  <link rel="icon" href="images/logomediano.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="images/logomediano.png" />
 
-  
+  <!-- Fuentes y estilos -->
+  <link rel="stylesheet" href="blogStyles.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- Título -->
+  <title>Jardinería Pérez | Mantenimiento de Jardines y Piscinas en Dénia y alrededores</title>
 </head>
-
 <body>
-
-  <!-- NAVBAR -->
+    <header>
+        <!-- NAVBAR -->
   <nav class="navbar">
     <div class="logo">
       <img src="../images/logo-pequeño.png" alt="Logo Jardinería Pérez">
-      <span>Jardinería Pérez</span>
+      <a href="/"><span>Jardinería Pérez</span></a>
     </div>
     <button class="menu-toggle" aria-label="Menú">
       <i class="fas fa-bars"></i>
     </button>
     <ul class="nav-links">
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#urbanizaciones">Urbanizaciones</a></li>
-      <li><a href="#testimonios">Testimonios</a></li>
-      <li><a href="#galeria">Proyectos</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-      <li><a href="/pages/blog.html">Blog</a></li>
+      <li><a href="../#servicios">Servicios</a></li>
+      <li><a href="../#urbanizaciones">Urbanizaciones</a></li>
+      <li><a href="../#testimonios">Testimonios</a></li>
+      <li><a href="../#galeria">Proyectos</a></li>
+      <li><a href="../#contacto">Contacto</a></li>
 
       <!-- ICONOS EN EL NAVBAR -->
 
@@ -48,121 +75,109 @@
 
     </ul>
   </nav>
-
-  <!-- MAIN CONTENT -->
-  <main class="section container">
-    <header>
-      <h1>Blog de Jardinería Pérez en Dénia</h1>
-      <p class="tagline">Consejos, trucos y novedades sobre jardinería en la Marina Alta (Alicante).</p>
     </header>
 
-    <!-- Blog Entries -->
-    <section class="blog-list">
-      <article class="article-card">
-        <img src="../images/jardin-mediterraneo.jpg" alt="Jardín Mediterráneo" class="article-image">
-        <h2 class="article-title">🌿 Consejos Básicos de Jardinería</h2>
-        <p class="article-summary">Consejos clave para mantener tu jardín siempre verde y saludable.</p>
-        <a href="#" class="btn-primary">Leer Más</a>
-      </article>
-      <article class="blog-post">
-        <h1>🌿 Consejos Básicos de Jardinería | Jardinería Pérez en Dénia (Marina Alta, Alicante)</h1>
-        <img src="../images/jardin-mediterraneo.jpg" alt="Jardín Mediterráneo"> <!-- Added image -->
-        <p>Si deseas mantener tu jardín siempre verde y saludable, en <strong>Jardinería Pérez</strong>, expertos en <strong>mantenimiento de jardines en Dénia (Marina Alta, Alicante)</strong>, te compartimos algunos consejos clave.</p>
-
-        <h2>6. Uso de herramientas adecuadas</h2>
-        <p>Utiliza herramientas de calidad que faciliten el trabajo y aseguren resultados óptimos.</p>
-
-        <h2>1. Elige las plantas adecuadas</h2>
-        <p>El clima de Dénia es ideal para especies mediterráneas como lavanda, romero o buganvilla. En <strong>Jardinería Pérez</strong> te asesoramos para elegir las mejores plantas según tu espacio y orientación.</p>
-
-        <h2>2. Riego eficiente</h2>
-        <p>Recomendamos el riego por goteo y en las horas más frescas del día. Esto ahorra agua y favorece la salud del jardín.</p>
-
-        <h2>3. Poda regular</h2>
-        <p>La poda ayuda al crecimiento saludable y a una estética cuidada. Ofrecemos servicios de poda profesional en la Marina Alta.</p>
-
-        <h2>4. Abonado natural</h2>
-        <p>Utiliza compost y fertilizantes orgánicos para mejorar la calidad del suelo y la resistencia de tus plantas.</p>
-
-        <h2>5. Control ecológico de plagas</h2>
-        <p>En <strong>Jardinería Pérez</strong> utilizamos métodos respetuosos con el medio ambiente para proteger tu jardín.</p>
-
-        <p><strong>✅ Confía en Jardinería Pérez para el mejor <em>mantenimiento de jardines</em> en Dénia (Marina Alta, Alicante).</strong></p>
-      </article>
-    </section>
-  </main>
-
-  <footer class="footer" id="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Logo y Descripción -->
-        <div class="footer-column footer-brand">
-          <div class="logo">
-            <i class="fas fa-seedling"></i>
-            <span>Jardinería Pérez</span>
-          </div>
-          <p>Especialistas en diseño y mantenimiento de espacios verdes desde 2009</p>
-          <div class="social-icons">
-            <a href="https://wa.me/34658645102"><i class="fab fa-whatsapp"></i></a>
-            <a href="mailto:jardineriaperez83@gmail.com"><i class="fa fa-envelope"></i></a>
-          </div>
+    <main class="blog-container">
+        <div class="container">
+            <h2>Consejos y Noticias de Jardinería</h2>
+            
+            <article class="blog-post featured">
+                <div class="post-image">
+                    <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae" alt="Jardín bien cuidado">
+                </div>
+                <div class="post-content">
+                    <span class="post-category">Cuidado de plantas</span>
+                    <h3><a href="#">Cómo mantener tu jardín en primavera</a></h3>
+                    <p class="post-excerpt">La primavera es la época más importante para el cuidado de tu jardín. Descubre los pasos esenciales para preparar tus plantas...</p>
+                    <div class="post-meta">
+                        <span class="post-date"><i class="far fa-calendar-alt"></i> 15 Mayo 2023</span>
+                        <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+            
+            <div class="blog-grid">
+                <article class="blog-post">
+                    <div class="post-image">
+                        <img src="https://images.unsplash.com/photo-1516253593875-bd7ba052fbc" alt="Herramientas de jardinería">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">Herramientas</span>
+                        <h3><a href="#">Las 5 herramientas esenciales para todo jardinero</a></h3>
+                        <p class="post-excerpt">No necesitas un arsenal de herramientas para mantener tu jardín. Estas 5 básicas son suficientes para la mayoría de tareas...</p>
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar-alt"></i> 2 Mayo 2023</span>
+                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-post">
+                    <div class="post-image">
+                        <img src="https://images.unsplash.com/photo-1598880940080-ff9a29891b80" alt="Riego automático">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">Riego</span>
+                        <h3><a href="#">Sistemas de riego eficientes para ahorrar agua</a></h3>
+                        <p class="post-excerpt">En tiempos de sequía, es fundamental optimizar el consumo de agua. Te mostramos los sistemas más eficientes para tu jardín...</p>
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar-alt"></i> 20 Abril 2023</span>
+                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="blog-post">
+                    <div class="post-image">
+                        <img src="https://images.unsplash.com/photo-1591348122449-8af0c2bdec8e" alt="Plantas de interior">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">Plantas de interior</span>
+                        <h3><a href="#">Las mejores plantas para purificar el aire de tu hogar</a></h3>
+                        <p class="post-excerpt">Algunas plantas no solo decoran, también filtran toxinas del aire. Descubre cuáles son las más efectivas y cómo cuidarlas...</p>
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar-alt"></i> 5 Abril 2023</span>
+                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#"><i class="fas fa-chevron-right"></i></a>
+            </div>
         </div>
-        <!-- Servicios -->
-        <div class="footer-column">
-          <h4>Servicios</h4>
-          <ul>
-            <li><a href="#servicios">Diseño de Jardines</a></li>
-            <li><a href="#servicios">Mantenimiento Profesional</a></li>
-            <li><a href="#servicios">Sistemas de Riego</a></li>
-            <li><a href="#urbanizaciones">Urbanizaciones</a></li>
-          </ul>
-        </div>
-        <!-- Legal -->
-        <div class="footer-column">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="/legal/politicaprivacidad.html">Política de Privacidad</a></li>
-            <li><a href="/legal/terminoscondiciones.html">Términos y Condiciones</a></li>
-            <li><a href="/legal/cookies.html">Cookies</a></li>
-          </ul>
-        </div>
-        <!-- Contacto -->
-        <div class="footer-column">
-          <h4>Contacto</h4>
-          <ul>
-            <li><i class="fas fa-map-marker-alt"></i>Calle Senieta 38 4º E<br>03700 Dénia, Alicante</li>
-            <li><a href="tel:+34658645102"><i class="fas fa-phone"></i>+34 658 64 51 02</a></li>
-            <li><i class="fas fa-envelope"></i>jardineriaperez83@gmail.com</li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Jardinería Pérez<p>
-            &copy;<script>
-              document.write(new Date().getFullYear());
-            </script> Copyright. Esta web ha sido diseñada con <i class="fas fa-heart" aria-hidden="true"
-              style="color: red;"></i> por <a>VaporWeb Designs &copy · Todos los derechos reservados</a>
-          </p>
-        </p>
-      </div>
-    </div>
-    <div class="cookie-container">
-      <div class="cookie-box" id="cookieBox">
-        <!-- Cruz en la esquina superior derecha -->
-        <img src="../images/icona_creu.svg" alt="cerrar" class="cookie-close" onclick="closeCookie()">
+    </main>
 
-        <!-- Texto centrado -->
-        <p class="cookie-text">
-          Usamos cookies propias y de terceros para mejorar nuestros servicios.
-          Si continuas navegando en esta página, aceptas nuestra
-          <a href="./legal/cookies.html">política de cookies</a>.
-        </p>
-      </div>
-    </div>
-
-  </footer>
-  <button onclick=topFunction() id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
-
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>Jardinería Pérez</h4>
+                    <p>Servicios profesionales de jardinería para hogares y negocios en toda la región.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-phone"></i> 123 456 789</p>
+                    <p><i class="fas fa-envelope"></i> info@jardineriaperez.com</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Redes Sociales</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Jardinería Pérez. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../scripts.js"></script>
 </body>
-
 </html>

@@ -11,6 +11,13 @@ html, body {
   overflow-x: hidden;
 }
 
+a {
+
+  text-decoration: none;
+  color: white;
+
+}
+
 #myBtn {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
