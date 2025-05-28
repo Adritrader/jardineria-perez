@@ -20,9 +20,5 @@ Sitio web profesional para **Jardinería Pérez**, un servicio autónomo especia
 - JavaScript
 - Librerías: [AOS (Animate on Scroll)](https://michalsnik.github.io/aos/), [Swiper.js](https://swiperjs.com/) para el slider
 
-## 📸 Imágenes
 
-Se han utilizado imágenes de alta calidad provenientes de bancos libres como **Unsplash** y **Pexels**, adecuadas para jardinería y servicios de piscina.
-
-## 📁 Estructura del Proyecto
 
