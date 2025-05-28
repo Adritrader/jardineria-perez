@@ -7,51 +7,51 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://jardineriaperez.netlify.app/index.html</loc>
-        <lastmod>2025-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://jardineriaperez.netlify.app/legal/politicaprivacidad.html</loc>
+        <loc>https://jardineriaperez.netlify.app/legal/politicaprivacidad</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://jardineriaperez.netlify.app/legal/terminoscondiciones.html</loc>
+        <loc>https://jardineriaperez.netlify.app/legal/terminoscondiciones</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://jardineriaperez.netlify.app/legal/cookies.html</loc>
+        <loc>https://jardineriaperez.netlify.app/legal/cookies</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://jardineriaperez.netlify.app/pages/articles/consejosBasicos.html</loc>
+        <loc>https://jardineriaperez.netlify.app/pages/articles/consejosBasicos</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://jardineriaperez.netlify.app/pages/articles/piscinasdenia.html</loc>
+        <loc>https://jardineriaperez.netlify.app/pages/articles/piscinasdenia</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://jardineriaperez.netlify.app/pages/articles/podapalmeras.html</loc>
+        <loc>https://jardineriaperez.netlify.app/pages/articles/podapalmeras</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://jardineriaperez.netlify.app/pages/articles/disenojardines.html</loc>
+        <loc>https://jardineriaperez.netlify.app/pages/articles/disenojardines</loc>
         <lastmod>2025-01-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://jardineriaperez.netlify.app/pages/blog</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
     </url>
 </urlset>
