@@ -46,7 +46,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Playfair Display', serif;
+
   margin-bottom: 1rem;
 }
 
@@ -298,6 +298,7 @@ h1, h2, h3, h4 {
   background-color: #ffffff;
   border-radius: 15px;
   padding: 2rem;
+  background: linear-gradient(180deg, #DCF9E0 0%, #FFFFFF 30.21%);
   text-align: center;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -313,6 +314,17 @@ h1, h2, h3, h4 {
   
   font-size: 18px;
   font-weight: 200;
+}
+
+.piscina {
+  
+  background: linear-gradient(180deg, #c5deff 0%, #FFFFFF 30.21%) !important;
+}
+
+.fosa {
+
+  background: linear-gradient(180deg, #c7b5a5 0%, #FFFFFF 30.21%);
+
 }
 
 
@@ -332,6 +344,36 @@ h1, h2, h3, h4 {
   border-radius: 50%;
   margin-bottom: 1.5rem;
   transition: background-color 0.3s ease;
+  border: 1px solid rgb(205, 252, 205);
+
+}
+
+.service-icon-piscina {
+  color: rgb(120, 165, 223);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.3s ease;
+  border: 1px solid rgb(205, 227, 252);
+
+}
+
+.service-icon-fosa {
+  color: rgb(110, 87, 61);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.3s ease;
+  border: 1px solid rgb(192, 176, 153);
+
 }
 
 .service-icon i{
@@ -339,9 +381,26 @@ h1, h2, h3, h4 {
   font-size: 30px;
 }
 
+.service-icon-piscina i{
+  
+  font-size: 30px;
+}
+
+.service-icon-fosa i{
+  
+  font-size: 30px;
+}
+
+.fosa:hover .service-icon-fosa {
+  background-color: #cab99a;
+}
+.piscina:hover .service-icon-piscina {
+  background-color: #c2e2f8;
+}
 .service-card:hover .service-icon {
   background-color: #d4f5d4;
 }
+
 
 /* === SECCIÓN URBANIZACIONES === */
 .urbanizaciones-section {
@@ -377,6 +436,7 @@ h1, h2, h3, h4 {
   text-align: center;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(180deg, #b3e7ff 0%, #FFFFFF 30.21%);
 }
 
 .urbanizacion-card:hover {
@@ -929,4 +989,6 @@ margin-bottom: 0;
 .cookie-close:hover {
   opacity: 1;
 }
+
+
 }
