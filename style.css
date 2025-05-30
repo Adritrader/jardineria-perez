@@ -63,13 +63,19 @@ h1, h2, h3, h4 {
   margin: 0 auto;
 }
 
+.container-urbanizaciones .urbanizacion-card{
+  width: 100%; 
+  padding: 20px;
+  margin-bottom: 60px;
+}
+
 .section {
   padding: 4rem 2rem;
 }
 
 .section-title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   margin-bottom: 3rem;
 }
 
@@ -246,9 +252,15 @@ h1, h2, h3, h4 {
   max-width: 100%;
 }
 
-.text {
-  font-size: 1.1rem;
+.text p {
+  font-size: 1.3rem;
 }
+
+.text p strong {
+  font-size: 1.3rem;
+}
+
+
 
 .features {
   margin-top: 2rem;
@@ -262,6 +274,8 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .features i {
@@ -287,11 +301,24 @@ h1, h2, h3, h4 {
   text-align: center;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
 }
 
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-card p {
+  
+  font-size: 18px;
+  font-weight: 200;
+}
+
+
+.service-card h3 {
+  
+  font-size: 24px;
 }
 
 .service-icon {
@@ -303,9 +330,13 @@ h1, h2, h3, h4 {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  font-size: 24px;
   margin-bottom: 1.5rem;
   transition: background-color 0.3s ease;
+}
+
+.service-icon i{
+  
+  font-size: 30px;
 }
 
 .service-card:hover .service-icon {
@@ -782,6 +813,16 @@ margin-bottom: 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
+}
+
+.urbanizacion-card p {
+  
+  font-size: 16px;
+}
+
+.urbanizacion-card h3 {
+  
+  font-size: 30px;
 }
 
 .urbanizacion-card:hover {
