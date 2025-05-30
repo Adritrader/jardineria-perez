@@ -75,8 +75,9 @@ h1, h2, h3, h4 {
 
 .section-title {
   text-align: center;
-  font-size: 2.7rem;
-  margin-bottom: 3rem;
+  font-size: 3.5rem;
+  margin-bottom: 5rem;
+  margin-top: 1.5rem;
 }
 
 /* HERO SECTION */
@@ -348,6 +349,12 @@ h1, h2, h3, h4 {
 
 }
 
+strong {
+  
+  font-weight: 700;
+
+}
+
 .service-icon-piscina {
   color: rgb(120, 165, 223);
   display: inline-flex;
@@ -457,6 +464,11 @@ h1, h2, h3, h4 {
   margin-bottom: 1.5rem;
   transition: background-color 0.3s ease;
 }
+
+.urban-icon i {
+  font-size: 30px;
+}
+
 
 /*TESTIMONIALS*/
 
@@ -839,14 +851,15 @@ margin-bottom: 0;
 
 /* === SECCIÓN URBANIZACIONES === */
 .urbanizaciones-section {
-  background-color: #f5fff5;
+  background-color: rgb(248, 251, 250);
   padding: 6rem 2rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
 
 .urbanizaciones-section .section-title {
-  color: #006633;
+  color: #000000;
+  font-size: 40px;
 }
 
 .urbanizaciones-section .section-description {
@@ -890,27 +903,22 @@ margin-bottom: 0;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-.urbanizacion-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(to right, #00c896, #4CAF50);
-}
 
 .urban-icon {
-  background-color: #e6ffe6;
-  color: green;
+  background-color: #ffffff;
+  color: black;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  font-size: 28px;
   margin-bottom: 1.5rem;
   transition: background-color 0.3s ease;
+}
+
+.urban-icon i {
+  font-size: 30px;
 }
 
 .urbanizacion-card:hover .urban-icon {
