@@ -29,20 +29,6 @@ form.addEventListener('submit', (event) => {
 });
 */
 
-
-
-function closeCookie() {
-  document.getElementById("cookieBox").style.display = "none";
-  localStorage.setItem("cookiesAccepted", "true");
-}
-
-// Al cargar la página, comprobamos si ya aceptó
-window.onload = function () {
-  if (localStorage.getItem("cookiesAccepted") === "true") {
-    document.getElementById("cookieBox").style.display = "none";
-  }
-};
-
 // --- RESPONSIVE MENU ---
 
 const menuToggle = document.querySelector('.menu-toggle');
@@ -96,3 +82,49 @@ window.addEventListener('resize', () => {
   aboutImg.style.maxWidth = '100%';
   galleryItems.forEach(img => img.style.maxWidth = '100%');
 });
+
+// ===== LIGHTBOX PARA GALERÍA =====
+function openLightbox(imageSrc, caption) {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  
+  if (lightbox && lightboxImg && lightboxCaption) {
+    lightboxImg.src = imageSrc;
+    lightboxCaption.textContent = caption;
+    lightbox.style.display = 'block';
+    
+    // Prevenir scroll del body
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  if (lightbox) {
+    lightbox.style.display = 'none';
+    
+    // Restaurar scroll del body
+    document.body.style.overflow = '';
+  }
+}
+
+// Cerrar lightbox al hacer clic fuera de la imagen
+document.addEventListener('DOMContentLoaded', function() {
+  const lightbox = document.getElementById('lightbox');
+  if (lightbox) {
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+  }
+  
+  // Cerrar con tecla ESC
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeLightbox();
+    }
+  });
+});
+

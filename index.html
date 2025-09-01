@@ -21,16 +21,18 @@
   instalación sistemas de riego Denia, riego automático Denia, control de plagas jardines Denia, fertilización césped Denia, 
   césped artificial Denia, jardineros profesionales Denia, jardinería ecológica Denia, limpieza de jardines Denia, plantación de arbustos Denia, 
   poda de setos Denia, jardinería sostenible Denia, mantenimiento piscinas Denia, limpieza de piscinas Denia, reparación piscinas Denia, 
+  rejuntes de piscinas Denia, reparación corona piscina Denia, tapar grietas corona piscina, colocación gresite Denia, vaciado piscinas Denia,
   puesta a punto piscinas Denia, análisis agua piscinas Denia, cloración piscinas Denia, depuración piscinas Denia, tratamientos agua piscinas Denia, 
   piscina desmontable Denia, piscina enterrada Denia, servicios jardinería Marina Alta, jardinero profesional Marina Alta, 
   mantenimiento jardines Marina Alta, poda palmeras Marina Alta, diseño jardines Marina Alta, riego jardines Marina Alta, limpieza piscinas Marina Alta, 
   mantenimiento piscinas Marina Alta, jardinero para comunidades Denia, mantenimiento zonas verdes Denia, poda árboles frutales Denia, 
   instalación iluminación jardines Denia, diseño paisajístico Denia, césped natural Denia, tratamientos fitosanitarios Denia, desbroce terrenos Denia,
-   especialistas en piscinas Dénia, control de cloro piscinas Marina Alta, mantenimiento zonas comunes Dénia, jardín vertical Dénia, 
-   sistemas de riego inteligentes Denia, jardinería profesional comunidades Denia, asesoramiento en jardinería Denia, 
-   paisajismo mediterráneo Marina Alta, piscinas ecológicas Denia, revisión bombas de piscina Denia, jardinería integral Denia,
-    automatización de riego Marina Alta, empresas de jardinería en Denia, diseño de exteriores Denia, servicios para comunidades Marina Alta, 
-    mantenimiento de urbanizaciones Denia, jardín con bajo consumo hídrico Denia, jardinería decorativa Denia, soluciones de riego por goteo Denia">
+  especialistas en piscinas Dénia, control de cloro piscinas Marina Alta, mantenimiento zonas comunes Dénia, jardín vertical Dénia, 
+  sistemas de riego inteligentes Denia, jardinería profesional comunidades Denia, asesoramiento en jardinería Denia, 
+  paisajismo mediterráneo Marina Alta, piscinas ecológicas Denia, revisión bombas de piscina Denia, jardinería integral Denia,
+  automatización de riego Marina Alta, empresas de jardinería en Denia, diseño de exteriores Denia, servicios para comunidades Marina Alta, 
+  mantenimiento de urbanizaciones Denia, jardín con bajo consumo hídrico Denia, jardinería decorativa Denia, soluciones de riego por goteo Denia,
+  plantas mediterráneas Denia, especies autóctonas Marina Alta, jardinería clima mediterráneo, plantas resistentes sequía Denia">
   <meta name="author" content="Adrián Garcia" />
   <meta name="robots" content="index, follow" />
   <meta name="language" content="es" />
@@ -78,15 +80,26 @@
 
   <script>
     function closeCookie() {
-      document.getElementById("cookieBox").style.display = "none";
-      localStorage.setItem("cookiesAccepted", "true");
+      const cookieBox = document.getElementById("cookieBox");
+      if (cookieBox) {
+        cookieBox.classList.add("hidden");
+        localStorage.setItem("cookiesAccepted", "true");
+        console.log("Cookie banner cerrado");
+      }
     }
 
-    window.onload = function () {
-      if (localStorage.getItem("cookiesAccepted") === "true") {
-        document.getElementById("cookieBox").style.display = "none";
+    // Esperamos a que el DOM esté completamente cargado
+    document.addEventListener('DOMContentLoaded', function() {
+      const cookieBox = document.getElementById("cookieBox");
+      console.log("DOM cargado, cookieBox encontrado:", !!cookieBox);
+      console.log("Cookies ya aceptadas:", localStorage.getItem("cookiesAccepted"));
+      
+      // Verificamos si las cookies ya fueron aceptadas
+      if (cookieBox && localStorage.getItem("cookiesAccepted") === "true") {
+        cookieBox.classList.add("hidden");
+        console.log("Ocultando banner de cookies porque ya fueron aceptadas");
       }
-    };
+    });
   </script>
   <script>
     (function () {
@@ -229,12 +242,11 @@
             <p>Instalamos sistemas de <strong>riego automático eficientes</strong> que optimizan el consumo 
               de agua y aseguran la salud de tus plantas, ideal para jardines residenciales y comunidades en Dénia y alrededores.</p>
           </article>
-          <article class="service-card fosa" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-icon-fosa"><i class="fas fa-trash"></i></div>
-            <h3>Vaciado de Fosas</h3>
-            <p>Ofrecemos un servicio rápido y eficaz de <strong>vaciado de fosas sépticas en Dénia y toda la Marina Alta</strong>.
-               Utilizamos camiones cisterna equipados para la extracción, limpieza y mantenimiento de fosas.
-            </p>
+          <article class="service-card piscina" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-icon-piscina"><i class="fas fa-tools"></i></div>
+            <h3>Rejuntes y Reparación de Piscinas</h3>
+            <p>Especialistas en <strong>rejuntes de piscinas, reparación de coronas y tapar grietas</strong> en Dénia. 
+               Realizamos colocación de gresite y vaciados completos de piscinas para su mantenimiento integral.</p>
           </article>
         </div>
       </div>
@@ -337,40 +349,167 @@
     <section id="galeria" class="section gallery">
       <div class="container">
         <h2 class="section-title">Nuestros Proyectos</h2>
+        <p class="section-subtitle">Explora nuestra galería de trabajos realizados en jardines y piscinas por toda la Marina Alta</p>
+        
         <div class="gallery-grid">
           <div class="gallery-item" data-aos="fade-up">
-            <img src="./images/piscinalimpieza.jpeg" alt="Limpieza piscina">
+            <div class="gallery-image-container">
+              <img src="./images/piscinalimpieza.jpeg" alt="Limpieza profesional de piscina en Dénia">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Limpieza de Piscina</h3>
+                  <p>Mantenimiento integral - Dénia</p>
+                  <span class="gallery-category">Piscinas</span>
+                </div>
+                <button class="gallery-zoom" onclick="openLightbox('./images/piscinalimpieza.jpeg', 'Limpieza profesional de piscina')">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
-            <img src="./images/piscina-adosados1.jpeg" alt="Piscina moderna">
-          </div>
-          <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
-            <img src="./images/piscina-urbanizacion1.jpeg" alt="Piscina moderna">
-          </div>
+          
           <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-            <img src="./images/piscinaurbanizacion.jpeg" alt="Piscina urbanizacion">
+            <div class="gallery-image-container">
+              <img src="./images/piscina-adosados1.jpeg" alt="Piscina moderna en adosados">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Piscina Moderna</h3>
+                  <p>Diseño contemporáneo - Urbanización</p>
+                  <span class="gallery-category">Piscinas</span>
+                </div>
+                <button class="gallery-zoom" onclick="openLightbox('./images/piscina-adosados1.jpeg', 'Piscina moderna en adosados')">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
           </div>
+          
           <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-            <img src="./images/piscina-comunidad-rinon.jpeg" alt="Piscina privada">
+            <div class="gallery-image-container">
+              <img src="./images/fondonuevo.jpeg" alt="Mantenimiento de jardín mediterráneo">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Jardín Mediterráneo</h3>
+                  <p>Diseño con plantas autóctonas</p>
+                  <span class="gallery-category">Jardines</span>
+                </div>
+                <button class="gallery-zoom" onclick="openLightbox('./images/fondonuevo.jpeg', 'Mantenimiento de jardín mediterráneo')">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
           </div>
+          
           <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
-            <img src="./images/fondonuevo.jpeg" alt="Poda de seto">
+            <div class="gallery-image-container">
+              <img src="./images/furgoneta.jpeg" alt="Equipo profesional de jardinería">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Equipo Profesional</h3>
+                  <p>Servicio a domicilio - Marina Alta</p>
+                  <span class="gallery-category">Mantenimiento</span>
+                </div>
+                <button class="gallery-zoom" onclick="openLightbox('./images/furgoneta.jpeg', 'Equipo profesional de jardinería')">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
-            <img src="./images/piscina-infinity.jpeg" alt="Piscina infinity">
+
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="gallery-image-container">
+              <img src="./images/piscina-urbanizacion1.jpeg" alt="Piscina comunitaria en urbanización">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Piscina Comunitaria</h3>
+                  <p>Mantenimiento regular - Marina Alta</p>
+                  <span class="gallery-category">Piscinas</span>
+                </div>
+                <button class="gallery-zoom" onclick="openLightbox('./images/piscina-urbanizacion1.jpeg', 'Piscina comunitaria en urbanización')">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
-            <img src="./images/piscina-larga.jpeg" alt="Piscina larga">
+
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
+            <div class="gallery-image-container">
+              <img src="./images/piscinaurbanizacion.jpeg" alt="Mantenimiento piscina urbanización">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Piscina Urbanización</h3>
+                  <p>Servicio profesional - Dénia</p>
+                  <span class="gallery-category">Piscinas</span>
+                </div>
+                <button class="gallery-zoom" onclick="openLightbox('./images/piscinaurbanizacion.jpeg', 'Mantenimiento piscina urbanización')">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
           </div>
-          <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
-            <img src="./images/furgoneta.jpeg" alt="Furgoneta">
+
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
+            <div class="gallery-image-container">
+              <img src="./images/piscina-comunidad-rinon.jpeg" alt="Piscina privada con diseño especial">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Piscina Privada</h3>
+                  <p>Diseño personalizado - Marina Alta</p>
+                  <span class="gallery-category">Piscinas</span>
+                </div>
+                <button class="gallery-zoom" onclick="openLightbox('./images/piscina-comunidad-rinon.jpeg', 'Piscina privada con diseño especial')">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="700">
+            <div class="gallery-image-container">
+              <img src="./images/piscina-infinity.jpeg" alt="Piscina infinity con vistas panorámicas">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Piscina Infinity</h3>
+                  <p>Diseño exclusivo - Costa de Dénia</p>
+                  <span class="gallery-category">Piscinas</span>
+                </div>
+                <button class="gallery-zoom" onclick="openLightbox('./images/piscina-infinity.jpeg', 'Piscina infinity con vistas panorámicas')">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="800">
+            <div class="gallery-image-container">
+              <img src="./images/piscina-larga.jpeg" alt="Piscina olímpica para ejercicio">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h3>Piscina Olímpica</h3>
+                  <p>Perfecta para ejercicio - Javea</p>
+                  <span class="gallery-category">Piscinas</span>
+                </div>
+                <button class="gallery-zoom" onclick="openLightbox('./images/piscina-larga.jpeg', 'Piscina olímpica para ejercicio')">
+                  <i class="fas fa-expand"></i>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
+        
         <div class="gallery-cta">
-          <a href="#" class="btn-secondary">Ver Más...<i class="fas fa-arrow-right"></i></a>
+          <p>¿Te gusta lo que ves? Podemos crear algo similar para ti</p>
+          <a href="#contacto" class="btn-primary">Solicita tu presupuesto gratuito</a>
         </div>
       </div>
     </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
 
     <!-- CONTACTO -->
     <section id="contacto" class="section contact">
@@ -480,7 +619,7 @@
     <div class="cookie-container">
       <div class="cookie-box" id="cookieBox">
         <!-- Cruz en la esquina superior derecha -->
-        <img src="./images/icona_creu.svg" alt="cerrar" class="cookie-close" onclick="closeCookie()">
+        <i class="fas fa-times cookie-close" onclick="closeCookie()"></i>
 
         <!-- Texto centrado -->
         <p class="cookie-text">
