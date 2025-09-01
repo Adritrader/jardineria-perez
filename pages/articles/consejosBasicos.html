@@ -112,6 +112,7 @@
   <link rel="apple-touch-icon" href="../images/logomediano.png" />
 
   <!-- Fuentes y estilos -->
+  <link rel="stylesheet" href="../../style.css" />
   <link rel="stylesheet" href="../blogStyles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -121,32 +122,47 @@
   <title>Jardinería Pérez | Consejos Básicos Jardinería</title>
 
 </head>
-<body class="blog-page">
-    <header>
-        <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="logo">
-      <img src="../../images/logo-pequeño.png" alt="Logo Jardinería Pérez">
-      <a href="/"><span>Jardinería Pérez</span></a>
-    </div>
-    <button class="menu-toggle" aria-label="Menú">
-      <i class="fas fa-bars"></i>
-    </button>
-    <ul class="nav-links">
-      <li><a href="../../#servicios">Servicios</a></li>
-      <li><a href="../../#urbanizaciones">Urbanizaciones</a></li>
-      <li><a href="../../#testimonios">Testimonios</a></li>
-      <li><a href="../../#galeria">Proyectos</a></li>
-      <li><a href="../../#contacto">Contacto</a></li>
-      <li><a href="../blog">Blog</a></li>
+<body class="blog-page article-page">
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../../"><img src="../../images/logo-pequeño.png" alt="Logo Jardinería Pérez"></a>
+            <a href="../../"><span>Jardinería Pérez</span></a>
+        </div>
+        <button class="menu-toggle" aria-label="Menú">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a href="../../#servicios">Servicios</a></li>
+            <li><a href="../../#urbanizaciones">Urbanizaciones</a></li>
+            <li><a href="../../#testimonios">Testimonios</a></li>
+            <li><a href="../../#galeria">Proyectos</a></li>
+            <li><a href="../../#contacto">Contacto</a></li>
+            <li><a href="../blog.html" class="active">Blog</a></li>
+            <li class="social-icon"><a href="https://wa.me/34658645102" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+            <li class="social-icon"><a href="mailto:jardineriaperez83@gmail.com"><i class="fas fa-envelope"></i></a></li>
+            <li class="social-icon"><a href="tel:+34658645102"><i class="fas fa-phone"></i></a></li>
+        </ul>
+    </nav>
 
-      <!-- ICONOS EN EL NAVBAR -->
+    <!-- CONTENIDO DEL ARTÍCULO -->
+    <div class="article-container">
+        <!-- HEADER DEL ARTÍCULO -->
+        <header class="article-header">
+            <nav class="breadcrumb">
+                <a href="../../">Inicio</a> > <a href="../blog.html">Blog</a> > <span>Consejos Básicos</span>
+            </nav>
+            <h1>Consejos Básicos de Jardinería para Principiantes</h1>
+            <div class="article-meta">
+                <span><i class="fas fa-calendar"></i> 28 Agosto 2025</span>
+                <span><i class="fas fa-clock"></i> 5 min lectura</span>
+                <span><i class="fas fa-user"></i> Jardinería Pérez</span>
+                <span><i class="fas fa-tag"></i> Jardinería</span>
+            </div>
+        </header>
 
-      <li class="social-icon"><a href="https://wa.me/34658645102" target="_blank" aria-label="WhatsApp"><i
-            class="fab fa-whatsapp"></i></a></li>
-      <li class="social-icon"><a href="mailto:jardineriaperez83@gmail.com" aria-label="Correo Electrónico"><i
-            class="fas fa-envelope"></i></a></li>
-      <li class="social-icon"><a href="tel:+34658645102"><i class="fas fa-phone"></i></a></li>
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="article-content">
 
     </ul>
   </nav>
@@ -243,68 +259,85 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-    <footer class="footer" id="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Logo y Descripción -->
-        <div class="footer-column footer-brand">
-          <div class="logo">
-            <i class="fas fa-seedling"></i>
-            <span>Jardinería Pérez</span>
-          </div>
-          <p>Especialistas en diseño y mantenimiento de espacios verdes desde 2009</p>
-          <div class="social-icons">
-            <a href="https://wa.me/34658645102"><i class="fab fa-whatsapp"></i></a>
-            <a href="mailto:jardineriaperez83@gmail.com"><i class="fa fa-envelope"></i></a>
-          </div>
-        </div>
-        <!-- Servicios -->
-        <div class="footer-column">
-          <h4>Servicios</h4>
-          <ul>
-            <li><a href="../../#servicios">Diseño de Jardines</a></li>
-            <li><a href="../../#servicios">Mantenimiento Profesional</a></li>
-            <li><a href="../../#servicios">Sistemas de Riego</a></li>
-            <li><a href="../../#urbanizaciones">Urbanizaciones</a></li>
-          </ul>
-        </div>
-        <!-- Legal -->
-        <div class="footer-column">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="/legal/politicaprivacidad">Política de Privacidad</a></li>
-            <li><a href="/legal/terminoscondiciones">Términos y Condiciones</a></li>
-            <li><a href="/legal/cookies">Cookies</a></li>
-          </ul>
-        </div>
-        <!-- Contacto -->
-        <div class="footer-column">
-          <h4>Contacto</h4>
-          <ul>
-            <li><i class="fas fa-map-marker-alt"></i>Calle Senieta 38 4º E<br>03700 Dénia, Alicante</li>
-            <li><a href="tel:+34658645102"><i class="fas fa-phone"></i>+34 658 64 51 02</a></li>
-            <li><i class="fas fa-envelope"></i>jardineriaperez83@gmail.com</li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Jardinería Pérez
-            &copy;<script>
-              document.write(new Date().getFullYear());
-            </script> Copyright. Esta web ha sido diseñada con <i class="fas fa-heart" aria-hidden="true"
-              style="color: red;"></i> por <a>VaporWeb Designs &copy; · Todos los derechos reservados</a>
-          
-        </p>
-      </div>
+        </main>
+        
+        <!-- FOOTER DEL ARTÍCULO -->
+        <footer class="article-footer">
+            <div class="article-tags">
+                <span class="tag">#JardineríaBásica</span>
+                <span class="tag">#ConsejosPrincipiantes</span>
+                <span class="tag">#JardineríaDénia</span>
+                <span class="tag">#CuidadoPlantas</span>
+            </div>
+            <div class="article-share">
+                <h4>Comparte este artículo:</h4>
+                <div class="share-buttons">
+                    <a href="https://wa.me/?text=Consejos%20Básicos%20de%20Jardinería%20-%20https://jardineriaperez.netlify.app/pages/articles/consejosbasicos.html" target="_blank" class="share-btn whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="mailto:?subject=Consejos Básicos de Jardinería&body=Te comparto este artículo sobre jardinería: https://jardineriaperez.netlify.app/pages/articles/consejosbasicos.html" class="share-btn email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
     </div>
-    
 
-  </footer>
-  <button onclick=topFunction() id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
-  <!-- JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="/scripts.js"></script>
+    <!-- FOOTER PRINCIPAL -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Logo y descripción -->
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="../../images/logo-pequeño.png" alt="Jardinería Pérez Logo">
+                        <h3>Jardinería Pérez</h3>
+                    </div>
+                    <p>Expertos en diseño y mantenimiento de jardines y piscinas en Dénia y Marina Alta.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/34658645102"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:jardineriaperez83@gmail.com"><i class="fa fa-envelope"></i></a>
+                    </div>
+                </div>
+                <!-- Servicios -->
+                <div class="footer-column">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="../../#servicios">Diseño de Jardines</a></li>
+                        <li><a href="../../#servicios">Mantenimiento Profesional</a></li>
+                        <li><a href="../../#servicios">Sistemas de Riego</a></li>
+                        <li><a href="../../#urbanizaciones">Urbanizaciones</a></li>
+                    </ul>
+                </div>
+                <!-- Legal -->
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../../legal/politicaprivacidad.html">Política de Privacidad</a></li>
+                        <li><a href="../../legal/terminoscondiciones.html">Términos y Condiciones</a></li>
+                        <li><a href="../../legal/cookies.html">Cookies</a></li>
+                    </ul>
+                </div>
+                <!-- Contacto -->
+                <div class="footer-column">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i>Calle Senieta 38 4º E<br>03700 Dénia, Alicante</li>
+                        <li><a href="tel:+34658645102"><i class="fas fa-phone"></i>+34 658 64 51 02</a></li>
+                        <li><i class="fas fa-envelope"></i>jardineriaperez83@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Jardinería Pérez - Todos los derechos reservados | Diseñado con <i class="fas fa-heart" style="color: red;"></i> por VaporWeb Designs</p>
+            </div>
+        </div>
+    </footer>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+    
+    <!-- JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../../scripts.js"></script>
 </body>
 </html>
