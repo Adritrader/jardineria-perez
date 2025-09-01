@@ -81,7 +81,7 @@ p {
 
 /* EFECTOS PARALLAX Y SEPARADORES */
 .parallax-separator {
-  height: 200px;
+  height: 250px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -92,6 +92,7 @@ p {
   justify-content: center;
   text-align: center;
   color: white;
+  margin: 60px 0;
 }
 
 .parallax-separator::before {
@@ -105,12 +106,12 @@ p {
   position: relative;
   z-index: 2;
   max-width: 600px;
-  padding: 0 20px;
+  padding: 40px 20px;
 }
 
 .parallax-separator h3 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
@@ -118,6 +119,7 @@ p {
   font-size: 1.2rem;
   opacity: 0.9;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  margin-bottom: 0;
 }
 
 .parallax-garden {
@@ -431,8 +433,11 @@ p {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .service-card {
@@ -1210,7 +1215,8 @@ margin-bottom: 0;
 }
 
   .services-grid {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
   }
 
 }
@@ -1219,6 +1225,7 @@ margin-bottom: 0;
   /* Tablets - Estilos responsive mejorados */
   .services-grid {
       grid-template-columns: 1fr;
+      grid-template-rows: auto;
   }
 
   .parallax-separator h3 {
@@ -1575,6 +1582,17 @@ margin-bottom: 0;
 
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+/* Pantallas grandes (1200px+) - Grid 3x3 optimizado */
+@media (min-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 2.5rem;
+    max-width: 1400px;
   }
 }
 
