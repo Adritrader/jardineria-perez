@@ -16,20 +16,20 @@ const translations = {
         
         // About section
         about_title: "Sobre Nosotros",
-        about_description: "En Jardinería Pérez, contamos con más de 15 años de experiencia ofreciendo servicios profesionales de jardinería en Dénia y en toda la Marina Alta.",
+        about_description: "En Jardinería Pérez, contamos con más de 15 años de experiencia ofreciendo servicios profesionales de jardinería en Dénia y en toda la Marina Alta. Nuestro equipo de expertos se especializa en el mantenimiento de jardines, la creación de espacios verdes personalizados y el cuidado integral de áreas ajardinadas. Utilizamos técnicas sostenibles y productos de alta calidad para garantizar jardines sanos, bonitos y duraderos durante todo el año. Confía en nosotros para dar vida y color a tu jardín.",
         
         // Servicios
         services_title: "Nuestros Servicios",
         service_garden_title: "Mantenimiento de Jardines",
-        service_garden_desc: "Cuidado integral de tu jardín durante todo el año. Poda, limpieza, fertilización y diseño de espacios verdes.",
+        service_garden_desc: "Ofrecemos un servicio integral de mantenimiento de jardines en Dénia y alrededores, incluyendo corte de césped, poda, fertilización y control de plagas. Adaptamos cada servicio a las necesidades específicas de tu espacio verde.",
         service_pools_title: "Limpieza de Piscinas",
-        service_pools_desc: "Mantenimiento completo de piscinas. Limpieza, tratamiento químico del agua y mantenimiento de equipos.",
+        service_pools_desc: "Ofrecemos servicios profesionales de limpieza y mantenimiento de piscinas en Dénia. Eliminamos hojas, algas y residuos, instalación de cloro salino y control de pH, análisis del agua, cloración y depuración para garantizar una piscina limpia, segura y lista para disfrutar.",
         service_design_title: "Diseño de Jardines",
-        service_design_desc: "Creación y diseño de jardines personalizados. Espacios únicos adaptados a tus necesidades y gustos.",
+        service_design_desc: "Creamos jardines únicos combinando funcionalidad y estética. Nuestro servicio de diseño de jardines en la Marina Alta transforma tu espacio exterior en un entorno armonioso y natural.",
         service_pruning_title: "Poda de Palmeras",
-        service_pruning_desc: "Expertos en poda de palmeras en Dénia. Eliminamos hojas secas y ramas dañadas para mantener tus palmeras saludables.",
+        service_pruning_desc: "Expertos en poda de palmeras en Dénia. Eliminamos hojas secas y ramas dañadas para mantener tus palmeras saludables y libres de plagas. Servicio seguro y profesional.",
         service_irrigation_title: "Sistemas de Riego",
-        service_irrigation_desc: "Instalamos sistemas de riego automático eficientes que optimizan el consumo de agua y aseguran la salud de tus plantas.",
+        service_irrigation_desc: "Instalamos sistemas de riego automático eficientes que optimizan el consumo de agua y aseguran la salud de tus plantas, ideal para jardines residenciales y comunidades en Dénia y alrededores.",
         
         // Galería
         gallery_title: "Galería de Trabajos",
@@ -94,6 +94,7 @@ const translations = {
         // Service cards additional
         service_repair_title: "Rejuntes y Reparación de Piscinas",
         service_repair_desc: "Especialistas en rejuntes de piscinas, reparación de coronas y tapar grietas en Dénia. Realizamos colocación de gresite, vaciados completos, instalación de cloro salino y pH, cambios de sondas, cambio de células, cambio de inyectores, reparación de filtraciones y averías de motores.",
+        service_repair_description: "Nos especializamos en rejuntes de piscinas, reparación de coronas y solución de grietas en Dénia y Marina Alta. Nuestros servicios incluyen colocación de gresite, vaciados completos, instalación de sistemas de cloro salino y control de pH, cambios de sondas, sustitución de células y células de electrólisis, cambio de inyectores, reparación de filtraciones y reparación de averías de motores de piscina. Contamos con personal especializado y materiales de primera calidad para garantizar reparaciones duraderas.",
         
         // Urbanizaciones section
         urbanizations_title: "Soluciones para Urbanizaciones",
@@ -164,20 +165,20 @@ const translations = {
         
         // About section
         about_title: "About Us",
-        about_description: "At Jardinería Pérez, we have over 15 years of experience providing professional gardening services in Dénia and throughout Marina Alta.",
+        about_description: "At Jardinería Pérez, we have over 15 years of experience providing professional gardening services in Dénia and throughout Marina Alta. Our team of experts specializes in garden maintenance, creating personalized green spaces and comprehensive care of landscaped areas. We use sustainable techniques and high-quality products to ensure healthy, beautiful and durable gardens throughout the year. Trust us to bring life and color to your garden.",
         
         // Services
         services_title: "Our Services",
         service_garden_title: "Garden Maintenance",
-        service_garden_desc: "Complete care of your garden throughout the year. Pruning, cleaning, fertilization and green space design.",
+        service_garden_desc: "We offer comprehensive garden maintenance services in Dénia and surroundings, including lawn mowing, pruning, fertilization and pest control. We adapt each service to the specific needs of your green space.",
         service_pools_title: "Pool Cleaning",
-        service_pools_desc: "Complete pool maintenance. Cleaning, chemical water treatment and equipment maintenance.",
+        service_pools_desc: "We offer professional pool cleaning and maintenance services in Dénia. We remove leaves, algae and debris, install saline chlorine and pH control, water analysis, chlorination and purification to ensure a clean, safe pool ready to enjoy.",
         service_design_title: "Garden Design",
-        service_design_desc: "Creation and design of personalized gardens. Unique spaces adapted to your needs and tastes.",
+        service_design_desc: "We create unique gardens combining functionality and aesthetics. Our garden design service in Marina Alta transforms your outdoor space into a harmonious and natural environment.",
         service_pruning_title: "Palm Tree Pruning",
-        service_pruning_desc: "Experts in palm tree pruning in Dénia. We remove dry leaves and damaged branches to keep your palm trees healthy.",
+        service_pruning_desc: "Experts in palm tree pruning in Dénia. We remove dry leaves and damaged branches to keep your palm trees healthy and pest-free. Safe and professional service.",
         service_irrigation_title: "Irrigation Systems",
-        service_irrigation_desc: "We install efficient automatic irrigation systems that optimize water consumption and ensure the health of your plants.",
+        service_irrigation_desc: "We install efficient automatic irrigation systems that optimize water consumption and ensure the health of your plants, ideal for residential gardens and communities in Dénia and surroundings.",
         
         // About section features
         about_feature_1: "Sustainable irrigation techniques",
@@ -215,6 +216,7 @@ const translations = {
         // Service cards additional
         service_repair_title: "Pool Grouting and Repair",
         service_repair_desc: "Specialists in pool grouting, crown repair and crack sealing in Dénia. We perform tile installation, complete draining, saline chlorine and pH installation, probe changes, cell changes, injector changes, leak repair and motor breakdowns.",
+        service_repair_description: "We specialize in pool grouting, crown repair and crack solutions in Dénia and Marina Alta. Our services include tile installation, complete draining, saline chlorine systems and pH control installation, probe changes, cell and electrolysis cell replacement, injector changes, leak repair and pool motor breakdown repair. We have specialized staff and top quality materials to guarantee long-lasting repairs.",
         
         // Urbanizaciones section
         urbanizations_title: "Solutions for Urbanizations",
@@ -312,20 +314,20 @@ const translations = {
         
         // About section
         about_title: "Über Uns",
-        about_description: "Bei Jardinería Pérez haben wir über 15 Jahre Erfahrung in der Bereitstellung professioneller Gartendienstleistungen in Dénia und der gesamten Marina Alta.",
+        about_description: "Bei Jardinería Pérez haben wir über 15 Jahre Erfahrung in der Bereitstellung professioneller Gartendienstleistungen in Dénia und der gesamten Marina Alta. Unser Expertenteam spezialisiert sich auf Gartenpflege, die Schaffung personalisierter Grünflächen und die umfassende Pflege von Landschaftsbereichen. Wir verwenden nachhaltige Techniken und hochwertige Produkte, um gesunde, schöne und langlebige Gärten das ganze Jahr über zu gewährleisten. Vertrauen Sie uns, um Leben und Farbe in Ihren Garten zu bringen.",
         
         // Services
         services_title: "Unsere Dienstleistungen",
         service_garden_title: "Gartenpflege",
-        service_garden_desc: "Komplette Pflege Ihres Gartens das ganze Jahr über. Beschneidung, Reinigung, Düngung und Gestaltung von Grünflächen.",
+        service_garden_desc: "Wir bieten umfassende Gartenpflegedienste in Dénia und Umgebung an, einschließlich Rasenmähen, Beschneidung, Düngung und Schädlingsbekämpfung. Wir passen jeden Service an die spezifischen Bedürfnisse Ihres Grünbereichs an.",
         service_pools_title: "Pool-Reinigung",
-        service_pools_desc: "Komplette Pool-Wartung. Reinigung, chemische Wasseraufbereitung und Gerätewartung.",
+        service_pools_desc: "Wir bieten professionelle Pool-Reinigungs- und Wartungsdienste in Dénia an. Wir entfernen Blätter, Algen und Rückstände, installieren Salzchlor und pH-Kontrolle, Wasseranalyse, Chlorierung und Aufbereitung, um einen sauberen, sicheren Pool zu gewährleisten, der bereit zum Genießen ist.",
         service_design_title: "Gartengestaltung",
-        service_design_desc: "Erstellung und Gestaltung personalisierter Gärten. Einzigartige Räume, angepasst an Ihre Bedürfnisse und Geschmäcker.",
+        service_design_desc: "Wir schaffen einzigartige Gärten, die Funktionalität und Ästhetik kombinieren. Unser Gartengestaltungsservice in Marina Alta verwandelt Ihren Außenbereich in eine harmonische und natürliche Umgebung.",
         service_pruning_title: "Palmenbeschneidung",
-        service_pruning_desc: "Experten für Palmenbeschneidung in Dénia. Wir entfernen trockene Blätter und beschädigte Äste, um Ihre Palmen gesund zu halten.",
+        service_pruning_desc: "Experten für Palmenbeschneidung in Dénia. Wir entfernen trockene Blätter und beschädigte Äste, um Ihre Palmen gesund und schädlingsfrei zu halten. Sicherer und professioneller Service.",
         service_irrigation_title: "Bewässerungssysteme",
-        service_irrigation_desc: "Wir installieren effiziente automatische Bewässerungssysteme, die den Wasserverbrauch optimieren und die Gesundheit Ihrer Pflanzen gewährleisten.",
+        service_irrigation_desc: "Wir installieren effiziente automatische Bewässerungssysteme, die den Wasserverbrauch optimieren und die Gesundheit Ihrer Pflanzen gewährleisten, ideal für Wohngärten und Gemeinden in Dénia und Umgebung.",
         
         // About section features
         about_feature_1: "Nachhaltige Bewässerungstechniken",
@@ -391,6 +393,7 @@ const translations = {
         // Service cards additional
         service_repair_title: "Pool-Fugenmörtel und Reparatur",
         service_repair_desc: "Spezialisten für Pool-Fugenmörtel, Kronenreparatur und Rissverschließung in Dénia. Wir führen Fliesenverlegung, komplette Entleerung, Salz-Chlor- und pH-Installation, Sondenwechsel, Zellenwechsel, Injektorenwechsel, Leckreparatur und Motorpannen durch.",
+        service_repair_description: "Wir spezialisieren uns auf Pool-Fugenmörtel, Kronenreparatur und Risslösungen in Dénia und Marina Alta. Unsere Dienstleistungen umfassen Fliesenverlegung, komplette Entleerung, Installation von Salz-Chlor-Systemen und pH-Kontrolle, Sondenwechsel, Austausch von Zellen und Elektrolysezellen, Injektorenwechsel, Leckreparatur und Reparatur von Pool-Motor-Pannen. Wir verfügen über spezialisiertes Personal und hochwertige Materialien, um langlebige Reparaturen zu gewährleisten.",
         
         // Urbanizaciones section
         urbanizations_title: "Lösungen für Urbanisationen",
@@ -468,20 +471,20 @@ const translations = {
         
         // About section
         about_title: "À Propos de Nous",
-        about_description: "Chez Jardinería Pérez, nous avons plus de 15 ans d'expérience dans la fourniture de services de jardinage professionnels à Dénia et dans toute la Marina Alta.",
+        about_description: "Chez Jardinería Pérez, nous avons plus de 15 ans d'expérience dans la fourniture de services de jardinage professionnels à Dénia et dans toute la Marina Alta. Notre équipe d'experts se spécialise dans l'entretien de jardins, la création d'espaces verts personnalisés et les soins complets des zones paysagées. Nous utilisons des techniques durables et des produits de haute qualité pour garantir des jardins sains, beaux et durables toute l'année. Faites-nous confiance pour donner vie et couleur à votre jardin.",
         
         // Services
         services_title: "Nos Services",
         service_garden_title: "Entretien de Jardins",
-        service_garden_desc: "Soins complets de votre jardin toute l'année. Élagage, nettoyage, fertilisation et conception d'espaces verts.",
+        service_garden_desc: "Nous offrons un service complet d'entretien de jardins à Dénia et environs, incluant la tonte de pelouse, l'élagage, la fertilisation et le contrôle des parasites. Nous adaptons chaque service aux besoins spécifiques de votre espace vert.",
         service_pools_title: "Nettoyage de Piscines",
-        service_pools_desc: "Entretien complet de piscines. Nettoyage, traitement chimique de l'eau et maintenance des équipements.",
+        service_pools_desc: "Nous offrons des services professionnels de nettoyage et d'entretien de piscines à Dénia. Nous éliminons les feuilles, algues et résidus, installation de chlore salin et contrôle du pH, analyse de l'eau, chloration et épuration pour garantir une piscine propre, sûre et prête à profiter.",
         service_design_title: "Conception de Jardins",
-        service_design_desc: "Création et conception de jardins personnalisés. Espaces uniques adaptés à vos besoins et goûts.",
+        service_design_desc: "Nous créons des jardins uniques combinant fonctionnalité et esthétique. Notre service de conception de jardins à Marina Alta transforme votre espace extérieur en un environnement harmonieux et naturel.",
         service_pruning_title: "Élagage de Palmiers",
-        service_pruning_desc: "Experts en élagage de palmiers à Dénia. Nous éliminons les feuilles sèches et les branches endommagées pour garder vos palmiers en bonne santé.",
+        service_pruning_desc: "Experts en élagage de palmiers à Dénia. Nous éliminons les feuilles sèches et les branches endommagées pour maintenir vos palmiers en bonne santé et exempts de parasites. Service sûr et professionnel.",
         service_irrigation_title: "Systèmes d'Irrigation",
-        service_irrigation_desc: "Nous installons des systèmes d'irrigation automatique efficaces qui optimisent la consommation d'eau et assurent la santé de vos plantes.",
+        service_irrigation_desc: "Nous installons des systèmes d'irrigation automatique efficaces qui optimisent la consommation d'eau et assurent la santé de vos plantes, idéal pour les jardins résidentiels et les communautés à Dénia et environs.",
         
         // About section features
         about_feature_1: "Techniques d'irrigation durables",
@@ -519,6 +522,7 @@ const translations = {
         // Service cards additional
         service_repair_title: "Rejointoiement et Réparation de Piscines",
         service_repair_desc: "Spécialistes du rejointoiement de piscines, réparation de couronnes et colmatage de fissures à Dénia. Nous effectuons la pose de carrelage, vidanges complètes, installation de chlore salin et pH, changements de sondes, changement de cellules, changement d'injecteurs, réparation de fuites et pannes de moteurs.",
+        service_repair_description: "Nous nous spécialisons dans le rejointoiement de piscines, la réparation de couronnes et les solutions de fissures à Dénia et Marina Alta. Nos services incluent la pose de carrelage, vidanges complètes, installation de systèmes de chlore salin et contrôle du pH, changements de sondes, remplacement de cellules et cellules d'électrolyse, changement d'injecteurs, réparation de fuites et réparation de pannes de moteurs de piscine. Nous disposons de personnel spécialisé et de matériaux de première qualité pour garantir des réparations durables.",
         
         // Urbanizaciones section
         urbanizations_title: "Solutions pour Urbanisations",
@@ -618,20 +622,20 @@ const translations = {
         
         // About section
         about_title: "Over Ons",
-        about_description: "Bij Jardinería Pérez hebben we meer dan 15 jaar ervaring met het leveren van professionele tuinierdiensten in Dénia en in de hele Marina Alta.",
+        about_description: "Bij Jardinería Pérez hebben we meer dan 15 jaar ervaring met het leveren van professionele tuinierdiensten in Dénia en in de hele Marina Alta. Ons team van experts specialiseert zich in tuinonderhoud, het creëren van gepersonaliseerde groene ruimtes en uitgebreide verzorging van aangelegde gebieden. We gebruiken duurzame technieken en hoogwaardige producten om gezonde, mooie en duurzame tuinen het hele jaar door te garanderen. Vertrouw op ons om leven en kleur aan uw tuin te geven.",
         
         // Services
         services_title: "Onze Diensten",
         service_garden_title: "Tuinonderhoud",
-        service_garden_desc: "Volledige verzorging van uw tuin het hele jaar door. Snoeien, schoonmaken, bemesting en ontwerp van groene ruimtes.",
+        service_garden_desc: "We bieden uitgebreide tuinonderhoudsdiensten in Dénia en omgeving, inclusief grasmaaien, snoeien, bemesting en ongediertebestrijding. We passen elke service aan de specifieke behoeften van uw groene ruimte aan.",
         service_pools_title: "Zwembadreiniging",
-        service_pools_desc: "Volledig zwembadonderhoud. Reiniging, chemische waterbehandeling en apparatuuronderhoud.",
+        service_pools_desc: "We bieden professionele zwembadreinigings- en onderhoudsdiensten in Dénia. We verwijderen bladeren, algen en resten, installeren zoutchloor en pH-controle, wateranalyse, chlorering en zuivering om een schoon, veilig zwembad te garanderen dat klaar is om van te genieten.",
         service_design_title: "Tuinontwerp",
-        service_design_desc: "Creatie en ontwerp van gepersonaliseerde tuinen. Unieke ruimtes aangepast aan uw behoeften en smaak.",
+        service_design_desc: "We creëren unieke tuinen die functionaliteit en esthetiek combineren. Onze tuinontwerpdienst in Marina Alta transformeert uw buitenruimte in een harmonieuze en natuurlijke omgeving.",
         service_pruning_title: "Palmboomsnoei",
-        service_pruning_desc: "Experts in palmboomsnoei in Dénia. We verwijderen droge bladeren en beschadigde takken om uw palmbomen gezond te houden.",
+        service_pruning_desc: "Experts in palmboomsnoei in Dénia. We verwijderen droge bladeren en beschadigde takken om uw palmbomen gezond en ongediertevrij te houden. Veilige en professionele service.",
         service_irrigation_title: "Irrigatiesystemen",
-        service_irrigation_desc: "We installeren efficiënte automatische irrigatiesystemen die het waterverbruik optimaliseren en de gezondheid van uw planten waarborgen.",
+        service_irrigation_desc: "We installeren efficiënte automatische irrigatiesystemen die het waterverbruik optimaliseren en de gezondheid van uw planten waarborgen, ideaal voor residentiële tuinen en gemeenschappen in Dénia en omgeving.",
         
         // About section features
         about_feature_1: "Duurzame irrigatietechnieken",
@@ -669,6 +673,7 @@ const translations = {
         // Service cards additional
         service_repair_title: "Zwembad Voegwerk en Reparatie",
         service_repair_desc: "Specialisten in zwembadvoegwerk, kroonreparatie en scheuren dichten in Dénia. We voeren tegelplaatsing uit, complete lediging, installatie van zoutchlorering en pH, sondewisselingen, celwisselingen, injectorwisselingen, lekreparatie en motorstoringen.",
+        service_repair_description: "We specialiseren ons in zwembadvoegwerk, kroonreparatie en scheurenoplossingen in Dénia en Marina Alta. Onze diensten omvatten tegelplaatsing, complete lediging, installatie van zoutchloreringssystemen en pH-controle, sondewisselingen, vervanging van cellen en elektrolysecellen, injectorwisselingen, lekreparatie en reparatie van zwembadmotorstoringen. We hebben gespecialiseerd personeel en eersteklas materialen om duurzame reparaties te garanderen.",
         
         // Urbanizaciones section
         urbanizations_title: "Oplossingen voor Urbanisaties",
