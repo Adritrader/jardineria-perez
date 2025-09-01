@@ -11,8 +11,16 @@
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://jardineriaperez.netlify.app/pages/blog.html">
     
+    <!-- Hreflang para SEO multiidioma -->
+    <link rel="alternate" hreflang="es" href="https://jardineriaperez.netlify.app/pages/blog.html">
+    <link rel="alternate" hreflang="en" href="https://jardineriaperez.netlify.app/pages/blog.html">
+    <link rel="alternate" hreflang="de" href="https://jardineriaperez.netlify.app/pages/blog.html">
+    <link rel="alternate" hreflang="fr" href="https://jardineriaperez.netlify.app/pages/blog.html">
+    <link rel="alternate" hreflang="nl" href="https://jardineriaperez.netlify.app/pages/blog.html">
+    <link rel="alternate" hreflang="x-default" href="https://jardineriaperez.netlify.app/pages/blog.html">
+    
     <!-- Título optimizado -->
-    <title>📚 Blog Jardinería Pérez | Consejos Expertos Jardines y Piscinas Dénia ⭐ Marina Alta</title>
+    <title data-translate="blog_title">📚 Blog Jardinería Pérez | Consejos Expertos Jardines y Piscinas Dénia ⭐ Marina Alta</title>
     
     <!-- Datos estructurados para Blog -->
     <script type="application/ld+json">
@@ -42,16 +50,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="blogStyles.css">
+    <link rel="stylesheet" href="../lang/language-selector.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <!-- Open Graph Mejorado -->
+    <!-- Open Graph Mejorado con soporte multiidioma -->
     <meta property="og:title" content="📚 Blog Jardinería Pérez | Consejos Expertos en Jardines y Piscinas">
     <meta property="og:description" content="✅ Descubre consejos profesionales sobre plantas mediterráneas, mantenimiento de piscinas y diseño de jardines en Dénia y Marina Alta.">
     <meta property="og:image" content="https://jardineriaperez.netlify.app/images/jardin-mediterraneo.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jardineriaperez.netlify.app/pages/blog.html">
     <meta property="og:site_name" content="Jardinería Pérez - Blog">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="nl_NL">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -70,12 +84,49 @@
             <i class="fas fa-bars"></i>
         </button>
         <ul class="nav-links">
-            <li><a href="../#servicios">Servicios</a></li>
+            <li><a href="../#servicios" data-translate="nav_services">Servicios</a></li>
             <li><a href="../#urbanizaciones">Urbanizaciones</a></li>
-            <li><a href="../#testimonios">Testimonios</a></li>
-            <li><a href="../#galeria">Proyectos</a></li>
-            <li><a href="../#contacto">Contacto</a></li>
-            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="../#testimonios" data-translate="nav_testimonials">Testimonios</a></li>
+            <li><a href="../#galeria" data-translate="nav_gallery">Proyectos</a></li>
+            <li><a href="../#contacto" data-translate="nav_contact">Contacto</a></li>
+            <li><a href="blog.html" class="active" data-translate="nav_blog">Blog</a></li>
+            
+            <!-- Selector de Idioma -->
+            <li class="nav-item language-selector-item">
+                <div id="language-selector">
+                    <div class="lang-dropdown">
+                        <div class="lang-current" id="current-lang">
+                            <span class="flag-icon flag-es" id="current-flag"></span>
+                            <span id="current-lang-text">ES</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="lang-options" id="lang-options">
+                            <div class="lang-option" data-lang="es">
+                                <span class="flag-icon flag-es"></span>
+                                <span>Español</span>
+                            </div>
+                            <div class="lang-option" data-lang="en">
+                                <span class="flag-icon flag-gb"></span>
+                                <span>English</span>
+                            </div>
+                            <div class="lang-option" data-lang="de">
+                                <span class="flag-icon flag-de"></span>
+                                <span>Deutsch</span>
+                            </div>
+                            <div class="lang-option" data-lang="fr">
+                                <span class="flag-icon flag-fr"></span>
+                                <span>Français</span>
+                            </div>
+                            <div class="lang-option" data-lang="nl">
+                                <span class="flag-icon flag-nl"></span>
+                                <span>Nederlands</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- ICONOS EN EL NAVBAR -->
             <li class="social-icon"><a href="https://wa.me/34658645102" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
             <li class="social-icon"><a href="mailto:jardineriaperez83@gmail.com"><i class="fas fa-envelope"></i></a></li>
             <li class="social-icon"><a href="tel:+34658645102"><i class="fas fa-phone"></i></a></li>
@@ -86,10 +137,10 @@
     <header class="blog-header">
         <div class="container">
             <nav class="breadcrumb">
-                <a href="../">Inicio</a> > <span>Blog</span>
+                <a href="../" data-translate="blog_breadcrumb_home">Inicio</a> > <span data-translate="blog_breadcrumb_blog">Blog</span>
             </nav>
-            <h1>Blog de Jardinería y Piscinas</h1>
-            <p class="blog-subtitle">Consejos expertos, guías prácticas y tendencias en jardinería mediterránea</p>
+            <h1 data-translate="blog_title">Blog de Jardinería y Piscinas</h1>
+            <p class="blog-subtitle" data-translate="blog_subtitle">Consejos expertos, guías prácticas y tendencias en jardinería mediterránea</p>
         </div>
     </header>
 
@@ -98,7 +149,7 @@
         <div class="container">
             <!-- ARTÍCULOS EN CUADRÍCULA -->
             <section class="blog-articles">
-                <h2>Artículos del Blog</h2>
+                <h2 data-translate="blog_articles_title">Artículos del Blog</h2>
                 
                 <div class="articles-grid">
                     <!-- Artículo 1 -->
@@ -106,7 +157,7 @@
                         <div class="card-image">
                             <img src="../images/jardin-mediterraneo.png" alt="Plantas mediterráneas para jardín">
                             <div class="card-overlay">
-                                <span class="article-category featured">Plantas</span>
+                                <span class="article-category featured" data-translate="article_category_plants">Plantas</span>
                             </div>
                         </div>
                         <div class="card-content">
@@ -117,7 +168,7 @@
                                 <span><i class="fas fa-clock"></i> 8 min lectura</span>
                             </div>
                             <a href="articles/plantasmediterraneas.html" class="read-more-btn">
-                                Leer artículo <i class="fas fa-arrow-right"></i>
+                                <span data-translate="read_more">Leer artículo</span> <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </article>
@@ -127,7 +178,7 @@
                         <div class="card-image">
                             <img src="../images/piscinalimpieza.jpeg" alt="Mantenimiento de piscinas">
                             <div class="card-overlay">
-                                <span class="article-category piscinas">Piscinas</span>
+                                <span class="article-category piscinas" data-translate="article_category_pools">Piscinas</span>
                             </div>
                         </div>
                         <div class="card-content">
@@ -138,7 +189,7 @@
                                 <span><i class="fas fa-clock"></i> 6 min lectura</span>
                             </div>
                             <a href="articles/piscinasdenia.html" class="read-more-btn">
-                                Leer artículo <i class="fas fa-arrow-right"></i>
+                                <span data-translate="read_more">Leer artículo</span> <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </article>
@@ -148,6 +199,86 @@
                         <div class="card-image">
                             <img src="../images/fondonuevo.jpeg" alt="Diseño de jardines">
                             <div class="card-overlay">
+                                <span class="article-category design" data-translate="article_category_design">Diseño</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3><a href="articles/disenojardines.html">Tendencias en Diseño de Jardines Modernos</a></h3>
+                            <p class="article-excerpt">Explora las últimas tendencias en paisajismo y diseño de jardines que están marcando la pauta.</p>
+                            <div class="article-meta">
+                                <span><i class="fas fa-calendar"></i> 15 Jun 2025</span>
+                                <span><i class="fas fa-clock"></i> 5 min lectura</span>
+                            </div>
+                            <a href="articles/disenojardines.html" class="read-more-btn">
+                                <span data-translate="read_more">Leer artículo</span> <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 4 -->
+                    <article class="article-card">
+                        <div class="card-image">
+                            <img src="../images/palmerasmediterraneas.png" alt="Poda de palmeras">
+                            <div class="card-overlay">
+                                <span class="article-category maintenance" data-translate="article_category_maintenance">Mantenimiento</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3><a href="articles/podapalmeras.html">Poda de Palmeras: Técnicas y Mejores Épocas</a></h3>
+                            <p class="article-excerpt">Aprende las técnicas correctas para la poda de palmeras y mantén tus ejemplares sanos.</p>
+                            <div class="article-meta">
+                                <span><i class="fas fa-calendar"></i> 10 Jun 2025</span>
+                                <span><i class="fas fa-clock"></i> 4 min lectura</span>
+                            </div>
+                            <a href="articles/podapalmeras.html" class="read-more-btn">
+                                <span data-translate="read_more">Leer artículo</span> <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 5 -->
+                    <article class="article-card">
+                        <div class="card-image">
+                            <img src="../images/herramientas.jpg" alt="Consejos básicos jardinería">
+                            <div class="card-overlay">
+                                <span class="article-category basics" data-translate="article_category_basics">Básicos</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3><a href="articles/consejosbasicos.html">Consejos Básicos para Principiantes en Jardinería</a></h3>
+                            <p class="article-excerpt">Una guía esencial para quienes se inician en el mundo de la jardinería con consejos prácticos.</p>
+                            <div class="article-meta">
+                                <span><i class="fas fa-calendar"></i> 25 May 2025</span>
+                                <span><i class="fas fa-clock"></i> 7 min lectura</span>
+                            </div>
+                            <a href="articles/consejosbasicos.html" class="read-more-btn">
+                                <span data-translate="read_more">Leer artículo</span> <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 6 -->
+                    <article class="article-card">
+                        <div class="card-image">
+                            <img src="../images/piscina-privada.jpeg" alt="Piscinas privadas">
+                            <div class="card-overlay">
+                                <span class="article-category piscinas" data-translate="article_category_pools">Piscinas</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3><a href="articles/tipospiscinas.html">Tipos de Piscinas para tu Hogar</a></h3>
+                            <p class="article-excerpt">Conoce los diferentes tipos de piscinas y cuál es la mejor opción para tu espacio y presupuesto.</p>
+                            <div class="article-meta">
+                                <span><i class="fas fa-calendar"></i> 20 May 2025</span>
+                                <span><i class="fas fa-clock"></i> 5 min lectura</span>
+                            </div>
+                            <a href="articles/tipospiscinas.html" class="read-more-btn">
+                                <span data-translate="read_more">Leer artículo</span> <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </section>
                                 <span class="article-category design">Diseño</span>
                             </div>
                         </div>
@@ -234,7 +365,7 @@
                 <!-- Artículos Populares -->
                 <div class="sidebar-card">
                     <div class="sidebar-header">
-                        <h3><i class="fas fa-fire"></i> Artículos Populares</h3>
+                        <h3><i class="fas fa-fire"></i> <span data-translate="popular_articles">Artículos Populares</span></h3>
                     </div>
                     <div class="popular-articles">
                         <article class="popular-item">
@@ -281,18 +412,18 @@
                 <!-- Ayuda -->
                 <div class="sidebar-card help-card">
                     <div class="sidebar-header">
-                        <h3><i class="fas fa-question-circle"></i> ¿Necesitas ayuda?</h3>
+                        <h3><i class="fas fa-question-circle"></i> <span data-translate="need_help">¿Necesitas ayuda?</span></h3>
                     </div>
                     <div class="help-content">
-                        <p>Nuestros expertos están aquí para asesorarte en todos tus proyectos de jardinería.</p>
+                        <p data-translate="help_description">Nuestros expertos están aquí para asesorarte en todos tus proyectos de jardinería.</p>
                         <div class="help-buttons">
                             <a href="../#contacto" class="help-btn primary">
                                 <i class="fas fa-phone"></i>
-                                Contactar
+                                <span data-translate="contact_btn">Contactar</span>
                             </a>
                             <a href="https://wa.me/34658645102" class="help-btn whatsapp">
                                 <i class="fab fa-whatsapp"></i>
-                                WhatsApp
+                                <span data-translate="whatsapp_btn">WhatsApp</span>
                             </a>
                         </div>
                     </div>
@@ -301,7 +432,7 @@
                 <!-- Etiquetas -->
                 <div class="sidebar-card">
                     <div class="sidebar-header">
-                        <h3><i class="fas fa-tags"></i> Etiquetas Populares</h3>
+                        <h3><i class="fas fa-tags"></i> <span data-translate="popular_tags">Etiquetas Populares</span></h3>
                     </div>
                     <div class="tags-container">
                         <span class="tag-item">plantas mediterráneas</span>
@@ -367,6 +498,7 @@
         </div>
     </footer>
 
+    <script src="../lang/translations.js"></script>
     <script src="../scripts.js"></script>
 </body>
 </html>

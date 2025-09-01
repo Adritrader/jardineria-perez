@@ -13,7 +13,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO optimizado -->
+    <!-- Hreflang para SEO multiidioma -->
+    <link rel="alternate" hreflang="es" href="https://jardineriaperez.netlify.app/pages/articles/disenojardines.html">
+    <link rel="alternate" hreflang="en" href="https://jardineriaperez.netlify.app/pages/articles/disenojardines.html">
+    <link rel="alternate" hreflang="de" href="https://jardineriaperez.netlify.app/pages/articles/disenojardines.html">
+    <link rel="alternate" hreflang="fr" href="https://jardineriaperez.netlify.app/pages/articles/disenojardines.html">
+    <link rel="alternate" hreflang="nl" href="https://jardineriaperez.netlify.app/pages/articles/disenojardines.html">
+    <link rel="alternate" hreflang="x-default" href="https://jardineriaperez.netlify.app/pages/articles/disenojardines.html">
+    
+    <!-- SEO optimizado con soporte multiidioma -->
     <title>🌺 Tendencias en Diseño de Jardines Modernos 2025 | Jardinería Pérez Dénia</title>
     <meta name="description" content="🏡 Descubre las últimas tendencias en paisajismo y diseño de jardines modernos 2025. Jardines sostenibles, xerojardines, biotecnología verde y más. ¡Inspírate! 🌿">
     <meta name="keywords" content="tendencias jardines modernos 2025, paisajismo contemporáneo Dénia, jardines sostenibles, xerojardines Alicante, biotecnología jardinería, jardines inteligentes Marina Alta, diseño paisajístico moderno">
@@ -25,9 +33,13 @@
     <!-- Verificación -->
     <meta name="google-site-verification" content="anr3IBOs-XBDGYR5qFMN6UVd81KS8ycec0jJvkKsyGs">
     
-    <!-- Open Graph optimizado -->
+    <!-- Open Graph optimizado con soporte multiidioma -->
     <meta property="og:type" content="article">
     <meta property="og:locale" content="es_ES">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="nl_NL">
     <meta property="og:site_name" content="Jardinería Pérez">
     <meta property="og:title" content="🌺 Tendencias en Diseño de Jardines Modernos 2025 | Jardinería Pérez">
     <meta property="og:description" content="🏡 Explora las últimas tendencias en paisajismo moderno: jardines sostenibles, xerojardines, biotecnología verde y sistemas inteligentes para espacios verdes contemporáneos.">
@@ -189,6 +201,7 @@
   <!-- Fuentes y estilos -->
   <link rel="stylesheet" href="../../style.css" />
   <link rel="stylesheet" href="../blogStyles.css" />
+  <link rel="stylesheet" href="../../lang/language-selector.css" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -208,12 +221,48 @@
             <i class="fas fa-bars"></i>
         </button>
         <ul class="nav-links">
-            <li><a href="../../#servicios">Servicios</a></li>
+            <li><a href="../../#servicios" data-translate="nav_services">Servicios</a></li>
             <li><a href="../../#urbanizaciones">Urbanizaciones</a></li>
-            <li><a href="../../#testimonios">Testimonios</a></li>
-            <li><a href="../../#galeria">Proyectos</a></li>
-            <li><a href="../../#contacto">Contacto</a></li>
-            <li><a href="../blog.html" class="active">Blog</a></li>
+            <li><a href="../../#testimonios" data-translate="nav_testimonials">Testimonios</a></li>
+            <li><a href="../../#galeria" data-translate="nav_gallery">Proyectos</a></li>
+            <li><a href="../../#contacto" data-translate="nav_contact">Contacto</a></li>
+            <li><a href="../blog.html" class="active" data-translate="nav_blog">Blog</a></li>
+            
+            <!-- Selector de Idioma -->
+            <li class="nav-item language-selector-item">
+                <div id="language-selector">
+                    <div class="lang-dropdown">
+                        <div class="lang-current" id="current-lang">
+                            <span class="flag-icon flag-es" id="current-flag"></span>
+                            <span id="current-lang-text">ES</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="lang-options" id="lang-options">
+                            <div class="lang-option" data-lang="es">
+                                <span class="flag-icon flag-es"></span>
+                                <span>Español</span>
+                            </div>
+                            <div class="lang-option" data-lang="en">
+                                <span class="flag-icon flag-gb"></span>
+                                <span>English</span>
+                            </div>
+                            <div class="lang-option" data-lang="de">
+                                <span class="flag-icon flag-de"></span>
+                                <span>Deutsch</span>
+                            </div>
+                            <div class="lang-option" data-lang="fr">
+                                <span class="flag-icon flag-fr"></span>
+                                <span>Français</span>
+                            </div>
+                            <div class="lang-option" data-lang="nl">
+                                <span class="flag-icon flag-nl"></span>
+                                <span>Nederlands</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
             <li class="social-icon"><a href="https://wa.me/34658645102" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
             <li class="social-icon"><a href="mailto:jardineriaperez83@gmail.com"><i class="fas fa-envelope"></i></a></li>
             <li class="social-icon"><a href="tel:+34658645102"><i class="fas fa-phone"></i></a></li>
@@ -524,6 +573,7 @@
   <button onclick=topFunction() id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
   <!-- JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="/scripts.js"></script>
+  <script src="../../lang/translations.js"></script>
+  <script src="../../scripts.js"></script>
 </body>
 </html>
