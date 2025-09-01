@@ -110,6 +110,13 @@ const translations = {
         whatsapp_btn: "WhatsApp",
         popular_tags: "Etiquetas Populares",
         
+        // Artículos - Breadcrumbs y elementos comunes
+        article_breadcrumb_home: "Inicio",
+        article_breadcrumb_blog: "Blog",
+        article_read_time: "min lectura",
+        article_author: "Jardinería Pérez",
+        article_published: "Publicado el",
+        
         // Elementos que faltan en la página principal
         parallax_garden_title: "Transformamos espacios verdes",
         parallax_garden_desc: "Especialistas en crear y mantener jardines únicos en la Costa Blanca",
@@ -267,6 +274,13 @@ const translations = {
         contact_btn: "Contact",
         whatsapp_btn: "WhatsApp",
         popular_tags: "Popular Tags",
+        
+        // Articles - Breadcrumbs and common elements
+        article_breadcrumb_home: "Home",
+        article_breadcrumb_blog: "Blog",
+        article_read_time: "min read",
+        article_author: "Jardinería Pérez",
+        article_published: "Published on",
         
         // Elements missing on main page
         parallax_garden_title: "We transform green spaces",
@@ -481,6 +495,13 @@ const translations = {
         whatsapp_btn: "WhatsApp",
         popular_tags: "Beliebte Tags",
         
+        // Artikel - Breadcrumbs und gemeinsame Elemente
+        article_breadcrumb_home: "Startseite",
+        article_breadcrumb_blog: "Blog",
+        article_read_time: "Min. Lesen",
+        article_author: "Jardinería Pérez",
+        article_published: "Veröffentlicht am",
+        
         // Fehlende Elemente auf der Hauptseite
         parallax_garden_title: "Wir verwandeln Grünflächen",
         parallax_garden_desc: "Spezialisten für die Schaffung und Pflege einzigartiger Gärten an der Costa Blanca",
@@ -645,6 +666,13 @@ const translations = {
         contact_btn: "Contact",
         whatsapp_btn: "WhatsApp",
         popular_tags: "Tags Populaires",
+        
+        // Articles - Breadcrumbs et éléments communs
+        article_breadcrumb_home: "Accueil",
+        article_breadcrumb_blog: "Blog",
+        article_read_time: "min de lecture",
+        article_author: "Jardinería Pérez",
+        article_published: "Publié le",
         
         // Éléments manquants sur la page principale
         parallax_garden_title: "Nous transformons les espaces verts",
@@ -832,6 +860,13 @@ const translations = {
         contact_btn: "Contact",
         whatsapp_btn: "WhatsApp",
         popular_tags: "Populaire Tags",
+        
+        // Artikelen - Breadcrumbs en gemeenschappelijke elementen
+        article_breadcrumb_home: "Home",
+        article_breadcrumb_blog: "Blog",
+        article_read_time: "min lezen",
+        article_author: "Jardinería Pérez",
+        article_published: "Gepubliceerd op",
         
         // Ontbrekende elementen op hoofdpagina
         parallax_garden_title: "We transformeren groene ruimtes",
