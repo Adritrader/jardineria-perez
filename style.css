@@ -1216,17 +1216,63 @@ margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
+  /* Tablets - Estilos responsive mejorados */
   .services-grid {
       grid-template-columns: 1fr;
+  }
+
+  .parallax-separator h3 {
+    font-size: 2rem;
+  }
+
+  .parallax-separator p {
+    font-size: 1.1rem;
+  }
+
+  .parallax-separator {
+    height: 170px;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .section {
+    padding: 60px 0;
   }
 }
 
 @media (max-width: 600px) {
 
+  /* Títulos parallax más pequeños en móviles */
+  .parallax-separator h3 {
+    font-size: 1.8rem !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .parallax-separator p {
+    font-size: 1rem !important;
+  }
+
+  .parallax-separator {
+    height: 150px;
+    background-attachment: scroll; /* Mejora performance en móviles */
+  }
+
   .hero h1 {
-
     font-size: 34px;
-
   }
 
   .footer-grid {
@@ -1482,3 +1528,72 @@ margin-bottom: 0;
   opacity: 1;
   color: #333;
 }
+
+/* ==========================================
+   MEDIA QUERIES RESPONSIVE MEJORADOS
+   ========================================== */
+
+/* Pantallas muy grandes (1400px+) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .parallax-separator h3 {
+    font-size: 3rem;
+  }
+
+  .parallax-separator p {
+    font-size: 1.4rem;
+  }
+}
+
+/* Pantallas grandes (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablets grandes y pantallas pequeñas (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablets (768px - 991px) - Estilos ya definidos arriba */
+
+/* Móviles grandes (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .parallax-separator h3 {
+    font-size: 2rem;
+  }
+
+  .parallax-separator p {
+    font-size: 1.1rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Móviles pequeños (hasta 575px) - Estilos ya definidos en max-width: 600px */

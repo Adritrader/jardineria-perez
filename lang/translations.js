@@ -22,14 +22,21 @@ const translations = {
         services_title: "Nuestros Servicios",
         service_garden_title: "Mantenimiento de Jardines",
         service_garden_desc: "Ofrecemos un servicio integral de mantenimiento de jardines en Dénia y alrededores, incluyendo corte de césped, poda, fertilización y control de plagas. Adaptamos cada servicio a las necesidades específicas de tu espacio verde.",
+        service_garden_description: "Ofrecemos un servicio integral de mantenimiento de jardines en Dénia y alrededores, incluyendo corte de césped profesional, poda especializada, fertilización orgánica y control integrado de plagas. Adaptamos cada servicio a las necesidades específicas de tu espacio verde, desde jardines residenciales hasta zonas comunitarias y comerciales, garantizando un cuidado sostenible durante todo el año.",
         service_pools_title: "Limpieza de Piscinas",
         service_pools_desc: "Ofrecemos servicios profesionales de limpieza y mantenimiento de piscinas en Dénia. Eliminamos hojas, algas y residuos, instalación de cloro salino y control de pH, análisis del agua, cloración y depuración para garantizar una piscina limpia, segura y lista para disfrutar.",
+        service_cleaning_description: "Ofrecemos servicios profesionales de limpieza y mantenimiento de piscinas en Dénia. Eliminamos hojas, algas y residuos, realizamos instalación de cloro salino y control de pH automático, análisis completo del agua, cloración y depuración especializada. Mantenimiento preventivo de equipos, limpieza de filtros y sistemas, para garantizar una piscina cristalina, segura y lista para disfrutar todo el año.",
         service_design_title: "Diseño de Jardines",
         service_design_desc: "Creamos jardines únicos combinando funcionalidad y estética. Nuestro servicio de diseño de jardines en la Marina Alta transforma tu espacio exterior en un entorno armonioso y natural.",
+        service_design_description: "Creamos jardines únicos combinando funcionalidad y estética mediterránea. Nuestro servicio de diseño de jardines en la Marina Alta transforma tu espacio exterior en un entorno armonioso y natural, adaptado al clima de Dénia. Utilizamos plantas autóctonas, sistemas de riego eficientes y materiales sostenibles para crear espacios verdes que requieren mínimo mantenimiento y máximo impacto visual.",
         service_pruning_title: "Poda de Palmeras",
         service_pruning_desc: "Expertos en poda de palmeras en Dénia. Eliminamos hojas secas y ramas dañadas para mantener tus palmeras saludables y libres de plagas. Servicio seguro y profesional.",
+        service_pruning_description: "Expertos en poda de palmeras en Dénia y Marina Alta. Realizamos poda técnica especializada eliminando hojas secas, inflorescencias y frutos, manteniéndolas saludables y libres de plagas como el picudo rojo. Servicio seguro con equipos profesionales, respetando los ciclos naturales de crecimiento y siguiendo las normativas municipales para preservar la belleza y salud de estas emblemáticas especies mediterráneas.",
         service_irrigation_title: "Sistemas de Riego",
         service_irrigation_desc: "Instalamos sistemas de riego automático eficientes que optimizan el consumo de agua y aseguran la salud de tus plantas, ideal para jardines residenciales y comunidades en Dénia y alrededores.",
+        service_irrigation_description: "Instalamos y mantenemos sistemas de riego automático de alta eficiencia que optimizan el consumo de agua y aseguran la salud de tus plantas. Tecnología de riego inteligente con sensores de humedad, programadores avanzados y riego por goteo localizado. Ideal para jardines residenciales, urbanizaciones y espacios comerciales en Dénia y alrededores, contribuyendo al ahorro hídrico y sostenibilidad ambiental.",
+        service_repair_title: "Rejuntes y Reparación de Piscinas",
+        service_repair_description: "Nos especializamos en rejuntes de piscinas, reparación de coronas y solución de grietas en Dénia y Marina Alta. Nuestros servicios incluyen colocación de gresite, vaciados completos, instalación de sistemas de cloro salino y control de pH, cambios de sondas, sustitución de células y células de electrólisis, cambio de inyectores, reparación de filtraciones y reparación de averías de motores de piscina. Contamos con personal especializado y materiales de primera calidad para garantizar reparaciones duraderas.",
         
         // Galería
         gallery_title: "Galería de Trabajos",
@@ -214,14 +221,21 @@ const translations = {
         services_title: "Our Services",
         service_garden_title: "Garden Maintenance",
         service_garden_desc: "We offer comprehensive garden maintenance services in Dénia and surroundings, including lawn mowing, pruning, fertilization and pest control. We adapt each service to the specific needs of your green space.",
+        service_garden_description: "We offer comprehensive garden maintenance services in Dénia and surroundings, including professional lawn cutting, specialized pruning, organic fertilization and integrated pest control. We adapt each service to the specific needs of your green space, from residential gardens to community and commercial areas, ensuring sustainable care throughout the year.",
         service_pools_title: "Pool Cleaning",
         service_pools_desc: "We offer professional pool cleaning and maintenance services in Dénia. We remove leaves, algae and debris, install saline chlorine and pH control, water analysis, chlorination and purification to ensure a clean, safe pool ready to enjoy.",
+        service_cleaning_description: "We offer professional pool cleaning and maintenance services in Dénia. We remove leaves, algae and debris, perform saline chlorine installation and automatic pH control, complete water analysis, specialized chlorination and purification. Preventive equipment maintenance, filter and system cleaning, to guarantee a crystal clear, safe pool ready to enjoy all year round.",
         service_design_title: "Garden Design",
         service_design_desc: "We create unique gardens combining functionality and aesthetics. Our garden design service in Marina Alta transforms your outdoor space into a harmonious and natural environment.",
+        service_design_description: "We create unique gardens combining functionality and Mediterranean aesthetics. Our garden design service in Marina Alta transforms your outdoor space into a harmonious and natural environment, adapted to Dénia's climate. We use native plants, efficient irrigation systems and sustainable materials to create green spaces that require minimal maintenance and maximum visual impact.",
         service_pruning_title: "Palm Tree Pruning",
         service_pruning_desc: "Experts in palm tree pruning in Dénia. We remove dry leaves and damaged branches to keep your palm trees healthy and pest-free. Safe and professional service.",
+        service_pruning_description: "Experts in palm tree pruning in Dénia and Marina Alta. We perform specialized technical pruning removing dry leaves, inflorescences and fruits, keeping them healthy and free from pests like the red weevil. Safe service with professional equipment, respecting natural growth cycles and following municipal regulations to preserve the beauty and health of these emblematic Mediterranean species.",
         service_irrigation_title: "Irrigation Systems",
         service_irrigation_desc: "We install efficient automatic irrigation systems that optimize water consumption and ensure the health of your plants, ideal for residential gardens and communities in Dénia and surroundings.",
+        service_irrigation_description: "We install and maintain high-efficiency automatic irrigation systems that optimize water consumption and ensure plant health. Smart irrigation technology with humidity sensors, advanced programmers and localized drip irrigation. Ideal for residential gardens, urbanizations and commercial spaces in Dénia and surroundings, contributing to water saving and environmental sustainability.",
+        service_repair_title: "Pool Regrouting and Repair",
+        service_repair_description: "We specialize in pool regrouting, crown repair and crack solutions in Dénia and Marina Alta. Our services include mosaic placement, complete draining, saline chlorine and pH system installation, probe changes, cell and electrolysis cell replacement, injector changes, leak repair and pool motor breakdown repair. We have specialized personnel and top-quality materials to guarantee lasting repairs.",
         
         // About section features
         about_feature_1: "Sustainable irrigation techniques",
@@ -406,14 +420,21 @@ const translations = {
         services_title: "Unsere Dienstleistungen",
         service_garden_title: "Gartenpflege",
         service_garden_desc: "Wir bieten umfassende Gartenpflegedienste in Dénia und Umgebung an, einschließlich Rasenmähen, Beschneidung, Düngung und Schädlingsbekämpfung. Wir passen jeden Service an die spezifischen Bedürfnisse Ihres Grünbereichs an.",
+        service_garden_description: "Wir bieten umfassende Gartenpflegedienste in Dénia und Umgebung an, einschließlich professionellem Rasenschnitt, spezialisierter Beschneidung, organischer Düngung und integrierter Schädlingsbekämpfung. Wir passen jeden Service an die spezifischen Bedürfnisse Ihres Grünbereichs an, von Wohngärten bis zu Gemeinschafts- und Gewerbeflächen, und gewährleisten nachhaltige Pflege das ganze Jahr über.",
         service_pools_title: "Pool-Reinigung",
         service_pools_desc: "Wir bieten professionelle Pool-Reinigungs- und Wartungsdienste in Dénia an. Wir entfernen Blätter, Algen und Rückstände, installieren Salzchlor und pH-Kontrolle, Wasseranalyse, Chlorierung und Aufbereitung, um einen sauberen, sicheren Pool zu gewährleisten, der bereit zum Genießen ist.",
+        service_cleaning_description: "Wir bieten professionelle Pool-Reinigungs- und Wartungsdienste in Dénia an. Wir entfernen Blätter, Algen und Rückstände, führen Salzchlor-Installation und automatische pH-Kontrolle durch, komplette Wasseranalyse, spezialisierte Chlorierung und Aufbereitung. Vorbeugende Gerätewartung, Filter- und Systemreinigung, um einen kristallklaren, sicheren Pool zu gewährleisten, der das ganze Jahr über bereit zum Genießen ist.",
         service_design_title: "Gartengestaltung",
         service_design_desc: "Wir schaffen einzigartige Gärten, die Funktionalität und Ästhetik kombinieren. Unser Gartengestaltungsservice in Marina Alta verwandelt Ihren Außenbereich in eine harmonische und natürliche Umgebung.",
+        service_design_description: "Wir schaffen einzigartige Gärten, die Funktionalität und mediterrane Ästhetik kombinieren. Unser Gartengestaltungsservice in Marina Alta verwandelt Ihren Außenbereich in eine harmonische und natürliche Umgebung, angepasst an das Klima von Dénia. Wir verwenden einheimische Pflanzen, effiziente Bewässerungssysteme und nachhaltige Materialien, um Grünflächen zu schaffen, die minimale Wartung und maximale visuelle Wirkung erfordern.",
         service_pruning_title: "Palmenbeschneidung",
         service_pruning_desc: "Experten für Palmenbeschneidung in Dénia. Wir entfernen trockene Blätter und beschädigte Äste, um Ihre Palmen gesund und schädlingsfrei zu halten. Sicherer und professioneller Service.",
+        service_pruning_description: "Experten für Palmenbeschneidung in Dénia und Marina Alta. Wir führen spezialisierte technische Beschneidung durch, entfernen trockene Blätter, Blütenstände und Früchte, halten sie gesund und frei von Schädlingen wie dem roten Rüsselkäfer. Sicherer Service mit professioneller Ausrüstung, unter Beachtung natürlicher Wachstumszyklen und Einhaltung städtischer Vorschriften zur Erhaltung der Schönheit und Gesundheit dieser emblematischen mediterranen Arten.",
         service_irrigation_title: "Bewässerungssysteme",
         service_irrigation_desc: "Wir installieren effiziente automatische Bewässerungssysteme, die den Wasserverbrauch optimieren und die Gesundheit Ihrer Pflanzen gewährleisten, ideal für Wohngärten und Gemeinden in Dénia und Umgebung.",
+        service_irrigation_description: "Wir installieren und warten hocheffiziente automatische Bewässerungssysteme, die den Wasserverbrauch optimieren und die Pflanzengesundheit gewährleisten. Intelligente Bewässerungstechnologie mit Feuchtigkeitssensoren, fortschrittlichen Programmierern und lokalisierter Tropfbewässerung. Ideal für Wohngärten, Urbanisationen und Gewerbeflächen in Dénia und Umgebung, trägt zur Wassereinsparung und Umweltnachhaltigkeit bei.",
+        service_repair_title: "Pool-Verfugung und Reparatur",
+        service_repair_description: "Wir spezialisieren uns auf Pool-Verfugung, Kronenreparatur und Risslösungen in Dénia und Marina Alta. Unsere Dienstleistungen umfassen Mosaikverlegung, komplette Entleerung, Installation von Salzchlor- und pH-Systemen, Sondenwechsel, Zellen- und Elektrolysezellenaustausch, Injektorwechsel, Leckreparatur und Reparatur von Pool-Motorausfällen. Wir haben spezialisiertes Personal und Materialien höchster Qualität, um dauerhafte Reparaturen zu gewährleisten.",
         
         // About section features
         about_feature_1: "Nachhaltige Bewässerungstechniken",
@@ -606,14 +627,20 @@ const translations = {
         services_title: "Nos Services",
         service_garden_title: "Entretien de Jardins",
         service_garden_desc: "Nous offrons un service complet d'entretien de jardins à Dénia et environs, incluant la tonte de pelouse, l'élagage, la fertilisation et le contrôle des parasites. Nous adaptons chaque service aux besoins spécifiques de votre espace vert.",
+        service_garden_description: "Nous offrons un service intégral d'entretien de jardins à Dénia et environs, incluant la tonte de pelouse professionnelle, l'élagage spécialisé, la fertilisation organique et le contrôle intégré des parasites. Nous adaptons chaque service aux besoins spécifiques de votre espace vert, des jardins résidentiels aux zones communautaires et commerciales, garantissant un soin durable toute l'année.",
         service_pools_title: "Nettoyage de Piscines",
         service_pools_desc: "Nous offrons des services professionnels de nettoyage et d'entretien de piscines à Dénia. Nous éliminons les feuilles, algues et résidus, installation de chlore salin et contrôle du pH, analyse de l'eau, chloration et épuration pour garantir une piscine propre, sûre et prête à profiter.",
+        service_cleaning_description: "Nettoyage professionnel de piscines avec traitement de l'eau et entretien complet. Nous garantissons une eau cristalline et un environnement sûr pour profiter de votre piscine en toute tranquillité toute l'année. Nous incluons l'élimination des feuilles, algues et résidus, installation de systèmes de chlore salin, contrôle du pH et analyse complète de l'eau.",
         service_design_title: "Conception de Jardins",
         service_design_desc: "Nous créons des jardins uniques combinant fonctionnalité et esthétique. Notre service de conception de jardins à Marina Alta transforme votre espace extérieur en un environnement harmonieux et naturel.",
+        service_design_description: "Nous créons des jardins uniques en combinant fonctionnalité et esthétique méditerranéenne. Notre service de conception de jardins à Marina Alta transforme votre espace extérieur en un environnement harmonieux et naturel, adapté au climat de Dénia. Nous utilisons des plantes indigènes, des systèmes d'irrigation efficaces et des matériaux durables pour créer des espaces verts nécessitant un minimum d'entretien et un maximum d'impact visuel.",
         service_pruning_title: "Élagage de Palmiers",
         service_pruning_desc: "Experts en élagage de palmiers à Dénia. Nous éliminons les feuilles sèches et les branches endommagées pour maintenir vos palmiers en bonne santé et exempts de parasites. Service sûr et professionnel.",
+        service_pruning_description: "Élagage spécialisé d'arbres et palmiers par des experts certifiés. Nous améliorons la santé et l'esthétique de vos plantes tout en garantissant la sécurité et le respect de l'environnement naturel. Nous éliminons les feuilles sèches, branches endommagées et prunes de formation pour maintenir la structure optimale des arbres.",
         service_irrigation_title: "Systèmes d'Irrigation",
         service_irrigation_desc: "Nous installons des systèmes d'irrigation automatique efficaces qui optimisent la consommation d'eau et assurent la santé de vos plantes, idéal pour les jardins résidentiels et les communautés à Dénia et environs.",
+        service_irrigation_description: "Installation et entretien de systèmes d'irrigation automatique sur mesure. Nous optimisons la consommation d'eau et garantissons un arrosage efficace adapté aux besoins spécifiques de chaque type de plante. Systèmes programmables et durables pour jardins résidentiels et commerciaux.",
+        service_repair_description: "Service de réparation et maintenance pour jardins et piscines. Nous résolvons rapidement tout problème technique pour maintenir vos espaces extérieurs en parfait état de fonctionnement. Réparation d'équipements d'irrigation, systèmes de filtration de piscines et infrastructure de jardin.",
         
         // About section features
         about_feature_1: "Techniques d'irrigation durables",
@@ -800,14 +827,20 @@ const translations = {
         services_title: "Onze Diensten",
         service_garden_title: "Tuinonderhoud",
         service_garden_desc: "We bieden uitgebreide tuinonderhoudsdiensten in Dénia en omgeving, inclusief grasmaaien, snoeien, bemesting en ongediertebestrijding. We passen elke service aan de specifieke behoeften van uw groene ruimte aan.",
+        service_garden_description: "We bieden uitgebreide tuinonderhoudsdiensten in Dénia en omgeving, inclusief professioneel grasmaaien, gespecialiseerde snoei, organische bemesting en geïntegreerde ongediertebestrijding. We passen elke service aan de specifieke behoeften van uw groene ruimte aan, van residentiële tuinen tot gemeenschappelijke en commerciële gebieden, waarbij we duurzame zorg het hele jaar door garanderen.",
         service_pools_title: "Zwembadreiniging",
         service_pools_desc: "We bieden professionele zwembadreinigings- en onderhoudsdiensten in Dénia. We verwijderen bladeren, algen en resten, installeren zoutchloor en pH-controle, wateranalyse, chlorering en zuivering om een schoon, veilig zwembad te garanderen dat klaar is om van te genieten.",
+        service_cleaning_description: "Professionele zwembadreiniging met waterbehandeling en volledig onderhoud. We garanderen kristalhelder water en een veilige omgeving om het hele jaar door met rust van uw zwembad te genieten. We omvatten het verwijderen van bladeren, algen en resten, installatie van zoutchloorsystemen, pH-controle en volledige wateranalyse.",
         service_design_title: "Tuinontwerp",
         service_design_desc: "We creëren unieke tuinen die functionaliteit en esthetiek combineren. Onze tuinontwerpdienst in Marina Alta transformeert uw buitenruimte in een harmonieuze en natuurlijke omgeving.",
+        service_design_description: "We creëren unieke tuinen door functionaliteit en mediterrane esthetiek te combineren. Onze tuinontwerpdienst in Marina Alta transformeert uw buitenruimte in een harmonieuze en natuurlijke omgeving, aangepast aan het klimaat van Dénia. We gebruiken inheemse planten, efficiënte irrigatiesystemen en duurzame materialen om groene ruimtes te creëren die minimaal onderhoud en maximale visuele impact vereisen.",
         service_pruning_title: "Palmboomsnoei",
         service_pruning_desc: "Experts in palmboomsnoei in Dénia. We verwijderen droge bladeren en beschadigde takken om uw palmbomen gezond en ongediertevrij te houden. Veilige en professionele service.",
+        service_pruning_description: "Gespecialiseerde snoei van bomen en palmbomen door gecertificeerde experts. We verbeteren de gezondheid en esthetiek van uw planten terwijl we veiligheid en respect voor de natuurlijke omgeving garanderen. We verwijderen droge bladeren, beschadigde takken en vormingssnoei om de optimale structuur van bomen te behouden.",
         service_irrigation_title: "Irrigatiesystemen",
         service_irrigation_desc: "We installeren efficiënte automatische irrigatiesystemen die het waterverbruik optimaliseren en de gezondheid van uw planten waarborgen, ideaal voor residentiële tuinen en gemeenschappen in Dénia en omgeving.",
+        service_irrigation_description: "Installatie en onderhoud van aangepaste automatische irrigatiesystemen. We optimaliseren het waterverbruik en garanderen efficiënte bewatering aangepast aan de specifieke behoeften van elk type plant. Programmeerbare en duurzame systemen voor residentiële en commerciële tuinen.",
+        service_repair_description: "Reparatie- en onderhoudsdienst voor tuinen en zwembaden. We lossen snel elk technisch probleem op om uw buitenruimtes in perfecte staat te houden. Reparatie van irrigatieapparatuur, zwembadfiltersystemen en tuininfrastructuur.",
         
         // About section features
         about_feature_1: "Duurzame irrigatietechnieken",
@@ -1132,20 +1165,35 @@ class LanguageManager {
     
     updateLanguageSelector() {
         const currentLangBtn = document.getElementById('current-lang');
+        const currentLangText = document.getElementById('current-lang-text');
+        const currentFlag = document.getElementById('current-flag');
         const langOptions = document.querySelectorAll('.lang-option');
         
         if (currentLangBtn) {
             const currentLangData = this.languages[this.currentLanguage];
-            currentLangBtn.innerHTML = `
-                <span class="flag-icon ${currentLangData.flag}"></span>
-                <span class="lang-text">${currentLangData.name}</span>
-                <svg class="chevron" width="12" height="8" viewBox="0 0 12 8" fill="none">
-                    <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-            `;
+            if (currentLangData) {
+                // Actualizar texto del idioma
+                if (currentLangText) {
+                    currentLangText.textContent = currentLangData.code.toUpperCase();
+                }
+                
+                // Actualizar bandera
+                if (currentFlag) {
+                    currentFlag.className = 'flag-icon ' + currentLangData.flag;
+                }
+                
+                // Si no hay elementos específicos, usar estructura completa
+                if (!currentLangText || !currentFlag) {
+                    currentLangBtn.innerHTML = `
+                        <span class="flag-icon ${currentLangData.flag}" id="current-flag"></span>
+                        <span id="current-lang-text">${currentLangData.code.toUpperCase()}</span>
+                        <i class="fas fa-chevron-down"></i>
+                    `;
+                }
+            }
         }
         
-        // Actualizar clases active
+        // Actualizar clases active en las opciones
         langOptions.forEach(option => {
             const lang = option.dataset.lang;
             if (lang === this.currentLanguage) {
@@ -1170,12 +1218,34 @@ class LanguageManager {
         elementsToTranslate.forEach(element => {
             const key = element.getAttribute('data-translate');
             if (translation[key]) {
-                // Preservar HTML interno si existe
+                // Si el elemento contiene HTML (como <strong>, <i>, etc.)
                 if (element.innerHTML.includes('<')) {
-                    const htmlContent = element.innerHTML;
-                    const textContent = element.textContent || element.innerText;
-                    element.innerHTML = htmlContent.replace(textContent, translation[key]);
+                    // Mantener las etiquetas HTML pero cambiar el texto
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = element.innerHTML;
+                    
+                    // Buscar nodos de texto y reemplazarlos
+                    function replaceTextNodes(node) {
+                        if (node.nodeType === Node.TEXT_NODE) {
+                            const text = node.textContent.trim();
+                            if (text.length > 0) {
+                                node.textContent = translation[key];
+                                return true;
+                            }
+                        } else {
+                            for (let child of node.childNodes) {
+                                if (replaceTextNodes(child)) {
+                                    break; // Solo reemplazar el primer nodo de texto significativo
+                                }
+                            }
+                        }
+                        return false;
+                    }
+                    
+                    replaceTextNodes(tempDiv);
+                    element.innerHTML = tempDiv.innerHTML;
                 } else {
+                    // Sin HTML, reemplazo directo
                     element.textContent = translation[key];
                 }
             } else {
@@ -1204,6 +1274,9 @@ class LanguageManager {
         
         // Actualizar hreflang
         this.updateHrefLang(lang);
+        
+        // Actualizar selector visual
+        this.updateLanguageSelector();
         
         // Remover clase de carga después de un pequeño retraso
         setTimeout(() => {
@@ -1273,5 +1346,79 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     console.log('Initializing LanguageManager...');
+    
+    // Limpiar localStorage si hay un idioma inválido
+    const storedLang = localStorage.getItem('preferred-language');
+    if (storedLang && !['es', 'en', 'de', 'fr', 'nl'].includes(storedLang)) {
+        localStorage.removeItem('preferred-language');
+        console.log('Removed invalid language from localStorage:', storedLang);
+    }
+    
     window.langManager = new LanguageManager();
+    
+    // Cargar el idioma solo si no es español (ya está en español por defecto)
+    const preferredLang = localStorage.getItem('preferred-language') || 'es';
+    if (preferredLang !== 'es') {
+        setTimeout(() => {
+            window.langManager.loadLanguage(preferredLang);
+        }, 100);
+    } else {
+        // Asegurar que el selector esté actualizado incluso en español
+        setTimeout(() => {
+            window.langManager.updateLanguageSelector();
+        }, 100);
+    }
+    
+    console.log('Language system initialized for language:', preferredLang);
 });
+
+// Backup: Si DOMContentLoaded ya pasó
+if (document.readyState !== 'loading') {
+    console.log('DOM already loaded, initializing immediately');
+    setTimeout(() => {
+        if (!window.langManager) {
+            // Limpiar localStorage si hay un idioma inválido
+            const storedLang = localStorage.getItem('preferred-language');
+            if (storedLang && !['es', 'en', 'de', 'fr', 'nl'].includes(storedLang)) {
+                localStorage.removeItem('preferred-language');
+                console.log('Removed invalid language from localStorage:', storedLang);
+            }
+            
+            window.langManager = new LanguageManager();
+            
+            const preferredLang = localStorage.getItem('preferred-language') || 'es';
+            if (preferredLang !== 'es') {
+                window.langManager.loadLanguage(preferredLang);
+            } else {
+                window.langManager.updateLanguageSelector();
+            }
+        }
+    }, 50);
+}
+
+// Funciones globales para debugging
+window.initLanguageSystem = function() {
+    console.log('Manual initialization requested');
+    if (!window.langManager) {
+        window.langManager = new LanguageManager();
+    }
+    const preferredLang = localStorage.getItem('preferred-language') || 'es';
+    window.langManager.loadLanguage(preferredLang);
+    console.log('Language system manually initialized');
+};
+
+window.changeLanguageTo = function(lang) {
+    console.log('Manual language change to:', lang);
+    if (!window.langManager) {
+        window.initLanguageSystem();
+    }
+    window.langManager.changeLanguage(lang);
+};
+
+// Funciones de compatibilidad con el sistema anterior
+window.translateTo = window.changeLanguageTo;
+window.forceTranslate = function(lang) {
+    if (window.langManager) {
+        window.langManager.loadLanguage(lang);
+    }
+};

@@ -114,6 +114,7 @@
   <!-- Fuentes y estilos -->
   <link rel="stylesheet" href="../../style.css" />
   <link rel="stylesheet" href="../blogStyles.css" />
+  <link rel="stylesheet" href="../../lang/language-selector.css" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -133,15 +134,52 @@
             <i class="fas fa-bars"></i>
         </button>
         <ul class="nav-links">
-            <li><a href="../../#servicios">Servicios</a></li>
+            <li><a href="../../#servicios" data-translate="nav_services">Servicios</a></li>
             <li><a href="../../#urbanizaciones">Urbanizaciones</a></li>
-            <li><a href="../../#testimonios">Testimonios</a></li>
-            <li><a href="../../#galeria">Proyectos</a></li>
-            <li><a href="../../#contacto">Contacto</a></li>
-            <li><a href="../blog.html" class="active">Blog</a></li>
+            <li><a href="../../#testimonios" data-translate="nav_testimonials">Testimonios</a></li>
+            <li><a href="../../#galeria" data-translate="nav_gallery">Proyectos</a></li>
+            <li><a href="../../#contacto" data-translate="nav_contact">Contacto</a></li>
+            <li><a href="../blog.html" class="active" data-translate="nav_blog">Blog</a></li>
+            
+            <!-- Selector de Idioma -->
+            <li class="nav-item language-selector-item">
+                <div id="language-selector">
+                    <div class="lang-dropdown">
+                        <div class="lang-current" id="current-lang">
+                            <span class="flag-icon flag-es" id="current-flag"></span>
+                            <span id="current-lang-text">ES</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="lang-options" id="lang-options">
+                            <div class="lang-option" data-lang="es">
+                                <span class="flag-icon flag-es"></span>
+                                <span>Español</span>
+                            </div>
+                            <div class="lang-option" data-lang="en">
+                                <span class="flag-icon flag-gb"></span>
+                                <span>English</span>
+                            </div>
+                            <div class="lang-option" data-lang="de">
+                                <span class="flag-icon flag-de"></span>
+                                <span>Deutsch</span>
+                            </div>
+                            <div class="lang-option" data-lang="fr">
+                                <span class="flag-icon flag-fr"></span>
+                                <span>Français</span>
+                            </div>
+                            <div class="lang-option" data-lang="nl">
+                                <span class="flag-icon flag-nl"></span>
+                                <span>Nederlands</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <!-- Iconos sociales -->
             <li class="social-icon"><a href="https://wa.me/34658645102" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
             <li class="social-icon"><a href="mailto:jardineriaperez83@gmail.com" aria-label="Correo Electrónico"><i class="fas fa-envelope"></i></a></li>
-            <li class="social-icon"><a href="tel:+34658645102"><i class="fas fa-phone"></i></a></li>
+            <li class="social-icon"><a href="tel:+34658645102" aria-label="Teléfono"><i class="fas fa-phone"></i></a></li>
         </ul>
     </nav>
 

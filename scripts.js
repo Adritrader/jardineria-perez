@@ -1,5 +1,32 @@
 // --- CONTACT FORM SUBMISSION ---
-/*const form = document.getElementById('formulario');
+/*const form // --- SCROLL ANIMATIONS ---
+AOS.init({
+  duration: 800,
+  easing: 'ease-in-out',
+  once: true,
+  mirror: false
+});
+
+// --- COOKIE FUNCTIONS ---
+function closeCookie() {
+  const cookieBox = document.getElementById('cookieBox');
+  if (cookieBox) {
+    cookieBox.style.display = 'none';
+    localStorage.setItem('cookieAccepted', 'true');
+  }
+}
+
+// Show cookie banner if not accepted
+document.addEventListener('DOMContentLoaded', function() {
+  const cookieAccepted = localStorage.getItem('cookieAccepted');
+  const cookieBox = document.getElementById('cookieBox');
+  
+  if (!cookieAccepted && cookieBox) {
+    cookieBox.style.display = 'flex';
+  } else if (cookieBox) {
+    cookieBox.style.display = 'none';
+  }
+});ent.getElementById('formulario');
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
