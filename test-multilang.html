@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Multiidioma - Jardinería Pérez</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../lang/language-selector.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .test-section {
+            background: #f5f5f5;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .nav-test {
+            background: #006633;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .nav-test nav {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-test a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-test">
+        <h1>Test Multiidioma</h1>
+        <nav>
+            <a href="#" data-translate="nav_services">Servicios</a>
+            <a href="#" data-translate="nav_contact">Contacto</a>
+            <a href="#" data-translate="nav_blog">Blog</a>
+        </nav>
+    </div>
+
+    <div class="test-section">
+        <h2 data-translate="hero_title">Jardinería Pérez</h2>
+        <p data-translate="hero_subtitle">Cuidado integral de jardines y piscinas durante todo el año</p>
+        <p data-translate="hero_description">Especialistas en mantenimiento de jardines, poda, limpieza y diseño de espacios verdes en Dénia y la Marina Alta.</p>
+        <button data-translate="hero_cta">Solicitar Presupuesto</button>
+    </div>
+
+    <div class="test-section">
+        <h2 data-translate="services_title">Nuestros Servicios</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+            <div style="border: 1px solid #ddd; padding: 15px; border-radius: 5px;">
+                <h3 data-translate="service_garden_title">Mantenimiento de Jardines</h3>
+                <p data-translate="service_garden_desc">Cuidado completo de tu jardín durante todo el año. Poda, limpieza, fertilización y diseño de espacios verdes.</p>
+            </div>
+            <div style="border: 1px solid #ddd; padding: 15px; border-radius: 5px;">
+                <h3 data-translate="service_pools_title">Limpieza de Piscinas</h3>
+                <p data-translate="service_pools_desc">Mantenimiento completo de piscinas. Limpieza, tratamiento químico del agua y mantenimiento de equipos.</p>
+            </div>
+            <div style="border: 1px solid #ddd; padding: 15px; border-radius: 5px;">
+                <h3 data-translate="service_design_title">Diseño de Jardines</h3>
+                <p data-translate="service_design_desc">Creación y diseño de jardines personalizados. Espacios únicos adaptados a tus necesidades y gustos.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2 data-translate="contact_title">Contacta con Nosotros</h2>
+        <p data-translate="contact_subtitle">¿Necesitas nuestros servicios? Ponte en contacto y te daremos presupuesto sin compromiso</p>
+        <p><strong data-translate="contact_phone">Teléfono:</strong> 658 64 51 02</p>
+        <p><strong data-translate="contact_email">Email:</strong> jardineriaperez83@gmail.com</p>
+        <p><strong data-translate="contact_hours">Horario:</strong> <span data-translate="contact_hours_text">Lunes a Viernes: 8:00 - 18:00</span></p>
+        <button data-translate="contact_cta">Solicitar Presupuesto Gratis</button>
+    </div>
+
+    <div class="test-section">
+        <h2>Estado actual del idioma</h2>
+        <p>Idioma activo: <span id="current-lang-display">Cargando...</span></p>
+        <p>Idiomas disponibles: ES, EN, DE, FR, NL</p>
+    </div>
+
+    <script src="../lang/translations.js"></script>
+    <script>
+        // Mostrar idioma actual
+        document.addEventListener('DOMContentLoaded', () => {
+            const display = document.getElementById('current-lang-display');
+            if (window.langManager) {
+                display.textContent = window.langManager.currentLanguage.toUpperCase();
+                
+                // Actualizar cada vez que cambie el idioma
+                const originalChangeLanguage = window.langManager.changeLanguage.bind(window.langManager);
+                window.langManager.changeLanguage = function(newLang) {
+                    originalChangeLanguage(newLang);
+                    display.textContent = newLang.toUpperCase();
+                };
+            }
+        });
+    </script>
+</body>
+</html>

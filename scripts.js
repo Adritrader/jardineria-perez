@@ -83,6 +83,65 @@ window.addEventListener('resize', () => {
   galleryItems.forEach(img => img.style.maxWidth = '100%');
 });
 
+// ===== TESTIMONIALS TOGGLE FUNCTIONALITY =====
+function toggleQuote(button) {
+  const card = button.closest('.testimonial-card');
+  const quote = card.querySelector('.quote');
+  const isExpanded = quote.classList.contains('expanded');
+  
+  if (isExpanded) {
+    quote.classList.remove('expanded');
+    button.textContent = 'Leer más';
+    card.style.maxHeight = '320px';
+  } else {
+    quote.classList.add('expanded');
+    button.textContent = 'Leer menos';
+    card.style.maxHeight = 'none';
+  }
+}
+
+// Inicializar botones de testimonios
+document.addEventListener('DOMContentLoaded', function() {
+  // Esperar a que las fuentes se carguen
+  setTimeout(() => {
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    
+    testimonialCards.forEach(card => {
+      const quote = card.querySelector('.quote');
+      const button = card.querySelector('.quote-toggle');
+      
+      if (quote && button) {
+        // Crear un elemento temporal para medir el texto completo
+        const tempDiv = document.createElement('div');
+        tempDiv.style.position = 'absolute';
+        tempDiv.style.visibility = 'hidden';
+        tempDiv.style.height = 'auto';
+        tempDiv.style.width = quote.offsetWidth + 'px';
+        tempDiv.style.fontSize = window.getComputedStyle(quote).fontSize;
+        tempDiv.style.lineHeight = window.getComputedStyle(quote).lineHeight;
+        tempDiv.style.fontFamily = window.getComputedStyle(quote).fontFamily;
+        tempDiv.innerHTML = quote.innerHTML;
+        
+        document.body.appendChild(tempDiv);
+        
+        const fullHeight = tempDiv.offsetHeight;
+        const lineHeight = parseInt(window.getComputedStyle(quote).lineHeight);
+        const maxHeight = lineHeight * 4; // 4 líneas
+        
+        document.body.removeChild(tempDiv);
+        
+        // Mostrar botón solo si el texto se trunca
+        if (fullHeight > maxHeight + 10) { // +10 para margen de error
+          button.classList.remove('hidden');
+          button.style.display = 'inline-block';
+        } else {
+          button.style.display = 'none';
+        }
+      }
+    });
+  }, 100);
+});
+
 // ===== LIGHTBOX PARA GALERÍA =====
 function openLightbox(imageSrc, caption) {
   const lightbox = document.getElementById('lightbox');

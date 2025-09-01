@@ -1,56 +1,98 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <!-- Página principal -->
     <url>
         <loc>https://jardineriaperez.netlify.app/</loc>
-        <lastmod>2025-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://jardineriaperez.netlify.app/legal/politicaprivacidad</loc>
-        <lastmod>2025-01-01</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://jardineriaperez.netlify.app/legal/terminoscondiciones</loc>
-        <lastmod>2025-01-01</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://jardineriaperez.netlify.app/legal/cookies</loc>
-        <lastmod>2025-01-01</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://jardineriaperez.netlify.app/pages/articles/consejosbasicos/</loc>
-        <lastmod>2025-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://jardineriaperez.netlify.app/pages/articles/piscinasdenia</loc>
-        <lastmod>2025-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://jardineriaperez.netlify.app/pages/articles/podapalmeras</loc>
-        <lastmod>2025-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://jardineriaperez.netlify.app/pages/articles/disenojardines</loc>
-        <lastmod>2025-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://jardineriaperez.netlify.app/pages/blog</loc>
-        <lastmod>2025-01-01</lastmod>
+        <lastmod>2025-01-16</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://jardineriaperez.netlify.app/images/logo-grande.png</image:loc>
+            <image:title>Jardinería Pérez - Servicios de jardinería en Dénia</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://jardineriaperez.netlify.app/images/cover.jpg</image:loc>
+            <image:title>Servicios profesionales de jardinería y piscinas</image:title>
+        </image:image>
+    </url>
+    
+    <!-- Blog principal -->
+    <url>
+        <loc>https://jardineriaperez.netlify.app/pages/blog.html</loc>
+        <lastmod>2025-01-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://jardineriaperez.netlify.app/images/jardin-mediterraneo.png</image:loc>
+            <image:title>Blog de jardinería mediterránea</image:title>
+        </image:image>
+    </url>
+    
+    <!-- Artículos del blog -->
+    <url>
+        <loc>https://jardineriaperez.netlify.app/pages/articles/consejosbasicos.html</loc>
+        <lastmod>2025-01-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://jardineriaperez.netlify.app/images/herramientas.jpg</image:loc>
+            <image:title>Consejos básicos de jardinería</image:title>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://jardineriaperez.netlify.app/pages/articles/disenojardines.html</loc>
+        <lastmod>2025-01-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://jardineriaperez.netlify.app/images/jardin-mediterraneo.png</image:loc>
+            <image:title>Diseño de jardines mediterráneos</image:title>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://jardineriaperez.netlify.app/pages/articles/piscinasdenia.html</loc>
+        <lastmod>2025-01-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://jardineriaperez.netlify.app/images/piscina-privada.jpeg</image:loc>
+            <image:title>Mantenimiento de piscinas en Dénia</image:title>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://jardineriaperez.netlify.app/pages/articles/podapalmeras.html</loc>
+        <lastmod>2025-01-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://jardineriaperez.netlify.app/images/palmerasmediterraneas.png</image:loc>
+            <image:title>Poda profesional de palmeras</image:title>
+        </image:image>
+    </url>
+    
+    <!-- Páginas legales -->
+    <url>
+        <loc>https://jardineriaperez.netlify.app/legal/politicaprivacidad.html</loc>
+        <lastmod>2025-01-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://jardineriaperez.netlify.app/legal/terminoscondiciones.html</loc>
+        <lastmod>2025-01-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://jardineriaperez.netlify.app/legal/cookies.html</loc>
+        <lastmod>2025-01-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
     </url>
 </urlset>

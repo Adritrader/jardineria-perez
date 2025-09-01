@@ -1,6 +1,43 @@
+# Robots.txt para Jardinería Pérez
+# Optimizado para SEO y rastreo de Google
+
 User-agent: *
 Allow: /
 Allow: /index.html
-Disallow: /images/
+Allow: /pages/
+Allow: /pages/blog.html
+Allow: /pages/articles/
+Allow: /legal/
+Allow: /images/*.jpg
+Allow: /images/*.jpeg
+Allow: /images/*.png
+Allow: /images/*.svg
+Allow: /images/*.webp
 
+# Bloquear archivos temporales y de sistema
+Disallow: /.*
+Disallow: /*.tmp
+Disallow: /*.log
+Disallow: /temp/
+Disallow: /cache/
+
+# Permitir rastreadores específicos
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit/
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Sitemaps
 Sitemap: https://jardineriaperez.netlify.app/sitemap.xml
+
+# Host principal
+Host: https://jardineriaperez.netlify.app
