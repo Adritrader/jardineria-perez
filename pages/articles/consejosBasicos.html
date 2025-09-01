@@ -102,338 +102,380 @@
         }
     }
     </script>
-  <meta name="twitter:description" content="Diseño, mantenimiento y limpieza de jardines y piscinas todo el año. Profesionales en Dénia y Marina Alta." />
-  <meta name="twitter:image" content="https://jardineriaperez.netlify.app/images/logo-pequeño.png" />
 
-  <!-- Íconos -->
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  <link rel="icon" href="../images/logo-pequeño.png" sizes="32x32" />
-  <link rel="icon" href="../images/logomediano.png" sizes="192x192" />
-  <link rel="apple-touch-icon" href="../images/logomediano.png" />
-
-  <!-- Fuentes y estilos -->
-  <link rel="stylesheet" href="../../style.css" />
-  <link rel="stylesheet" href="../blogStyles.css" />
-  <link rel="stylesheet" href="../../lang/language-selector.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
-  <!-- Título -->
-  <title>Jardinería Pérez | Consejos Básicos Jardinería</title>
-
+    <!-- Enlaces -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../lang/language-selector.css">
+    <link rel="stylesheet" href="../blogStyles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
 </head>
-<body class="blog-page article-page">
-    <!-- NAVBAR -->
-    <nav class="navbar">
+
+<body>
+  <!-- HEADER PRINCIPAL -->
+  <header class="main-header">
+    <div class="container">
+      <div class="header-content">
         <div class="logo">
-            <a href="../../"><img src="../../images/logo-pequeño.png" alt="Logo Jardinería Pérez"></a>
-            <a href="../../"><span>Jardinería Pérez</span></a>
+          <img src="../../images/logomediano.png" alt="Jardinería Pérez - Mantenimiento de jardines en Dénia">
         </div>
-        <button class="menu-toggle" aria-label="Menú">
-            <i class="fas fa-bars"></i>
-        </button>
+        
+        <div class="header-right">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>+34 615 75 65 84</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>info@jardineriaperez.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Dénia, Marina Alta</span>
+            </div>
+          </div>
+          
+          <!-- Selector de idiomas -->
+          <div class="language-selector">
+            <div class="selected" data-translate="current_lang">ES</div>
+            <div class="options">
+              <div class="option" data-lang="es">🇪🇸 Español</div>
+              <div class="option" data-lang="en">🇬🇧 English</div>
+              <div class="option" data-lang="de">🇩🇪 Deutsch</div>
+              <div class="option" data-lang="fr">🇫🇷 Français</div>
+              <div class="option" data-lang="nl">🇳🇱 Nederlands</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="main-nav">
+    <div class="container">
+      <div class="nav-content">
+        <div class="nav-logo">
+          <a href="../../index.html">
+            <img src="../../images/logo-pequeño.png" alt="Jardinería Pérez">
+          </a>
+        </div>
+        
         <ul class="nav-links">
-            <li><a href="../../#servicios" data-translate="nav_services">Servicios</a></li>
-            <li><a href="../../#urbanizaciones">Urbanizaciones</a></li>
-            <li><a href="../../#testimonios" data-translate="nav_testimonials">Testimonios</a></li>
-            <li><a href="../../#galeria" data-translate="nav_gallery">Proyectos</a></li>
-            <li><a href="../../#contacto" data-translate="nav_contact">Contacto</a></li>
-            <li><a href="../blog.html" class="active" data-translate="nav_blog">Blog</a></li>
-            
-            <!-- Selector de Idioma -->
-            <li class="nav-item language-selector-item">
-                <div id="language-selector">
-                    <div class="lang-dropdown">
-                        <div class="lang-current" id="current-lang">
-                            <span class="flag-icon flag-es" id="current-flag"></span>
-                            <span id="current-lang-text">ES</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="lang-options" id="lang-options">
-                            <div class="lang-option" data-lang="es">
-                                <span class="flag-icon flag-es"></span>
-                                <span>Español</span>
-                            </div>
-                            <div class="lang-option" data-lang="en">
-                                <span class="flag-icon flag-gb"></span>
-                                <span>English</span>
-                            </div>
-                            <div class="lang-option" data-lang="de">
-                                <span class="flag-icon flag-de"></span>
-                                <span>Deutsch</span>
-                            </div>
-                            <div class="lang-option" data-lang="fr">
-                                <span class="flag-icon flag-fr"></span>
-                                <span>Français</span>
-                            </div>
-                            <div class="lang-option" data-lang="nl">
-                                <span class="flag-icon flag-nl"></span>
-                                <span>Nederlands</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            
-            <!-- Iconos sociales -->
-            <li class="social-icon"><a href="https://wa.me/34658645102" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
-            <li class="social-icon"><a href="mailto:jardineriaperez83@gmail.com" aria-label="Correo Electrónico"><i class="fas fa-envelope"></i></a></li>
-            <li class="social-icon"><a href="tel:+34658645102" aria-label="Teléfono"><i class="fas fa-phone"></i></a></li>
+          <li><a href="../../index.html#servicios" data-translate="nav_services">Servicios</a></li>
+          <li><a href="../../index.html#galeria" data-translate="nav_gallery">Galería</a></li>
+          <li><a href="../../index.html#testimonios" data-translate="nav_testimonials">Testimonios</a></li>
+          <li><a href="../blog.html" data-translate="nav_blog">Blog</a></li>
+          <li><a href="../../index.html#contacto" data-translate="nav_contact">Contacto</a></li>
         </ul>
-    </nav>
+        
+        <div class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO SECTION DEL ARTÍCULO -->
+    <section class="article-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="../../index.html">Inicio</a> > 
+          <a href="../blog.html">Blog</a> > 
+          <span>Consejos Básicos de Jardinería</span>
+        </div>
+        
+        <h1 class="article-title">🌱 Consejos Básicos de Jardinería para Principiantes</h1>
+        
+        <div class="article-meta">
+          <div class="author-info">
+            <img src="../../images/logo-pequeño.png" alt="Jardinería Pérez" class="author-avatar">
+            <div>
+              <span class="author-name">Jardinería Pérez</span>
+              <time class="publish-date" datetime="2025-01-16">16 de enero, 2025</time>
+            </div>
+          </div>
+          
+          <div class="article-tags">
+            <span class="tag">Consejos</span>
+            <span class="tag">Principiantes</span>
+            <span class="tag">Jardinería</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- CONTENIDO DEL ARTÍCULO -->
-    <div class="article-container">
-        <!-- HEADER DEL ARTÍCULO -->
-        <header class="article-header">
-            <nav class="breadcrumb">
-                <a href="../../" data-translate="article_breadcrumb_home">Inicio</a> > <a href="../blog.html" data-translate="article_breadcrumb_blog">Blog</a> > <span>Consejos Básicos</span>
-            </nav>
-            <h1>Consejos Básicos de Jardinería para Principiantes</h1>
-            <div class="article-meta">
-                <span><i class="fas fa-calendar"></i> 15 Jun 2025</span>
-                <span><i class="fas fa-clock"></i> 8 min lectura</span>
-                <span><i class="fas fa-user"></i> Jardinería Pérez</span>
-                <span><i class="fas fa-tag"></i> Consejos Básicos</span>
-            </div>
-        </header>
+    <article class="article-content">
+      <div class="container">
+        <div class="content-wrapper">
+          <div class="article-image">
+            <img src="../../images/herramientas.jpg" alt="Herramientas básicas de jardinería para principiantes" loading="lazy">
+            <figcaption>Herramientas esenciales para comenzar en el mundo de la jardinería</figcaption>
+          </div>
 
-        <!-- CONTENIDO PRINCIPAL -->
-        <main class="article-content">
+          <div class="article-text">
+            <p class="lead">🌿 <strong>Comenzar en el mundo de la jardinería</strong> puede parecer abrumador al principio, pero con los consejos adecuados y un poco de paciencia, cualquier persona puede crear y mantener un hermoso jardín. En <strong>Jardinería Pérez</strong>, con más de 15 años de experiencia en Dénia y la Marina Alta, compartimos contigo los consejos fundamentales que todo principiante debe conocer.</p>
+
+            <h2>🌱 1. Conoce Tu Espacio y Clima</h2>
+            <p>Antes de plantar cualquier cosa, es fundamental entender las características de tu jardín:</p>
             
-            <!-- Imagen principal del artículo -->
-            <div style="text-align: center; margin: 2rem 0;">
-                <img src="../../images/herramientas.jpg" alt="Herramientas básicas de jardinería para principiantes" 
-                     style="width: 100%; max-width: 600px; height: 300px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 25px rgba(0, 102, 51, 0.15);">
-                <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem; font-style: italic;">Herramientas esenciales para comenzar en jardinería</p>
+            <ul class="tips-list">
+              <li><strong>Exposición solar:</strong> Observa cuántas horas de sol recibe cada área de tu jardín durante el día</li>
+              <li><strong>Tipo de suelo:</strong> Determina si tu suelo es arcilloso, arenoso o franco</li>
+              <li><strong>Drenaje:</strong> Verifica cómo se comporta el agua después de la lluvia</li>
+              <li><strong>Clima mediterráneo:</strong> En Dénia, aprovecha las ventajas del clima mediterráneo eligiendo plantas autóctonas</li>
+            </ul>
+
+            <div class="tip-box">
+              <h3>💡 Consejo de Experto</h3>
+              <p>En la zona de Dénia y Marina Alta, las plantas mediterráneas como lavanda, romero, olivos y palmeras son ideales porque están adaptadas al clima local y requieren menos mantenimiento.</p>
             </div>
 
-            <p>Si vives en <strong>Dénia</strong> o en la comarca de la <strong>Marina Alta</strong>, sabes lo importante que es contar con un jardín bonito y bien cuidado durante todo el año. Para los principiantes en jardinería, comenzar puede parecer abrumador, pero con los consejos adecuados y las herramientas correctas, cualquiera puede crear y mantener un hermoso espacio verde.</p>
+            <h2>🚿 2. Domina las Técnicas de Riego</h2>
+            <p>El riego es uno de los aspectos más críticos en la jardinería. Muchas plantas mueren por exceso de agua más que por falta de ella:</p>
 
-            <h2>🌱 Herramientas Básicas para Comenzar</h2>
-            
-            <div style="display: flex; gap: 2rem; margin: 2rem 0; align-items: center; flex-wrap: wrap;">
-                <div style="flex: 1; min-width: 300px;">
-                    <p>Para empezar en jardinería, no necesitas una gran inversión. Las herramientas básicas incluyen:</p>
-                    <ul>
-                        <li><strong>Pala y azadón</strong> - Para preparar el terreno y trasplantar</li>
-                        <li><strong>Tijeras de podar</strong> - Esenciales para el mantenimiento de plantas</li>
-                        <li><strong>Regadera o manguera</strong> - Para un riego adecuado</li>
-                        <li><strong>Guantes de jardinería</strong> - Protección para las manos</li>
-                        <li><strong>Rastrillo pequeño</strong> - Para limpiar y nivelar el suelo</li>
-                    </ul>
-                </div>
-                <div style="flex: 1; min-width: 250px;">
-                    <img src="../../images/jardin-mediterraneo.png" alt="Jardín mediterráneo bien cuidado" 
-                         style="width: 100%; height: 200px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 25px rgba(0, 102, 51, 0.15);">
-                </div>
+            <h3>Reglas básicas del riego:</h3>
+            <ul class="tips-list">
+              <li><strong>Riega profundo y menos frecuente:</strong> Es mejor un riego abundante cada 2-3 días que riegos superficiales diarios</li>
+              <li><strong>Mejor momento:</strong> Riega temprano en la mañana o al atardecer para evitar la evaporación</li>
+              <li><strong>Técnica del dedo:</strong> Introduce el dedo 2-3 cm en la tierra. Si está seca, es momento de regar</li>
+              <li><strong>Riego por goteo:</strong> Considera instalar un sistema de riego por goteo para mayor eficiencia</li>
+            </ul>
+
+            <h2>✂️ 3. Aprende los Fundamentos de la Poda</h2>
+            <p>La poda correcta estimula el crecimiento saludable y mantiene las plantas con buen aspecto:</p>
+
+            <h3>Principios básicos de poda:</h3>
+            <ul class="tips-list">
+              <li><strong>Timing:</strong> La mayoría de plantas se podan en invierno cuando están dormantes</li>
+              <li><strong>Herramientas limpias:</strong> Siempre usa tijeras afiladas y desinfectadas</li>
+              <li><strong>Regla del 1/3:</strong> Nunca cortes más del 30% de la planta de una vez</li>
+              <li><strong>Cortes limpios:</strong> Haz cortes en ángulo, justo por encima de un brote o nudo</li>
+            </ul>
+
+            <div class="warning-box">
+              <h3>⚠️ Atención Especial</h3>
+              <p>Para la poda de palmeras en Dénia, es recomendable contactar profesionales debido a las regulaciones municipales y la prevención del picudo rojo.</p>
             </div>
 
-            <h2>💧 Técnicas de Riego Eficiente</h2>
-            
-            <p>El riego es uno de los aspectos más importantes en jardinería, especialmente en el clima mediterráneo de Dénia. Un riego inadecuado puede ser la diferencia entre plantas sanas y plantas que luchan por sobrevivir.</p>
+            <h2>🌿 4. Selección de Plantas para Principiantes</h2>
+            <p>Comienza con plantas resistentes y fáciles de cuidar:</p>
 
-            <div class="service-card">
-                <h3>Consejos para un Riego Eficaz</h3>
-                <p><strong>Mejor momento:</strong> Riega temprano en la mañana o al atardecer para evitar la evaporación excesiva.</p>
-                <p><strong>Frecuencia:</strong> Es mejor regar profundamente pero menos frecuentemente que riegos superficiales diarios.</p>
-                <p><strong>Método:</strong> Riega cerca de la base de las plantas, no sobre las hojas, para prevenir enfermedades fúngicas.</p>
-            </div>
-
-            <h2>✂️ Poda Básica y Mantenimiento</h2>
-            
-            <div style="display: flex; gap: 2rem; margin: 2rem 0; align-items: flex-start; flex-wrap: wrap;">
-                <div style="flex: 1; min-width: 250px;">
-                    <img src="../../images/podapalmeras.png" alt="Técnicas de poda profesional" 
-                         style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 25px rgba(0, 102, 51, 0.15);">
-                    <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem; font-style: italic; text-align: center;">Poda profesional de palmeras</p>
-                </div>
-                <div style="flex: 1; min-width: 300px;">
-                    <p>La poda es esencial para mantener las plantas sanas y con buena forma. Cada tipo de planta tiene sus propias necesidades de poda:</p>
-                    
-                    <h3>Cuándo Podar</h3>
-                    <ul>
-                        <li><strong>Plantas de flor:</strong> Después de la floración</li>
-                        <li><strong>Arbustos perennes:</strong> A finales de invierno</li>
-                        <li><strong>Palmeras:</strong> Solo hojas secas o dañadas</li>
-                        <li><strong>Setos:</strong> Durante la época de crecimiento</li>
-                    </ul>
-                </div>
+            <h3>Plantas ideales para principiantes en clima mediterráneo:</h3>
+            <div class="plants-grid">
+              <div class="plant-item">
+                <h4>Lavanda</h4>
+                <p>Aromática, resistente a la sequía, atrae polinizadores</p>
+              </div>
+              <div class="plant-item">
+                <h4>Romero</h4>
+                <p>Perenne, comestible, muy resistente</p>
+              </div>
+              <div class="plant-item">
+                <h4>Geranios</h4>
+                <p>Floración prolongada, fácil mantenimiento</p>
+              </div>
+              <div class="plant-item">
+                <h4>Suculentas</h4>
+                <p>Mínimo riego, gran variedad de formas</p>
+              </div>
             </div>
 
-            <h2>🌿 Selección de Plantas para Principiantes</h2>
-            
-            <p>En el clima mediterráneo de Dénia, algunas plantas son especialmente adecuadas para jardineros principiantes por su resistencia y facilidad de cuidado:</p>
+            <h2>🔧 5. Herramientas Esenciales</h2>
+            <p>No necesitas muchas herramientas para comenzar, pero asegúrate de que sean de calidad:</p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
-                <div class="service-card">
-                    <h3>🌹 Plantas Mediterráneas</h3>
-                    <ul>
-                        <li>Lavanda - Aromática y resistente</li>
-                        <li>Romero - Comestible y decorativo</li>
-                        <li>Oleandro - Floración abundante</li>
-                        <li>Bougainvillea - Color vibrante</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3>🌱 Plantas de Interior/Exterior</h3>
-                    <ul>
-                        <li>Geranios - Fáciles de cuidar</li>
-                        <li>Petunias - Floración continua</li>
-                        <li>Suculentas - Muy resistentes</li>
-                        <li>Hierbas aromáticas - Útiles y bonitas</li>
-                    </ul>
-                </div>
-            </div>
+            <ul class="tips-list">
+              <li><strong>Pala de mano:</strong> Para plantar y transplantar</li>
+              <li><strong>Tijeras de podar:</strong> Para cortes limpios y precisos</li>
+              <li><strong>Regadera o manguera:</strong> Para el riego controlado</li>
+              <li><strong>Guantes:</strong> Protección básica para las manos</li>
+              <li><strong>Rastrillo pequeño:</strong> Para limpiar y airear la tierra</li>
+            </ul>
 
-            <h2>🏡 Planificación de tu Jardín</h2>
-            
-            <div style="background: linear-gradient(135deg, #f8fdf9, #e8f5e8); padding: 2rem; border-radius: 12px; margin: 2rem 0; border-left: 4px solid #4a9b6b;">
-                <h3 style="color: #006633; margin-bottom: 1rem;">Pasos para Planificar tu Jardín</h3>
-                <ol style="font-size: 1.1rem; line-height: 1.7;">
-                    <li><strong>Observa tu espacio:</strong> Nota las horas de sol, sombra y drenaje</li>
-                    <li><strong>Define tus objetivos:</strong> ¿Quieres flores, huerto, o bajo mantenimiento?</li>
-                    <li><strong>Elige plantas adecuadas:</strong> Considera el clima local y tu experiencia</li>
-                    <li><strong>Planifica el riego:</strong> Agrupa plantas con necesidades similares</li>
-                    <li><strong>Comienza pequeño:</strong> Es mejor empezar con pocas plantas y expandir gradualmente</li>
-                </ol>
+            <h2>🍂 6. Preparación del Suelo</h2>
+            <p>Un suelo saludable es la base de un jardín exitoso:</p>
+
+            <ul class="tips-list">
+              <li><strong>Añade compost:</strong> Mejora la estructura y fertilidad del suelo</li>
+              <li><strong>Aireación:</strong> Afloja la tierra compactada con una horquilla</li>
+              <li><strong>pH equilibrado:</strong> La mayoría de plantas prefieren un pH entre 6.0 y 7.0</li>
+              <li><strong>Drenaje:</strong> Asegúrate de que el agua no se acumule</li>
+            </ul>
+
+            <h2>🐛 7. Control Natural de Plagas</h2>
+            <p>Prevenir es mejor que curar cuando se trata de plagas:</p>
+
+            <ul class="tips-list">
+              <li><strong>Biodiversidad:</strong> Planta variedad de especies para atraer insectos beneficiosos</li>
+              <li><strong>Inspección regular:</strong> Revisa tus plantas semanalmente</li>
+              <li><strong>Métodos naturales:</strong> Usa jabón insecticida o aceite de neem</li>
+              <li><strong>Plantas repelentes:</strong> Albahaca, menta y caléndulas repelen muchas plagas</li>
+            </ul>
+
+            <div class="tip-box">
+              <h3>🌍 Jardinería Sostenible</h3>
+              <p>En Jardinería Pérez promovemos prácticas sostenibles: recoge agua de lluvia, haz compost con restos orgánicos y elige plantas nativas que requieren menos recursos.</p>
             </div>
 
-            <h2>🔧 Mantenimiento Estacional</h2>
-            
-            <p>En Dénia, cada estación requiere cuidados específicos para mantener tu jardín en perfectas condiciones:</p>
+            <h2>📅 8. Planificación Estacional</h2>
+            <p>En el clima mediterráneo de Dénia, cada estación tiene sus tareas:</p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
-                <div class="service-card" style="background: linear-gradient(135deg, #fff3cd, #fdf7e3);">
-                    <h3 style="color: #856404;">🌸 Primavera</h3>
-                    <ul>
-                        <li>Preparar el suelo</li>
-                        <li>Plantar nuevas especies</li>
-                        <li>Incrementar el riego</li>
-                        <li>Fertilizar plantas</li>
-                    </ul>
-                </div>
-                <div class="service-card" style="background: linear-gradient(135deg, #d4edda, #e8f5e9);">
-                    <h3 style="color: #155724;">☀️ Verano</h3>
-                    <ul>
-                        <li>Riego regular temprano</li>
-                        <li>Proteger del sol intenso</li>
-                        <li>Control de plagas</li>
-                        <li>Recolección de frutos</li>
-                    </ul>
-                </div>
-                <div class="service-card" style="background: linear-gradient(135deg, #f8d7da, #f5e1e3);">
-                    <h3 style="color: #721c24;">🍂 Otoño</h3>
-                    <ul>
-                        <li>Recolectar hojas secas</li>
-                        <li>Plantar bulbos</li>
-                        <li>Reducir el riego</li>
-                        <li>Preparar para invierno</li>
-                    </ul>
-                </div>
-                <div class="service-card" style="background: linear-gradient(135deg, #d1ecf1, #e3f4f6);">
-                    <h3 style="color: #0c5460;">❄️ Invierno</h3>
-                    <ul>
-                        <li>Proteger plantas sensibles</li>
-                        <li>Poda de mantenimiento</li>
-                        <li>Planificar próxima temporada</li>
-                        <li>Mantener herramientas</li>
-                    </ul>
-                </div>
-            </div>
+            <h3>Calendario básico de jardinería:</h3>
+            <ul class="tips-list">
+              <li><strong>Primavera:</strong> Época de plantación y inicio del riego regular</li>
+              <li><strong>Verano:</strong> Riego intensivo y protección del sol excesivo</li>
+              <li><strong>Otoño:</strong> Plantación de árboles y preparación para el invierno</li>
+              <li><strong>Invierno:</strong> Poda, planificación y mantenimiento de herramientas</li>
+            </ul>
 
-            <div class="conclusion">
-                <h2>Comienza tu Aventura en Jardinería</h2>
-                <p>La jardinería es una actividad gratificante que mejora tanto tu hogar como tu bienestar. En Dénia, con nuestro clima favorable, es el lugar perfecto para comenzar. Recuerda que cada jardinero experto fue una vez principiante - lo importante es empezar y aprender de la experiencia.</p>
-                
-                <p>Si necesitas ayuda profesional o asesoramiento específico para tu jardín en Dénia, no dudes en contactar con expertos locales que conocen perfectamente las condiciones de nuestra zona.</p>
-            </div>
+            <h2>🏆 Conclusión</h2>
+            <p>La jardinería es un proceso de aprendizaje continuo que requiere <strong>paciencia, observación y práctica</strong>. No te desanimes si cometes errores al principio; incluso los jardineros más experimentados siguen aprendiendo.</p>
 
-            <div class="signature">
-                <p><strong>¿Necesitas ayuda profesional para tu jardín?</strong></p>
-                <p>En Jardinería Pérez ofrecemos servicios completos de diseño, instalación y mantenimiento de jardines en Dénia y Marina Alta. ¡Contacta con nosotros para una consulta gratuita!</p>
-            </div>
-        </main>
-        
-        <!-- FOOTER DEL ARTÍCULO -->
-        <footer class="article-footer">
-            <div class="article-tags">
-                <span class="tag">#JardineríaBásica</span>
-                <span class="tag">#ConsejosPrincipiantes</span>
-                <span class="tag">#JardineríaDénia</span>
-                <span class="tag">#CuidadoPlantas</span>
-            </div>
-            <div class="article-share">
-                <h4>Comparte este artículo:</h4>
-                <div class="share-buttons">
-                    <a href="https://wa.me/?text=Consejos%20Básicos%20de%20Jardinería%20-%20https://jardineriaperez.netlify.app/pages/articles/consejosbasicos.html" target="_blank" class="share-btn whatsapp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="mailto:?subject=Consejos Básicos de Jardinería&body=Te comparto este artículo sobre jardinería: https://jardineriaperez.netlify.app/pages/articles/consejosbasicos.html" class="share-btn email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-        </footer>
-    </div>
+            <p>Recuerda que cada jardín es único, y lo que funciona en un lugar puede no funcionar en otro. La clave está en observar, experimentar y adaptar estos consejos básicos a tu situación específica.</p>
 
-    <!-- FOOTER PRINCIPAL -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <!-- Logo y descripción -->
-                <div class="footer-column">
-                    <div class="footer-logo">
-                        <img src="../../images/logo-pequeño.png" alt="Jardinería Pérez Logo">
-                        <h3>Jardinería Pérez</h3>
-                    </div>
-                    <p>Expertos en diseño y mantenimiento de jardines y piscinas en Dénia y Marina Alta.</p>
-                    <div class="social-links">
-                        <a href="https://wa.me/34658645102"><i class="fab fa-whatsapp"></i></a>
-                        <a href="mailto:jardineriaperez83@gmail.com"><i class="fa fa-envelope"></i></a>
-                    </div>
-                </div>
-                <!-- Servicios -->
-                <div class="footer-column">
-                    <h4>Servicios</h4>
-                    <ul>
-                        <li><a href="../../#servicios">Diseño de Jardines</a></li>
-                        <li><a href="../../#servicios">Mantenimiento Profesional</a></li>
-                        <li><a href="../../#servicios">Sistemas de Riego</a></li>
-                        <li><a href="../../#urbanizaciones">Urbanizaciones</a></li>
-                    </ul>
-                </div>
-                <!-- Legal -->
-                <div class="footer-column">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="../../legal/politicaprivacidad.html">Política de Privacidad</a></li>
-                        <li><a href="../../legal/terminoscondiciones.html">Términos y Condiciones</a></li>
-                        <li><a href="../../legal/cookies.html">Cookies</a></li>
-                    </ul>
-                </div>
-                <!-- Contacto -->
-                <div class="footer-column">
-                    <h4>Contacto</h4>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i>Calle Senieta 38 4º E<br>03700 Dénia, Alicante</li>
-                        <li><a href="tel:+34658645102"><i class="fas fa-phone"></i>+34 658 64 51 02</a></li>
-                        <li><i class="fas fa-envelope"></i>jardineriaperez83@gmail.com</li>
-                    </ul>
-                </div>
+            <div class="cta-box">
+              <h3>🌟 ¿Necesitas Ayuda Profesional?</h3>
+              <p>En <strong>Jardinería Pérez</strong> ofrecemos servicios profesionales de diseño, mantenimiento y asesoramiento para jardines en Dénia y toda la Marina Alta. ¡Contacta con nosotros para una consulta gratuita!</p>
+              <a href="../../index.html#contacto" class="cta-button">Solicitar Presupuesto Gratuito</a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Jardinería Pérez - Todos los derechos reservados | Diseñado con <i class="fas fa-heart" style="color: red;"></i> por VaporWeb Designs</p>
-            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </article>
 
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
-    
-    <!-- JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="../../lang/translations.js"></script>
-    <script src="../../scripts.js"></script>
+    <!-- ARTÍCULOS RELACIONADOS -->
+    <section class="related-articles">
+      <div class="container">
+        <h2>📚 Artículos Relacionados</h2>
+        <div class="articles-grid">
+          <article class="article-card">
+            <img src="../../images/jardin-mediterraneo.png" alt="Diseño de jardines mediterráneos" loading="lazy">
+            <div class="card-content">
+              <h3><a href="disenojardines.html">Diseño de Jardines Mediterráneos</a></h3>
+              <p>Aprende a crear espacios verdes únicos adaptados al clima de la Costa Blanca.</p>
+              <a href="disenojardines.html" class="read-more">Leer más →</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <img src="../../images/palmerasmediterraneas.png" alt="Poda de palmeras" loading="lazy">
+            <div class="card-content">
+              <h3><a href="podapalmeras.html">Poda Profesional de Palmeras</a></h3>
+              <p>Técnicas especializadas para mantener tus palmeras saludables y libres de plagas.</p>
+              <a href="podapalmeras.html" class="read-more">Leer más →</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <img src="../../images/piscinalimpieza.jpeg" alt="Mantenimiento de piscinas" loading="lazy">
+            <div class="card-content">
+              <h3><a href="piscinasdenia.html">Mantenimiento de Piscinas en Dénia</a></h3>
+              <p>Guía completa para mantener tu piscina cristalina durante todo el año.</p>
+              <a href="piscinasdenia.html" class="read-more">Leer más →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER PRINCIPAL - IDÉNTICO AL INDEX -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 data-translate="footer_title">Jardinería Pérez</h3>
+          <p data-translate="footer_subtitle">Tu socio de confianza en jardinería</p>
+          <p data-translate="footer_description">Especialistas en mantenimiento de jardines, poda de palmeras y limpieza de piscinas en Dénia y Marina Alta.</p>
+          
+          <div class="social-links">
+            <a href="https://www.facebook.com/jardineriaperez" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/jardineriaperez" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/34615756584" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4 data-translate="footer_services">Servicios</h4>
+          <ul>
+            <li><a href="../../index.html#servicios" data-translate="service_garden_title">Mantenimiento de Jardines</a></li>
+            <li><a href="../../index.html#servicios" data-translate="service_design_title">Diseño de Jardines</a></li>
+            <li><a href="../../index.html#servicios" data-translate="service_pruning_title">Poda de Palmeras</a></li>
+            <li><a href="../../index.html#servicios" data-translate="service_pools_title">Limpieza de Piscinas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4 data-translate="footer_quick_links">Enlaces Rápidos</h4>
+          <ul>
+            <li><a href="../../index.html" data-translate="nav_services">Inicio</a></li>
+            <li><a href="../../index.html#galeria" data-translate="nav_gallery">Galería</a></li>
+            <li><a href="../../index.html#testimonios" data-translate="nav_testimonials">Testimonios</a></li>
+            <li><a href="../blog.html" data-translate="nav_blog">Blog</a></li>
+            <li><a href="../../index.html#contacto" data-translate="nav_contact">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4 data-translate="footer_contact_info">Información de Contacto</h4>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span>+34 615 75 65 84</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@jardineriaperez.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Dénia, Marina Alta</span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <span>Lun - Vie: 8:00 - 18:00</span>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4 data-translate="footer_legal">Legal</h4>
+          <ul>
+            <li><a href="../../legal/politicaprivacidad.html" data-translate="footer_privacy">Política de Privacidad</a></li>
+            <li><a href="../../legal/terminoscondiciones.html" data-translate="footer_terms">Términos y Condiciones</a></li>
+            <li><a href="../../legal/cookies.html" data-translate="footer_cookies">Política de Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Jardinería Pérez. <span data-translate="footer_rights">Todos los derechos reservados.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+  
+  <!-- JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../../lang/translations.js"></script>
+  <script src="../../scripts.js"></script>
+
 </body>
 </html>

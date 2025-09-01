@@ -1,5 +1,4 @@
-// --- CONTACT FORM SUBMISSION ---
-/*const form // --- SCROLL ANIMATIONS ---
+// --- SCROLL ANIMATIONS ---
 AOS.init({
   duration: 800,
   easing: 'ease-in-out',
@@ -26,7 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
   } else if (cookieBox) {
     cookieBox.style.display = 'none';
   }
-});ent.getElementById('formulario');
+});
+
+// --- CONTACT FORM SUBMISSION ---
+/*const form = document.getElementById('formulario');
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
