@@ -19,7 +19,7 @@
     <meta property="og:image" content="../images/logo-grande.png">
     <meta property="og:type" content="website">
 </head>
-<body>
+<body class="blog-page">
     <!-- NAVBAR -->
     <nav class="navbar">
         <div class="logo">
@@ -56,213 +56,290 @@
     <!-- BLOG CONTENT -->
     <main class="blog-main">
         <div class="container">
-            <div class="blog-layout">
-                <!-- ARTÍCULOS DESTACADOS -->
-                <section class="featured-articles">
-                    <h2>Artículos Destacados</h2>
-                    
-                    <!-- Artículo Principal -->
-                    <article class="featured-article-main">
-                        <div class="article-image">
+            <!-- ARTÍCULOS DESTACADOS EN TARJETAS -->
+            <section class="featured-articles">
+                <h2>Artículos Destacados</h2>
+                
+                <div class="articles-container">
+                    <!-- Artículo Principal Grande -->
+                    <article class="article-card hero-card">
+                        <div class="card-image">
                             <img src="../images/jardin-mediterraneo.png" alt="Plantas mediterráneas para jardín">
-                            <span class="article-category">Plantas</span>
+                            <div class="card-overlay">
+                                <span class="article-category featured">Plantas</span>
+                            </div>
                         </div>
-                        <div class="article-content">
+                        <div class="card-content">
                             <h3><a href="articles/plantasmediterraneas.html">10 Especies de Plantas Perfectas para el Clima Mediterráneo</a></h3>
                             <p class="article-excerpt">Descubre las mejores especies de plantas autóctonas y adaptadas al clima mediterráneo de Dénia y la Marina Alta. Una guía completa con consejos de plantación y mantenimiento.</p>
                             <div class="article-meta">
                                 <span><i class="fas fa-calendar"></i> 1 Sep 2025</span>
                                 <span><i class="fas fa-clock"></i> 8 min lectura</span>
-                                <span><i class="fas fa-tag"></i> Plantas Mediterráneas</span>
+                                <span><i class="fas fa-user"></i> Jardinería Pérez</span>
                             </div>
-                            <a href="articles/plantasmediterraneas.html" class="read-more">Leer artículo completo <i class="fas fa-arrow-right"></i></a>
+                            <a href="articles/plantasmediterraneas.html" class="read-more-btn">
+                                Leer artículo completo 
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </article>
 
-                    <!-- Artículos Secundarios -->
-                    <div class="featured-articles-grid">
-                        <article class="featured-article">
-                            <div class="article-image">
+                    <!-- Grid de Artículos Secundarios -->
+                    <div class="articles-grid">
+                        <article class="article-card">
+                            <div class="card-image">
                                 <img src="../images/piscinalimpieza.jpeg" alt="Mantenimiento de piscinas">
-                                <span class="article-category">Piscinas</span>
+                                <div class="card-overlay">
+                                    <span class="article-category piscinas">Piscinas</span>
+                                </div>
                             </div>
-                            <div class="article-content">
+                            <div class="card-content">
                                 <h4><a href="articles/piscinasdenia.html">Guía Completa: Mantenimiento de Piscinas en Dénia</a></h4>
-                                <p>Todo lo que necesitas saber sobre el cuidado y mantenimiento de tu piscina durante todo el año en el clima mediterráneo.</p>
+                                <p>Todo lo que necesitas saber sobre el cuidado y mantenimiento de tu piscina durante todo el año.</p>
                                 <div class="article-meta">
                                     <span><i class="fas fa-calendar"></i> 28 Ago 2025</span>
                                     <span><i class="fas fa-clock"></i> 6 min</span>
                                 </div>
+                                <a href="articles/piscinasdenia.html" class="read-more-simple">Leer más</a>
                             </div>
                         </article>
 
-                        <article class="featured-article">
-                            <div class="article-image">
+                        <article class="article-card">
+                            <div class="card-image">
                                 <img src="../images/fondonuevo.jpeg" alt="Diseño de jardines">
-                                <span class="article-category">Diseño</span>
+                                <div class="card-overlay">
+                                    <span class="article-category design">Diseño</span>
+                                </div>
                             </div>
-                            <div class="article-content">
+                            <div class="card-content">
                                 <h4><a href="articles/disenojardines.html">Tendencias en Diseño de Jardines Modernos</a></h4>
-                                <p>Explora las últimas tendencias en paisajismo y diseño de jardines que están marcando la pauta en la Marina Alta.</p>
+                                <p>Explora las últimas tendencias en paisajismo y diseño de jardines que están marcando la pauta.</p>
                                 <div class="article-meta">
                                     <span><i class="fas fa-calendar"></i> 25 Ago 2025</span>
                                     <span><i class="fas fa-clock"></i> 5 min</span>
                                 </div>
+                                <a href="articles/disenojardines.html" class="read-more-simple">Leer más</a>
                             </div>
                         </article>
 
-                        <article class="featured-article">
-                            <div class="article-image">
+                        <article class="article-card">
+                            <div class="card-image">
                                 <img src="../images/palmerasmediterraneas.png" alt="Poda de palmeras">
-                                <span class="article-category">Mantenimiento</span>
+                                <div class="card-overlay">
+                                    <span class="article-category maintenance">Mantenimiento</span>
+                                </div>
                             </div>
-                            <div class="article-content">
+                            <div class="card-content">
                                 <h4><a href="articles/podapalmeras.html">Poda de Palmeras: Técnicas y Mejores Épocas</a></h4>
-                                <p>Aprende las técnicas correctas para la poda de palmeras y mantén tus ejemplares sanos y hermosos.</p>
+                                <p>Aprende las técnicas correctas para la poda de palmeras y mantén tus ejemplares sanos.</p>
                                 <div class="article-meta">
                                     <span><i class="fas fa-calendar"></i> 22 Ago 2025</span>
                                     <span><i class="fas fa-clock"></i> 4 min</span>
                                 </div>
+                                <a href="articles/podapalmeras.html" class="read-more-simple">Leer más</a>
                             </div>
                         </article>
 
-                        <article class="featured-article">
-                            <div class="article-image">
+                        <article class="article-card">
+                            <div class="card-image">
                                 <img src="../images/herramientas.jpg" alt="Consejos básicos jardinería">
-                                <span class="article-category">Básicos</span>
+                                <div class="card-overlay">
+                                    <span class="article-category basics">Básicos</span>
+                                </div>
                             </div>
-                            <div class="article-content">
+                            <div class="card-content">
                                 <h4><a href="articles/consejosbasicos.html">Consejos Básicos para Principiantes en Jardinería</a></h4>
-                                <p>Una guía esencial para quienes se inician en el mundo de la jardinería con consejos prácticos y fundamentales.</p>
+                                <p>Una guía esencial para quienes se inician en el mundo de la jardinería con consejos prácticos.</p>
                                 <div class="article-meta">
                                     <span><i class="fas fa-calendar"></i> 20 Ago 2025</span>
                                     <span><i class="fas fa-clock"></i> 7 min</span>
                                 </div>
+                                <a href="articles/consejosbasicos.html" class="read-more-simple">Leer más</a>
                             </div>
                         </article>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <!-- CATEGORÍAS -->
-                <section class="blog-categories">
-                    <h2>Explora por Categorías</h2>
-                    <div class="categories-grid">
-                        <div class="category-card">
-                            <div class="category-icon">
+            <!-- CATEGORÍAS EN TARJETAS -->
+            <section class="blog-categories">
+                <h2>Explora por Categorías</h2>
+                <div class="categories-container">
+                    <div class="category-card">
+                        <div class="category-header">
+                            <div class="category-icon plants">
                                 <i class="fas fa-leaf"></i>
                             </div>
-                            <h3>Plantas y Jardines</h3>
-                            <p>Consejos sobre especies, plantación y cuidado de plantas mediterráneas</p>
-                            <span class="article-count">8 artículos</span>
-                        </div>
-
-                        <div class="category-card">
-                            <div class="category-icon">
-                                <i class="fas fa-swimming-pool"></i>
+                            <div class="category-info">
+                                <h3>Plantas y Jardines</h3>
+                                <span class="article-count">8 artículos</span>
                             </div>
-                            <h3>Piscinas</h3>
-                            <p>Mantenimiento, limpieza y consejos para el cuidado de piscinas</p>
-                            <span class="article-count">6 artículos</span>
                         </div>
-
-                        <div class="category-card">
-                            <div class="category-icon">
-                                <i class="fas fa-paint-brush"></i>
-                            </div>
-                            <h3>Diseño y Paisajismo</h3>
-                            <p>Tendencias, ideas y consejos para el diseño de espacios exteriores</p>
-                            <span class="article-count">5 artículos</span>
-                        </div>
-
-                        <div class="category-card">
-                            <div class="category-icon">
-                                <i class="fas fa-tools"></i>
-                            </div>
-                            <h3>Mantenimiento</h3>
-                            <p>Técnicas de poda, riego y cuidado general de jardines</p>
-                            <span class="article-count">7 artículos</span>
+                        <p>Consejos sobre especies, plantación y cuidado de plantas mediterráneas</p>
+                        <div class="category-action">
+                            <a href="#" class="category-link">Ver todos los artículos</a>
                         </div>
                     </div>
-                </section>
 
-                <!-- NEWSLETTER -->
-                <section class="newsletter-section">
+                    <div class="category-card">
+                        <div class="category-header">
+                            <div class="category-icon pools">
+                                <i class="fas fa-swimming-pool"></i>
+                            </div>
+                            <div class="category-info">
+                                <h3>Piscinas</h3>
+                                <span class="article-count">6 artículos</span>
+                            </div>
+                        </div>
+                        <p>Mantenimiento, limpieza y consejos para el cuidado de piscinas</p>
+                        <div class="category-action">
+                            <a href="#" class="category-link">Ver todos los artículos</a>
+                        </div>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-header">
+                            <div class="category-icon design">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <div class="category-info">
+                                <h3>Diseño y Paisajismo</h3>
+                                <span class="article-count">5 artículos</span>
+                            </div>
+                        </div>
+                        <p>Tendencias, ideas y consejos para el diseño de espacios exteriores</p>
+                        <div class="category-action">
+                            <a href="#" class="category-link">Ver todos los artículos</a>
+                        </div>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-header">
+                            <div class="category-icon maintenance">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="category-info">
+                                <h3>Mantenimiento</h3>
+                                <span class="article-count">7 artículos</span>
+                            </div>
+                        </div>
+                        <p>Técnicas de poda, riego y cuidado general de jardines</p>
+                        <div class="category-action">
+                            <a href="#" class="category-link">Ver todos los artículos</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NEWSLETTER EN TARJETA -->
+            <section class="newsletter-section">
+                <div class="newsletter-card">
                     <div class="newsletter-content">
+                        <div class="newsletter-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
                         <div class="newsletter-text">
                             <h3>Suscríbete a nuestro newsletter</h3>
                             <p>Recibe consejos semanales de jardinería y las últimas novedades directamente en tu email</p>
                         </div>
-                        <form class="newsletter-form">
-                            <input type="email" placeholder="Tu email" required>
-                            <button type="submit" class="btn-primary">Suscribirse</button>
-                        </form>
                     </div>
-                </section>
-            </div>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" placeholder="Tu email" required>
+                            <button type="submit" class="newsletter-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Suscribirse
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
 
-            <!-- SIDEBAR -->
+            <!-- SIDEBAR EN TARJETAS -->
             <aside class="blog-sidebar">
-                <div class="sidebar-widget">
-                    <h3>Artículos Populares</h3>
+                <!-- Artículos Populares -->
+                <div class="sidebar-card">
+                    <div class="sidebar-header">
+                        <h3><i class="fas fa-fire"></i> Artículos Populares</h3>
+                    </div>
                     <div class="popular-articles">
-                        <article class="popular-article">
+                        <article class="popular-item">
                             <div class="popular-image">
                                 <img src="../images/jardin-mediterraneo.png" alt="Plantas mediterráneas">
                             </div>
                             <div class="popular-content">
                                 <h4><a href="articles/plantasmediterraneas.html">10 Especies de Plantas Mediterráneas</a></h4>
-                                <span class="popular-date">1 Sep 2025</span>
+                                <div class="popular-meta">
+                                    <span><i class="fas fa-calendar"></i> 1 Sep 2025</span>
+                                    <span class="popular-views"><i class="fas fa-eye"></i> 1.2k</span>
+                                </div>
                             </div>
                         </article>
 
-                        <article class="popular-article">
+                        <article class="popular-item">
                             <div class="popular-image">
                                 <img src="../images/piscinalimpieza.jpeg" alt="Mantenimiento piscinas">
                             </div>
                             <div class="popular-content">
                                 <h4><a href="articles/piscinasdenia.html">Mantenimiento de Piscinas</a></h4>
-                                <span class="popular-date">28 Ago 2025</span>
+                                <div class="popular-meta">
+                                    <span><i class="fas fa-calendar"></i> 28 Ago 2025</span>
+                                    <span class="popular-views"><i class="fas fa-eye"></i> 890</span>
+                                </div>
                             </div>
                         </article>
 
-                        <article class="popular-article">
+                        <article class="popular-item">
                             <div class="popular-image">
                                 <img src="../images/fondonuevo.jpeg" alt="Diseño jardines">
                             </div>
                             <div class="popular-content">
                                 <h4><a href="articles/disenojardines.html">Diseño de Jardines Modernos</a></h4>
-                                <span class="popular-date">25 Ago 2025</span>
+                                <div class="popular-meta">
+                                    <span><i class="fas fa-calendar"></i> 25 Ago 2025</span>
+                                    <span class="popular-views"><i class="fas fa-eye"></i> 750</span>
+                                </div>
                             </div>
                         </article>
                     </div>
                 </div>
 
-                <div class="sidebar-widget">
-                    <h3>¿Necesitas ayuda?</h3>
-                    <div class="help-widget">
+                <!-- Ayuda -->
+                <div class="sidebar-card help-card">
+                    <div class="sidebar-header">
+                        <h3><i class="fas fa-question-circle"></i> ¿Necesitas ayuda?</h3>
+                    </div>
+                    <div class="help-content">
                         <p>Nuestros expertos están aquí para asesorarte en todos tus proyectos de jardinería.</p>
-                        <div class="contact-buttons">
-                            <a href="../#contacto" class="btn-contact">Contactar</a>
-                            <a href="https://wa.me/34658645102" class="btn-whatsapp">
-                                <i class="fab fa-whatsapp"></i> WhatsApp
+                        <div class="help-buttons">
+                            <a href="../#contacto" class="help-btn primary">
+                                <i class="fas fa-phone"></i>
+                                Contactar
+                            </a>
+                            <a href="https://wa.me/34658645102" class="help-btn whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                                WhatsApp
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="sidebar-widget">
-                    <h3>Etiquetas</h3>
-                    <div class="tags-cloud">
-                        <span class="tag">plantas mediterráneas</span>
-                        <span class="tag">piscinas</span>
-                        <span class="tag">jardinería</span>
-                        <span class="tag">poda</span>
-                        <span class="tag">riego</span>
-                        <span class="tag">diseño</span>
-                        <span class="tag">mantenimiento</span>
-                        <span class="tag">palmeras</span>
-                        <span class="tag">césped</span>
-                        <span class="tag">paisajismo</span>
+                <!-- Etiquetas -->
+                <div class="sidebar-card">
+                    <div class="sidebar-header">
+                        <h3><i class="fas fa-tags"></i> Etiquetas Populares</h3>
+                    </div>
+                    <div class="tags-container">
+                        <span class="tag-item">plantas mediterráneas</span>
+                        <span class="tag-item">piscinas</span>
+                        <span class="tag-item">jardinería</span>
+                        <span class="tag-item">poda</span>
+                        <span class="tag-item">riego</span>
+                        <span class="tag-item">diseño</span>
+                        <span class="tag-item">mantenimiento</span>
+                        <span class="tag-item">palmeras</span>
+                        <span class="tag-item">césped</span>
+                        <span class="tag-item">paisajismo</span>
                     </div>
                 </div>
             </aside>
