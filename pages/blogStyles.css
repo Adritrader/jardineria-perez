@@ -744,7 +744,12 @@
 
 /* Altura específica para la tarjeta de ayuda */
 .help-card {
-    min-height: 280px; /* Altura mínima para mostrar ambos botones */
+    min-height: 380px; /* Aumentar significativamente la altura */
+}
+
+/* Altura específica para la tarjeta de artículos populares */
+.sidebar-card:has(.popular-articles) {
+    min-height: 650px; /* Asegurar altura mínima para el scroll */
 }
 
 .sidebar-card:hover {
@@ -790,8 +795,8 @@
 /* ===== ARTÍCULOS POPULARES ===== */
 .popular-articles {
     padding: 1.5rem;
-    max-height: 450px; /* Aumentar altura para PC */
-    overflow-y: auto;
+    max-height: 600px; /* Aumentar altura significativamente */
+    overflow-y: scroll; /* Forzar scroll siempre */
     scrollbar-width: thin;
     scrollbar-color: var(--blog-accent) var(--blog-light);
 }
@@ -799,23 +804,25 @@
 /* Scroll siempre visible en PC */
 @media (min-width: 1024px) {
     .popular-articles {
-        max-height: 500px; /* Aún más altura en PC */
+        max-height: 700px; /* Aún más altura en PC */
         overflow-y: scroll; /* Forzar scroll en PC */
     }
 }
 
 .popular-articles::-webkit-scrollbar {
-    width: 8px; /* Scroll más ancho en PC */
+    width: 12px; /* Scroll aún más ancho para mayor visibilidad */
 }
 
 .popular-articles::-webkit-scrollbar-track {
     background: var(--blog-light);
-    border-radius: 4px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 102, 51, 0.1);
 }
 
 .popular-articles::-webkit-scrollbar-thumb {
     background: var(--blog-accent);
-    border-radius: 4px;
+    border-radius: 6px;
+    border: 2px solid var(--blog-light);
 }
 
 .popular-articles::-webkit-scrollbar-thumb:hover {
@@ -824,15 +831,15 @@
 
 .popular-item {
     display: flex;
-    gap: 1rem;
-    padding: 1rem 0;
+    gap: 1.2rem; /* Más espacio entre imagen y contenido */
+    padding: 1.5rem 0; /* Más padding vertical */
     border-bottom: 1px solid rgba(0, 102, 51, 0.1);
     transition: var(--transition-fast);
 }
 
 .popular-item:last-child {
     border-bottom: none;
-    padding-bottom: 0;
+    padding-bottom: 1.5rem; /* Mantener padding en el último */
 }
 
 .popular-item:hover {
@@ -840,12 +847,14 @@
     margin: 0 -1rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     border-radius: var(--border-radius-sm);
 }
 
 .popular-image {
-    width: 80px;
-    height: 60px;
+    width: 100px; /* Imágenes más grandes */
+    height: 80px; /* Imágenes más altas */
     border-radius: var(--border-radius-sm);
     overflow: hidden;
     flex-shrink: 0;
@@ -901,22 +910,22 @@
 
 /* ===== TARJETA DE AYUDA ===== */
 .help-card .help-content {
-    padding: 1.5rem;
+    padding: 2rem;
     text-align: center;
-    min-height: 200px; /* Asegurar altura mínima en desktop */
+    min-height: 280px; /* Aumentar altura mínima significativamente */
 }
 
 .help-content p {
-    font-size: 0.95rem;
-    line-height: 1.5;
+    font-size: 1rem; /* Aumentar tamaño de fuente */
+    line-height: 1.6;
     color: var(--blog-gray-dark);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem; /* Más espacio */
 }
 
 .help-buttons {
     display: flex;
     flex-direction: column;
-    gap: 1rem; /* Aumentar espacio entre botones */
+    gap: 1.5rem; /* Más espacio entre botones */
     width: 100%;
 }
 
@@ -924,14 +933,15 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.8rem;
-    padding: 1rem 1.2rem; /* Aumentar padding */
+    gap: 1rem; /* Más espacio entre icono y texto */
+    padding: 1.2rem 1.5rem; /* Botones más grandes */
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1rem; /* Texto más grande */
     transition: var(--transition);
-    white-space: nowrap; /* Evitar que el texto se rompa */
+    white-space: nowrap;
+    margin-bottom: 20px;
 }
 
 .help-btn.primary {
@@ -959,42 +969,47 @@
 /* Estilos específicos para desktop - pantallas grandes */
 @media (min-width: 1024px) {
     .help-card .help-content {
-        padding: 2rem;
-        min-height: 220px; /* Más altura en desktop */
+        padding: 2.5rem;
+        min-height: 320px; /* Altura aún mayor en desktop */
     }
     
     .help-buttons {
-        gap: 1.2rem; /* Más espacio entre botones en desktop */
+        gap: 2rem; /* Más espacio entre botones en desktop */
     }
     
     .help-btn {
-        padding: 1.1rem 1.5rem; /* Botones más grandes en desktop */
-        font-size: 1rem;
+        padding: 1.4rem 2rem; /* Botones aún más grandes en desktop */
+        font-size: 1.1rem;
     }
     
     .help-card {
-        min-height: 320px; /* Aún más altura en pantallas grandes */
+        min-height: 450px; /* Altura mucho mayor en pantallas grandes */
     }
 }
 
 /* Pantallas extra grandes */
 @media (min-width: 1440px) {
     .help-card {
-        min-height: 350px; /* Altura extra para pantallas muy grandes */
+        min-height: 500px; /* Altura extra para pantallas muy grandes */
     }
     
     .help-card .help-content {
-        padding: 2.5rem;
-        min-height: 240px;
+        padding: 3rem;
+        min-height: 360px;
     }
     
     .help-btn {
-        padding: 1.2rem 1.8rem;
-        font-size: 1.1rem;
+        padding: 1.6rem 2.2rem;
+        font-size: 1.2rem;
     }
     
     .help-buttons {
-        gap: 1.5rem;
+        gap: 2.5rem;
+    }
+    
+    /* También aumentar artículos populares en pantallas grandes */
+    .popular-articles {
+        max-height: 800px;
     }
 }
 
@@ -1004,6 +1019,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.8rem;
+    margin-bottom: 30px;
 }
 
 .tag-item {
