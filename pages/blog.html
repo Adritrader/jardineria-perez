@@ -326,6 +326,45 @@
                                 </div>
                             </div>
                         </article>
+
+                        <article class="popular-item">
+                            <div class="popular-image">
+                                <img src="../images/palmerasmediterraneas.png" alt="Poda palmeras">
+                            </div>
+                            <div class="popular-content">
+                                <h4><a href="articles/podapalmeras.html" data-translate="article_4_title_short">Poda de Palmeras: Guía Completa</a></h4>
+                                <div class="popular-meta">
+                                    <span><i class="fas fa-calendar"></i> 20 Ago 2025</span>
+                                    <span class="popular-views"><i class="fas fa-eye"></i> 650</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="popular-item">
+                            <div class="popular-image">
+                                <img src="../images/herramientas.jpg" alt="Consejos jardinería">
+                            </div>
+                            <div class="popular-content">
+                                <h4><a href="articles/consejosbasicos.html" data-translate="article_5_title_short">Consejos Básicos de Jardinería</a></h4>
+                                <div class="popular-meta">
+                                    <span><i class="fas fa-calendar"></i> 15 Ago 2025</span>
+                                    <span class="popular-views"><i class="fas fa-eye"></i> 580</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="popular-item">
+                            <div class="popular-image">
+                                <img src="../images/piscina-infinity.jpeg" alt="Sistemas riego">
+                            </div>
+                            <div class="popular-content">
+                                <h4><a href="#" data-translate="article_6_title_short">Sistemas de Riego Inteligente</a></h4>
+                                <div class="popular-meta">
+                                    <span><i class="fas fa-calendar"></i> 10 Ago 2025</span>
+                                    <span class="popular-views"><i class="fas fa-eye"></i> 520</span>
+                                </div>
+                            </div>
+                        </article>
                     </div>
                 </div>
 
@@ -355,16 +394,16 @@
                         <h3><i class="fas fa-tags"></i> <span data-translate="popular_tags">Etiquetas Populares</span></h3>
                     </div>
                     <div class="tags-container">
-                        <span class="tag-item">plantas mediterráneas</span>
-                        <span class="tag-item">piscinas</span>
-                        <span class="tag-item">jardinería</span>
-                        <span class="tag-item">poda</span>
-                        <span class="tag-item">riego</span>
-                        <span class="tag-item">diseño</span>
-                        <span class="tag-item">mantenimiento</span>
-                        <span class="tag-item">palmeras</span>
-                        <span class="tag-item">césped</span>
-                        <span class="tag-item">paisajismo</span>
+                        <a href="#" class="tag-item" data-tag="plantas-mediterraneas">plantas mediterráneas</a>
+                        <a href="#" class="tag-item" data-tag="piscinas">piscinas</a>
+                        <a href="#" class="tag-item" data-tag="jardineria">jardinería</a>
+                        <a href="#" class="tag-item" data-tag="poda">poda</a>
+                        <a href="#" class="tag-item" data-tag="riego">riego</a>
+                        <a href="#" class="tag-item" data-tag="diseno">diseño</a>
+                        <a href="#" class="tag-item" data-tag="mantenimiento">mantenimiento</a>
+                        <a href="#" class="tag-item" data-tag="palmeras">palmeras</a>
+                        <a href="#" class="tag-item" data-tag="cesped">césped</a>
+                        <a href="#" class="tag-item" data-tag="paisajismo">paisajismo</a>
                     </div>
                 </div>
             </aside>
@@ -494,6 +533,59 @@
                 console.log('Blog menu toggled manually');
             }
         };
+        
+        // ===== FUNCIONALIDAD ETIQUETAS =====
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.tag-item').forEach(tag => {
+                tag.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const tagName = this.getAttribute('data-tag');
+                    const tagText = this.textContent;
+                    
+                    console.log('Tag clicked:', tagName, tagText);
+                    
+                    // Remover clase activa de todas las etiquetas
+                    document.querySelectorAll('.tag-item').forEach(t => t.classList.remove('active'));
+                    
+                    // Agregar clase activa a la etiqueta clickeada
+                    this.classList.add('active');
+                    
+                    // Filtrar artículos (simulado por ahora)
+                    filterArticlesByTag(tagName, tagText);
+                });
+            });
+            
+            function filterArticlesByTag(tag, tagText) {
+                // Por ahora, mostrar un mensaje. En el futuro aquí filtrarías los artículos
+                const message = document.createElement('div');
+                message.className = 'filter-message';
+                message.style.cssText = `
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: #006633;
+                    color: white;
+                    padding: 1rem 2rem;
+                    border-radius: 8px;
+                    z-index: 10000;
+                    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+                    font-family: 'Outfit', sans-serif;
+                `;
+                message.innerHTML = `<i class="fas fa-filter"></i> Filtrando por: <strong>${tagText}</strong>`;
+                
+                document.body.appendChild(message);
+                
+                // Remover mensaje después de 2 segundos
+                setTimeout(() => {
+                    if (message.parentNode) {
+                        message.parentNode.removeChild(message);
+                    }
+                }, 2000);
+            }
+            
+            console.log('Tag filtering system initialized');
+        });
     </script>
 </body>
 </html>

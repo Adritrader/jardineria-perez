@@ -742,6 +742,11 @@
     transition: var(--transition);
 }
 
+/* Altura específica para la tarjeta de ayuda */
+.help-card {
+    min-height: 280px; /* Altura mínima para mostrar ambos botones */
+}
+
 .sidebar-card:hover {
     box-shadow: var(--shadow-md);
     border-color: var(--blog-accent);
@@ -785,24 +790,32 @@
 /* ===== ARTÍCULOS POPULARES ===== */
 .popular-articles {
     padding: 1.5rem;
-    max-height: 400px;
+    max-height: 450px; /* Aumentar altura para PC */
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: var(--blog-accent) var(--blog-light);
 }
 
+/* Scroll siempre visible en PC */
+@media (min-width: 1024px) {
+    .popular-articles {
+        max-height: 500px; /* Aún más altura en PC */
+        overflow-y: scroll; /* Forzar scroll en PC */
+    }
+}
+
 .popular-articles::-webkit-scrollbar {
-    width: 6px;
+    width: 8px; /* Scroll más ancho en PC */
 }
 
 .popular-articles::-webkit-scrollbar-track {
     background: var(--blog-light);
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 .popular-articles::-webkit-scrollbar-thumb {
     background: var(--blog-accent);
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 .popular-articles::-webkit-scrollbar-thumb:hover {
@@ -890,6 +903,7 @@
 .help-card .help-content {
     padding: 1.5rem;
     text-align: center;
+    min-height: 200px; /* Asegurar altura mínima en desktop */
 }
 
 .help-content p {
@@ -902,7 +916,8 @@
 .help-buttons {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 1rem; /* Aumentar espacio entre botones */
+    width: 100%;
 }
 
 .help-btn {
@@ -910,12 +925,13 @@
     align-items: center;
     justify-content: center;
     gap: 0.8rem;
-    padding: 0.8rem 1.2rem;
+    padding: 1rem 1.2rem; /* Aumentar padding */
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
     transition: var(--transition);
+    white-space: nowrap; /* Evitar que el texto se rompa */
 }
 
 .help-btn.primary {
@@ -938,6 +954,48 @@
     background: linear-gradient(135deg, #128C7E, #075E54);
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(37, 211, 102, 0.3);
+}
+
+/* Estilos específicos para desktop - pantallas grandes */
+@media (min-width: 1024px) {
+    .help-card .help-content {
+        padding: 2rem;
+        min-height: 220px; /* Más altura en desktop */
+    }
+    
+    .help-buttons {
+        gap: 1.2rem; /* Más espacio entre botones en desktop */
+    }
+    
+    .help-btn {
+        padding: 1.1rem 1.5rem; /* Botones más grandes en desktop */
+        font-size: 1rem;
+    }
+    
+    .help-card {
+        min-height: 320px; /* Aún más altura en pantallas grandes */
+    }
+}
+
+/* Pantallas extra grandes */
+@media (min-width: 1440px) {
+    .help-card {
+        min-height: 350px; /* Altura extra para pantallas muy grandes */
+    }
+    
+    .help-card .help-content {
+        padding: 2.5rem;
+        min-height: 240px;
+    }
+    
+    .help-btn {
+        padding: 1.2rem 1.8rem;
+        font-size: 1.1rem;
+    }
+    
+    .help-buttons {
+        gap: 1.5rem;
+    }
 }
 
 /* ===== ETIQUETAS ===== */
@@ -967,6 +1025,19 @@
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 102, 51, 0.3);
+}
+
+/* Estado activo para etiquetas seleccionadas */
+.tag-item.active {
+    background: var(--blog-primary);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 102, 51, 0.3);
+    transform: translateY(-1px);
+}
+
+.tag-item.active:hover {
+    background: var(--blog-secondary);
+    transform: translateY(-2px);
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
