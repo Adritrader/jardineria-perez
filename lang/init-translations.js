@@ -285,13 +285,18 @@ document.addEventListener('DOMContentLoaded', function() {
 function debugMobileEvents() {
     const currentLang = document.getElementById('current-lang');
     const dropdown = document.getElementById('lang-options');
+    const langDropdown = document.querySelector('.lang-dropdown');
     
     if (currentLang && dropdown) {
-        console.log('Debugging mobile events...');
+        console.log('=== MOBILE DEBUG ===');
         console.log('Current lang element:', currentLang);
         console.log('Dropdown element:', dropdown);
+        console.log('Lang dropdown container:', langDropdown);
         console.log('Is mobile device:', isMobileDevice());
         console.log('Dropdown classes:', dropdown.className);
+        if (langDropdown) {
+            console.log('Lang dropdown classes:', langDropdown.className);
+        }
         
         // Test if elements are clickable
         const rect = currentLang.getBoundingClientRect();
@@ -300,10 +305,25 @@ function debugMobileEvents() {
         const dropdownRect = dropdown.getBoundingClientRect();
         console.log('Dropdown position:', dropdownRect);
         
-        // Check z-index
+        // Check z-index and visibility
         const computedStyle = window.getComputedStyle(dropdown);
-        console.log('Dropdown z-index:', computedStyle.zIndex);
-        console.log('Dropdown position style:', computedStyle.position);
+        console.log('Dropdown computed styles:');
+        console.log('- z-index:', computedStyle.zIndex);
+        console.log('- position:', computedStyle.position);
+        console.log('- opacity:', computedStyle.opacity);
+        console.log('- visibility:', computedStyle.visibility);
+        console.log('- transform:', computedStyle.transform);
+        
+        // Add test function to window
+        window.testDropdown = function() {
+            dropdown.classList.toggle('open');
+            if (langDropdown) {
+                langDropdown.classList.toggle('open');
+            }
+            console.log('Test toggle executed. Dropdown classes:', dropdown.className);
+        };
+        
+        console.log('=== Use window.testDropdown() to test manually ===');
     }
 }
 
@@ -333,8 +353,12 @@ function setupLanguageSelector() {
             if (changeLanguage(lang)) {
                 // Cerrar dropdown
                 const dropdown = document.getElementById('lang-options');
+                const langDropdown = document.querySelector('.lang-dropdown');
                 if (dropdown) {
                     dropdown.classList.remove('open');
+                }
+                if (langDropdown) {
+                    langDropdown.classList.remove('open');
                 }
                 
                 // Actualizar enlaces de navegación si es necesario
@@ -357,8 +381,10 @@ function setupLanguageSelector() {
             e.preventDefault();
             e.stopPropagation();
             const dropdown = document.getElementById('lang-options');
-            if (dropdown) {
+            const langDropdown = document.querySelector('.lang-dropdown');
+            if (dropdown && langDropdown) {
                 dropdown.classList.toggle('open');
+                langDropdown.classList.toggle('open');
                 console.log('Dropdown toggled');
             }
         };
@@ -375,8 +401,12 @@ function setupLanguageSelector() {
             const selector = document.getElementById('language-selector');
             if (selector && !selector.contains(e.target)) {
                 const dropdown = document.getElementById('lang-options');
+                const langDropdown = document.querySelector('.lang-dropdown');
                 if (dropdown && dropdown.classList.contains('open')) {
                     dropdown.classList.remove('open');
+                    if (langDropdown) {
+                        langDropdown.classList.remove('open');
+                    }
                     console.log('Dropdown closed by outside click');
                 }
             }
