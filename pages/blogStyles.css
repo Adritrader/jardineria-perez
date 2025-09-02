@@ -744,12 +744,12 @@
 
 /* Altura específica para la tarjeta de ayuda */
 .help-card {
-    min-height: 380px; /* Aumentar significativamente la altura */
+    min-height: 320px; /* Reducir para dar espacio a las etiquetas */
 }
 
 /* Altura específica para la tarjeta de artículos populares */
 .sidebar-card:has(.popular-articles) {
-    min-height: 650px; /* Asegurar altura mínima para el scroll */
+    min-height: 450px; /* Reducir para que se vean las etiquetas */
 }
 
 .sidebar-card:hover {
@@ -795,8 +795,8 @@
 /* ===== ARTÍCULOS POPULARES ===== */
 .popular-articles {
     padding: 1.5rem;
-    max-height: 600px; /* Aumentar altura significativamente */
-    overflow-y: scroll; /* Forzar scroll siempre */
+    max-height: 350px; /* Reducir altura para equilibrar con etiquetas */
+    overflow-y: scroll; /* Mantener scroll siempre */
     scrollbar-width: thin;
     scrollbar-color: var(--blog-accent) var(--blog-light);
 }
@@ -804,7 +804,7 @@
 /* Scroll siempre visible en PC */
 @media (min-width: 1024px) {
     .popular-articles {
-        max-height: 700px; /* Aún más altura en PC */
+        max-height: 400px; /* Altura moderada en PC */
         overflow-y: scroll; /* Forzar scroll en PC */
     }
 }
@@ -910,22 +910,22 @@
 
 /* ===== TARJETA DE AYUDA ===== */
 .help-card .help-content {
-    padding: 2rem;
+    padding: 1.8rem;
     text-align: center;
-    min-height: 280px; /* Aumentar altura mínima significativamente */
+    min-height: 220px; /* Reducir altura para dar espacio a etiquetas */
 }
 
 .help-content p {
-    font-size: 1rem; /* Aumentar tamaño de fuente */
-    line-height: 1.6;
+    font-size: 0.95rem; /* Tamaño de fuente moderado */
+    line-height: 1.5;
     color: var(--blog-gray-dark);
-    margin-bottom: 2rem; /* Más espacio */
+    margin-bottom: 1.8rem; /* Espacio moderado */
 }
 
 .help-buttons {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* Más espacio entre botones */
+    gap: 1.2rem; /* Espacio moderado entre botones */
     width: 100%;
 }
 
@@ -933,15 +933,14 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem; /* Más espacio entre icono y texto */
-    padding: 1.2rem 1.5rem; /* Botones más grandes */
+    gap: 0.9rem; /* Espacio moderado entre icono y texto */
+    padding: 1rem 1.4rem; /* Tamaño moderado de botones */
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1rem; /* Texto más grande */
+    font-size: 0.95rem; /* Tamaño de texto moderado */
     transition: var(--transition);
     white-space: nowrap;
-    margin-bottom: 20px;
 }
 
 .help-btn.primary {
@@ -969,47 +968,47 @@
 /* Estilos específicos para desktop - pantallas grandes */
 @media (min-width: 1024px) {
     .help-card .help-content {
-        padding: 2.5rem;
-        min-height: 320px; /* Altura aún mayor en desktop */
+        padding: 2rem;
+        min-height: 240px; /* Reducir altura en desktop */
     }
     
     .help-buttons {
-        gap: 2rem; /* Más espacio entre botones en desktop */
+        gap: 1.5rem; /* Espacio moderado entre botones */
     }
     
     .help-btn {
-        padding: 1.4rem 2rem; /* Botones aún más grandes en desktop */
-        font-size: 1.1rem;
+        padding: 1.2rem 1.8rem; /* Botones de tamaño moderado */
+        font-size: 1rem;
     }
     
     .help-card {
-        min-height: 450px; /* Altura mucho mayor en pantallas grandes */
+        min-height: 360px; /* Altura moderada en pantallas grandes */
     }
 }
 
 /* Pantallas extra grandes */
 @media (min-width: 1440px) {
     .help-card {
-        min-height: 500px; /* Altura extra para pantallas muy grandes */
+        min-height: 400px; /* Reducir altura para pantallas muy grandes */
     }
     
     .help-card .help-content {
-        padding: 3rem;
-        min-height: 360px;
+        padding: 2.5rem;
+        min-height: 280px; /* Reducir altura del contenido */
     }
     
     .help-btn {
-        padding: 1.6rem 2.2rem;
-        font-size: 1.2rem;
+        padding: 1.4rem 2rem; /* Reducir padding de botones */
+        font-size: 1.1rem;
     }
     
     .help-buttons {
-        gap: 2.5rem;
+        gap: 2rem; /* Reducir gap */
     }
     
-    /* También aumentar artículos populares en pantallas grandes */
+    /* También ajustar artículos populares en pantallas grandes */
     .popular-articles {
-        max-height: 800px;
+        max-height: 450px; /* Altura más moderada */
     }
 }
 
@@ -1019,7 +1018,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.8rem;
-    margin-bottom: 30px;
 }
 
 .tag-item {
