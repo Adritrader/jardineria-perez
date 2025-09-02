@@ -1,6 +1,9 @@
 // Sistema de traducciones completo para Jardinería Pérez
 const translations = {
     es: {
+        // Información general
+        company_name: "Jardinería Pérez",
+        
         // Navegación
         nav_services: "Servicios",
         nav_gallery: "Galería", 
@@ -69,15 +72,32 @@ const translations = {
         testimonial_toggle: "Leer más",
         
         // Galería
-        gallery_pool_modern_title: "Piscina Moderna",
+        gallery_title: "Nuestros Proyectos",
+        gallery_subtitle: "Descubre la excelencia en cada proyecto",
+        gallery_description: "Explora nuestra galería de trabajos realizados en jardines y piscinas por toda la Marina Alta. Cada imagen cuenta la historia de espacios transformados con pasión y experiencia profesional.",
+        gallery_pool_cleaning_title: "Limpieza profesional de piscina en Dénia",
+        gallery_pool_cleaning_desc: "Limpieza de Piscina - Mantenimiento integral - Dénia",
+        gallery_pool_modern_title: "Piscina moderna en adosados",
         gallery_pool_modern_desc: "Diseño contemporáneo - Urbanización",
-        gallery_pool_category: "Piscinas",
-        gallery_garden_mediterranean_title: "Jardín Mediterráneo",
+        gallery_garden_mediterranean_title: "Mantenimiento de jardín mediterráneo",
         gallery_garden_mediterranean_desc: "Diseño con plantas autóctonas",
-        gallery_garden_category: "Jardines",
-        gallery_equipment_title: "Equipo Profesional",
+        gallery_equipment_title: "Equipo profesional de jardinería",
         gallery_equipment_desc: "Servicio a domicilio - Marina Alta",
+        gallery_pool_community_title: "Piscina comunitaria en urbanización",
+        gallery_pool_community_desc: "Mantenimiento regular - Marina Alta",
+        gallery_pool_urbanization_title: "Mantenimiento piscina urbanización", 
+        gallery_pool_urbanization_desc: "Servicio profesional - Dénia",
+        gallery_pool_private_title: "Piscina privada con diseño especial",
+        gallery_pool_private_desc: "Diseño personalizado - Marina Alta",
+        gallery_pool_infinity_title: "Piscina infinity con vistas panorámicas",
+        gallery_pool_infinity_desc: "Diseño exclusivo - Costa de Dénia",
+        gallery_pool_olympic_title: "Piscina olímpica para ejercicio",
+        gallery_pool_olympic_desc: "Perfecta para ejercicio - Javea",
+        gallery_pool_category: "Piscinas",
+        gallery_garden_category: "Jardines",
         gallery_maintenance_category: "Mantenimiento",
+        gallery_cta_text: "¿Te gusta lo que ves? Podemos crear algo similar para ti",
+        gallery_cta_button: "Solicita tu presupuesto gratuito",
         
         // Contacto
         contact_title: "Contáctanos",
@@ -107,9 +127,112 @@ const translations = {
         
         // Cookies
         cookie_text: "Usamos cookies propias y de terceros para mejorar nuestros servicios. Si continúa navegando, consideramos que acepta su uso. Puede obtener más información en nuestra",
-        cookie_policy: "política de cookies"
+        cookie_policy: "política de cookies",
+        
+        // Blog
+        blog_title: "Blog de Jardinería y Piscinas",
+        blog_subtitle: "Consejos expertos, guías prácticas y tendencias en jardinería mediterránea",
+        blog_breadcrumb_home: "Inicio",
+        blog_breadcrumb_blog: "Blog",
+        blog_articles_title: "Artículos del Blog",
+        article_category_plants: "Plantas",
+        article_category_pools: "Piscinas",
+        article_category_design: "Diseño",
+        article_category_maintenance: "Mantenimiento",
+        article_category_basics: "Básicos",
+        read_more: "Leer artículo",
+        popular_articles: "Artículos Populares",
+        need_help: "¿Necesitas ayuda?",
+        help_description: "Nuestros expertos están aquí para asesorarte en todos tus proyectos de jardinería.",
+        contact_btn: "Contactar",
+        whatsapp_btn: "WhatsApp",
+        popular_tags: "Etiquetas Populares",
+        
+        // Artículos del Blog
+        blog_breadcrumb_home: "Inicio",
+        blog_breadcrumb_blog: "Blog",
+        blog_articles_title: "Artículos del Blog",
+        article_category_plants: "Plantas",
+        article_category_pools: "Piscinas",
+        article_category_design: "Diseño",
+        article_category_maintenance: "Mantenimiento",
+        article_category_basics: "Básicos",
+        read_more: "Leer artículo",
+        popular_articles: "Artículos Populares",
+        need_help: "¿Necesitas ayuda?",
+        help_description: "Nuestros expertos están aquí para asesorarte en todos tus proyectos de jardinería.",
+        footer_garden_design: "Diseño de Jardines",
+        
+        // Artículos específicos
+        article_1_title: "10 Especies de Plantas Perfectas para el Clima Mediterráneo",
+        article_1_excerpt: "Descubre las mejores especies de plantas autóctonas y adaptadas al clima mediterráneo de Dénia y la Marina Alta.",
+        article_1_title_short: "10 Especies de Plantas Mediterráneas",
+        article_2_title: "Guía Completa: Mantenimiento de Piscinas en Dénia",
+        article_2_excerpt: "Todo lo que necesitas saber sobre el cuidado y mantenimiento de tu piscina durante todo el año.",
+        article_2_title_short: "Mantenimiento de Piscinas",
+        article_3_title: "Tendencias en Diseño de Jardines Modernos",
+        article_3_excerpt: "Explora las últimas tendencias en paisajismo y diseño de jardines que están marcando la pauta.",
+        article_3_title_short: "Diseño de Jardines Modernos",
+        article_4_title: "Poda de Palmeras: Técnicas y Mejores Épocas",
+        article_4_excerpt: "Aprende las técnicas correctas para la poda de palmeras y mantén tus ejemplares sanos.",
+        article_5_title: "Consejos Básicos para Principiantes en Jardinería",
+        article_5_excerpt: "Una guía esencial para quienes se inician en el mundo de la jardinería con consejos prácticos.",
+        article_6_title: "Tipos de Piscinas para tu Hogar",
+        article_6_excerpt: "Conoce los diferentes tipos de piscinas y cuál es la mejor opción para tu espacio y presupuesto.",
+        reading_time_4: "4 min lectura",
+        reading_time_5: "5 min lectura",
+        reading_time_6: "6 min lectura",
+        reading_time_7: "7 min lectura",
+        reading_time_8: "8 min lectura",
+        
+        // Footer elementos adicionales
+        footer_title: "Jardinería Pérez",
+        footer_subtitle: "Tu socio de confianza en jardinería",
+        footer_description: "Especialistas en mantenimiento de jardines, poda de palmeras y limpieza de piscinas en Dénia y Marina Alta.",
+        footer_contact_info: "Información de Contacto",
+        footer_quick_links: "Enlaces Rápidos",
+        footer_rights: "Todos los derechos reservados.",
+        
+        // Artículo - Elementos comunes
+        breadcrumb_home: "Inicio",
+        breadcrumb_blog: "Blog", 
+        breadcrumb_article: "Consejos Básicos de Jardinería",
+        article_main_title: "🌱 Consejos Básicos de Jardinería para Principiantes",
+        tag_tips: "Consejos",
+        tag_beginners: "Principiantes",
+        tag_gardening: "Jardinería",
+        image_caption: "Herramientas esenciales para comenzar en el mundo de la jardinería",
+        
+        // Artículo piscinas Dénia - traducciones específicas
+        articles: {
+            piscinasdenia: {
+                title: "Piscinas en Dénia: Mantenimiento Profesional",
+                main_title: "🏊‍♂️ Guía Completa: Mantenimiento de Piscinas en Dénia y Marina Alta",
+                breadcrumb: "Mantenimiento de Piscinas",
+                meta_author: "Jardinería Pérez",
+                category: "Mantenimiento Piscinas",
+                read_time: "9 min lectura",
+                conclusion_title: "Tu Piscina, Nuestra Especialidad",
+                conclusion_text1: "Mantener una piscina en perfectas condiciones en Dénia requiere conocimientos técnicos, experiencia y dedicación constante. Cada piscina es única y merece un tratamiento personalizado que tenga en cuenta su ubicación, uso y características específicas.",
+                conclusion_text2: "Un mantenimiento profesional no solo garantiza agua cristalina y segura, sino que protege tu inversión y te permite disfrutar sin preocupaciones de uno de los mayores placeres del clima mediterráneo.",
+                signature_question: "¿Tu piscina necesita atención profesional?",
+                signature_text: "En Jardinería Pérez somos especialistas en mantenimiento integral de piscinas en Dénia y Marina Alta. Más de 15 años cuidando piscinas privadas y comunitarias con garantía de resultados. ¡Solicita tu presupuesto personalizado!",
+                tags: {
+                    pools_denia: "#PiscinasDénia",
+                    maintenance: "#Mantenimiento",
+                    cleaning: "#Limpieza",
+                    marina_alta: "#MarinAlta",
+                    private_pools: "#PiscinasPrivadas"
+                },
+                share_title: "Mantenimiento de Piscinas en Dénia",
+                share_text: "Te comparto este artículo sobre mantenimiento de piscinas: "
+            }
+        }
     },
     en: {
+        // General information
+        company_name: "Jardinería Pérez",
+        
         // Navegación
         nav_services: "Services",
         nav_gallery: "Gallery", 
@@ -178,15 +301,32 @@ const translations = {
         testimonial_toggle: "Read more",
         
         // Galería
-        gallery_pool_modern_title: "Modern Pool",
+        gallery_title: "Our Projects",
+        gallery_subtitle: "Discover excellence in every project",
+        gallery_description: "Explore our gallery of works carried out in gardens and pools throughout Marina Alta. Each image tells the story of spaces transformed with passion and professional experience.",
+        gallery_pool_cleaning_title: "Professional pool cleaning in Dénia",
+        gallery_pool_cleaning_desc: "Pool Cleaning - Comprehensive maintenance - Dénia",
+        gallery_pool_modern_title: "Modern pool in townhouses",
         gallery_pool_modern_desc: "Contemporary design - Urbanization",
-        gallery_pool_category: "Pools",
-        gallery_garden_mediterranean_title: "Mediterranean Garden",
+        gallery_garden_mediterranean_title: "Mediterranean garden maintenance",
         gallery_garden_mediterranean_desc: "Design with native plants",
-        gallery_garden_category: "Gardens",
-        gallery_equipment_title: "Professional Equipment",
+        gallery_equipment_title: "Professional gardening equipment",
         gallery_equipment_desc: "Home service - Marina Alta",
+        gallery_pool_community_title: "Community pool in urbanization",
+        gallery_pool_community_desc: "Regular maintenance - Marina Alta",
+        gallery_pool_urbanization_title: "Urbanization pool maintenance",
+        gallery_pool_urbanization_desc: "Professional service - Dénia",
+        gallery_pool_private_title: "Private pool with special design",
+        gallery_pool_private_desc: "Custom design - Marina Alta",
+        gallery_pool_infinity_title: "Infinity pool with panoramic views",
+        gallery_pool_infinity_desc: "Exclusive design - Dénia Coast",
+        gallery_pool_olympic_title: "Olympic pool for exercise",
+        gallery_pool_olympic_desc: "Perfect for exercise - Javea",
+        gallery_pool_category: "Pools",
+        gallery_garden_category: "Gardens",
         gallery_maintenance_category: "Maintenance",
+        gallery_cta_text: "Do you like what you see? We can create something similar for you",
+        gallery_cta_button: "Request your free quote",
         
         // Contacto
         contact_title: "Contact Us",
@@ -216,7 +356,107 @@ const translations = {
         
         // Cookies
         cookie_text: "We use our own and third-party cookies to improve our services. If you continue browsing, we consider that you accept their use. You can get more information in our",
-        cookie_policy: "cookie policy"
+        cookie_policy: "cookie policy",
+        
+        // Blog
+        blog_title: "Gardening and Pool Blog",
+        blog_subtitle: "Expert advice, practical guides and trends in Mediterranean gardening",
+        blog_breadcrumb_home: "Home",
+        blog_breadcrumb_blog: "Blog",
+        blog_articles_title: "Blog Articles",
+        article_category_plants: "Plants",
+        article_category_pools: "Pools",
+        article_category_design: "Design",
+        article_category_maintenance: "Maintenance",
+        article_category_basics: "Basics",
+        read_more: "Read article",
+        popular_articles: "Popular Articles",
+        need_help: "Need help?",
+        help_description: "Our experts are here to advise you on all your gardening projects.",
+        contact_btn: "Contact",
+        whatsapp_btn: "WhatsApp",
+        popular_tags: "Popular Tags",
+        
+        // Blog Articles
+        blog_breadcrumb_home: "Home",
+        blog_breadcrumb_blog: "Blog",
+        blog_articles_title: "Blog Articles",
+        article_category_plants: "Plants",
+        article_category_pools: "Pools",
+        article_category_design: "Design",
+        article_category_maintenance: "Maintenance",
+        article_category_basics: "Basics",
+        read_more: "Read article",
+        popular_articles: "Popular Articles",
+        need_help: "Need help?",
+        help_description: "Our experts are here to advise you on all your gardening projects.",
+        footer_garden_design: "Garden Design",
+        
+        // Specific Articles
+        article_1_title: "10 Perfect Plant Species for Mediterranean Climate",
+        article_1_excerpt: "Discover the best native and adapted plant species for the Mediterranean climate of Dénia and Marina Alta.",
+        article_1_title_short: "10 Mediterranean Plant Species",
+        article_2_title: "Complete Guide: Pool Maintenance in Dénia",
+        article_2_excerpt: "Everything you need to know about caring for and maintaining your pool throughout the year.",
+        article_2_title_short: "Pool Maintenance",
+        article_3_title: "Trends in Modern Garden Design",
+        article_3_excerpt: "Explore the latest trends in landscaping and garden design that are setting the standard.",
+        article_3_title_short: "Modern Garden Design",
+        article_4_title: "Palm Tree Pruning: Techniques and Best Times",
+        article_4_excerpt: "Learn the correct techniques for palm tree pruning and keep your specimens healthy.",
+        article_5_title: "Basic Tips for Gardening Beginners",
+        article_5_excerpt: "An essential guide for those starting in the world of gardening with practical tips.",
+        article_6_title: "Types of Pools for Your Home",
+        article_6_excerpt: "Learn about different types of pools and which is the best option for your space and budget.",
+        reading_time_4: "4 min read",
+        reading_time_5: "5 min read",
+        reading_time_6: "6 min read",
+        reading_time_7: "7 min read",
+        reading_time_8: "8 min read",
+        
+        // Footer additional elements
+        footer_title: "Jardinería Pérez",
+        footer_subtitle: "Your trusted gardening partner",
+        footer_description: "Specialists in garden maintenance, palm tree pruning and pool cleaning in Dénia and Marina Alta.",
+        footer_contact_info: "Contact Information",
+        footer_quick_links: "Quick Links",
+        footer_rights: "All rights reserved.",
+        
+        // Article - Common elements
+        breadcrumb_home: "Home",
+        breadcrumb_blog: "Blog",
+        breadcrumb_article: "Basic Gardening Tips",
+        article_main_title: "🌱 Basic Gardening Tips for Beginners",
+        tag_tips: "Tips",
+        tag_beginners: "Beginners",
+        tag_gardening: "Gardening",
+        image_caption: "Essential tools to start in the world of gardening",
+        
+        // Pool maintenance Dénia article - specific translations
+        articles: {
+            piscinasdenia: {
+                title: "Pools in Dénia: Professional Maintenance",
+                main_title: "🏊‍♂️ Complete Guide: Pool Maintenance in Dénia and Marina Alta",
+                breadcrumb: "Pool Maintenance",
+                meta_author: "Jardinería Pérez",
+                category: "Pool Maintenance",
+                read_time: "9 min read",
+                conclusion_title: "Your Pool, Our Specialty",
+                conclusion_text1: "Maintaining a pool in perfect condition in Dénia requires technical knowledge, experience and constant dedication. Each pool is unique and deserves personalized treatment that takes into account its location, use and specific characteristics.",
+                conclusion_text2: "Professional maintenance not only guarantees crystal clear and safe water, but also protects your investment and allows you to enjoy without worries one of the greatest pleasures of the Mediterranean climate.",
+                signature_question: "Does your pool need professional attention?",
+                signature_text: "At Jardinería Pérez we are specialists in comprehensive pool maintenance in Dénia and Marina Alta. More than 15 years caring for private and community pools with guaranteed results. Request your personalized quote!",
+                tags: {
+                    pools_denia: "#PoolsDénia",
+                    maintenance: "#Maintenance",
+                    cleaning: "#Cleaning",
+                    marina_alta: "#MarinaAlta",
+                    private_pools: "#PrivatePools"
+                },
+                share_title: "Pool Maintenance in Dénia",
+                share_text: "I share this article about pool maintenance: "
+            }
+        }
     },
     de: {
         // Navegación
@@ -287,15 +527,32 @@ const translations = {
         testimonial_toggle: "Mehr lesen",
         
         // Galería
-        gallery_pool_modern_title: "Moderner Pool",
+        gallery_title: "Unsere Projekte",
+        gallery_subtitle: "Entdecken Sie Exzellenz in jedem Projekt",
+        gallery_description: "Erkunden Sie unsere Galerie von Arbeiten in Gärten und Pools in der gesamten Marina Alta. Jedes Bild erzählt die Geschichte von Räumen, die mit Leidenschaft und professioneller Erfahrung transformiert wurden.",
+        gallery_pool_cleaning_title: "Professionelle Poolreinigung in Dénia",
+        gallery_pool_cleaning_desc: "Pool-Reinigung - Umfassende Wartung - Dénia",
+        gallery_pool_modern_title: "Moderner Pool in Reihenhäusern",
         gallery_pool_modern_desc: "Zeitgenössisches Design - Urbanisation",
-        gallery_pool_category: "Pools",
-        gallery_garden_mediterranean_title: "Mediterraner Garten",
+        gallery_garden_mediterranean_title: "Wartung mediterraner Gärten",
         gallery_garden_mediterranean_desc: "Design mit einheimischen Pflanzen",
-        gallery_garden_category: "Gärten",
-        gallery_equipment_title: "Professionelle Ausrüstung",
+        gallery_equipment_title: "Professionelle Gartengeräte",
         gallery_equipment_desc: "Hausservice - Marina Alta",
+        gallery_pool_community_title: "Gemeinschaftspool in Urbanisation",
+        gallery_pool_community_desc: "Regelmäßige Wartung - Marina Alta",
+        gallery_pool_urbanization_title: "Wartung von Urbanisationspools",
+        gallery_pool_urbanization_desc: "Professioneller Service - Dénia",
+        gallery_pool_private_title: "Privater Pool mit speziellem Design",
+        gallery_pool_private_desc: "Individuelles Design - Marina Alta",
+        gallery_pool_infinity_title: "Infinity-Pool mit Panoramablick",
+        gallery_pool_infinity_desc: "Exklusives Design - Küste von Dénia",
+        gallery_pool_olympic_title: "Olympischer Pool für Sport",
+        gallery_pool_olympic_desc: "Perfekt für Sport - Javea",
+        gallery_pool_category: "Pools",
+        gallery_garden_category: "Gärten",
         gallery_maintenance_category: "Wartung",
+        gallery_cta_text: "Gefällt Ihnen was Sie sehen? Wir können etwas Ähnliches für Sie schaffen",
+        gallery_cta_button: "Kostenloses Angebot anfordern",
         
         // Contacto
         contact_title: "Kontaktieren Sie uns",
@@ -325,7 +582,62 @@ const translations = {
         
         // Cookies
         cookie_text: "Wir verwenden eigene und Drittanbieter-Cookies, um unsere Dienstleistungen zu verbessern. Wenn Sie weiter surfen, gehen wir davon aus, dass Sie deren Verwendung akzeptieren. Weitere Informationen finden Sie in unserer",
-        cookie_policy: "Cookie-Richtlinie"
+        cookie_policy: "Cookie-Richtlinie",
+        
+        // Blog
+        blog_title: "Garten- und Pool-Blog",
+        blog_subtitle: "Expertenratschläge, praktische Anleitungen und Trends im mediterranen Gartenbau",
+        blog_breadcrumb_home: "Startseite",
+        blog_breadcrumb_blog: "Blog",
+        blog_articles_title: "Blog-Artikel",
+        article_category_plants: "Pflanzen",
+        article_category_pools: "Pools",
+        article_category_design: "Design",
+        article_category_maintenance: "Wartung",
+        article_category_basics: "Grundlagen",
+        read_more: "Artikel lesen",
+        popular_articles: "Beliebte Artikel",
+        need_help: "Brauchen Sie Hilfe?",
+        help_description: "Unsere Experten sind hier, um Sie bei all Ihren Gartenprojekten zu beraten.",
+        contact_btn: "Kontakt",
+        whatsapp_btn: "WhatsApp",
+        popular_tags: "Beliebte Tags",
+        
+        // Article - Common elements
+        breadcrumb_home: "Startseite",
+        breadcrumb_blog: "Blog",
+        breadcrumb_article: "Grundlegende Gartentipps",
+        article_main_title: "🌱 Grundlegende Gartentipps für Anfänger",
+        tag_tips: "Tipps",
+        tag_beginners: "Anfänger",
+        tag_gardening: "Gartenbau",
+        image_caption: "Wesentliche Werkzeuge, um in die Welt des Gartenbaus einzusteigen",
+        
+        // Pool maintenance Dénia article - specific translations
+        articles: {
+            piscinasdenia: {
+                title: "Pools in Dénia: Professionelle Wartung",
+                main_title: "🏊‍♂️ Vollständiger Leitfaden: Pool-Wartung in Dénia und Marina Alta",
+                breadcrumb: "Pool-Wartung",
+                meta_author: "Jardinería Pérez",
+                category: "Pool-Wartung",
+                read_time: "9 Min. Lesezeit",
+                conclusion_title: "Ihr Pool, Unsere Spezialität",
+                conclusion_text1: "Einen Pool in perfektem Zustand in Dénia zu halten erfordert technisches Wissen, Erfahrung und konstante Hingabe. Jeder Pool ist einzigartig und verdient eine personalisierte Behandlung, die seinen Standort, seine Nutzung und spezifischen Eigenschaften berücksichtigt.",
+                conclusion_text2: "Professionelle Wartung garantiert nicht nur kristallklares und sicheres Wasser, sondern schützt auch Ihre Investition und ermöglicht es Ihnen, sorgenfrei eines der größten Vergnügen des mediterranen Klimas zu genießen.",
+                signature_question: "Braucht Ihr Pool professionelle Aufmerksamkeit?",
+                signature_text: "Bei Jardinería Pérez sind wir Spezialisten für umfassende Pool-Wartung in Dénia und Marina Alta. Mehr als 15 Jahre Pflege privater und gemeinschaftlicher Pools mit garantierten Ergebnissen. Fordern Sie Ihr persönliches Angebot an!",
+                tags: {
+                    pools_denia: "#PoolsDénia",
+                    maintenance: "#Wartung",
+                    cleaning: "#Reinigung",
+                    marina_alta: "#MarinaAlta",
+                    private_pools: "#PrivatePools"
+                },
+                share_title: "Pool-Wartung in Dénia", 
+                share_text: "Ich teile diesen Artikel über Pool-Wartung: "
+            }
+        }
     },
     fr: {
         // Navegación
@@ -396,15 +708,32 @@ const translations = {
         testimonial_toggle: "Lire plus",
         
         // Galería
-        gallery_pool_modern_title: "Piscine Moderne",
+        gallery_title: "Nos Projets",
+        gallery_subtitle: "Découvrez l'excellence dans chaque projet",
+        gallery_description: "Explorez notre galerie de travaux réalisés dans les jardins et piscines dans toute la Marina Alta. Chaque image raconte l'histoire d'espaces transformés avec passion et expérience professionnelle.",
+        gallery_pool_cleaning_title: "Nettoyage professionnel de piscine à Dénia",
+        gallery_pool_cleaning_desc: "Nettoyage de Piscine - Maintenance intégrale - Dénia",
+        gallery_pool_modern_title: "Piscine moderne dans maisons mitoyennes",
         gallery_pool_modern_desc: "Design contemporain - Urbanisation",
-        gallery_pool_category: "Piscines",
-        gallery_garden_mediterranean_title: "Jardin Méditerranéen",
+        gallery_garden_mediterranean_title: "Maintenance de jardin méditerranéen",
         gallery_garden_mediterranean_desc: "Design avec plantes indigènes",
-        gallery_garden_category: "Jardins",
-        gallery_equipment_title: "Équipement Professionnel",
+        gallery_equipment_title: "Équipement professionnel de jardinage",
         gallery_equipment_desc: "Service à domicile - Marina Alta",
+        gallery_pool_community_title: "Piscine communautaire en urbanisation",
+        gallery_pool_community_desc: "Maintenance régulière - Marina Alta",
+        gallery_pool_urbanization_title: "Maintenance piscine d'urbanisation",
+        gallery_pool_urbanization_desc: "Service professionnel - Dénia",
+        gallery_pool_private_title: "Piscine privée avec design spécial",
+        gallery_pool_private_desc: "Design personnalisé - Marina Alta",
+        gallery_pool_infinity_title: "Piscine infinity avec vues panoramiques",
+        gallery_pool_infinity_desc: "Design exclusif - Côte de Dénia",
+        gallery_pool_olympic_title: "Piscine olympique pour exercice",
+        gallery_pool_olympic_desc: "Parfaite pour l'exercice - Javea",
+        gallery_pool_category: "Piscines",
+        gallery_garden_category: "Jardins",
         gallery_maintenance_category: "Maintenance",
+        gallery_cta_text: "Vous aimez ce que vous voyez ? Nous pouvons créer quelque chose de similaire pour vous",
+        gallery_cta_button: "Demandez votre devis gratuit",
         
         // Contacto
         contact_title: "Contactez-nous",
@@ -434,7 +763,292 @@ const translations = {
         
         // Cookies
         cookie_text: "Nous utilisons nos propres cookies et ceux de tiers pour améliorer nos services. Si vous continuez à naviguer, nous considérons que vous acceptez leur utilisation. Vous pouvez obtenir plus d'informations dans notre",
-        cookie_policy: "politique de cookies"
+        cookie_policy: "politique de cookies",
+        
+        // Blog
+        blog_title: "Blog Jardinage et Piscines",
+        blog_subtitle: "Conseils d'experts, guides pratiques et tendances en jardinage méditerranéen",
+        blog_breadcrumb_home: "Accueil",
+        blog_breadcrumb_blog: "Blog",
+        blog_articles_title: "Articles du Blog",
+        article_category_plants: "Plantes",
+        article_category_pools: "Piscines",
+        article_category_design: "Design",
+        article_category_maintenance: "Maintenance",
+        article_category_basics: "Bases",
+        read_more: "Lire l'article",
+        popular_articles: "Articles Populaires",
+        need_help: "Besoin d'aide ?",
+        help_description: "Nos experts sont là pour vous conseiller sur tous vos projets de jardinage.",
+        contact_btn: "Contact",
+        whatsapp_btn: "WhatsApp",
+        popular_tags: "Tags Populaires",
+        footer_garden_design: "Conception de Jardins",
+        
+        // Articles spécifiques
+        article_1_title: "10 Espèces de Plantes Parfaites pour le Climat Méditerranéen",
+        article_1_excerpt: "Découvrez les meilleures espèces de plantes indigènes et adaptées au climat méditerranéen de Dénia et Marina Alta.",
+        article_1_title_short: "10 Espèces de Plantes Méditerranéennes",
+        article_2_title: "Guide Complet : Entretien de Piscines à Dénia",
+        article_2_excerpt: "Tout ce que vous devez savoir sur l'entretien et la maintenance de votre piscine toute l'année.",
+        article_2_title_short: "Entretien de Piscines",
+        article_3_title: "Tendances en Conception de Jardins Modernes",
+        article_3_excerpt: "Explorez les dernières tendances en aménagement paysager et conception de jardins qui marquent la référence.",
+        article_3_title_short: "Conception de Jardins Modernes",
+        article_4_title: "Élagage de Palmiers : Techniques et Meilleures Périodes",
+        article_4_excerpt: "Apprenez les techniques correctes pour l'élagage de palmiers et gardez vos spécimens en bonne santé.",
+        article_5_title: "Conseils de Base pour Débutants en Jardinage",
+        article_5_excerpt: "Un guide essentiel pour ceux qui commencent dans le monde du jardinage avec des conseils pratiques.",
+        article_6_title: "Types de Piscines pour Votre Maison",
+        article_6_excerpt: "Découvrez les différents types de piscines et quelle est la meilleure option pour votre espace et budget.",
+        reading_time_4: "4 min de lecture",
+        reading_time_5: "5 min de lecture",
+        reading_time_6: "6 min de lecture",
+        reading_time_7: "7 min de lecture",
+        reading_time_8: "8 min de lecture",
+        
+        // Footer éléments supplémentaires
+        footer_title: "Jardinería Pérez",
+        footer_subtitle: "Votre partenaire de confiance en jardinage",
+        footer_description: "Spécialistes en entretien de jardins, élagage de palmiers et nettoyage de piscines à Dénia et Marina Alta.",
+        footer_contact_info: "Informations de Contact",
+        footer_quick_links: "Liens Rapides",
+        footer_rights: "Tous droits réservés.",
+        
+        // Article - Éléments communs
+        breadcrumb_home: "Accueil",
+        breadcrumb_blog: "Blog",
+        breadcrumb_article: "Conseils de Base en Jardinage",
+        article_main_title: "🌱 Conseils de Base en Jardinage pour Débutants",
+        tag_tips: "Conseils",
+        tag_beginners: "Débutants",
+        tag_gardening: "Jardinage",
+        image_caption: "Outils essentiels pour commencer dans le monde du jardinage",
+        
+        // Pool maintenance Dénia article - specific translations
+        articles: {
+            piscinasdenia: {
+                title: "Piscines à Dénia : Entretien Professionnel",
+                main_title: "🏊‍♂️ Guide Complet : Entretien de Piscines à Dénia et Marina Alta",
+                breadcrumb: "Entretien de Piscines",
+                meta_author: "Jardinería Pérez",
+                category: "Entretien de Piscines",
+                read_time: "9 min de lecture",
+                conclusion_title: "Votre Piscine, Notre Spécialité",
+                conclusion_text1: "Maintenir une piscine en parfait état à Dénia nécessite des connaissances techniques, de l'expérience et un dévouement constant. Chaque piscine est unique et mérite un traitement personnalisé qui tient compte de son emplacement, de son utilisation et de ses caractéristiques spécifiques.",
+                conclusion_text2: "Un entretien professionnel garantit non seulement une eau cristalline et sûre, mais protège aussi votre investissement et vous permet de profiter sans soucis de l'un des plus grands plaisirs du climat méditerranéen.",
+                signature_question: "Votre piscine a-t-elle besoin d'attention professionnelle ?",
+                signature_text: "Chez Jardinería Pérez, nous sommes spécialistes en entretien complet de piscines à Dénia et Marina Alta. Plus de 15 ans prenant soin de piscines privées et communautaires avec des résultats garantis. Demandez votre devis personnalisé !",
+                tags: {
+                    pools_denia: "#PiscinesDénia",
+                    maintenance: "#Entretien",
+                    cleaning: "#Nettoyage",
+                    marina_alta: "#MarinaAlta",
+                    private_pools: "#PiscinesPrivées"
+                },
+                share_title: "Entretien de Piscines à Dénia",
+                share_text: "Je partage cet article sur l'entretien de piscines : "
+            }
+        }
+    },
+    de: {
+        // Navegación
+        nav_services: "Dienstleistungen",
+        nav_gallery: "Galerie",
+        nav_testimonials: "Referenzen",
+        nav_contact: "Kontakt",
+        nav_blog: "Blog",
+        
+        // Hero Section
+        hero_title: "Jardinería Pérez - Gartenbaudienstleistungen in Dénia",
+        hero_subtitle: "Garten- und Poolservice",
+        hero_description: "Spezialisten für Gartenarbeit und Poolwartung.",
+        hero_cta: "Fordern Sie Ihr Angebot an",
+        
+        // About section
+        about_title: "Über uns",
+        about_description: "Bei Jardinería Pérez haben wir mehr als 15 Jahre Erfahrung in der Bereitstellung professioneller Gartenbaudienstleistungen in Dénia und in der gesamten Marina Alta. Unser Expertenteam ist spezialisiert auf Gartenpflege, die Schaffung personalisierter Grünflächen und umfassende Pflege angelegter Bereiche.",
+        about_feature_1: "Nachhaltige Bewässerungstechniken",
+        about_feature_2: "Personalisierte Designs",
+        about_feature_3: "Umfassende Wartung",
+        about_feature_4: "Kostenlose technische Beratung",
+        
+        // Parallax
+        parallax_garden_title: "Wir verwandeln Grünflächen",
+        parallax_garden_desc: "Spezialisten für die Schaffung und Pflege einzigartiger Gärten an der Costa Blanca",
+        parallax_services_title: "Erfahrung und Qualität in jedem Service",
+        parallax_services_desc: "Mehr als 15 Jahre spezialisiert auf umfassende Garten- und Poolpflege",
+        parallax_pools_title: "Kristallklare Pools das ganze Jahr über",
+        parallax_pools_desc: "Professionelle Wartung und spezialisierte Wasserbehandlung",
+        parallax_maintenance_title: "Professionelle Werkzeuge und Erfahrung",
+        parallax_maintenance_desc: "Mehr als 15 Jahre Gartenpflege in Dénia und Marina Alta",
+        
+        // Servicios
+        services_title: "Unsere Dienstleistungen",
+        service_design_title: "Gartengestaltung",
+        service_design_description: "Wir schaffen einzigartige Gärten, die Funktionalität und mediterrane Ästhetik kombinieren. Unser Gartengestaltungsservice in Marina Alta verwandelt Ihren Außenbereich in eine harmonische und natürliche Umgebung, angepasst an das Klima von Dénia.",
+        service_garden_title: "Gartenpflege",
+        service_garden_description: "Wir bieten umfassende Gartenpflegedienste in Dénia und Umgebung, einschließlich professionellem Rasenmähen, spezialisiertem Beschneiden, organischer Düngung und integrierter Schädlingsbekämpfung.",
+        service_pruning_title: "Palmenbeschnitt",
+        service_pruning_description: "Experten im Palmenbeschnitt in Dénia und Marina Alta. Wir führen spezialisierten technischen Schnitt durch, indem wir trockene Blätter, Blütenstände und Früchte entfernen, sie gesund halten und frei von Schädlingen wie dem roten Rüsselkäfer.",
+        service_pools_title: "Poolreinigung",
+        service_cleaning_description: "Wir bieten professionelle Poolreinigungs- und Wartungsdienste in Dénia. Wir entfernen Blätter, Algen und Schmutz, installieren Salzchlorierung und automatische pH-Kontrolle.",
+        service_irrigation_title: "Bewässerungssysteme",
+        service_irrigation_description: "Wir installieren und warten hocheffiziente automatische Bewässerungssysteme, die den Wasserverbrauch optimieren und die Pflanzengesundheit gewährleisten.",
+        service_repair_title: "Pool-Verfugung und Reparatur",
+        service_repair_description: "Wir spezialisieren uns auf Pool-Verfugung, Kronenreparatur und Risslösungen in Dénia und Marina Alta. Unsere Dienstleistungen umfassen Flieseninstallation, komplette Entwässerung, Installation von Salzchlorierungssystemen.",
+        
+        // Urbanizaciones
+        urbanizations_title: "Lösungen für Urbanisationen",
+        urbanizations_desc_1: "Bei Jardinería Pérez bieten wir umfassende Lösungen für Urbanisationen in Dénia und Marina Alta, spezialisiert auf die Wartung von Gemeinschaftsbereichen, Gärten und Grünflächen.",
+        urbanizations_desc_2: "Wir bieten auch spezialisierte Pooldienstleistungen, von Reinigung und Wartung bis hin zu Wasseranalyse und -behandlung, um sichere und attraktive Räume zu gewährleisten.",
+        urbanizations_desc_3: "Wir haben umfangreiche Erfahrung in der Urbanisationswartung und bieten einen umfassenden Service, der die Ästhetik und Funktionalität der Gemeinschaftsbereiche verbessert.",
+        urban_planning_title: "Grüne Planung",
+        urban_planning_desc: "Wir entwerfen nachhaltige Räume, die die Lebensqualität in Urbanisationen verbessern.",
+        urban_irrigation_title: "Intelligente Bewässerung",
+        urban_irrigation_desc: "Wir implementieren automatisierte Bewässerungssysteme, die den Wasserverbrauch optimieren.",
+        urban_maintenance_title: "Umfassende Wartung",
+        urban_maintenance_desc: "Regelmäßige Reinigungs-, Beschneidungs- und Pflegedienste für Gemeinschaftsbereiche.",
+        urban_pools_title: "Urbanisations-Pools",
+        urban_pools_desc: "Pflege, Wartung und Sanierung von Gemeinschaftspools.",
+        
+        // Testimonios
+        testimonials_title: "Was unsere Kunden sagen",
+        testimonial_1: "Wunderbare Profis. Seriös und effizient, ich arbeite schon seit Jahren mit Miguel und empfehle ihn ohne Zweifel. Er kennt sein Handwerk sehr gut und pflegt nicht nur den Garten und Pool perfekt, sondern entwirft und organisiert auch neue Räume mit Intelligenz und gutem Geschmack.",
+        testimonial_2: "Zufrieden mit Miguel, guter Gärtner... er kommt schon eine Weile nach Hause und die Wahrheit ist, dass der Garten anders aussieht. Aufmerksam für alles, gute Person... alles perfekt. Ich empfehle ihn.",
+        testimonial_3: "Ein guter Arbeiter und sehr verantwortlich. Und ausgezeichnete Behandlung.",
+        testimonial_toggle: "Mehr lesen",
+        
+        // Galería
+        gallery_title: "Unsere Projekte",
+        gallery_subtitle: "Entdecken Sie Exzellenz in jedem Projekt",
+        gallery_description: "Erkunden Sie unsere Galerie von Arbeiten in Gärten und Pools in ganz Marina Alta. Jedes Bild erzählt die Geschichte von Räumen, die mit Leidenschaft und professioneller Erfahrung transformiert wurden.",
+        gallery_pool_cleaning_title: "Professionelle Poolreinigung Dénia",
+        gallery_pool_cleaning_desc: "Poolreinigung - Umfassende Wartung - Dénia",
+        gallery_pool_modern_title: "Moderner Pool in Reihenhäusern",
+        gallery_pool_modern_desc: "Zeitgenössisches Design - Urbanisation",
+        gallery_garden_mediterranean_title: "Mediterrane Gartenwartung",
+        gallery_garden_mediterranean_desc: "Design mit einheimischen Pflanzen",
+        gallery_equipment_title: "Professionelle Gartenausrüstung",
+        gallery_equipment_desc: "Hausservice - Marina Alta",
+        gallery_pool_community_title: "Gemeinschaftspool in Urbanisation",
+        gallery_pool_community_desc: "Regelmäßige Wartung - Marina Alta",
+        gallery_pool_urbanization_title: "Urbanisations-Poolwartung",
+        gallery_pool_urbanization_desc: "Professioneller Service - Dénia",
+        gallery_pool_private_title: "Privater Pool mit speziellem Design",
+        gallery_pool_private_desc: "Maßgeschneidertes Design - Marina Alta",
+        gallery_pool_infinity_title: "Infinity-Pool mit Panoramablick",
+        gallery_pool_infinity_desc: "Exklusives Design - Küste von Dénia",
+        gallery_pool_olympic_title: "Olympischer Pool für Sport",
+        gallery_pool_olympic_desc: "Perfekt für Sport - Javea",
+        gallery_pool_category: "Pools",
+        gallery_garden_category: "Gärten",
+        gallery_maintenance_category: "Wartung",
+        gallery_cta_text: "Gefällt Ihnen was Sie sehen? Wir können etwas Ähnliches für Sie schaffen",
+        gallery_cta_button: "Fordern Sie Ihr kostenloses Angebot an",
+        
+        // Contacto
+        contact_title: "Kontaktieren Sie uns",
+        contact_form_title: "Kontaktformular",
+        contact_form_name: "Vollständiger Name",
+        contact_form_name_placeholder: "Ihr Name",
+        contact_form_email: "E-Mail-Adresse",
+        contact_form_email_placeholder: "ihre@email.com",
+        contact_form_message: "Ihre Nachricht",
+        contact_form_message_placeholder: "Schreiben Sie Ihre Anfrage...",
+        contact_form_submit: "Nachricht senden",
+        contact_form_note: "* Wir antworten innerhalb von 24 Stunden",
+        
+        // Footer
+        footer_company_desc: "Spezialisten für Design und Wartung von Grünflächen seit 2009",
+        footer_services_title: "Dienstleistungen",
+        footer_design: "Gartengestaltung",
+        footer_maintenance: "Professionelle Wartung",
+        footer_irrigation: "Bewässerungssysteme",
+        footer_urbanizations: "Urbanisationen",
+        footer_legal_title: "Rechtliches",
+        footer_privacy: "Datenschutzrichtlinie",
+        footer_terms: "Geschäftsbedingungen",
+        footer_cookies: "Cookie-Richtlinie",
+        footer_contact_title: "Kontakt",
+        footer_copyright: "Diese Website wurde mit ❤️ von Profis entworfen",
+        
+        // Cookies
+        cookie_text: "Wir verwenden eigene und Drittanbieter-Cookies, um unsere Dienstleistungen zu verbessern. Wenn Sie weiter surfen, betrachten wir das als Zustimmung zu deren Verwendung. Weitere Informationen finden Sie in unserer",
+        cookie_policy: "Cookie-Richtlinie",
+        
+        // Blog
+        blog_title: "Gartenbau-Blog",
+        blog_subtitle: "Tipps, Anleitungen und Ratschläge für Ihren Garten",
+        blog_category_tips: "Gartentipps",
+        blog_category_pools: "Schwimmbäder",
+        blog_category_design: "Gartengestaltung",
+        blog_category_maintenance: "Wartung",
+        blog_sidebar_categories: "Kategorien",
+        blog_sidebar_recent: "Aktuelle Artikel",
+        blog_sidebar_contact: "Brauchen Sie Hilfe?",
+        blog_sidebar_contact_text: "Kontaktieren Sie uns für persönliche Beratung",
+        blog_sidebar_contact_btn: "Kontakt",
+        blog_sidebar_whatsapp: "WhatsApp",
+        blog_tags: "Beliebte Tags",
+        contact_btn: "Kontakt",
+        whatsapp_btn: "WhatsApp",
+        popular_tags: "Beliebte Tags",
+        
+        // Blog-Artikel
+        blog_breadcrumb_home: "Startseite",
+        blog_breadcrumb_blog: "Blog",
+        blog_articles_title: "Blog-Artikel",
+        article_category_plants: "Pflanzen",
+        article_category_pools: "Schwimmbäder",
+        article_category_design: "Design",
+        article_category_maintenance: "Wartung",
+        article_category_basics: "Grundlagen",
+        read_more: "Artikel lesen",
+        popular_articles: "Beliebte Artikel",
+        need_help: "Brauchen Sie Hilfe?",
+        help_description: "Unsere Experten stehen Ihnen bei allen Ihren Gartenprojekten beratend zur Seite.",
+        footer_garden_design: "Gartengestaltung",
+        
+        // Spezifische Artikel
+        article_1_title: "10 Perfekte Pflanzenarten für das Mittelmeerklima",
+        article_1_excerpt: "Entdecken Sie die besten einheimischen und angepassten Pflanzenarten für das Mittelmeerklima von Dénia und Marina Alta.",
+        article_1_title_short: "10 Mediterrane Pflanzenarten",
+        article_2_title: "Vollständiger Leitfaden: Poolwartung in Dénia",
+        article_2_excerpt: "Alles was Sie über die Pflege und Wartung Ihres Pools das ganze Jahr über wissen müssen.",
+        article_2_title_short: "Poolwartung",
+        article_3_title: "Trends in der modernen Gartengestaltung",
+        article_3_excerpt: "Entdecken Sie die neuesten Trends in Landschaftsgestaltung und Gartendesign, die den Standard setzen.",
+        article_3_title_short: "Modernes Gartendesign",
+        article_4_title: "Palmenschnitt: Techniken und beste Zeiten",
+        article_4_excerpt: "Lernen Sie die richtigen Techniken für den Palmenschnitt und halten Sie Ihre Exemplare gesund.",
+        article_5_title: "Grundlegende Tipps für Gartenanfänger",
+        article_5_excerpt: "Ein wesentlicher Leitfaden für Einsteiger in die Welt der Gartenarbeit mit praktischen Tipps.",
+        article_6_title: "Poolarten für Ihr Zuhause",
+        article_6_excerpt: "Lernen Sie verschiedene Poolarten kennen und welche die beste Option für Ihren Raum und Ihr Budget ist.",
+        reading_time_4: "4 Min. Lesezeit",
+        reading_time_5: "5 Min. Lesezeit",
+        reading_time_6: "6 Min. Lesezeit",
+        reading_time_7: "7 Min. Lesezeit",
+        reading_time_8: "8 Min. Lesezeit",
+        
+        // Footer zusätzliche Elemente
+        footer_title: "Jardinería Pérez",
+        footer_subtitle: "Ihr vertrauensvoller Gartenpartner",
+        footer_description: "Spezialisten für Gartenpflege, Palmenschnitt und Poolreinigung in Dénia und Marina Alta.",
+        footer_contact_info: "Kontaktinformationen",
+        footer_quick_links: "Schnelle Links",
+        footer_rights: "Alle Rechte vorbehalten.",
+        
+        // Artikel - Gemeinsame Elemente
+        breadcrumb_home: "Startseite",
+        breadcrumb_blog: "Blog",
+        breadcrumb_article: "Grundlegende Gartentipps",
+        article_main_title: "🌱 Grundlegende Gartentipps für Anfänger",
+        tag_tips: "Tipps",
+        tag_beginners: "Anfänger",
+        tag_gardening: "Gartenarbeit",
+        image_caption: "Wesentliche Werkzeuge für den Einstieg in die Welt der Gartenarbeit"
     },
     nl: {
         // Navegación
@@ -505,15 +1119,32 @@ const translations = {
         testimonial_toggle: "Meer lezen",
         
         // Galería
-        gallery_pool_modern_title: "Modern Zwembad",
+        gallery_title: "Onze Projecten",
+        gallery_subtitle: "Ontdek uitmuntendheid in elk project",
+        gallery_description: "Verken onze galerij van werken uitgevoerd in tuinen en zwembaden door heel Marina Alta. Elke afbeelding vertelt het verhaal van ruimtes getransformeerd met passie en professionele ervaring.",
+        gallery_pool_cleaning_title: "Professionele zwembadreinigingen Dénia",
+        gallery_pool_cleaning_desc: "Zwembadreinigen - Uitgebreid onderhoud - Dénia",
+        gallery_pool_modern_title: "Modern zwembad in rijtjeshuizen",
         gallery_pool_modern_desc: "Eigentijds ontwerp - Urbanisatie",
-        gallery_pool_category: "Zwembaden",
-        gallery_garden_mediterranean_title: "Mediterrane Tuin",
+        gallery_garden_mediterranean_title: "Mediterrane tuinonderhoud",
         gallery_garden_mediterranean_desc: "Ontwerp met inheemse planten",
-        gallery_garden_category: "Tuinen",
-        gallery_equipment_title: "Professionele Uitrusting",
+        gallery_equipment_title: "Professionele tuinieruitrusting",
         gallery_equipment_desc: "Thuisservice - Marina Alta",
+        gallery_pool_community_title: "Gemeenschapszwembad in urbanisatie",
+        gallery_pool_community_desc: "Regelmatig onderhoud - Marina Alta",
+        gallery_pool_urbanization_title: "Urbanisatie zwembadonderhoud",
+        gallery_pool_urbanization_desc: "Professionele service - Dénia",
+        gallery_pool_private_title: "Privé zwembad met speciaal ontwerp",
+        gallery_pool_private_desc: "Aangepast ontwerp - Marina Alta",
+        gallery_pool_infinity_title: "Infinity zwembad met panoramisch uitzicht",
+        gallery_pool_infinity_desc: "Exclusief ontwerp - Kust van Dénia",
+        gallery_pool_olympic_title: "Olympisch zwembad voor sport",
+        gallery_pool_olympic_desc: "Perfect voor sport - Javea",
+        gallery_pool_category: "Zwembaden",
+        gallery_garden_category: "Tuinen",
         gallery_maintenance_category: "Onderhoud",
+        gallery_cta_text: "Bevalt wat u ziet? Wij kunnen iets soortgelijks voor u creëren",
+        gallery_cta_button: "Vraag uw gratis offerte aan",
         
         // Contacto
         contact_title: "Neem contact met ons op",
@@ -543,7 +1174,106 @@ const translations = {
         
         // Cookies
         cookie_text: "We gebruiken onze eigen en externe cookies om onze diensten te verbeteren. Als u doorgaat met browsen, beschouwen we dat u hun gebruik accepteert. U kunt meer informatie krijgen in ons",
-        cookie_policy: "cookiebeleid"
+        cookie_policy: "cookiebeleid",
+        
+        // Blog
+        blog_title: "Tuinbouwblog",
+        blog_subtitle: "Tips, gidsen en advies voor uw tuin",
+        blog_category_tips: "Tuinbouwtips",
+        blog_category_pools: "Zwembaden",
+        blog_category_design: "Tuinontwerp",
+        blog_category_maintenance: "Onderhoud",
+        blog_sidebar_categories: "Categorieën",
+        blog_sidebar_recent: "Recente artikelen",
+        blog_sidebar_contact: "Hulp nodig?",
+        blog_sidebar_contact_text: "Neem contact met ons op voor gepersonaliseerd advies",
+        blog_sidebar_contact_btn: "Contact",
+        blog_sidebar_whatsapp: "WhatsApp",
+        blog_tags: "Populaire tags",
+        contact_btn: "Contact",
+        whatsapp_btn: "WhatsApp",
+        popular_tags: "Populaire Tags",
+        
+        // Blog Artikelen
+        blog_breadcrumb_home: "Home",
+        blog_breadcrumb_blog: "Blog",
+        blog_articles_title: "Blog Artikelen",
+        article_category_plants: "Planten",
+        article_category_pools: "Zwembaden",
+        article_category_design: "Ontwerp",
+        article_category_maintenance: "Onderhoud",
+        article_category_basics: "Basis",
+        read_more: "Artikel lezen",
+        popular_articles: "Populaire Artikelen",
+        need_help: "Hulp nodig?",
+        help_description: "Onze experts staan klaar om u te adviseren bij al uw tuinprojecten.",
+        footer_garden_design: "Tuinontwerp",
+        
+        // Specifieke Artikelen
+        article_1_title: "10 Perfecte Plantensoorten voor het Mediterrane Klimaat",
+        article_1_excerpt: "Ontdek de beste inheemse en aangepaste plantensoorten voor het mediterrane klimaat van Dénia en Marina Alta.",
+        article_1_title_short: "10 Mediterrane Plantensoorten",
+        article_2_title: "Volledige Gids: Zwembadonderhoud in Dénia",
+        article_2_excerpt: "Alles wat je moet weten over de verzorging en het onderhoud van je zwembad het hele jaar door.",
+        article_2_title_short: "Zwembadonderhoud",
+        article_3_title: "Trends in Modern Tuinontwerp",
+        article_3_excerpt: "Verken de laatste trends in landschapsarchitectuur en tuinontwerp die de standaard bepalen.",
+        article_3_title_short: "Modern Tuinontwerp",
+        article_4_title: "Palmbomen Snoeien: Technieken en Beste Tijden",
+        article_4_excerpt: "Leer de juiste technieken voor het snoeien van palmbomen en houd je exemplaren gezond.",
+        article_5_title: "Basistips voor Tuinieren Beginners",
+        article_5_excerpt: "Een essentiële gids voor degenen die beginnen in de wereld van tuinieren met praktische tips.",
+        article_6_title: "Soorten Zwembaden voor je Huis",
+        article_6_excerpt: "Leer over verschillende soorten zwembaden en welke de beste optie is voor je ruimte en budget.",
+        reading_time_4: "4 min leestijd",
+        reading_time_5: "5 min leestijd",
+        reading_time_6: "6 min leestijd",
+        reading_time_7: "7 min leestijd",
+        reading_time_8: "8 min leestijd",
+        
+        // Footer extra elementen
+        footer_title: "Jardinería Pérez",
+        footer_subtitle: "Uw vertrouwde tuinpartner",
+        footer_description: "Specialisten in tuinonderhoud, palmensnoei en zwembadreinige in Dénia en Marina Alta.",
+        footer_contact_info: "Contactinformatie",
+        footer_quick_links: "Snelle Links",
+        footer_rights: "Alle rechten voorbehouden.",
+        
+        // Artikel - Gemeenschappelijke elementen
+        breadcrumb_home: "Home",
+        breadcrumb_blog: "Blog",
+        breadcrumb_article: "Basis Tuintips",
+        article_main_title: "🌱 Basis Tuintips voor Beginners",
+        tag_tips: "Tips",
+        tag_beginners: "Beginners",
+        tag_gardening: "Tuinieren",
+        image_caption: "Essentiële gereedschappen om te beginnen in de wereld van tuinieren",
+        
+        // Pool maintenance Dénia article - specific translations
+        articles: {
+            piscinasdenia: {
+                title: "Zwembaden in Dénia: Professioneel Onderhoud",
+                main_title: "🏊‍♂️ Volledige Gids: Zwembadonderhoud in Dénia en Marina Alta",
+                breadcrumb: "Zwembadonderhoud",
+                meta_author: "Jardinería Pérez",
+                category: "Zwembadonderhoud",
+                read_time: "9 min leestijd",
+                conclusion_title: "Uw Zwembad, Onze Specialiteit",
+                conclusion_text1: "Een zwembad in perfecte staat houden in Dénia vereist technische kennis, ervaring en constante toewijding. Elk zwembad is uniek en verdient een gepersonaliseerde behandeling die rekening houdt met de locatie, het gebruik en specifieke kenmerken.",
+                conclusion_text2: "Professioneel onderhoud garandeert niet alleen kristalhelder en veilig water, maar beschermt ook uw investering en stelt u in staat om zorgeloos te genieten van een van de grootste geneugten van het mediterrane klimaat.",
+                signature_question: "Heeft uw zwembad professionele aandacht nodig?",
+                signature_text: "Bij Jardinería Pérez zijn wij specialisten in uitgebreid zwembadonderhoud in Dénia en Marina Alta. Meer dan 15 jaar zorgend voor privé en gemeenschappelijke zwembaden met gegarandeerde resultaten. Vraag uw persoonlijke offerte aan!",
+                tags: {
+                    pools_denia: "#ZwembadenDénia",
+                    maintenance: "#Onderhoud",
+                    cleaning: "#Reiniging",
+                    marina_alta: "#MarinaAlta",
+                    private_pools: "#PrivéZwembaden"
+                },
+                share_title: "Zwembadonderhoud in Dénia",
+                share_text: "Ik deel dit artikel over zwembadonderhoud: "
+            }
+        }
     }
 };
 

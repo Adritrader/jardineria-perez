@@ -33,7 +33,7 @@
     line-height: 1.6;
     color: var(--blog-dark);
     background: var(--blog-gray-light);
-    padding-top: 80px; /* Espacio para navbar fijo */
+    padding-top: 0px; /* Espacio para navbar fijo */
 }
 
 /* ===== NAVBAR PARA BLOG (MISMO ESTILO QUE INDEX) ===== */
@@ -386,6 +386,7 @@
     font-size: 0.95rem;
     opacity: 0.9;
     font-weight: 500;
+    margin-top: 50px;
 }
 
 .breadcrumb a {

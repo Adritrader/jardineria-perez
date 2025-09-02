@@ -145,6 +145,119 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  
+  <!-- Estilos específicos para el artículo -->
+  <style>
+    .service-card {
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .service-card h3 {
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+    
+    .service-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .service-card li {
+        padding: 0.25rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .service-card li:last-child {
+        border-bottom: none;
+    }
+    
+    /* Mejorar contraste en secciones con colores de fondo */
+    .service-card[style*="background: linear-gradient(135deg, #e7f3ff, #f0f8ff)"] {
+        color: #1a365d !important;
+    }
+    
+    .service-card[style*="background: linear-gradient(135deg, #e7f3ff, #f0f8ff)"] h3 {
+        color: #0066cc !important;
+    }
+    
+    .service-card[style*="background: linear-gradient(135deg, #d4edda, #e8f5e9)"] {
+        color: #155724 !important;
+    }
+    
+    .service-card[style*="background: linear-gradient(135deg, #d4edda, #e8f5e9)"] h3 {
+        color: #28a745 !important;
+    }
+    
+    .service-card[style*="background: linear-gradient(135deg, #fff3cd, #fdf7e3)"] {
+        color: #856404 !important;
+    }
+    
+    .service-card[style*="background: linear-gradient(135deg, #fff3cd, #fdf7e3)"] h3 {
+        color: #856404 !important;
+    }
+    
+    /* Estilo para secciones de contenido con fondos coloridos */
+    div[style*="background: linear-gradient"] {
+        color: inherit;
+    }
+    
+    div[style*="background: linear-gradient"] p,
+    div[style*="background: linear-gradient"] li,
+    div[style*="background: linear-gradient"] ul {
+        color: inherit;
+    }
+    
+    /* Estilos para conclusion y signature con texto blanco */
+    .conclusion {
+        background: linear-gradient(135deg, #006633, #004d26);
+        color: white !important;
+        padding: 3rem 2rem;
+        border-radius: 12px;
+        margin: 3rem 0;
+        box-shadow: 0 8px 25px rgba(0, 102, 51, 0.3);
+    }
+    
+    .conclusion h2 {
+        color: white !important;
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .conclusion p {
+        color: white !important;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+    }
+    
+    .signature {
+        background: linear-gradient(135deg, #2c5e3f, #1a4529);
+        color: white !important;
+        padding: 2.5rem 2rem;
+        border-radius: 12px;
+        margin: 2rem 0;
+        text-align: center;
+        box-shadow: 0 8px 25px rgba(44, 94, 63, 0.3);
+    }
+    
+    .signature p {
+        color: white !important;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+    
+    .signature strong {
+        color: white !important;
+        font-size: 1.3rem;
+    }
+  </style>
 
   <!-- Título -->
   <title>Jardinería Pérez | Mantenimiento Básico de Piscinas</title>
@@ -215,14 +328,14 @@
         <!-- HEADER DEL ARTÍCULO -->
         <header class="article-header">
             <nav class="breadcrumb">
-                <a href="../../" data-translate="article_breadcrumb_home">Inicio</a> > <a href="../blog.html" data-translate="article_breadcrumb_blog">Blog</a> > <span>Mantenimiento de Piscinas</span>
+                <a href="../../" data-translate="breadcrumb_home">Inicio</a> > <a href="../blog.html" data-translate="breadcrumb_blog">Blog</a> > <span data-translate="articles.piscinasdenia.breadcrumb">Mantenimiento de Piscinas</span>
             </nav>
-            <h1>🏊‍♂️ Guía Completa: Mantenimiento de Piscinas en Dénia y Marina Alta</h1>
+            <h1 data-translate="articles.piscinasdenia.main_title">🏊‍♂️ Guía Completa: Mantenimiento de Piscinas en Dénia y Marina Alta</h1>
             <div class="article-meta">
                 <span><i class="fas fa-calendar"></i> 20 May 2025</span>
-                <span><i class="fas fa-clock"></i> 9 min lectura</span>
-                <span><i class="fas fa-user"></i> Jardinería Pérez</span>
-                <span><i class="fas fa-tag"></i> Mantenimiento Piscinas</span>
+                <span><i class="fas fa-clock"></i> <span data-translate="articles.piscinasdenia.read_time">9 min lectura</span></span>
+                <span><i class="fas fa-user"></i> <span data-translate="articles.piscinasdenia.meta_author">Jardinería Pérez</span></span>
+                <span><i class="fas fa-tag"></i> <span data-translate="articles.piscinasdenia.category">Mantenimiento Piscinas</span></span>
             </div>
         </header>
 
@@ -236,19 +349,19 @@
                 <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem; font-style: italic;">Piscina privada con mantenimiento profesional en Dénia</p>
             </div>
 
-            <p>Disfrutar de una piscina en <strong>Dénia</strong> y la <strong>Marina Alta</strong> es uno de los mayores placeres del clima mediterráneo. Con más de 300 días de sol al año, nuestras piscinas pueden usarse desde abril hasta octubre. Sin embargo, mantener el agua cristalina y segura requiere conocimientos técnicos y un programa de mantenimiento constante.</p>
+            <p data-translate="articles.piscinasdenia.intro_text">Disfrutar de una piscina en <strong>Dénia</strong> y la <strong>Marina Alta</strong> es uno de los mayores placeres del clima mediterráneo. Con más de 300 días de sol al año, nuestras piscinas pueden usarse desde abril hasta octubre. Sin embargo, mantener el agua cristalina y segura requiere conocimientos técnicos y un programa de mantenimiento constante.</p>
 
-            <h2>🌊 El Desafío del Clima Mediterráneo</h2>
+            <h2 data-translate="articles.piscinasdenia.challenge_title">🌊 El Desafío del Clima Mediterráneo</h2>
             
             <div style="display: flex; gap: 2rem; margin: 2rem 0; align-items: flex-start; flex-wrap: wrap;">
                 <div style="flex: 1; min-width: 300px;">
-                    <p>El clima de Dénia presenta desafíos únicos para el mantenimiento de piscinas:</p>
+                    <p data-translate="articles.piscinasdenia.challenge_intro">El clima de Dénia presenta desafíos únicos para el mantenimiento de piscinas:</p>
                     <ul>
-                        <li><strong>Temperaturas elevadas</strong> - Aceleran el crecimiento de algas</li>
-                        <li><strong>Vientos de levante</strong> - Transportan arena y suciedad</li>
-                        <li><strong>Alta exposición UV</strong> - Degrada el cloro más rápidamente</li>
-                        <li><strong>Uso intensivo</strong> - Temporada extendida de baño</li>
-                        <li><strong>Calima ocasional</strong> - Partículas en suspensión</li>
+                        <li data-translate="articles.piscinasdenia.challenge_temp"><strong>Temperaturas elevadas</strong> - Aceleran el crecimiento de algas</li>
+                        <li data-translate="articles.piscinasdenia.challenge_wind"><strong>Vientos de levante</strong> - Transportan arena y suciedad</li>
+                        <li data-translate="articles.piscinasdenia.challenge_uv"><strong>Alta exposición UV</strong> - Degrada el cloro más rápidamente</li>
+                        <li data-translate="articles.piscinasdenia.challenge_use"><strong>Uso intensivo</strong> - Temporada extendida de baño</li>
+                        <li data-translate="articles.piscinasdenia.challenge_dust"><strong>Calima ocasional</strong> - Partículas en suspensión</li>
                     </ul>
                 </div>
                 <div style="flex: 1; min-width: 250px;">
@@ -258,79 +371,79 @@
                 </div>
             </div>
 
-            <h2>🔬 Química del Agua: La Base del Mantenimiento</h2>
+            <h2 data-translate="articles.piscinasdenia.chemistry_title">🔬 Química del Agua: La Base del Mantenimiento</h2>
             
-            <p>El equilibrio químico del agua es fundamental para la salud de los bañistas y la durabilidad de los equipos:</p>
+            <p data-translate="articles.piscinasdenia.chemistry_intro">El equilibrio químico del agua es fundamental para la salud de los bañistas y la durabilidad de los equipos:</p>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
                 <div class="service-card" style="background: linear-gradient(135deg, #e7f3ff, #f0f8ff);">
-                    <h3 style="color: #0066cc;">💧 pH Ideal</h3>
+                    <h3 style="color: #0066cc;" data-translate="articles.piscinasdenia.ph_title">💧 pH Ideal</h3>
                     <ul>
-                        <li><strong>Rango óptimo:</strong> 7.2 - 7.6</li>
-                        <li>Comfort para la piel y ojos</li>
-                        <li>Eficacia del cloro optimizada</li>
-                        <li>Prevención de corrosión</li>
+                        <li data-translate="articles.piscinasdenia.ph_range"><strong>Rango óptimo:</strong> 7.2 - 7.6</li>
+                        <li data-translate="articles.piscinasdenia.ph_comfort">Comfort para la piel y ojos</li>
+                        <li data-translate="articles.piscinasdenia.ph_chlorine">Eficacia del cloro optimizada</li>
+                        <li data-translate="articles.piscinasdenia.ph_corrosion">Prevención de corrosión</li>
                     </ul>
                 </div>
                 <div class="service-card" style="background: linear-gradient(135deg, #d4edda, #e8f5e9);">
-                    <h3 style="color: #28a745;">🧪 Cloro Libre</h3>
+                    <h3 style="color: #28a745;" data-translate="articles.piscinasdenia.chlorine_title">🧪 Cloro Libre</h3>
                     <ul>
-                        <li><strong>Concentración:</strong> 1.0 - 3.0 ppm</li>
-                        <li>Desinfección efectiva</li>
-                        <li>Eliminación de bacterias</li>
-                        <li>Control de algas</li>
+                        <li data-translate="articles.piscinasdenia.chlorine_concentration"><strong>Concentración:</strong> 1.0 - 3.0 ppm</li>
+                        <li data-translate="articles.piscinasdenia.chlorine_disinfection">Desinfección efectiva</li>
+                        <li data-translate="articles.piscinasdenia.chlorine_bacteria">Eliminación de bacterias</li>
+                        <li data-translate="articles.piscinasdenia.chlorine_algae">Control de algas</li>
                     </ul>
                 </div>
                 <div class="service-card" style="background: linear-gradient(135deg, #fff3cd, #fdf7e3);">
-                    <h3 style="color: #856404;">⚖️ Alcalinidad</h3>
+                    <h3 style="color: #856404;" data-translate="articles.piscinasdenia.alkalinity_title">⚖️ Alcalinidad</h3>
                     <ul>
-                        <li><strong>Rango:</strong> 80 - 120 ppm</li>
-                        <li>Estabiliza el pH</li>
-                        <li>Reduce fluctuaciones</li>
-                        <li>Protege los equipos</li>
+                        <li data-translate="articles.piscinasdenia.alkalinity_range"><strong>Rango:</strong> 80 - 120 ppm</li>
+                        <li data-translate="articles.piscinasdenia.alkalinity_stabilize">Estabiliza el pH</li>
+                        <li data-translate="articles.piscinasdenia.alkalinity_fluctuations">Reduce fluctuaciones</li>
+                        <li data-translate="articles.piscinasdenia.alkalinity_equipment">Protege los equipos</li>
                     </ul>
                 </div>
             </div>
 
-            <h2>🛠️ Programa de Mantenimiento Semanal</h2>
+            <h2 data-translate="articles.piscinasdenia.maintenance_title">🛠️ Programa de Mantenimiento Semanal</h2>
             
             <div style="background: linear-gradient(135deg, #f8fdf9, #e8f5e8); padding: 2rem; border-radius: 12px; margin: 2rem 0; border-left: 4px solid #4a9b6b;">
-                <h3 style="color: #006633; margin-bottom: 1.5rem;">Rutina Semanal Profesional</h3>
+                <h3 style="color: #006633; margin-bottom: 1.5rem;" data-translate="articles.piscinasdenia.maintenance_routine_title">Rutina Semanal Profesional</h3>
                 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
                     <div>
-                        <h4 style="color: #2d5e3f; margin-bottom: 1rem;"><strong>🔍 Lunes - Inspección</strong></h4>
+                        <h4 style="color: #2d5e3f; margin-bottom: 1rem;" data-translate="articles.piscinasdenia.monday_inspection"><strong>🔍 Lunes - Inspección</strong></h4>
                         <ul style="font-size: 0.95rem; line-height: 1.6;">
-                            <li>Análisis completo del agua</li>
-                            <li>Revisión del skimmer y cestillo</li>
-                            <li>Control visual del estado general</li>
-                            <li>Verificación de equipos de filtración</li>
+                            <li data-translate="articles.piscinasdenia.monday_analysis">Análisis completo del agua</li>
+                            <li data-translate="articles.piscinasdenia.monday_skimmer">Revisión del skimmer y cestillo</li>
+                            <li data-translate="articles.piscinasdenia.monday_visual">Control visual del estado general</li>
+                            <li data-translate="articles.piscinasdenia.monday_equipment">Verificación de equipos de filtración</li>
                         </ul>
                     </div>
                     <div>
-                        <h4 style="color: #2d5e3f; margin-bottom: 1rem;"><strong>🧹 Miércoles - Limpieza</strong></h4>
+                        <h4 style="color: #2d5e3f; margin-bottom: 1rem;" data-translate="articles.piscinasdenia.wednesday_cleaning"><strong>🧹 Miércoles - Limpieza</strong></h4>
                         <ul style="font-size: 0.95rem; line-height: 1.6;">
-                            <li>Aspirado del fondo</li>
-                            <li>Cepillado de paredes y línea de agua</li>
-                            <li>Limpieza de filtros</li>
-                            <li>Vaciado de cestas de skimmers</li>
+                            <li data-translate="articles.piscinasdenia.wednesday_vacuum">Aspirado del fondo</li>
+                            <li data-translate="articles.piscinasdenia.wednesday_brush">Cepillado de paredes y línea de agua</li>
+                            <li data-translate="articles.piscinasdenia.wednesday_filters">Limpieza de filtros</li>
+                            <li data-translate="articles.piscinasdenia.wednesday_baskets">Vaciado de cestas de skimmers</li>
                         </ul>
                     </div>
                     <div>
-                        <h4 style="color: #2d5e3f; margin-bottom: 1rem;"><strong>⚗️ Viernes - Química</strong></h4>
+                        <h4 style="color: #2d5e3f; margin-bottom: 1rem;" data-translate="articles.piscinasdenia.friday_chemistry"><strong>⚗️ Viernes - Química</strong></h4>
                         <ul style="font-size: 0.95rem; line-height: 1.6;">
-                            <li>Ajuste de pH si es necesario</li>
-                            <li>Dosificación de cloro</li>
-                            <li>Aplicación de alguicida</li>
-                            <li>Control de alcalinidad</li>
+                            <li data-translate="articles.piscinasdenia.friday_ph">Ajuste de pH si es necesario</li>
+                            <li data-translate="articles.piscinasdenia.friday_chlorine">Dosificación de cloro</li>
+                            <li data-translate="articles.piscinasdenia.friday_algaecide">Aplicación de alguicida</li>
+                            <li data-translate="articles.piscinasdenia.friday_alkalinity">Control de alcalinidad</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <h2>🏠 Tipos de Piscinas en Dénia</h2>
+            <h2 data-translate="articles.piscinasdenia.pool_types_title">🏠 Tipos de Piscinas en Dénia</h2>
             
-            <p>En nuestra zona encontramos diferentes tipos de piscinas, cada una con necesidades específicas:</p>
+            <p data-translate="articles.piscinasdenia.pool_types_intro">En nuestra zona encontramos diferentes tipos de piscinas, cada una con necesidades específicas:</p>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0;">
                 <div class="service-card">
@@ -357,7 +470,7 @@
             
             <div style="display: flex; gap: 2rem; margin: 2rem 0; align-items: flex-start; flex-wrap: wrap;">
                 <div style="flex: 1; min-width: 250px;">
-                    <img src="../../images/piscinlimpieza.jpeg" alt="Limpieza profesional de piscina" 
+                    <img src="../../images/piscinalimpieza.jpeg" alt="Limpieza profesional de piscina" 
                          style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 25px rgba(0, 102, 51, 0.15);">
                     <p style="font-size: 0.9rem; color: #6b7280; margin-top: 0.5rem; font-style: italic; text-align: center;">Proceso de limpieza profesional</p>
                 </div>
@@ -381,100 +494,100 @@
                 </div>
             </div>
 
-            <h2>⚙️ Equipamiento Moderno para Piscinas</h2>
+            <h2 data-translate="article_pool_equipment_title">⚙️ Equipamiento Moderno para Piscinas</h2>
             
-            <p>Las piscinas en Dénia se benefician de tecnologías avanzadas que facilitan el mantenimiento:</p>
+            <p data-translate="article_pool_equipment_intro">Las piscinas en Dénia se benefician de tecnologías avanzadas que facilitan el mantenimiento:</p>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
                 <div class="service-card" style="background: linear-gradient(135deg, #e8f5e9, #f0fff0);">
-                    <h3 style="color: #28a745;">🤖 Automatización</h3>
+                    <h3 style="color: #28a745;" data-translate="equipment_automation_title">🤖 Automatización</h3>
                     <ul>
-                        <li>Dosificadores automáticos</li>
-                        <li>Robots limpiafondos</li>
-                        <li>Control remoto por app</li>
-                        <li>Sensores de calidad</li>
+                        <li data-translate="automation_dosifiers">Dosificadores automáticos</li>
+                        <li data-translate="automation_robots">Robots limpiafondos</li>
+                        <li data-translate="automation_app">Control remoto por app</li>
+                        <li data-translate="automation_sensors">Sensores de calidad</li>
                     </ul>
                 </div>
                 <div class="service-card" style="background: linear-gradient(135deg, #e7f3ff, #f0f8ff);">
-                    <h3 style="color: #0066cc;">🧂 Cloración Salina</h3>
+                    <h3 style="color: #0066cc;" data-translate="equipment_salt_title">🧂 Cloración Salina</h3>
                     <ul>
-                        <li>Menos productos químicos</li>
-                        <li>Agua más suave</li>
-                        <li>Menor irritación</li>
-                        <li>Mantenimiento simplificado</li>
+                        <li data-translate="salt_less_chemicals">Menos productos químicos</li>
+                        <li data-translate="salt_soft_water">Agua más suave</li>
+                        <li data-translate="salt_less_irritation">Menor irritación</li>
+                        <li data-translate="salt_simplified">Mantenimiento simplificado</li>
                     </ul>
                 </div>
                 <div class="service-card" style="background: linear-gradient(135deg, #fff3cd, #fdf7e3);">
-                    <h3 style="color: #856404;">🌡️ Climatización</h3>
+                    <h3 style="color: #856404;" data-translate="equipment_heating_title">🌡️ Climatización</h3>
                     <ul>
-                        <li>Bombas de calor eficientes</li>
-                        <li>Coberturas térmicas</li>
-                        <li>Calentadores solares</li>
-                        <li>Control de temperatura</li>
+                        <li data-translate="heating_heat_pumps">Bombas de calor eficientes</li>
+                        <li data-translate="heating_covers">Coberturas térmicas</li>
+                        <li data-translate="heating_solar">Calentadores solares</li>
+                        <li data-translate="heating_control">Control de temperatura</li>
                     </ul>
                 </div>
             </div>
 
-            <h2>🏗️ Mantenimiento Estacional</h2>
+            <h2 data-translate="seasonal_maintenance_title">🏗️ Mantenimiento Estacional</h2>
             
-            <p>En Dénia, el mantenimiento varía según la época del año:</p>
+            <p data-translate="seasonal_maintenance_intro">En Dénia, el mantenimiento varía según la época del año:</p>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
                 <div class="service-card" style="background: linear-gradient(135deg, #fff8dc, #fffacd);">
-                    <h3 style="color: #b8860b;">🌸 Primavera - Puesta a Punto</h3>
+                    <h3 style="color: #b8860b;" data-translate="spring_title">🌸 Primavera - Puesta a Punto</h3>
                     <ul>
-                        <li>Limpieza profunda del vaso</li>
-                        <li>Revisión completa de equipos</li>
-                        <li>Cambio de arena del filtro</li>
-                        <li>Calibración de dosificadores</li>
-                        <li>Primera cloración del año</li>
+                        <li data-translate="spring_deep_cleaning">Limpieza profunda del vaso</li>
+                        <li data-translate="spring_equipment_check">Revisión completa de equipos</li>
+                        <li data-translate="spring_sand_change">Cambio de arena del filtro</li>
+                        <li data-translate="spring_calibration">Calibración de dosificadores</li>
+                        <li data-translate="spring_first_chlorination">Primera cloración del año</li>
                     </ul>
                 </div>
                 <div class="service-card" style="background: linear-gradient(135deg, #ffe4b5, #fff8dc);">
-                    <h3 style="color: #d2691e;">☀️ Verano - Mantenimiento Intensivo</h3>
+                    <h3 style="color: #d2691e;" data-translate="summer_title">☀️ Verano - Mantenimiento Intensivo</h3>
                     <ul>
-                        <li>Análisis diarios del agua</li>
-                        <li>Limpieza frecuente de superficie</li>
-                        <li>Control estricto de pH y cloro</li>
-                        <li>Tratamientos preventivos</li>
-                        <li>Mantenimiento de equipos</li>
+                        <li data-translate="summer_daily_analysis">Análisis diarios del agua</li>
+                        <li data-translate="summer_surface_cleaning">Limpieza frecuente de superficie</li>
+                        <li data-translate="summer_ph_control">Control estricto de pH y cloro</li>
+                        <li data-translate="summer_preventive">Tratamientos preventivos</li>
+                        <li data-translate="summer_equipment">Mantenimiento de equipos</li>
                     </ul>
                 </div>
                 <div class="service-card" style="background: linear-gradient(135deg, #e6f3ff, #f0f8ff);">
-                    <h3 style="color: #4682b4;">❄️ Invierno - Hibernación</h3>
+                    <h3 style="color: #4682b4;" data-translate="winter_title">❄️ Invierno - Hibernación</h3>
                     <ul>
-                        <li>Tratamiento antiheladas</li>
-                        <li>Cobertura de invierno</li>
-                        <li>Funcionamiento reducido</li>
-                        <li>Mantenimiento preventivo</li>
-                        <li>Preparación para próxima temporada</li>
+                        <li data-translate="winter_antifreeze">Tratamiento antiheladas</li>
+                        <li data-translate="winter_cover">Cobertura de invierno</li>
+                        <li data-translate="winter_reduced">Funcionamiento reducido</li>
+                        <li data-translate="winter_preventive">Mantenimiento preventivo</li>
+                        <li data-translate="winter_preparation">Preparación para próxima temporada</li>
                     </ul>
                 </div>
             </div>
 
-            <h2>💡 Consejos de Experto</h2>
+            <h2 data-translate="expert_tips_title">💡 Consejos de Experto</h2>
             
             <div style="background: linear-gradient(135deg, #f8fdf9, #e8f5e8); padding: 2rem; border-radius: 12px; margin: 2rem 0;">
-                <h3 style="color: #006633; margin-bottom: 1.5rem;">🎯 Secretos del Mantenimiento Profesional</h3>
+                <h3 style="color: #006633; margin-bottom: 1.5rem;" data-translate="expert_secrets_title">🎯 Secretos del Mantenimiento Profesional</h3>
                 <ul style="font-size: 1.1rem; line-height: 1.7;">
-                    <li><strong>Prevención antes que curación:</strong> Es más económico prevenir problemas que solucionarlos</li>
-                    <li><strong>Consistencia es clave:</strong> Mejor mantenimiento regular que intensivo esporádico</li>
-                    <li><strong>Calidad del agua de llenado:</strong> Analiza el agua de red antes de llenar</li>
-                    <li><strong>Circulación continua:</strong> En verano, la bomba debe funcionar al menos 8-10 horas</li>
-                    <li><strong>Limpieza nocturna:</strong> Los tratamientos de choque son más efectivos sin sol</li>
+                    <li data-translate="tip_prevention"><strong>Prevención antes que curación:</strong> Es más económico prevenir problemas que solucionarlos</li>
+                    <li data-translate="tip_consistency"><strong>Consistencia es clave:</strong> Mejor mantenimiento regular que intensivo esporádico</li>
+                    <li data-translate="tip_water_quality"><strong>Calidad del agua de llenado:</strong> Analiza el agua de red antes de llenar</li>
+                    <li data-translate="tip_circulation"><strong>Circulación continua:</strong> En verano, la bomba debe funcionar al menos 8-10 horas</li>
+                    <li data-translate="tip_night_cleaning"><strong>Limpieza nocturna:</strong> Los tratamientos de choque son más efectivos sin sol</li>
                 </ul>
             </div>
 
             <div class="conclusion">
-                <h2>Tu Piscina, Nuestra Especialidad</h2>
-                <p>Mantener una piscina en perfectas condiciones en Dénia requiere conocimientos técnicos, experiencia y dedicación constante. Cada piscina es única y merece un tratamiento personalizado que tenga en cuenta su ubicación, uso y características específicas.</p>
+                <h2 data-translate="articles.piscinasdenia.conclusion_title">Tu Piscina, Nuestra Especialidad</h2>
+                <p data-translate="articles.piscinasdenia.conclusion_text1">Mantener una piscina en perfectas condiciones en Dénia requiere conocimientos técnicos, experiencia y dedicación constante. Cada piscina es única y merece un tratamiento personalizado que tenga en cuenta su ubicación, uso y características específicas.</p>
                 
-                <p>Un mantenimiento profesional no solo garantiza agua cristalina y segura, sino que protege tu inversión y te permite disfrutar sin preocupaciones de uno de los mayores placeres del clima mediterráneo.</p>
+                <p data-translate="articles.piscinasdenia.conclusion_text2">Un mantenimiento profesional no solo garantiza agua cristalina y segura, sino que protege tu inversión y te permite disfrutar sin preocupaciones de uno de los mayores placeres del clima mediterráneo.</p>
             </div>
 
             <div class="signature">
-                <p><strong>¿Tu piscina necesita atención profesional?</strong></p>
-                <p>En Jardinería Pérez somos especialistas en mantenimiento integral de piscinas en Dénia y Marina Alta. Más de 15 años cuidando piscinas privadas y comunitarias con garantía de resultados. ¡Solicita tu presupuesto personalizado!</p>
+                <p><strong data-translate="articles.piscinasdenia.signature_question">¿Tu piscina necesita atención profesional?</strong></p>
+                <p data-translate="articles.piscinasdenia.signature_text">En Jardinería Pérez somos especialistas en mantenimiento integral de piscinas en Dénia y Marina Alta. Más de 15 años cuidando piscinas privadas y comunitarias con garantía de resultados. ¡Solicita tu presupuesto personalizado!</p>
             </div>
         
         </main>
@@ -482,10 +595,10 @@
         <!-- FOOTER DEL ARTÍCULO -->
         <footer class="article-footer">
             <div class="article-tags">
-                <span class="tag">#PiscinasDénia</span>
-                <span class="tag">#Mantenimiento</span>
-                <span class="tag">#MarinAlta</span>
-                <span class="tag">#PiscinasPrivadas</span>
+                <span class="tag" data-translate="articles.piscinasdenia.tags.pools_denia">#PiscinasDénia</span>
+                <span class="tag" data-translate="articles.piscinasdenia.tags.maintenance">#Mantenimiento</span>
+                <span class="tag" data-translate="articles.piscinasdenia.tags.marina_alta">#MarinAlta</span>
+                <span class="tag" data-translate="articles.piscinasdenia.tags.private_pools">#PiscinasPrivadas</span>
             </div>
             <div class="article-share">
                 <h4>Comparte este artículo:</h4>
@@ -502,43 +615,43 @@
     </div>
 
     <!-- FOOTER PRINCIPAL -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-content">
-                <!-- Logo y descripción -->
-                <div class="footer-column">
-                    <div class="footer-logo">
-                        <img src="../../images/logo-pequeño.png" alt="Jardinería Pérez Logo">
-                        <h3>Jardinería Pérez</h3>
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Logo y Descripción -->
+                <div class="footer-column footer-brand">
+                    <div class="logo">
+                        <i class="fas fa-seedling"></i>
+                        <span>Jardinería Pérez</span>
                     </div>
-                    <p>Expertos en diseño y mantenimiento de jardines y piscinas en Dénia y Marina Alta.</p>
-                    <div class="social-links">
+                    <p data-translate="footer_company_desc">Especialistas en diseño y mantenimiento de espacios verdes desde 2009</p>
+                    <div class="social-icons">
                         <a href="https://wa.me/34658645102"><i class="fab fa-whatsapp"></i></a>
                         <a href="mailto:jardineriaperez83@gmail.com"><i class="fa fa-envelope"></i></a>
                     </div>
                 </div>
                 <!-- Servicios -->
                 <div class="footer-column">
-                    <h4>Servicios</h4>
+                    <h4 data-translate="footer_services_title">Servicios</h4>
                     <ul>
-                        <li><a href="../../#servicios">Diseño de Jardines</a></li>
-                        <li><a href="../../#servicios">Mantenimiento Profesional</a></li>
-                        <li><a href="../../#servicios">Sistemas de Riego</a></li>
-                        <li><a href="../../#urbanizaciones">Urbanizaciones</a></li>
+                        <li><a href="../../#servicios" data-translate="footer_design">Diseño de Jardines</a></li>
+                        <li><a href="../../#servicios" data-translate="footer_maintenance">Mantenimiento Profesional</a></li>
+                        <li><a href="../../#servicios" data-translate="footer_irrigation">Sistemas de Riego</a></li>
+                        <li><a href="../../#urbanizaciones" data-translate="footer_urbanizations">Urbanizaciones</a></li>
                     </ul>
                 </div>
                 <!-- Legal -->
                 <div class="footer-column">
-                    <h4>Legal</h4>
+                    <h4 data-translate="footer_legal_title">Legal</h4>
                     <ul>
-                        <li><a href="../../legal/politicaprivacidad.html">Política de Privacidad</a></li>
-                        <li><a href="../../legal/terminoscondiciones.html">Términos y Condiciones</a></li>
-                        <li><a href="../../legal/cookies.html">Cookies</a></li>
+                        <li><a href="../../legal/politicaprivacidad.html" data-translate="footer_privacy">Política de Privacidad</a></li>
+                        <li><a href="../../legal/terminoscondiciones.html" data-translate="footer_terms">Términos y Condiciones</a></li>
+                        <li><a href="../../legal/cookies.html" data-translate="footer_cookies">Cookies</a></li>
                     </ul>
                 </div>
                 <!-- Contacto -->
                 <div class="footer-column">
-                    <h4>Contacto</h4>
+                    <h4 data-translate="footer_contact_title">Contacto</h4>
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i>Calle Senieta 38 4º E<br>03700 Dénia, Alicante</li>
                         <li><a href="tel:+34658645102"><i class="fas fa-phone"></i>+34 658 64 51 02</a></li>
@@ -547,7 +660,21 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Jardinería Pérez - Todos los derechos reservados | Diseñado con <i class="fas fa-heart" style="color: red;"></i> por VaporWeb Designs</p>
+                <p>
+                    <span data-translate="footer_copyright">Esta web ha sido diseñada con <i class="fas fa-heart" aria-hidden="true" style="color: red;"></i> por VaporWeb Designs © · Todos los derechos reservados</span>
+                </p>
+            </div>
+        </div>
+        <div class="cookie-container">
+            <div class="cookie-box" id="cookieBox">
+                <!-- Cruz en la esquina superior derecha -->
+                <i class="fas fa-times cookie-close" onclick="closeCookie()"></i>
+
+                <!-- Texto centrado -->
+                <p class="cookie-text">
+                    <span data-translate="cookie_text">Usamos cookies propias y de terceros para mejorar nuestros servicios. Si continuas navegando en esta página, aceptas nuestra</span>
+                    <a href="../../legal/cookies.html" data-translate="cookie_policy">política de cookies</a>.
+                </p>
             </div>
         </div>
     </footer>
@@ -557,6 +684,7 @@
     <!-- JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../../lang/translations.js"></script>
+    <script src="../../lang/init-translations.js"></script>
     <script src="../../scripts.js"></script>
 </body>
 </html>

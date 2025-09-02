@@ -321,7 +321,7 @@
   <nav class="navbar">
     <div class="logo">
       <a href="/"><img src="./images/logo-pequeño.png" alt="Logo Jardinería Pérez"></a>
-      <a href="/"><span>Jardinería Pérez</span></a>
+      <a href="/"><span data-translate="company_name">Jardinería Pérez</span></a>
     </div>
     <button class="menu-toggle" aria-label="Menú">
       <i class="fas fa-bars"></i>
@@ -332,7 +332,7 @@
       <li><a href="#testimonios" data-translate="nav_testimonials">Testimonios</a></li>
       <li><a href="#galeria" data-translate="nav_gallery">Proyectos</a></li>
       <li><a href="#contacto" data-translate="nav_contact">Contacto</a></li>
-      <li><a href="pages/blog" data-translate="nav_blog">Blog</a></li>
+      <li><a href="pages/blog.html" data-translate="nav_blog">Blog</a></li>
 
       <!-- Selector de Idioma -->
       <li class="nav-item language-selector-item">
@@ -646,9 +646,9 @@
               <img src="./images/piscina-urbanizacion1.jpeg" alt="Piscina comunitaria en urbanización">
               <div class="gallery-overlay">
                 <div class="gallery-info">
-                  <h3>Piscina Comunitaria</h3>
-                  <p>Mantenimiento regular - Marina Alta</p>
-                  <span class="gallery-category">Piscinas</span>
+                  <h3 data-translate="gallery_pool_community_title">Piscina Comunitaria</h3>
+                  <p data-translate="gallery_pool_community_desc">Mantenimiento regular - Marina Alta</p>
+                  <span class="gallery-category" data-translate="gallery_pool_category">Piscinas</span>
                 </div>
                 <button class="gallery-zoom" onclick="openLightbox('./images/piscina-urbanizacion1.jpeg', 'Piscina comunitaria en urbanización')">
                   <i class="fas fa-expand"></i>
@@ -662,9 +662,9 @@
               <img src="./images/piscinaurbanizacion.jpeg" alt="Mantenimiento piscina urbanización">
               <div class="gallery-overlay">
                 <div class="gallery-info">
-                  <h3>Piscina Urbanización</h3>
-                  <p>Servicio profesional - Dénia</p>
-                  <span class="gallery-category">Piscinas</span>
+                  <h3 data-translate="gallery_pool_urbanization_title">Piscina Urbanización</h3>
+                  <p data-translate="gallery_pool_urbanization_desc">Servicio profesional - Dénia</p>
+                  <span class="gallery-category" data-translate="gallery_pool_category">Piscinas</span>
                 </div>
                 <button class="gallery-zoom" onclick="openLightbox('./images/piscinaurbanizacion.jpeg', 'Mantenimiento piscina urbanización')">
                   <i class="fas fa-expand"></i>
@@ -678,9 +678,9 @@
               <img src="./images/piscina-comunidad-rinon.jpeg" alt="Piscina privada con diseño especial">
               <div class="gallery-overlay">
                 <div class="gallery-info">
-                  <h3>Piscina Privada</h3>
-                  <p>Diseño personalizado - Marina Alta</p>
-                  <span class="gallery-category">Piscinas</span>
+                  <h3 data-translate="gallery_pool_private_title">Piscina Privada</h3>
+                  <p data-translate="gallery_pool_private_desc">Diseño personalizado - Marina Alta</p>
+                  <span class="gallery-category" data-translate="gallery_pool_category">Piscinas</span>
                 </div>
                 <button class="gallery-zoom" onclick="openLightbox('./images/piscina-comunidad-rinon.jpeg', 'Piscina privada con diseño especial')">
                   <i class="fas fa-expand"></i>
@@ -694,9 +694,9 @@
               <img src="./images/piscina-infinity.jpeg" alt="Piscina infinity con vistas panorámicas">
               <div class="gallery-overlay">
                 <div class="gallery-info">
-                  <h3>Piscina Infinity</h3>
-                  <p>Diseño exclusivo - Costa de Dénia</p>
-                  <span class="gallery-category">Piscinas</span>
+                  <h3 data-translate="gallery_pool_infinity_title">Piscina Infinity</h3>
+                  <p data-translate="gallery_pool_infinity_desc">Diseño exclusivo - Costa de Dénia</p>
+                  <span class="gallery-category" data-translate="gallery_pool_category">Piscinas</span>
                 </div>
                 <button class="gallery-zoom" onclick="openLightbox('./images/piscina-infinity.jpeg', 'Piscina infinity con vistas panorámicas')">
                   <i class="fas fa-expand"></i>
@@ -710,9 +710,9 @@
               <img src="./images/piscina-larga.jpeg" alt="Piscina olímpica para ejercicio">
               <div class="gallery-overlay">
                 <div class="gallery-info">
-                  <h3>Piscina Olímpica</h3>
-                  <p>Perfecta para ejercicio - Javea</p>
-                  <span class="gallery-category">Piscinas</span>
+                  <h3 data-translate="gallery_pool_olympic_title">Piscina Olímpica</h3>
+                  <p data-translate="gallery_pool_olympic_desc">Perfecta para ejercicio - Javea</p>
+                  <span class="gallery-category" data-translate="gallery_pool_category">Piscinas</span>
                 </div>
                 <button class="gallery-zoom" onclick="openLightbox('./images/piscina-larga.jpeg', 'Piscina olímpica para ejercicio')">
                   <i class="fas fa-expand"></i>
@@ -723,8 +723,8 @@
         </div>
         
         <div class="gallery-cta">
-          <p>¿Te gusta lo que ves? Podemos crear algo similar para ti</p>
-          <a href="#contacto" class="btn-primary">Solicita tu presupuesto gratuito</a>
+          <p data-translate="gallery_cta_text">¿Te gusta lo que ves? Podemos crear algo similar para ti</p>
+          <a href="#contacto" class="btn-primary" data-translate="gallery_cta_button">Solicita tu presupuesto gratuito</a>
         </div>
       </div>
     </section>
@@ -867,6 +867,7 @@
   <!-- JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="lang/translations.js"></script>
+  <script src="lang/init-translations.js"></script>
   <script src="scripts.js"></script>
 
 </body>
