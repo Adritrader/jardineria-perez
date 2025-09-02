@@ -3,6 +3,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    z-index: 2000; /* Asegurar que esté por encima de todo */
 }
 
 .lang-dropdown {
@@ -24,9 +25,12 @@
     font-weight: 500;
     height: 36px;
     min-width: 80px;
+    -webkit-tap-highlight-color: transparent; /* Eliminar highlight en iOS */
+    touch-action: manipulation; /* Mejor soporte touch */
 }
 
-.lang-current:hover {
+.lang-current:hover,
+.lang-current:active {
     background: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.3);
 }
@@ -95,7 +99,7 @@
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.3s ease;
-    z-index: 1000;
+    z-index: 2001; /* Más alto para móviles */
     overflow: hidden;
     margin-top: 8px;
 }
@@ -117,9 +121,12 @@
     font-size: 14px;
     font-weight: 500;
     position: relative;
+    -webkit-tap-highlight-color: transparent; /* Eliminar highlight en iOS */
+    touch-action: manipulation; /* Mejor soporte touch */
 }
 
-.lang-option:hover {
+.lang-option:hover,
+.lang-option:active {
     background-color: #f5f5f5;
 }
 
@@ -174,6 +181,7 @@
         position: fixed;
         right: 20px;
         left: auto;
+        z-index: 9999; /* Más alto en tablets */
     }
     
     .lang-option {
@@ -183,11 +191,17 @@
 }
 
 @media (max-width: 768px) {
+    #language-selector {
+        z-index: 10000; /* Máximo z-index en móviles */
+    }
+    
     .lang-current {
         padding: 8px 12px;
         font-size: 13px;
         height: 36px;
         min-width: 90px;
+        /* Mejorar área de toque */
+        min-height: 44px; /* Tamaño mínimo recomendado para touch */
     }
     
     .flag-icon {
@@ -202,11 +216,25 @@
     
     .lang-options {
         min-width: 110px;
+        position: fixed; /* Usar fixed en móviles */
+        right: 10px;
+        top: auto;
+        z-index: 10001; /* Asegurar que esté encima de todo */
+        box-shadow: 0 8px 30px rgba(0,0,0,0.2); /* Sombra más prominente */
     }
     
     .lang-option {
         padding: 12px 16px;
         font-size: 13px;
+        min-height: 44px; /* Área de toque más grande */
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Asegurar que no interfiera con el menú móvil */
+    .nav-links.active #language-selector {
+        position: relative;
+        z-index: 10002;
     }
 }
 

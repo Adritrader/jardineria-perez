@@ -256,11 +256,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Configurar selector de idiomas después de la traducción inicial
                 setTimeout(() => {
                     setupLanguageSelector();
+                    
+                    // Debug para móviles
+                    if (isMobileDevice()) {
+                        setTimeout(debugMobileEvents, 1000);
+                    }
                 }, 100);
             } else {
                 console.error('Initial translation failed, falling back to Spanish');
                 translatePage('es');
                 setupLanguageSelector();
+                
+                // Debug para móviles
+                if (isMobileDevice()) {
+                    setTimeout(debugMobileEvents, 1000);
+                }
             }
         } else {
             console.log('Waiting for translations to load...');
@@ -271,13 +281,50 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeTranslations();
 });
 
+// Debug function to check mobile events
+function debugMobileEvents() {
+    const currentLang = document.getElementById('current-lang');
+    const dropdown = document.getElementById('lang-options');
+    
+    if (currentLang && dropdown) {
+        console.log('Debugging mobile events...');
+        console.log('Current lang element:', currentLang);
+        console.log('Dropdown element:', dropdown);
+        console.log('Is mobile device:', isMobileDevice());
+        console.log('Dropdown classes:', dropdown.className);
+        
+        // Test if elements are clickable
+        const rect = currentLang.getBoundingClientRect();
+        console.log('Current lang position:', rect);
+        
+        const dropdownRect = dropdown.getBoundingClientRect();
+        console.log('Dropdown position:', dropdownRect);
+        
+        // Check z-index
+        const computedStyle = window.getComputedStyle(dropdown);
+        console.log('Dropdown z-index:', computedStyle.zIndex);
+        console.log('Dropdown position style:', computedStyle.position);
+    }
+}
+
+// Detectar si es un dispositivo móvil
+function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
+           ('ontouchstart' in window) || 
+           (navigator.maxTouchPoints > 0);
+}
+
 // Función separada para configurar el selector de idiomas
 function setupLanguageSelector() {
     const langOptions = document.querySelectorAll('.lang-option');
     console.log('Found language options:', langOptions.length);
     
+    const isMobile = isMobileDevice();
+    console.log('Is mobile device:', isMobile);
+    
     langOptions.forEach(option => {
-        option.addEventListener('click', function(e) {
+        // Agregar soporte para touch events en móviles
+        const handleOptionClick = function(e) {
             e.preventDefault();
             e.stopPropagation();
             const lang = this.getAttribute('data-lang');
@@ -293,13 +340,20 @@ function setupLanguageSelector() {
                 // Actualizar enlaces de navegación si es necesario
                 updateNavigationLinks();
             }
-        });
+        };
+        
+        if (isMobile) {
+            // En móviles, usar touchstart para mejor respuesta
+            option.addEventListener('touchstart', handleOptionClick, { passive: false });
+        }
+        // Siempre agregar click como fallback
+        option.addEventListener('click', handleOptionClick);
     });
     
     // Configurar botón actual del selector
     const currentLang = document.getElementById('current-lang');
     if (currentLang) {
-        currentLang.addEventListener('click', function(e) {
+        const handleToggle = function(e) {
             e.preventDefault();
             e.stopPropagation();
             const dropdown = document.getElementById('lang-options');
@@ -307,21 +361,34 @@ function setupLanguageSelector() {
                 dropdown.classList.toggle('open');
                 console.log('Dropdown toggled');
             }
-        });
+        };
+        
+        if (isMobile) {
+            // En móviles, usar touchstart
+            currentLang.addEventListener('touchstart', handleToggle, { passive: false });
+        }
+        // Siempre agregar click como fallback
+        currentLang.addEventListener('click', handleToggle);
         
         // Cerrar dropdown al hacer click fuera
-        document.addEventListener('click', function(e) {
+        const closeDropdown = function(e) {
             const selector = document.getElementById('language-selector');
             if (selector && !selector.contains(e.target)) {
                 const dropdown = document.getElementById('lang-options');
-                if (dropdown) {
+                if (dropdown && dropdown.classList.contains('open')) {
                     dropdown.classList.remove('open');
+                    console.log('Dropdown closed by outside click');
                 }
             }
-        });
+        };
+        
+        if (isMobile) {
+            document.addEventListener('touchstart', closeDropdown, { passive: true });
+        }
+        document.addEventListener('click', closeDropdown);
     }
     
-    console.log('Language selector configured');
+    console.log('Language selector configured with mobile support');
 }
 
 // Función para actualizar enlaces de navegación
