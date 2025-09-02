@@ -421,5 +421,79 @@
     <script src="../lang/translations.js"></script>
     <script src="../lang/init-translations.js"></script>
     <script src="../scripts.js"></script>
+    
+    <!-- Script específico para menú del blog -->
+    <script>
+        // Función específica para el blog que fuerza el funcionamiento del menú
+        function initBlogMenu() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            console.log('=== BLOG MENU INIT ===');
+            console.log('Menu Toggle:', menuToggle);
+            console.log('Nav Links:', navLinks);
+            
+            if (menuToggle && navLinks) {
+                // Remover listeners existentes si los hay
+                menuToggle.replaceWith(menuToggle.cloneNode(true));
+                const newMenuToggle = document.querySelector('.menu-toggle');
+                
+                newMenuToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    console.log('Blog menu clicked!');
+                    
+                    // Toggle class
+                    navLinks.classList.toggle('active');
+                    
+                    // Force display
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.style.display = 'flex';
+                        navLinks.style.position = 'fixed';
+                        navLinks.style.top = '60px';
+                        navLinks.style.left = '0';
+                        navLinks.style.width = '100%';
+                        navLinks.style.backgroundColor = '#006633';
+                        navLinks.style.flexDirection = 'column';
+                        navLinks.style.zIndex = '1001';
+                        console.log('Menu opened - styles applied');
+                    } else {
+                        navLinks.style.display = '';
+                        console.log('Menu closed');
+                    }
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!newMenuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+                        navLinks.classList.remove('active');
+                        navLinks.style.display = '';
+                    }
+                });
+                
+                console.log('Blog menu initialized successfully');
+            } else {
+                console.error('Blog menu elements not found');
+            }
+        }
+        
+        // Ejecutar cuando el DOM esté listo
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initBlogMenu);
+        } else {
+            setTimeout(initBlogMenu, 100);
+        }
+        
+        // Test function
+        window.testBlogMenu = function() {
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks) {
+                navLinks.classList.toggle('active');
+                navLinks.style.display = navLinks.classList.contains('active') ? 'flex' : '';
+                console.log('Blog menu toggled manually');
+            }
+        };
+    </script>
 </body>
 </html>

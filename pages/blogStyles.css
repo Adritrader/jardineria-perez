@@ -134,12 +134,7 @@
     transform: translateY(-2px);
 }
 
-@media (max-width: 992px) {
-    /* Media query para tablets - solo ajustes específicos */
-    .blog-page .navbar {
-        padding: 0.6rem 1.5rem;
-    }
-}
+
 
 /* ===== FOOTER PARA BLOG (MISMO ESTILO QUE INDEX) ===== */
 .blog-page .footer {
@@ -295,10 +290,29 @@
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* Responsive para navbar y footer */
-@media (max-width: 768px) {
+/* ===== MENÚ MÓVIL ESPECÍFICO PARA BLOG - FORZAR ESTILOS ===== */
+.blog-page .navbar .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+/* Estilos base para nav-links */
+.blog-page .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* Media query unificada para móviles */
+@media (max-width: 992px) {
     .blog-page .navbar .menu-toggle {
-        display: block;
+        display: block !important;
         z-index: 1002;
     }
     
@@ -318,6 +332,43 @@
     
     .blog-page .navbar .nav-links.active {
         display: flex !important;
+        z-index: 1001 !important;
+    }
+    
+    .blog-page .navbar .nav-links a {
+        color: white;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Responsive para navbar y footer */
+@media (max-width: 768px) {
+    /* Duplicar estilos para asegurar que funcionen en dispositivos más pequeños */
+    .blog-page .navbar .menu-toggle {
+        display: block !important;
+        z-index: 1002;
+    }
+    
+    .blog-page .navbar .nav-links {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #006633;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        z-index: 1001;
+        border-bottom: 5px solid white;
+    }
+    
+    .blog-page .navbar .nav-links.active {
+        display: flex !important;
+        z-index: 1001 !important;
     }
     
     .blog-page .navbar .nav-links a {
