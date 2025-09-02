@@ -283,7 +283,7 @@
             <!-- SIDEBAR EN TARJETAS -->
             <aside class="blog-sidebar">
                 <!-- Artículos Populares -->
-                <div class="sidebar-card">
+                <div class="sidebar-card popular-card">
                     <div class="sidebar-header">
                         <h3><i class="fas fa-fire"></i> <span data-translate="popular_articles">Artículos Populares</span></h3>
                     </div>
@@ -389,7 +389,7 @@
                 </div>
 
                 <!-- Etiquetas -->
-                <div class="sidebar-card">
+                <div class="sidebar-card tags-card">
                     <div class="sidebar-header">
                         <h3><i class="fas fa-tags"></i> <span data-translate="popular_tags">Etiquetas Populares</span></h3>
                     </div>
@@ -586,6 +586,32 @@
             
             console.log('Tag filtering system initialized');
         });
+        
+        // ===== DEBUG ETIQUETAS =====
+        setTimeout(function() {
+            const tagsCard = document.querySelector('.tags-card');
+            const tagsContainer = document.querySelector('.tags-container');
+            const tagItems = document.querySelectorAll('.tag-item');
+            
+            console.log('=== TAGS DEBUG ===');
+            console.log('Tags card found:', !!tagsCard);
+            console.log('Tags container found:', !!tagsContainer);
+            console.log('Tag items found:', tagItems.length);
+            
+            if (tagsCard) {
+                console.log('Tags card visibility:', window.getComputedStyle(tagsCard).visibility);
+                console.log('Tags card display:', window.getComputedStyle(tagsCard).display);
+            }
+            
+            if (tagsContainer) {
+                console.log('Tags container visibility:', window.getComputedStyle(tagsContainer).visibility);
+                console.log('Tags container display:', window.getComputedStyle(tagsContainer).display);
+            }
+            
+            tagItems.forEach((tag, index) => {
+                console.log(`Tag ${index}:`, tag.textContent, 'visible:', window.getComputedStyle(tag).visibility);
+            });
+        }, 3000);
     </script>
 </body>
 </html>

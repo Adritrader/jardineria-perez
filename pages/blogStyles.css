@@ -708,28 +708,8 @@
     gap: 2rem;
     position: sticky;
     top: 2rem;
-    max-height: calc(100vh - 6rem);
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--blog-accent) var(--blog-light);
-}
-
-.blog-sidebar::-webkit-scrollbar {
-    width: 6px;
-}
-
-.blog-sidebar::-webkit-scrollbar-track {
-    background: var(--blog-light);
-    border-radius: 3px;
-}
-
-.blog-sidebar::-webkit-scrollbar-thumb {
-    background: var(--blog-accent);
-    border-radius: 3px;
-}
-
-.blog-sidebar::-webkit-scrollbar-thumb:hover {
-    background: var(--blog-primary);
+    max-height: none; /* Eliminar altura máxima */
+    overflow: visible; /* Eliminar scroll del sidebar */
 }
 
 /* ===== TARJETAS DEL SIDEBAR ===== */
@@ -748,8 +728,15 @@
 }
 
 /* Altura específica para la tarjeta de artículos populares */
-.sidebar-card:has(.popular-articles) {
+.popular-card {
     min-height: 450px; /* Reducir para que se vean las etiquetas */
+}
+
+/* Asegurar que la tarjeta de etiquetas sea visible */
+.tags-card {
+    min-height: 200px; /* Altura mínima para las etiquetas */
+    display: block !important;
+    visibility: visible !important;
 }
 
 .sidebar-card:hover {
@@ -1015,13 +1002,14 @@
 /* ===== ETIQUETAS ===== */
 .tags-container {
     padding: 1.5rem;
-    display: flex;
+    display: flex !important;
     flex-wrap: wrap;
     gap: 0.8rem;
+    visibility: visible !important;
 }
 
 .tag-item {
-    display: inline-block;
+    display: inline-block !important;
     padding: 0.5rem 1rem;
     background: var(--blog-light);
     color: var(--blog-primary);
@@ -1032,6 +1020,7 @@
     transition: var(--transition-fast);
     border: 1px solid rgba(0, 102, 51, 0.2);
     cursor: pointer;
+    visibility: visible !important;
 }
 
 .tag-item:hover {
