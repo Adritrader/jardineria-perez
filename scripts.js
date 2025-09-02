@@ -59,21 +59,76 @@ form.addEventListener('submit', (event) => {
 */
 
 // --- RESPONSIVE MENU ---
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
 
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  navLinks.style.display = navLinks.classList.contains('active') ? 'flex' : '';
-});
-
-// --- CLOSE MENU ON LINK CLICK (mobile) ---
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-    
+  console.log('DOM loaded, initializing menu:', {
+    menuToggle: !!menuToggle,
+    navLinks: !!navLinks,
+    page: document.title
   });
+
+  if (menuToggle && navLinks) {
+    console.log('Mobile menu initialized successfully');
+    
+    // Agregar debugging específico para blog
+    window.testMobileMenu = function() {
+      navLinks.classList.toggle('active');
+      if (navLinks.classList.contains('active')) {
+        navLinks.style.display = 'flex';
+        console.log('Menu opened manually');
+      } else {
+        navLinks.style.display = '';
+        console.log('Menu closed manually');
+      }
+    };
+    
+    menuToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log('Menu toggle clicked');
+      
+      navLinks.classList.toggle('active');
+      
+      // Alternar display para móviles
+      if (navLinks.classList.contains('active')) {
+        navLinks.style.display = 'flex';
+        console.log('Menu opened - classes:', navLinks.className);
+      } else {
+        navLinks.style.display = '';
+        console.log('Menu closed - classes:', navLinks.className);
+      }
+    });
+
+    // --- CLOSE MENU ON LINK CLICK (mobile) ---
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', function() {
+        navLinks.classList.remove('active');
+        navLinks.style.display = '';
+        console.log('Menu closed by link click');
+      });
+    });
+
+    // Cerrar menú al hacer click fuera
+    document.addEventListener('click', function(e) {
+      if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+        if (navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+          navLinks.style.display = '';
+          console.log('Menu closed by outside click');
+        }
+      }
+    });
+    
+  } else {
+    console.error('Menu elements not found:', {
+      menuToggle: !!menuToggle,
+      navLinks: !!navLinks,
+      menuToggleSelector: document.querySelector('.menu-toggle'),
+      navLinksSelector: document.querySelector('.nav-links')
+    });
+  }
 });
 
 // --- SCROLL ANIMATIONS ---
