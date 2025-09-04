@@ -103,133 +103,498 @@
     }
     </script>
 
-    <!-- Enlaces -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="../../lang/language-selector.css">
-    <link rel="stylesheet" href="../blogStyles.css">
-    <link rel="stylesheet" href="../articles-mobile.css">
+    <!-- Íconos -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../../images/logo-pequeño.png" sizes="32x32" />
+    <link rel="icon" href="../../images/logomediano.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="../../images/logomediano.png" />
+
+    <!-- Fuentes y estilos -->
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../blogStyles.css" />
+    <link rel="stylesheet" href="../consejosbasicos-styles.css" />
+    <link rel="stylesheet" href="../../lang/language-selector.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <!-- Estilos específicos para asegurar visibilidad del footer y optimización móvil -->
+    <style>
+        /* Forzar estilos del footer - Usar clases idénticas al index */
+        .footer {
+            background: #006633 !important;
+            color: white !important;
+            padding: 4rem 2rem !important;
+            margin-top: 4rem !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            position: relative !important;
+            z-index: 10 !important;
+            width: 100% !important;
+            clear: both !important;
+        }
+        
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            min-height: 100vh !important;
+        }
+        
+        .article-content {
+            margin-bottom: 2rem !important;
+        }
+        
+        .related-articles {
+            margin-bottom: 2rem !important;
+        }
+        
+        /* Botón scroll to top corregido */
+        #myBtn {
+            display: none !important;
+            position: fixed !important;
+            bottom: 30px !important;
+            right: 30px !important;
+            z-index: 999 !important;
+            border: none !important;
+            outline: none !important;
+            background-color: #4caf50 !important;
+            color: white !important;
+            cursor: pointer !important;
+            padding: 15px !important;
+            border-radius: 50% !important;
+            font-size: 18px !important;
+            width: 60px !important;
+            height: 60px !important;
+            box-shadow: 0 4px 15px rgba(72, 156, 82, 0.3) !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        #myBtn:hover {
+            background-color: #2e7d32 !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 6px 20px rgba(72, 156, 82, 0.4) !important;
+        }
+
+        /* ===== OPTIMIZACIÓN MÓVIL ===== */
+        @media (max-width: 768px) {
+            /* Container y márgenes generales */
+            .container {
+                padding: 0 15px !important;
+                max-width: 100% !important;
+            }
+            
+            /* Header del artículo */
+            .article-header {
+                padding: 20px 0 !important;
+                text-align: center !important;
+            }
+            
+            .article-title {
+                font-size: 24px !important;
+                line-height: 1.3 !important;
+                margin: 15px 0 !important;
+                padding: 0 10px !important;
+            }
+            
+            .article-meta {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 8px !important;
+                font-size: 14px !important;
+            }
+            
+            .article-meta span {
+                margin: 0 !important;
+            }
+            
+            /* Breadcrumb */
+            .breadcrumb {
+                font-size: 14px !important;
+                text-align: center !important;
+                margin-bottom: 15px !important;
+            }
+            
+            /* Contenido principal */
+            .article-content {
+                padding: 20px 0 !important;
+            }
+            
+            .content-wrapper {
+                max-width: 100% !important;
+                padding: 0 !important;
+            }
+            
+            /* Imagen del artículo */
+            .article-image {
+                margin-bottom: 25px !important;
+                text-align: center !important;
+            }
+            
+            .article-image img {
+                width: 100% !important;
+                max-width: 100% !important;
+                height: auto !important;
+                border-radius: 8px !important;
+            }
+            
+            .article-image figcaption {
+                font-size: 14px !important;
+                padding: 10px 15px !important;
+                text-align: center !important;
+                font-style: italic !important;
+                color: #666 !important;
+            }
+            
+            /* Tipografía del artículo */
+            .article-text {
+                font-size: 16px !important;
+                line-height: 1.6 !important;
+                padding: 0 5px !important;
+            }
+            
+            .article-text h2 {
+                font-size: 22px !important;
+                line-height: 1.3 !important;
+                margin: 30px 0 15px 0 !important;
+                padding: 0 10px !important;
+                text-align: left !important;
+            }
+            
+            .article-text h3 {
+                font-size: 18px !important;
+                line-height: 1.4 !important;
+                margin: 25px 0 12px 0 !important;
+                padding: 0 10px !important;
+            }
+            
+            .article-text p {
+                margin: 15px 0 !important;
+                padding: 0 10px !important;
+                text-align: left !important;
+            }
+            
+            .lead {
+                font-size: 17px !important;
+                line-height: 1.5 !important;
+                margin-bottom: 25px !important;
+                font-weight: 400 !important;
+                padding: 0 15px !important;
+            }
+            
+            /* Listas */
+            .tips-list {
+                margin: 15px 0 !important;
+                padding: 0 15px 0 25px !important;
+            }
+            
+            .tips-list li {
+                margin: 12px 0 !important;
+                line-height: 1.5 !important;
+                font-size: 15px !important;
+                padding-left: 8px !important;
+            }
+            
+            /* Cajas de consejos */
+            .tip-box, .cta-box {
+                margin: 25px 10px !important;
+                padding: 20px 15px !important;
+                border-radius: 8px !important;
+                text-align: center !important;
+            }
+            
+            .tip-box h3, .cta-box h3 {
+                font-size: 18px !important;
+                margin: 0 0 12px 0 !important;
+                padding: 0 !important;
+            }
+            
+            .tip-box p, .cta-box p {
+                font-size: 15px !important;
+                line-height: 1.5 !important;
+                margin: 12px 0 !important;
+                padding: 0 !important;
+            }
+            
+            /* Botón CTA */
+            .cta-button {
+                display: inline-block !important;
+                padding: 15px 25px !important;
+                font-size: 16px !important;
+                border-radius: 8px !important;
+                margin-top: 15px !important;
+                text-decoration: none !important;
+                background-color: #4caf50 !important;
+                color: white !important;
+                font-weight: bold !important;
+                text-align: center !important;
+                transition: all 0.3s ease !important;
+            }
+            
+            /* Artículos relacionados */
+            .related-articles {
+                padding: 30px 0 !important;
+                margin-top: 40px !important;
+            }
+            
+            .related-articles h2 {
+                font-size: 24px !important;
+                text-align: center !important;
+                margin-bottom: 25px !important;
+                padding: 0 15px !important;
+            }
+            
+            .articles-grid {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 20px !important;
+                padding: 0 15px !important;
+            }
+            
+            .article-card {
+                border-radius: 8px !important;
+                overflow: hidden !important;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+                background: white !important;
+            }
+            
+            .article-card img {
+                width: 100% !important;
+                height: 200px !important;
+                object-fit: cover !important;
+            }
+            
+            .card-content {
+                padding: 20px 15px !important;
+            }
+            
+            .card-content h3 {
+                font-size: 18px !important;
+                margin: 0 0 10px 0 !important;
+                line-height: 1.3 !important;
+            }
+            
+            .card-content p {
+                font-size: 14px !important;
+                line-height: 1.4 !important;
+                margin: 10px 0 15px 0 !important;
+                color: #666 !important;
+                padding: 0 !important;
+            }
+            
+            .read-more {
+                font-size: 14px !important;
+                color: #4caf50 !important;
+                text-decoration: none !important;
+                font-weight: bold !important;
+            }
+            
+            /* Footer móvil */
+            .footer {
+                padding: 30px 15px 20px 15px !important;
+                margin-top: 40px !important;
+            }
+            
+            .footer-grid {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 25px !important;
+                text-align: center !important;
+            }
+            
+            .footer-column {
+                margin-bottom: 20px !important;
+            }
+            
+            .footer-column h4 {
+                font-size: 18px !important;
+                margin-bottom: 15px !important;
+                color: #00c896 !important;
+            }
+            
+            .footer-column ul {
+                list-style: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            
+            .footer-column li {
+                margin: 8px 0 !important;
+                font-size: 14px !important;
+            }
+            
+            .footer-brand .logo {
+                font-size: 24px !important;
+                margin-bottom: 15px !important;
+                justify-content: center !important;
+            }
+            
+            .footer-brand p {
+                font-size: 14px !important;
+                line-height: 1.5 !important;
+                margin: 15px 0 !important;
+                padding: 0 !important;
+            }
+            
+            .social-icons {
+                justify-content: center !important;
+                gap: 15px !important;
+                margin-top: 15px !important;
+            }
+            
+            .social-icons a {
+                font-size: 20px !important;
+                width: 40px !important;
+                height: 40px !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                border-radius: 50% !important;
+                background-color: #00c896 !important;
+                color: white !important;
+            }
+            
+            .footer-bottom {
+                text-align: center !important;
+                padding-top: 20px !important;
+                border-top: 1px solid #00c896 !important;
+                margin-top: 30px !important;
+            }
+            
+            .footer-bottom p {
+                font-size: 12px !important;
+                line-height: 1.4 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            
+            /* Botón scroll to top móvil */
+            #myBtn {
+                bottom: 20px !important;
+                right: 20px !important;
+                width: 50px !important;
+                height: 50px !important;
+                font-size: 16px !important;
+                padding: 12px !important;
+            }
+        }
+
+        /* Móviles muy pequeños */
+        @media (max-width: 480px) {
+            .article-title {
+                font-size: 20px !important;
+                padding: 0 5px !important;
+            }
+            
+            .article-text h2 {
+                font-size: 20px !important;
+                padding: 0 5px !important;
+            }
+            
+            .container {
+                padding: 0 10px !important;
+            }
+            
+            .tip-box, .cta-box {
+                margin: 20px 5px !important;
+                padding: 15px 12px !important;
+            }
+            
+            .footer {
+                padding: 25px 10px 15px 10px !important;
+            }
+        }
+    </style>
 </head>
 
-<body>
-  <!-- HEADER PRINCIPAL -->
-  <header class="main-header">
-    <div class="container">
-      <div class="header-content">
+<body class="blog-page article-page">
+    <!-- NAVBAR -->
+    <nav class="navbar">
         <div class="logo">
-          <img src="../../images/logomediano.png" alt="Jardinería Pérez - Mantenimiento de jardines en Dénia">
+            <a href="../../"><img src="../../images/logo-pequeño.png" alt="Logo Jardinería Pérez"></a>
+            <a href="../../"><span>Jardinería Pérez</span></a>
         </div>
-        
-        <div class="header-right">
-          <div class="contact-info">
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <span>+34 615 75 65 84</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <span>info@jardineriaperez.com</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Dénia, Marina Alta</span>
-            </div>
-          </div>
-          
-          <!-- Selector de idiomas -->
-          <div class="language-selector">
-            <div class="selected" data-translate="current_lang">ES</div>
-            <div class="options">
-              <div class="option" data-lang="es">🇪🇸 Español</div>
-              <div class="option" data-lang="en">🇬🇧 English</div>
-              <div class="option" data-lang="de">🇩🇪 Deutsch</div>
-              <div class="option" data-lang="fr">🇫🇷 Français</div>
-              <div class="option" data-lang="nl">🇳🇱 Nederlands</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- NAVEGACIÓN -->
-  <nav class="main-nav">
-    <div class="container">
-      <div class="nav-content">
-        <div class="nav-logo">
-          <a href="../../index.html">
-            <img src="../../images/logo-pequeño.png" alt="Jardinería Pérez">
-          </a>
-        </div>
-        
+        <button class="menu-toggle" aria-label="Menú">
+            <i class="fas fa-bars"></i>
+        </button>
         <ul class="nav-links">
-          <li><a href="../../index.html#servicios" data-translate="nav_services">Servicios</a></li>
-          <li><a href="../../index.html#galeria" data-translate="nav_gallery">Galería</a></li>
-          <li><a href="../../index.html#testimonios" data-translate="nav_testimonials">Testimonios</a></li>
-          <li><a href="../blog.html" data-translate="nav_blog">Blog</a></li>
-          <li><a href="../../index.html#contacto" data-translate="nav_contact">Contacto</a></li>
+            <li><a href="../../#servicios" data-translate="nav_services">Servicios</a></li>
+            <li><a href="../../#urbanizaciones">Urbanizaciones</a></li>
+            <li><a href="../../#testimonios" data-translate="nav_testimonials">Testimonios</a></li>
+            <li><a href="../../#galeria" data-translate="nav_gallery">Proyectos</a></li>
+            <li><a href="../../#contacto" data-translate="nav_contact">Contacto</a></li>
+            <li><a href="../blog.html" class="active" data-translate="nav_blog">Blog</a></li>
+            
+            <!-- Selector de Idioma -->
+            <li class="nav-item language-selector-item">
+                <div id="language-selector">
+                    <div class="lang-dropdown">
+                        <div class="lang-current" id="current-lang">
+                            <span class="flag-icon flag-es" id="current-flag"></span>
+                            <span id="current-lang-text">ES</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="lang-options" id="lang-options">
+                            <div class="lang-option" data-lang="es">
+                                <span class="flag-icon flag-es"></span>
+                                <span>Español</span>
+                            </div>
+                            <div class="lang-option" data-lang="en">
+                                <span class="flag-icon flag-gb"></span>
+                                <span>English</span>
+                            </div>
+                            <div class="lang-option" data-lang="de">
+                                <span class="flag-icon flag-de"></span>
+                                <span>Deutsch</span>
+                            </div>
+                            <div class="lang-option" data-lang="fr">
+                                <span class="flag-icon flag-fr"></span>
+                                <span>Français</span>
+                            </div>
+                            <div class="lang-option" data-lang="nl">
+                                <span class="flag-icon flag-nl"></span>
+                                <span>Nederlands</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <!-- Iconos sociales -->
+            <li class="social-icon"><a href="https://wa.me/34658645102" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+            <li class="social-icon"><a href="mailto:jardineriaperez83@gmail.com" aria-label="Correo Electrónico"><i class="fas fa-envelope"></i></a></li>
+            <li class="social-icon"><a href="tel:+34658645102" aria-label="Teléfono"><i class="fas fa-phone"></i></a></li>
         </ul>
-        
-        <div class="nav-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </div>
-  </nav>
+    </nav>
 
-  <main>
-    <!-- HERO SECTION DEL ARTÍCULO -->
-    <section class="article-hero">
-      <div class="container">
-        <div class="breadcrumb">
-          <a href="../../index.html" data-translate="breadcrumb_home">Inicio</a> > 
-          <a href="../blog.html" data-translate="breadcrumb_blog">Blog</a> > 
-          <span data-translate="breadcrumb_article">Consejos Básicos de Jardinería</span>
-        </div>
-        
-        <h1 class="article-title" data-translate="article_main_title">🌱 Consejos Básicos de Jardinería para Principiantes</h1>
-        
-        <div class="article-meta">
-          <div class="author-info">
-            <img src="../../images/logo-pequeño.png" alt="Jardinería Pérez" class="author-avatar">
-            <div>
-              <span class="author-name">Jardinería Pérez</span>
-              <time class="publish-date" datetime="2025-01-16">16 de enero, 2025</time>
+    <!-- ARTICLE HEADER -->
+    <header class="article-header">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../../" data-translate="article_breadcrumb_home">Inicio</a> > <a href="../blog.html" data-translate="article_breadcrumb_blog">Blog</a> > <span>Consejos Básicos de Jardinería</span>
+            </nav>
+            <h1 class="article-title">🌱 Consejos Básicos de Jardinería para Principiantes</h1>
+            <div class="article-meta">
+                <span><i class="fas fa-calendar"></i> 16 de enero, 2025</span>
+                <span><i class="fas fa-clock"></i> 12 min lectura</span>
+                <span><i class="fas fa-tag"></i> Guía Principiantes</span>
             </div>
-          </div>
-          
-          <div class="article-tags">
-            <span class="tag" data-translate="tag_tips">Consejos</span>
-            <span class="tag" data-translate="tag_beginners">Principiantes</span>
-            <span class="tag" data-translate="tag_gardening">Jardinería</span>
-          </div>
         </div>
-      </div>
-    </section>
+    </header>
 
     <!-- CONTENIDO DEL ARTÍCULO -->
-    <article class="article-content">
-      <div class="container">
-        <div class="content-wrapper">
-          <div class="article-image">
-            <img src="../../images/herramientas.jpg" alt="Herramientas básicas de jardinería para principiantes" loading="lazy">
-            <figcaption data-translate="image_caption">Herramientas esenciales para comenzar en el mundo de la jardinería</figcaption>
-          </div>
+    <main class="article-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="article-image">
+                    <img src="../../images/herramientas.jpg" alt="Herramientas básicas de jardinería para principiantes" loading="lazy">
+                    <figcaption data-translate="image_caption">Herramientas esenciales para comenzar en el mundo de la jardinería</figcaption>
+                </div>
 
-          <div class="article-text">
-            <p class="lead">🌿 <strong>Comenzar en el mundo de la jardinería</strong> puede parecer abrumador al principio, pero con los consejos adecuados y un poco de paciencia, cualquier persona puede crear y mantener un hermoso jardín. En <strong>Jardinería Pérez</strong>, con más de 15 años de experiencia en Dénia y la Marina Alta, compartimos contigo los consejos fundamentales que todo principiante debe conocer.</p>
+                <div class="article-text">
+                    <p class="lead">🌿 <strong>Comenzar en el mundo de la jardinería</strong> puede parecer abrumador al principio, pero con los consejos adecuados y un poco de paciencia, cualquier persona puede crear y mantener un hermoso jardín. En <strong>Jardinería Pérez</strong>, con más de 15 años de experiencia en Dénia y la Marina Alta, compartimos contigo los consejos fundamentales que todo principiante debe conocer.</p>
 
-            <h2>🌱 1. Conoce Tu Espacio y Clima</h2>
+                    <h2>🌱 1. Conoce Tu Espacio y Clima</h2>
             <p>Antes de plantar cualquier cosa, es fundamental entender las características de tu jardín:</p>
             
             <ul class="tips-list">
@@ -351,10 +716,8 @@
               <p>En <strong>Jardinería Pérez</strong> ofrecemos servicios profesionales de diseño, mantenimiento y asesoramiento para jardines en Dénia y toda la Marina Alta. ¡Contacta con nosotros para una consulta gratuita!</p>
               <a href="../../index.html#contacto" class="cta-button">Solicitar Presupuesto Gratuito</a>
             </div>
-          </div>
         </div>
-      </div>
-    </article>
+    </main>
 
     <!-- ARTÍCULOS RELACIONADOS -->
     <section class="related-articles">
@@ -390,92 +753,64 @@
         </div>
       </div>
     </section>
-  </main>
 
-  <!-- FOOTER PRINCIPAL - IDÉNTICO AL INDEX -->
-  <footer class="main-footer">
+    <!-- Botón scroll to top -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+  <!-- FOOTER PRINCIPAL -->
+  <footer class="footer" id="footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
+      <div class="footer-grid">
+        <!-- Logo y Descripción -->
+        <div class="footer-column footer-brand">
           <div class="logo">
             <i class="fas fa-seedling"></i>
-            <span data-translate="footer_title">Jardinería Pérez</span>
+            <span>Jardinería Pérez</span>
           </div>
-          <p data-translate="footer_subtitle">Tu socio de confianza en jardinería</p>
-          <p data-translate="footer_description">Especialistas en mantenimiento de jardines, poda de palmeras y limpieza de piscinas en Dénia y Marina Alta.</p>
-          
-          <div class="social-links">
-            <a href="https://www.facebook.com/jardineriaperez" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/jardineriaperez" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://wa.me/34615756584" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-              <i class="fab fa-whatsapp"></i>
-            </a>
+          <p data-translate="footer_company_desc">Especialistas en diseño y mantenimiento de espacios verdes desde 2009</p>
+          <div class="social-icons">
+            <a href="https://wa.me/34658645102"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:jardineriaperez83@gmail.com"><i class="fa fa-envelope"></i></a>
           </div>
         </div>
-
-        <div class="footer-section">
-          <h4 data-translate="footer_services">Servicios</h4>
+        <!-- Servicios -->
+        <div class="footer-column">
+          <h4 data-translate="footer_services_title">Servicios</h4>
           <ul>
-            <li><a href="../../index.html#servicios" data-translate="service_garden_title">Mantenimiento de Jardines</a></li>
-            <li><a href="../../index.html#servicios" data-translate="service_design_title">Diseño de Jardines</a></li>
-            <li><a href="../../index.html#servicios" data-translate="service_pruning_title">Poda de Palmeras</a></li>
-            <li><a href="../../index.html#servicios" data-translate="service_pools_title">Limpieza de Piscinas</a></li>
+            <li><a href="../../#servicios" data-translate="footer_design">Diseño de Jardines</a></li>
+            <li><a href="../../#servicios" data-translate="footer_maintenance">Mantenimiento Profesional</a></li>
+            <li><a href="../../#servicios" data-translate="footer_irrigation">Sistemas de Riego</a></li>
+            <li><a href="../../#urbanizaciones" data-translate="footer_urbanizations">Urbanizaciones</a></li>
           </ul>
         </div>
-
-        <div class="footer-section">
-          <h4 data-translate="footer_quick_links">Enlaces Rápidos</h4>
-          <ul>
-            <li><a href="../../index.html" data-translate="nav_services">Inicio</a></li>
-            <li><a href="../../index.html#galeria" data-translate="nav_gallery">Galería</a></li>
-            <li><a href="../../index.html#testimonios" data-translate="nav_testimonials">Testimonios</a></li>
-            <li><a href="../blog.html" data-translate="nav_blog">Blog</a></li>
-            <li><a href="../../index.html#contacto" data-translate="nav_contact">Contacto</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h4 data-translate="footer_contact_info">Información de Contacto</h4>
-          <div class="contact-item">
-            <i class="fas fa-phone"></i>
-            <span>+34 615 75 65 84</span>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <span>info@jardineriaperez.com</span>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>Dénia, Marina Alta</span>
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-clock"></i>
-            <span>Lun - Vie: 8:00 - 18:00</span>
-          </div>
-        </div>
-
-        <div class="footer-section">
-          <h4 data-translate="footer_legal">Legal</h4>
+        <!-- Legal -->
+        <div class="footer-column">
+          <h4 data-translate="footer_legal_title">Legal</h4>
           <ul>
             <li><a href="../../legal/politicaprivacidad.html" data-translate="footer_privacy">Política de Privacidad</a></li>
             <li><a href="../../legal/terminoscondiciones.html" data-translate="footer_terms">Términos y Condiciones</a></li>
-            <li><a href="../../legal/cookies.html" data-translate="footer_cookies">Política de Cookies</a></li>
+            <li><a href="../../legal/cookies.html" data-translate="footer_cookies">Cookies</a></li>
+          </ul>
+        </div>
+        <!-- Contacto -->
+        <div class="footer-column">
+          <h4 data-translate="footer_contact_title">Contacto</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i>Calle Senieta 38 4º E<br>03700 Dénia, Alicante</li>
+            <li><a href="tel:+34658645102"><i class="fas fa-phone"></i>+34 658 64 51 02</a></li>
+            <li><i class="fas fa-envelope"></i>jardineriaperez83@gmail.com</li>
           </ul>
         </div>
       </div>
-
       <div class="footer-bottom">
-        <p>&copy; 2025 Jardinería Pérez. <span data-translate="footer_rights">Todos los derechos reservados.</span></p>
+        <p>
+          <span data-translate="footer_copyright">Esta web ha sido diseñada con <i class="fas fa-heart" aria-hidden="true"
+              style="color: red;"></i> por VaporWeb Designs © · Todos los derechos reservados</span>
+        </p>
       </div>
     </div>
   </footer>
 
-  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
-  
   <!-- JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="../../lang/translations.js"></script>

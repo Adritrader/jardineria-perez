@@ -1,0 +1,642 @@
+/* ========================================
+   ESTILOS ESPECÍFICOS PARA ARTÍCULO DE CONSEJOS BÁSICOS
+   ======================================== */
+
+/* Contenedor principal con estilo profesional */
+.article-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+    min-height: 100vh;
+}
+
+/* Header del artículo mejorado */
+.article-header {
+    background: linear-gradient(135deg, #e8f5e8 0%, #f1f8e9 100%);
+    border-radius: 20px;
+    padding: 3rem;
+    margin: 2rem 0;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.article-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 60%;
+    height: 150%;
+    background: radial-gradient(ellipse, rgba(76,175,80,0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.article-header h1,
+.article-title {
+    position: relative;
+    z-index: 2;
+    font-size: 2.5rem;
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.article-meta {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.article-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.article-meta i {
+    color: #4caf50;
+}
+
+/* Breadcrumb styling */
+.breadcrumb {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #666;
+    position: relative;
+    z-index: 2;
+}
+
+.breadcrumb a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Asegurar que el contenido principal también tenga el estilo */
+.article-content .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+}
+
+/* Estilos específicos del contenido */
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.article-image {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.article-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.article-image figcaption {
+    margin-top: 0.8rem;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.article-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* Estilo del párrafo principal */
+.lead {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: #2c5530;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e8 100%);
+    border-left: 4px solid #4caf50;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* Títulos de sección */
+.article-text h2 {
+    color: #2e7d32;
+    font-size: 1.8rem;
+    margin: 2.5rem 0 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 3px solid #e8f5e8;
+    padding-bottom: 0.5rem;
+}
+
+.article-text h3 {
+    color: #2e7d32;
+    font-size: 1.4rem;
+    margin: 2rem 0 1rem 0;
+    font-weight: 600;
+}
+
+/* Listas con estilo */
+.tips-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.tips-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #e8f5e8;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.tips-list li::before {
+    content: '✓';
+    color: #4caf50;
+    font-weight: bold;
+    font-size: 1.2rem;
+    min-width: 20px;
+}
+
+/* Cajas de consejos */
+.tip-box {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    border: 2px solid #ffc107;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.tip-box::before {
+    content: '💡';
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    background: #fff8e1;
+    padding: 0 10px;
+    font-size: 1.5rem;
+}
+
+.tip-box h3 {
+    color: #f57f17;
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.tip-box p {
+    margin: 0;
+    color: #5d4037;
+    line-height: 1.6;
+}
+
+/* Cajas de advertencia */
+.warning-box {
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+    border: 2px solid #f44336;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.warning-box::before {
+    content: '⚠️';
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    background: #ffebee;
+    padding: 0 10px;
+    font-size: 1.5rem;
+}
+
+.warning-box h3 {
+    color: #d32f2f;
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.warning-box p {
+    margin: 0;
+    color: #5d4037;
+    line-height: 1.6;
+}
+
+/* Grid de plantas/elementos */
+.plants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.plant-item {
+    background: linear-gradient(145deg, #ffffff, #f8fffe);
+    border: 2px solid #e8f5e8;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(72, 156, 82, 0.1);
+    transition: all 0.3s ease;
+}
+
+.plant-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(72, 156, 82, 0.2);
+    border-color: #4caf50;
+}
+
+.plant-item h4 {
+    color: #2e7d32;
+    margin: 0 0 0.8rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.plant-item p {
+    color: #555;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* CTA (Call to Action) */
+.cta-box {
+    background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+    border: 3px solid #4caf50;
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 3rem 0;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(72, 156, 82, 0.15);
+}
+
+.cta-box h3 {
+    color: #2e7d32;
+    font-size: 1.5rem;
+    margin: 0 0 1rem 0;
+    font-weight: 700;
+}
+
+.cta-box p {
+    color: #2e7d32;
+    margin: 0 0 1.5rem 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(72, 156, 82, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(72, 156, 82, 0.4);
+    background: linear-gradient(135deg, #388e3c, #4caf50);
+    color: white;
+    text-decoration: none;
+}
+
+/* Artículos relacionados */
+.related-articles {
+    background: #f8f9fa;
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
+
+.related-articles h2 {
+    text-align: center;
+    color: #2e7d32;
+    font-size: 2rem;
+    margin: 0 0 2rem 0;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.article-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.article-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+}
+
+.card-content h3 a {
+    color: #2e7d32;
+    text-decoration: none;
+}
+
+.card-content h3 a:hover {
+    color: #4caf50;
+}
+
+.card-content p {
+    color: #666;
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
+}
+
+.read-more {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #2e7d32;
+}
+
+/* Footer principal - Usando las mismas clases que index.html */
+.footer {
+    background: #006633 !important;
+    color: white !important;
+    padding: 4rem 2rem !important;
+    margin-top: 4rem !important;
+    position: relative !important;
+    z-index: 10 !important;
+    width: 100% !important;
+    clear: both !important;
+}
+
+.footer-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 2rem !important;
+    margin-bottom: 3rem !important;
+}
+
+.footer-column {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.footer-column h4 {
+    color: #00c896 !important;
+    margin-bottom: 1.5rem !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+}
+
+.footer-column ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.8rem !important;
+    color: white !important;
+}
+
+.footer-column ul li a {
+    color: white !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease !important;
+}
+
+.footer-column ul li a:hover {
+    color: #00c896 !important;
+}
+
+.footer-column ul li i {
+    margin-right: 0.5rem !important;
+    width: 20px !important;
+    color: #00c896 !important;
+}
+
+.footer-brand .logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    margin-bottom: 1rem !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+}
+
+.footer-brand .logo i {
+    color: #00c896 !important;
+}
+
+.footer-brand .logo span {
+    color: white !important;
+}
+
+.footer-brand p {
+    color: white !important;
+    margin-bottom: 1rem !important;
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+}
+
+.footer-brand .social-icons {
+    display: flex !important;
+    gap: 0.8rem !important;
+}
+
+.footer-brand .social-icons a {
+    color: white !important;
+    font-size: 1.1rem !important;
+    transition: color 0.3s ease !important;
+}
+
+.footer-brand .social-icons a:hover {
+    color: #00c896 !important;
+}
+
+.footer-bottom {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    border-top: 1px solid rgba(255,255,255,0.1) !important;
+    padding-top: 2rem !important;
+    margin-top: 2rem !important;
+    text-align: center !important;
+    color: white !important;
+}
+
+/* Asegurar estructura del body */
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Main content debe crecer para empujar el footer abajo */
+.article-content {
+    flex: 1 !important;
+}
+
+/* Botón scroll to top */
+#myBtn {
+    display: none !important;
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 30px !important;
+    z-index: 99 !important;
+    border: none !important;
+    outline: none !important;
+    background-color: #4caf50 !important;
+    color: white !important;
+    cursor: pointer !important;
+    padding: 15px !important;
+    border-radius: 50% !important;
+    font-size: 16px !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(72, 156, 82, 0.3) !important;
+}
+
+#myBtn:hover {
+    background-color: #2e7d32;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(72, 156, 82, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .article-container {
+        padding: 0 1rem;
+    }
+    
+    .article-header {
+        padding: 2rem 1rem;
+        margin: 1rem 0;
+    }
+    
+    .article-header h1,
+    .article-title {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+    
+    .article-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 0.95rem;
+    }
+    
+    .content-wrapper {
+        padding: 0;
+    }
+    
+    .article-content .container {
+        padding: 0 1rem;
+    }
+    
+    .article-text {
+        font-size: 1rem;
+    }
+    
+    .article-text h2 {
+        font-size: 1.5rem;
+        margin: 2rem 0 1rem 0;
+    }
+    
+    .article-text h3 {
+        font-size: 1.2rem;
+    }
+    
+    .plants-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .article-header {
+        padding: 1.5rem 0.8rem;
+    }
+    
+    .article-header h1,
+    .article-title {
+        font-size: 1.5rem;
+    }
+    
+    .article-content .container {
+        padding: 0 0.8rem;
+    }
+    
+    .tip-box, .warning-box, .cta-box {
+        padding: 1rem;
+    }
+    
+    .plant-item {
+        padding: 1rem;
+    }
+}
