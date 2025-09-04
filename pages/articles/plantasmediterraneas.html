@@ -125,10 +125,529 @@
     <!-- Fuentes y estilos -->
     <link rel="stylesheet" href="../../style.css" />
     <link rel="stylesheet" href="../blogStyles.css" />
+    <link rel="stylesheet" href="../plantasmediterraneas-styles.css" />
     <link rel="stylesheet" href="../../lang/language-selector.css" />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    
+    <!-- Estilos específicos para botones flotantes -->
+    <style>
+        /* Botones flotantes */
+        .floating-buttons {
+            position: fixed !important;
+            bottom: 2rem !important;
+            right: 2rem !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 1rem !important;
+            z-index: 1000 !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            transform: translateY(20px) !important;
+            transition: all 0.4s ease !important;
+        }
+
+        .floating-buttons.visible {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: translateY(0) !important;
+        }
+
+        .back-button,
+        .back-to-top {
+            width: 55px !important;
+            height: 55px !important;
+            border: none !important;
+            border-radius: 50% !important;
+            color: white !important;
+            font-size: 1.3rem !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            position: relative !important;
+            overflow: hidden !important;
+        }
+
+        .back-button {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52) !important;
+            margin-bottom: 0.5rem !important;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px) scale(1.05) !important;
+            box-shadow: 0 6px 25px rgba(255, 107, 107, 0.4) !important;
+            background: linear-gradient(135deg, #ff5252, #e53e3e) !important;
+        }
+
+        .back-to-top {
+            background: linear-gradient(135deg, #4a8c52, #6db46e) !important;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px) scale(1.05) !important;
+            box-shadow: 0 6px 25px rgba(72, 156, 82, 0.4) !important;
+            background: linear-gradient(135deg, #2d5a33, #4a8c52) !important;
+        }
+
+        .back-button i,
+        .back-to-top i {
+            transition: transform 0.3s ease !important;
+        }
+
+        .back-button:hover i {
+            transform: translateX(-2px) !important;
+        }
+
+        .back-to-top:hover i {
+            transform: translateY(-2px) !important;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .floating-buttons {
+                bottom: 1.5rem !important;
+                right: 1.5rem !important;
+                gap: 0.8rem !important;
+            }
+            
+            .back-button,
+            .back-to-top {
+                width: 50px !important;
+                height: 50px !important;
+                font-size: 1.1rem !important;
+            }
+        }
+
+        /* Tarjetas de plantas con dimensiones uniformes */
+        .plant-grid {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+            gap: 2rem !important;
+            margin: 2rem 0 !important;
+            width: 100% !important;
+        }
+
+        .plant-card {
+            background: linear-gradient(145deg, #ffffff, #f8fffe) !important;
+            border: 2px solid #e8f5e8 !important;
+            border-radius: 16px !important;
+            padding: 1.5rem !important;
+            box-shadow: 0 4px 20px rgba(72, 156, 82, 0.1) !important;
+            transition: all 0.3s ease !important;
+            height: auto !important;
+            min-height: 500px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
+        }
+
+        .plant-card:hover {
+            transform: translateY(-8px) !important;
+            box-shadow: 0 8px 30px rgba(72, 156, 82, 0.2) !important;
+            border-color: #4a8c52 !important;
+        }
+
+        .plant-image {
+            width: 100% !important;
+            height: 200px !important;
+            overflow: hidden !important;
+            border-radius: 12px !important;
+            margin-bottom: 1rem !important;
+            background: #f0f8f0 !important;
+        }
+
+        .plant-image img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center !important;
+            transition: transform 0.3s ease !important;
+        }
+
+        .plant-card:hover .plant-image img {
+            transform: scale(1.05) !important;
+        }
+
+        .plant-card h3 {
+            color: #2d5a33 !important;
+            font-size: 1.2rem !important;
+            font-weight: 600 !important;
+            margin: 0.5rem 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 0.5rem !important;
+        }
+
+        .plant-card h3 i {
+            color: #4a8c52 !important;
+            font-size: 1.1rem !important;
+        }
+
+        .plant-rating {
+            background: linear-gradient(135deg, #f0f8f0, #e8f5e8) !important;
+            padding: 0.5rem !important;
+            border-radius: 8px !important;
+            margin-bottom: 1rem !important;
+            font-size: 0.9rem !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 0.5rem !important;
+        }
+
+        .plant-rating span {
+            color: #666 !important;
+            font-weight: 500 !important;
+        }
+
+        .plant-card p {
+            color: #4a5a4a !important;
+            line-height: 1.6 !important;
+            margin-bottom: 0.8rem !important;
+            font-size: 0.95rem !important;
+        }
+
+        .plant-specs {
+            display: flex !important;
+            gap: 1rem !important;
+            margin-top: auto !important;
+            padding-top: 1rem !important;
+            border-top: 1px solid #e0e0e0 !important;
+            flex-wrap: wrap !important;
+        }
+
+        .plant-specs span {
+            background: #f8fffe !important;
+            padding: 0.3rem 0.6rem !important;
+            border-radius: 6px !important;
+            font-size: 0.85rem !important;
+            color: #2d5a33 !important;
+            font-weight: 500 !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 0.3rem !important;
+        }
+
+        .plant-specs i {
+            color: #4a8c52 !important;
+        }
+
+        /* Responsive para tarjetas */
+        @media (max-width: 1200px) {
+            .plant-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+                gap: 1.5rem !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Ajustar header del artículo para móvil */
+            .article-header {
+                padding: 1.5rem 1rem !important;
+                margin: 1rem 0 !important;
+            }
+            
+            .article-header h1,
+            .article-title {
+                font-size: 1.8rem !important;
+                line-height: 1.3 !important;
+                margin-bottom: 1rem !important;
+                text-align: center !important;
+            }
+            
+            .article-meta {
+                flex-direction: column !important;
+                gap: 0.5rem !important;
+                text-align: center !important;
+                font-size: 0.9rem !important;
+            }
+            
+            .article-meta span {
+                display: block !important;
+                margin: 0.2rem 0 !important;
+            }
+            
+            .breadcrumb {
+                font-size: 0.85rem !important;
+                margin-bottom: 1rem !important;
+                text-align: center !important;
+            }
+            
+            /* Reducir márgenes del contenedor principal pero mantener centrado */
+            .container {
+                padding: 0 0.75rem !important;
+                max-width: 100% !important;
+                margin: 0 auto !important;
+                box-sizing: border-box !important;
+            }
+            
+            .article-content .container {
+                padding: 0 0.75rem !important;
+                margin: 0 auto !important;
+            }
+            
+            /* Ajustar body del artículo */
+            .article-body {
+                flex-direction: column !important;
+                gap: 1rem !important;
+                padding: 0 !important;
+                margin: 2rem auto 0 auto !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+            
+            .main-content {
+                padding: 0 !important;
+                margin: 0 !important;
+                width: 100% !important;
+            }
+            
+            .article-sidebar {
+                padding: 0 !important;
+                margin: 0 !important;
+                width: 100% !important;
+            }
+            
+            /* Ajustar grid de plantas para móvil */
+            .plant-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+                margin: 1rem auto !important;
+                padding: 0 !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+            
+            .plant-card {
+                margin: 0 auto !important;
+                min-height: 450px !important;
+                padding: 1rem !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+            
+            /* Ajustar sección de consejos */
+            .tips-section {
+                gap: 1rem !important;
+                margin: 1rem auto !important;
+                padding: 0 !important;
+                width: 100% !important;
+            }
+            
+            .tip-box {
+                padding: 1rem !important;
+                margin: 0 auto !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+            
+            /* Ajustar combinaciones */
+            .combination-box {
+                margin: 0.8rem auto !important;
+                padding: 1rem !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+            
+            /* Ajustar widget de contacto */
+            .contact-widget {
+                margin: 1rem auto !important;
+                padding: 1.2rem !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+            
+            /* Ajustar navegación */
+            .navigation-buttons {
+                margin: 1.5rem auto 1rem auto !important;
+                padding: 1rem !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+        }
+
+        /* Para pantallas muy pequeñas */
+        @media (max-width: 480px) {
+            /* Header aún más compacto */
+            .article-header {
+                padding: 1rem 0.5rem !important;
+                margin: 0.5rem 0 !important;
+            }
+            
+            .article-header h1,
+            .article-title {
+                font-size: 1.5rem !important;
+                line-height: 1.2 !important;
+                margin-bottom: 0.8rem !important;
+            }
+            
+            .article-meta {
+                font-size: 0.8rem !important;
+                gap: 0.3rem !important;
+            }
+            
+            .breadcrumb {
+                font-size: 0.8rem !important;
+                margin-bottom: 0.8rem !important;
+            }
+            
+            .container {
+                padding: 0 0.5rem !important;
+                margin: 0 auto !important;
+            }
+            
+            .article-content .container {
+                padding: 0 0.5rem !important;
+                margin: 0 auto !important;
+            }
+            
+            .plant-card {
+                padding: 0.8rem !important;
+            }
+            
+            .tip-box {
+                padding: 0.8rem !important;
+            }
+            
+            .combination-box {
+                padding: 0.8rem !important;
+            }
+            
+            .contact-widget {
+                padding: 1rem !important;
+            }
+        }
+
+        /* Forzar grid layout en todas las resoluciones */
+        .plant-grid > * {
+            width: 100% !important;
+            box-sizing: border-box !important;
+        }
+
+        /* Article body spacing general */
+        .article-body {
+            margin-top: 2rem !important;
+        }
+
+        /* Sección de asesoramiento mejorada */
+        .contact-widget {
+            background: linear-gradient(145deg, #f0f8f0, #e8f5e8) !important;
+            border: 2px solid #4a8c52 !important;
+            border-radius: 16px !important;
+            padding: 2rem !important;
+            margin: 2rem 0 !important;
+            box-shadow: 0 8px 25px rgba(72, 156, 82, 0.15) !important;
+            position: relative !important;
+            overflow: hidden !important;
+        }
+
+        .contact-widget::before {
+            content: '🌱' !important;
+            position: absolute !important;
+            top: 1rem !important;
+            right: 1rem !important;
+            font-size: 2rem !important;
+            opacity: 0.3 !important;
+        }
+
+        .contact-widget h3 {
+            color: #2d5a33 !important;
+            font-size: 1.4rem !important;
+            font-weight: 700 !important;
+            margin-bottom: 1rem !important;
+            text-align: center !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 0.5rem !important;
+        }
+
+        .contact-widget h3::before {
+            content: '💬' !important;
+            font-size: 1.2rem !important;
+        }
+
+        .contact-widget p {
+            color: #4a5a4a !important;
+            line-height: 1.6 !important;
+            margin-bottom: 1.5rem !important;
+            text-align: center !important;
+            font-size: 1rem !important;
+        }
+
+        .contact-info {
+            background: rgba(255, 255, 255, 0.7) !important;
+            border-radius: 12px !important;
+            padding: 1rem !important;
+            margin-bottom: 1.5rem !important;
+        }
+
+        .contact-info p {
+            margin: 0.5rem 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 0.5rem !important;
+            color: #2d5a33 !important;
+            font-weight: 500 !important;
+        }
+
+        .contact-info i {
+            color: #4a8c52 !important;
+            font-size: 1.1rem !important;
+        }
+
+        .btn-contact {
+            display: block !important;
+            width: 100% !important;
+            padding: 1rem 2rem !important;
+            background: linear-gradient(135deg, #4a8c52, #6db46e) !important;
+            color: white !important;
+            text-decoration: none !important;
+            border-radius: 10px !important;
+            font-weight: 600 !important;
+            font-size: 1.1rem !important;
+            text-align: center !important;
+            transition: all 0.3s ease !important;
+            border: 2px solid transparent !important;
+            position: relative !important;
+            overflow: hidden !important;
+        }
+
+        .btn-contact::before {
+            content: '📞' !important;
+            margin-right: 0.5rem !important;
+        }
+
+        .btn-contact::after {
+            content: '' !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: -100% !important;
+            width: 100% !important;
+            height: 100% !important;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent) !important;
+            transition: left 0.5s !important;
+        }
+
+        .btn-contact:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 6px 20px rgba(72, 156, 82, 0.4) !important;
+            background: linear-gradient(135deg, #2d5a33, #4a8c52) !important;
+            border-color: #2d5a33 !important;
+        }
+
+        .btn-contact:hover::after {
+            left: 100% !important;
+        }
+
+        .btn-contact:active {
+            transform: translateY(0) !important;
+        }
+    </style>
 
 </head>
 <body class="blog-page article-page">
@@ -197,11 +716,11 @@
             <nav class="breadcrumb">
                 <a href="../../" data-translate="article_breadcrumb_home">Inicio</a> > <a href="../blog.html" data-translate="article_breadcrumb_blog">Blog</a> > <span>Plantas Mediterráneas</span>
             </nav>
-            <h1 class="article-title">10 Especies de Plantas Perfectas para el Clima Mediterráneo</h1>
+            <h1 class="article-title">🌿 Las 10 Plantas Mediterráneas Perfectas para tu Jardín en Dénia</h1>
             <div class="article-meta">
-                <span><i class="fas fa-calendar"></i> 1 de Septiembre, 2025</span>
-                <span><i class="fas fa-user"></i> Jardinería Pérez</span>
-                <span><i class="fas fa-clock"></i> 8 min lectura</span>
+                <span><i class="fas fa-calendar"></i> 4 de Septiembre, 2025</span>
+                <span><i class="fas fa-clock"></i> 12 min lectura</span>
+                <span><i class="fas fa-tag"></i> Guía Profesional</span>
             </div>
         </div>
     </header>
@@ -211,92 +730,192 @@
         <div class="container">
             <div class="article-body">
                 <div class="article-intro">
-                    <p>El clima mediterráneo de Dénia y la Marina Alta ofrece condiciones únicas para el cultivo de especies vegetales autóctonas y adaptadas. Como expertos en <strong>jardinería mediterránea</strong>, en Jardinería Pérez hemos seleccionado las 10 especies más resistentes y hermosas para tu jardín.</p>
+                    <p class="lead">El clima mediterráneo de Dénia y la Marina Alta ofrece condiciones únicas para el cultivo de especies vegetales autóctonas y adaptadas. Como <strong>expertos en jardinería mediterránea</strong> con más de 15 años de experiencia, en Jardinería Pérez hemos seleccionado las 10 especies más resistentes, hermosas y funcionales para crear el jardín mediterráneo perfecto.</p>
+                    
+                    <div class="highlight-box">
+                        <h3><i class="fas fa-lightbulb"></i> ¿Sabías que...?</h3>
+                        <p>Las plantas mediterráneas pueden reducir el consumo de agua de tu jardín hasta en un <strong>70%</strong> comparado con especies no autóctonas, mientras mantienen un aspecto espectacular todo el año.</p>
+                    </div>
                 </div>
 
-                <img src="../../images/jardin-mediterraneo.png" alt="Jardín mediterráneo con plantas autóctonas" class="article-image">
+                <img src="../../images/jardin-mediterraneo.png" alt="Jardín mediterráneo profesional con plantas autóctonas en Dénia" class="article-image" style="max-width: 500px !important; height: 400px !important; object-fit: cover !important; border-radius: 8px; margin: 40px auto; display: block;">
 
-                <h2>¿Por qué elegir plantas mediterráneas?</h2>
-                <p>Las plantas mediterráneas están perfectamente adaptadas a nuestro clima, caracterizado por veranos secos y calurosos e inviernos suaves. Estas especies ofrecen múltiples ventajas:</p>
+
+
+                <h2><i class="fas fa-question-circle"></i> ¿Por qué elegir plantas mediterráneas para tu jardín?</h2>
+                <p>Las plantas mediterráneas están perfectamente adaptadas a nuestro clima, caracterizado por veranos secos y calurosos e inviernos suaves. Estas especies han evolucionado durante milenios en condiciones similares a las de nuestra región, ofreciendo múltiples ventajas tanto económicas como ecológicas:</p>
                 
                 <ul class="benefits-list">
-                    <li><strong>Resistencia a la sequía:</strong> Requieren menos riego, perfectas para el ahorro de agua</li>
-                    <li><strong>Bajo mantenimiento:</strong> Se adaptan naturalmente al clima local</li>
-                    <li><strong>Floración prolongada:</strong> Muchas especies florecen gran parte del año</li>
-                    <li><strong>Atracción de fauna local:</strong> Favorecen la biodiversidad del jardín</li>
+                    <li><strong>💧 Máximo ahorro de agua:</strong> Requieren hasta 70% menos riego, perfectas para un jardín sostenible</li>
+                    <li><strong>🛠️ Mantenimiento mínimo:</strong> Se adaptan naturalmente sin necesidad de cuidados intensivos</li>
+                    <li><strong>🌸 Floración prolongada:</strong> Muchas especies ofrecen color y aroma durante gran parte del año</li>
+                    <li><strong>🦋 Biodiversidad local:</strong> Atraen abejas, mariposas y fauna autóctona beneficiosa</li>
+                    <li><strong>💰 Ahorro económico:</strong> Menor gasto en agua, fertilizantes y reemplazos</li>
+                    <li><strong>🌡️ Resistencia climática:</strong> Soportan temperaturas extremas y condiciones adversas</li>
                 </ul>
 
-                <h2>Las 10 especies imprescindibles</h2>
+                <h2><i class="fas fa-star"></i> Las 10 especies imprescindibles para tu jardín mediterráneo</h2>
+                <p class="section-intro">Estas son nuestras plantas mediterráneas favoritas, seleccionadas por su belleza, resistencia y facilidad de mantenimiento. Cada una aporta características únicas que las hacen ideales para diferentes zonas y usos en tu jardín:</p>
 
                 <div class="plant-grid">
                     <div class="plant-card">
+                        <div class="plant-image">
+                            <img src="https://images.unsplash.com/photo-1611909023032-2d6b3134ecba?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Lavanda en floración" loading="lazy">
+                        </div>
                         <h3><i class="fas fa-leaf"></i> 1. Lavanda (Lavandula angustifolia)</h3>
-                        <p><strong>Características:</strong> Aromática, floración violeta, muy resistente a la sequía.</p>
-                        <p><strong>Cuidados:</strong> Exposición solar directa, riego moderado, poda después de la floración.</p>
-                        <p><strong>Usos:</strong> Setos bajos, borduras, jardines aromáticos.</p>
+                        <div class="plant-rating">⭐⭐⭐⭐⭐ <span>Resistencia máxima</span></div>
+                        <p><strong>🌸 Características:</strong> Aromática perenne con floración violeta intensa de mayo a septiembre. Hojas plateadas que contrastan bellamente con sus espigas florales.</p>
+                        <p><strong>🌱 Cuidados:</strong> Exposición solar directa, riego muy moderado (1-2 veces por semana en verano), poda después de la floración para mantener forma compacta.</p>
+                        <p><strong>🏡 Usos ideales:</strong> Setos bajos aromáticos, borduras, jardines sensoriales, repelente natural de insectos.</p>
+                        <div class="plant-specs">
+                            <span><i class="fas fa-ruler-vertical"></i> 60-80cm</span>
+                            <span><i class="fas fa-tint"></i> Muy bajo</span>
+                            <span><i class="fas fa-sun"></i> Pleno sol</span>
+                        </div>
                     </div>
 
                     <div class="plant-card">
+                        <div class="plant-image">
+                            <img src="../../images/romero.jpg" alt="Romero mediterráneo" loading="lazy">
+                        </div>
                         <h3><i class="fas fa-leaf"></i> 2. Romero (Rosmarinus officinalis)</h3>
-                        <p><strong>Características:</strong> Perenne, flores azules, hojas aromáticas todo el año.</p>
-                        <p><strong>Cuidados:</strong> Muy resistente, requiere poco riego una vez establecido.</p>
-                        <p><strong>Usos:</strong> Setos informales, cocina, control de erosión en taludes.</p>
+                        <div class="plant-rating">⭐⭐⭐⭐⭐ <span>Versátil y resistente</span></div>
+                        <p><strong>🌸 Características:</strong> Arbusto perenne con flores azul-violeta de febrero a mayo. Hojas aromáticas lineales de color verde oscuro, ideales para uso culinario.</p>
+                        <p><strong>🌱 Cuidados:</strong> Extremadamente resistente, requiere riego mínimo una vez establecido. Tolera podas frecuentes y suelos pobres.</p>
+                        <p><strong>🏡 Usos ideales:</strong> Setos informales, jardines culinarios, control de erosión, topiaria rústica.</p>
+                        <div class="plant-specs">
+                            <span><i class="fas fa-ruler-vertical"></i> 80-150cm</span>
+                            <span><i class="fas fa-tint"></i> Muy bajo</span>
+                            <span><i class="fas fa-sun"></i> Pleno sol</span>
+                        </div>
                     </div>
 
                     <div class="plant-card">
+                        <div class="plant-image">
+                            <img src="../../images/palmito.jpg" alt="Palmito mediterráneo" loading="lazy">
+                        </div>
                         <h3><i class="fas fa-leaf"></i> 3. Palmito (Chamaerops humilis)</h3>
-                        <p><strong>Características:</strong> Palmera autóctona, crecimiento lento, muy resistente.</p>
-                        <p><strong>Cuidados:</strong> Tolera la sequía y el viento salino costero.</p>
-                        <p><strong>Usos:</strong> Ejemplar aislado, grupos, jardines costeros.</p>
+                        <div class="plant-rating">⭐⭐⭐⭐⭐ <span>Emblema mediterráneo</span></div>
+                        <p><strong>🌸 Características:</strong> Única palmera autóctona europea, crecimiento lento y múltiples troncos. Hojas en abanico de color verde-plateado.</p>
+                        <p><strong>🌱 Cuidados:</strong> Tolera la sequía extrema y el viento salino. Riego ocasional en verano, sin necesidades especiales de abono.</p>
+                        <p><strong>🏡 Usos ideales:</strong> Ejemplar singular, grupos paisajísticos, jardines costeros, macetas grandes.</p>
+                        <div class="plant-specs">
+                            <span><i class="fas fa-ruler-vertical"></i> 200-400cm</span>
+                            <span><i class="fas fa-tint"></i> Muy bajo</span>
+                            <span><i class="fas fa-sun"></i> Sol/Sombra parcial</span>
+                        </div>
                     </div>
 
                     <div class="plant-card">
+                        <div class="plant-image">
+                            <img src="../../images/adelfa.webp" alt="Adelfa en floración" loading="lazy">
+                        </div>
                         <h3><i class="fas fa-leaf"></i> 4. Adelfa (Nerium oleander)</h3>
-                        <p><strong>Características:</strong> Floración abundante, colores variados, hoja perenne.</p>
-                        <p><strong>Cuidados:</strong> Resistente a la sequía, tolera suelos pobres.</p>
-                        <p><strong>Usos:</strong> Setos altos, pantallas vegetales, ejemplares aislados.</p>
+                        <div class="plant-rating">⭐⭐⭐⭐⭐ <span>Floración espectacular</span></div>
+                        <p><strong>🌸 Características:</strong> Floración abundante desde mayo hasta octubre en colores rosa, blanco o rojo. Hojas lanceoladas perennes de color verde intenso.</p>
+                        <p><strong>🌱 Cuidados:</strong> Muy resistente una vez establecida, tolera perfectamente la sequía estival. Poda ligera después de la floración principal.</p>
+                        <p><strong>🏡 Usos ideales:</strong> Setos divisorios, pantallas vegetales, ejemplares aislados, jardines de bajo mantenimiento.</p>
+                        <div class="plant-specs">
+                            <span><i class="fas fa-ruler-vertical"></i> 150-300cm</span>
+                            <span><i class="fas fa-tint"></i> Bajo</span>
+                            <span><i class="fas fa-sun"></i> Pleno sol</span>
+                        </div>
                     </div>
 
                     <div class="plant-card">
+                        <div class="plant-image">
+                            <img src="../../images/santolina.jpg" alt="Santolina plateada" loading="lazy">
+                        </div>
                         <h3><i class="fas fa-leaf"></i> 5. Santolina (Santolina chamaecyparissus)</h3>
-                        <p><strong>Características:</strong> Follaje plateado, flores amarillas, compacta.</p>
-                        <p><strong>Cuidados:</strong> Poda de formación, riego muy moderado.</p>
-                        <p><strong>Usos:</strong> Borduras, jardines de rocalla, combinaciones de color.</p>
+                        <div class="plant-rating">⭐⭐⭐⭐ <span>Textura única</span></div>
+                        <p><strong>🌸 Características:</strong> Follaje plateado aromático y flores amarillas globosas en verano. Porte compacto y redondeado muy decorativo.</p>
+                        <p><strong>🌱 Cuidados:</strong> Poda de formación tras floración, riego muy espaciado. Evitar encharcamientos y exceso de humedad.</p>
+                        <p><strong>🏡 Usos ideales:</strong> Borduras geométricas, jardines de rocalla, combinaciones cromáticas, arte topiario.</p>
+                        <div class="plant-specs">
+                            <span><i class="fas fa-ruler-vertical"></i> 40-60cm</span>
+                            <span><i class="fas fa-tint"></i> Muy bajo</span>
+                            <span><i class="fas fa-sun"></i> Pleno sol</span>
+                        </div>
                     </div>
 
                     <div class="plant-card">
+                        <div class="plant-image">
+                            <img src="../../images/durillo.webp" alt="Durillo en floración" loading="lazy">
+                        </div>
                         <h3><i class="fas fa-leaf"></i> 6. Durillo (Viburnum tinus)</h3>
-                        <p><strong>Características:</strong> Floración invernal blanca, frutos azules, hoja perenne.</p>
-                        <p><strong>Cuidados:</strong> Tolera la sombra parcial, riego moderado.</p>
-                        <p><strong>Usos:</strong> Setos medianos, grupos arbustivos, zonas de sombra.</p>
+                        <div class="plant-rating">⭐⭐⭐⭐ <span>Floración invernal</span></div>
+                        <p><strong>🌸 Características:</strong> Floración blanca fragante de noviembre a marzo, seguida de frutos azul-metálicos. Hojas perennes brillantes.</p>
+                        <p><strong>🌱 Cuidados:</strong> Tolera sombra parcial, riego moderado. Ideal para zonas menos soleadas del jardín.</p>
+                        <p><strong>🏡 Usos ideales:</strong> Setos medianos, masas arbustivas, zonas de sombra, jardines de invierno.</p>
+                        <div class="plant-specs">
+                            <span><i class="fas fa-ruler-vertical"></i> 150-300cm</span>
+                            <span><i class="fas fa-tint"></i> Medio</span>
+                            <span><i class="fas fa-cloud"></i> Sol/Sombra</span>
+                        </div>
                     </div>
 
                     <div class="plant-card">
+                        <div class="plant-image">
+                            <img src="../../images/Retama.jpg" alt="Retama en floración amarilla" loading="lazy">
+                        </div>
                         <h3><i class="fas fa-leaf"></i> 7. Retama (Spartium junceum)</h3>
-                        <p><strong>Características:</strong> Floración amarilla espectacular, ramas verdes.</p>
-                        <p><strong>Cuidados:</strong> Extremadamente resistente, poda ligera tras floración.</p>
-                        <p><strong>Usos:</strong> Taludes, jardines silvestres, zonas extensas.</p>
+                        <div class="plant-rating">⭐⭐⭐⭐⭐ <span>Máxima resistencia</span></div>
+                        <p><strong>🌸 Características:</strong> Espectacular floración amarilla perfumada de abril a julio. Ramas verdes que mantienen función fotosintética.</p>
+                        <p><strong>🌱 Cuidados:</strong> Extremadamente resistente, poda ligera post-floración. Ideal para condiciones adversas y suelos pobres.</p>
+                        <p><strong>🏡 Usos ideales:</strong> Revegetación de taludes, jardines extensivos, zonas rústicas, cortavientos natural.</p>
+                        <div class="plant-specs">
+                            <span><i class="fas fa-ruler-vertical"></i> 200-300cm</span>
+                            <span><i class="fas fa-tint"></i> Muy bajo</span>
+                            <span><i class="fas fa-sun"></i> Pleno sol</span>
+                        </div>
                     </div>
 
                     <div class="plant-card">
+                        <div class="plant-image">
+                            <img src="../../images/lentisco.jpeg" alt="Lentisco mediterráneo" loading="lazy">
+                        </div>
                         <h3><i class="fas fa-leaf"></i> 8. Lentisco (Pistacia lentiscus)</h3>
-                        <p><strong>Características:</strong> Arbusto autóctono, muy resistente al viento salino.</p>
-                        <p><strong>Cuidados:</strong> Sin necesidades especiales una vez establecido.</p>
-                        <p><strong>Usos:</strong> Jardines costeros, restauración paisajística, setos naturales.</p>
+                        <div class="plant-rating">⭐⭐⭐⭐⭐ <span>Autóctono perfecto</span></div>
+                        <p><strong>🌸 Características:</strong> Arbusto autóctono de hojas compuestas perennes. Frutos rojos que se tornan negros, muy apreciados por las aves.</p>
+                        <p><strong>🌱 Cuidados:</strong> Cero mantenimiento una vez establecido. Resistente al viento salino y suelos diversos.</p>
+                        <p><strong>🏡 Usos ideales:</strong> Jardines costeros, restauración paisajística, setos naturales, zonas de fauna.</p>
+                        <div class="plant-specs">
+                            <span><i class="fas fa-ruler-vertical"></i> 100-200cm</span>
+                            <span><i class="fas fa-tint"></i> Muy bajo</span>
+                            <span><i class="fas fa-sun"></i> Pleno sol</span>
+                        </div>
                     </div>
 
                     <div class="plant-card">
+                        <div class="plant-image">
+                            <img src="../../images/pitosporo.jpg" alt="Pitosporo ornamental" loading="lazy">
+                        </div>
                         <h3><i class="fas fa-leaf"></i> 9. Pitosporo (Pittosporum tobira)</h3>
-                        <p><strong>Características:</strong> Hojas brillantes, flores fragantes, crecimiento denso.</p>
-                        <p><strong>Cuidados:</strong> Tolera la poda, resistente al ambiente marino.</p>
-                        <p><strong>Usos:</strong> Setos formales, topiaria, jardines urbanos.</p>
+                        <div class="plant-rating">⭐⭐⭐⭐ <span>Elegancia urbana</span></div>
+                        <p><strong>🌸 Características:</strong> Hojas brillantes de borde ondulado, flores pequeñas muy fragantes en primavera. Crecimiento denso y uniforme.</p>
+                        <p><strong>🌱 Cuidados:</strong> Tolera la poda frecuente, resistente al ambiente marino. Riego moderado en establecimiento.</p>
+                        <p><strong>🏡 Usos ideales:</strong> Setos formales, topiaria, jardines urbanos, macetas grandes ornamentales.</p>
+                        <div class="plant-specs">
+                            <span><i class="fas fa-ruler-vertical"></i> 150-250cm</span>
+                            <span><i class="fas fa-tint"></i> Medio</span>
+                            <span><i class="fas fa-sun"></i> Sol/Sombra parcial</span>
+                        </div>
                     </div>
 
                     <div class="plant-card">
+                        <div class="plant-image">
+                            <img src="../../images/cipres.webp" alt="Ciprés mediterráneo" loading="lazy">
+                        </div>
                         <h3><i class="fas fa-leaf"></i> 10. Ciprés (Cupressus sempervirens)</h3>
-                        <p><strong>Características:</strong> Porte columnar, símbolo del paisaje mediterráneo.</p>
-                        <p><strong>Cuidados:</strong> Resistente a la sequía, crecimiento vertical natural.</p>
-                        <p><strong>Usos:</strong> Alineaciones, pantallas visuales, ejemplares singulares.</p>
+                        <div class="plant-rating">⭐⭐⭐⭐⭐ <span>Icono mediterráneo</span></div>
+                        <p><strong>🌸 Características:</strong> Porte columnar elegante, símbolo del paisaje mediterráneo. Follaje perenne de color verde oscuro intenso.</p>
+                        <p><strong>🌱 Cuidados:</strong> Resistente a sequía extrema, crecimiento vertical natural. Poda opcional para mantener forma.</p>
+                        <p><strong>🏡 Usos ideales:</strong> Alineaciones formales, pantallas visuales altas, ejemplares singulares, jardines históricos.</p>
+                        <div class="plant-specs">
+                            <span><i class="fas fa-ruler-vertical"></i> 500-2000cm</span>
+                            <span><i class="fas fa-tint"></i> Muy bajo</span>
+                            <span><i class="fas fa-sun"></i> Pleno sol</span>
+                        </div>
                     </div>
                 </div>
 
@@ -357,26 +976,15 @@
 
             <!-- SIDEBAR -->
             <aside class="article-sidebar">
-                <div class="related-articles">
-                    <h3>Artículos relacionados</h3>
-                    <div class="related-item">
-                        <a href="consejosbasicos.html">
-                            <h4>Consejos Básicos de Jardinería</h4>
-                            <p>Fundamentos esenciales para mantener tu jardín perfecto...</p>
-                        </a>
-                    </div>
-                    <div class="related-item">
-                        <a href="disenojardines.html">
-                            <h4>Diseño de Jardines Modernos</h4>
-                            <p>Tendencias actuales en paisajismo y diseño de exteriores...</p>
-                        </a>
-                    </div>
-                    <div class="related-item">
-                        <a href="piscinasdenia.html">
-                            <h4>Mantenimiento de Piscinas</h4>
-                            <p>Todo lo que necesitas saber sobre el cuidado de tu piscina...</p>
-                        </a>
-                    </div>
+                <div class="navigation-buttons">
+                    <a href="../blog.html" class="nav-btn">
+                        <i class="fas fa-arrow-left"></i>
+                        Volver al Blog
+                    </a>
+                    <button onclick="scrollToTop()" class="nav-btn">
+                        <i class="fas fa-arrow-up"></i>
+                        Ir Arriba
+                    </button>
                 </div>
 
                 <div class="contact-widget">
@@ -438,6 +1046,45 @@
             </div>
         </div>
     </footer>
+
+    <!-- Botones flotantes de navegación -->
+    <div class="floating-buttons">
+        <button class="back-button" onclick="goBack()" title="Volver atrás">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <button class="back-to-top" id="backToTop" onclick="scrollToTop()" title="Ir arriba">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+    </div>
+
+    <script>
+        // Función para ir arriba
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Función para ir atrás
+        function goBack() {
+            if (document.referrer && document.referrer !== window.location.href) {
+                window.history.back();
+            } else {
+                window.location.href = '../blog.html';
+            }
+        }
+
+        // Mostrar/ocultar botones flotantes
+        window.addEventListener('scroll', function() {
+            const floatingButtons = document.querySelector('.floating-buttons');
+            if (window.pageYOffset > 300) {
+                floatingButtons.classList.add('visible');
+            } else {
+                floatingButtons.classList.remove('visible');
+            }
+        });
+    </script>
 
     <script src="../../lang/translations.js"></script>
     <script src="../../lang/init-translations.js"></script>

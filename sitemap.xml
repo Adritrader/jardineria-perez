@@ -32,7 +32,7 @@
     <!-- Artículos del blog -->
     <url>
         <loc>https://jardineriaperez.netlify.app/pages/articles/consejosbasicos.html</loc>
-        <lastmod>2025-01-16</lastmod>
+        <lastmod>2025-09-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
@@ -43,7 +43,7 @@
     
     <url>
         <loc>https://jardineriaperez.netlify.app/pages/articles/disenojardines.html</loc>
-        <lastmod>2025-01-16</lastmod>
+        <lastmod>2025-09-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
@@ -54,7 +54,7 @@
     
     <url>
         <loc>https://jardineriaperez.netlify.app/pages/articles/piscinasdenia.html</loc>
-        <lastmod>2025-01-16</lastmod>
+        <lastmod>2025-09-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
@@ -65,12 +65,34 @@
     
     <url>
         <loc>https://jardineriaperez.netlify.app/pages/articles/podapalmeras.html</loc>
-        <lastmod>2025-01-16</lastmod>
+        <lastmod>2025-09-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
             <image:loc>https://jardineriaperez.netlify.app/images/palmerasmediterraneas.png</image:loc>
             <image:title>Poda profesional de palmeras</image:title>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://jardineriaperez.netlify.app/pages/articles/plantasmediterraneas.html</loc>
+        <lastmod>2025-09-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://jardineriaperez.netlify.app/images/jardin-mediterraneo.png</image:loc>
+            <image:title>10 Plantas Mediterráneas Perfectas para tu Jardín</image:title>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://jardineriaperez.netlify.app/pages/articles/tipospiscinas.html</loc>
+        <lastmod>2025-09-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://jardineriaperez.netlify.app/images/piscina-privada.jpeg</image:loc>
+            <image:title>Tipos de Piscinas para tu Hogar - Guía Completa</image:title>
         </image:image>
     </url>
     

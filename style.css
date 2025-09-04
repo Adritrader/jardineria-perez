@@ -1,3 +1,43 @@
+/* --- MEJORAS RESPONSIVAS PARA MOVIL Y BLOG --- */
+@media (max-width: 768px) {
+  .container, .hero .content, .section-title, .about-content, .services-grid, .gallery-grid, .testimonials-grid, .urbanizaciones-grid, .contact-content, .navbar {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+  .about-content, .contact-content {
+    flex-direction: column !important;
+  }
+  .services-grid, .gallery-grid, .testimonials-grid, .urbanizaciones-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  .hero h1 { font-size: 2rem !important; }
+  .hero h2 { font-size: 1.2rem !important; }
+}
+
+@media (max-width: 768px) {
+  .article-container, .article-header, .article-title, .article-meta, .article-content {
+    max-width: 100% !important;
+    padding: 0 1rem !important;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+  .article-image {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+  }
+  .article-content h2, .article-content h3 {
+    font-size: 1.3rem !important;
+    margin: 1.5rem 0 1rem !important;
+  }
+  .article-content p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1rem !important;
+  }
+}
 /* GENERAL RESET Y TIPOGRAFÍA */
 * {
   margin: 0;
