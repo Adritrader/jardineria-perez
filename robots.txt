@@ -37,7 +37,7 @@ User-agent: Twitterbot
 Allow: /
 
 # Sitemaps
-Sitemap: https://jardineriaperez.netlify.app/sitemap.xml
+Sitemap: https://jardineriaperez.com/sitemap.xml
 
 # Host principal
-Host: https://jardineriaperez.netlify.app
+Host: https://jardineriaperez.com

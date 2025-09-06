@@ -3,117 +3,117 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <!-- Página principal -->
     <url>
-        <loc>https://jardineriaperez.netlify.app/</loc>
-        <lastmod>2025-01-16</lastmod>
+        <loc>https://jardineriaperez.com/</loc>
+        <lastmod>2025-09-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <image:image>
-            <image:loc>https://jardineriaperez.netlify.app/images/logo-grande.png</image:loc>
+            <image:loc>https://jardineriaperez.com/images/logo-grande.png</image:loc>
             <image:title>Jardinería Pérez - Servicios de jardinería en Dénia</image:title>
         </image:image>
         <image:image>
-            <image:loc>https://jardineriaperez.netlify.app/images/cover.jpg</image:loc>
+            <image:loc>https://jardineriaperez.com/images/cover.jpg</image:loc>
             <image:title>Servicios profesionales de jardinería y piscinas</image:title>
         </image:image>
     </url>
     
     <!-- Blog principal -->
     <url>
-        <loc>https://jardineriaperez.netlify.app/pages/blog.html</loc>
-        <lastmod>2025-01-16</lastmod>
+        <loc>https://jardineriaperez.com/pages/blog.html</loc>
+        <lastmod>2025-09-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
         <image:image>
-            <image:loc>https://jardineriaperez.netlify.app/images/jardin-mediterraneo.png</image:loc>
+            <image:loc>https://jardineriaperez.com/images/jardin-mediterraneo.png</image:loc>
             <image:title>Blog de jardinería mediterránea</image:title>
         </image:image>
     </url>
     
     <!-- Artículos del blog -->
     <url>
-        <loc>https://jardineriaperez.netlify.app/pages/articles/consejosbasicos.html</loc>
-        <lastmod>2025-09-04</lastmod>
+        <loc>https://jardineriaperez.com/pages/articles/consejosbasicos.html</loc>
+        <lastmod>2025-09-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://jardineriaperez.netlify.app/images/herramientas.jpg</image:loc>
+            <image:loc>https://jardineriaperez.com/images/herramientas.jpg</image:loc>
             <image:title>Consejos básicos de jardinería</image:title>
         </image:image>
     </url>
     
     <url>
-        <loc>https://jardineriaperez.netlify.app/pages/articles/disenojardines.html</loc>
-        <lastmod>2025-09-04</lastmod>
+        <loc>https://jardineriaperez.com/pages/articles/disenojardines.html</loc>
+        <lastmod>2025-09-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://jardineriaperez.netlify.app/images/jardin-mediterraneo.png</image:loc>
+            <image:loc>https://jardineriaperez.com/images/jardin-mediterraneo.png</image:loc>
             <image:title>Diseño de jardines mediterráneos</image:title>
         </image:image>
     </url>
     
     <url>
-        <loc>https://jardineriaperez.netlify.app/pages/articles/piscinasdenia.html</loc>
-        <lastmod>2025-09-04</lastmod>
+        <loc>https://jardineriaperez.com/pages/articles/piscinasdenia.html</loc>
+        <lastmod>2025-09-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://jardineriaperez.netlify.app/images/piscina-privada.jpeg</image:loc>
+            <image:loc>https://jardineriaperez.com/images/piscina-privada.jpeg</image:loc>
             <image:title>Mantenimiento de piscinas en Dénia</image:title>
         </image:image>
     </url>
     
     <url>
-        <loc>https://jardineriaperez.netlify.app/pages/articles/podapalmeras.html</loc>
-        <lastmod>2025-09-04</lastmod>
+        <loc>https://jardineriaperez.com/pages/articles/podapalmeras.html</loc>
+        <lastmod>2025-09-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://jardineriaperez.netlify.app/images/palmerasmediterraneas.png</image:loc>
+            <image:loc>https://jardineriaperez.com/images/palmerasmediterraneas.png</image:loc>
             <image:title>Poda profesional de palmeras</image:title>
         </image:image>
     </url>
     
     <url>
-        <loc>https://jardineriaperez.netlify.app/pages/articles/plantasmediterraneas.html</loc>
-        <lastmod>2025-09-04</lastmod>
+        <loc>https://jardineriaperez.com/pages/articles/plantasmediterraneas.html</loc>
+        <lastmod>2025-09-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://jardineriaperez.netlify.app/images/jardin-mediterraneo.png</image:loc>
+            <image:loc>https://jardineriaperez.com/images/jardin-mediterraneo.png</image:loc>
             <image:title>10 Plantas Mediterráneas Perfectas para tu Jardín</image:title>
         </image:image>
     </url>
     
     <url>
-        <loc>https://jardineriaperez.netlify.app/pages/articles/tipospiscinas.html</loc>
-        <lastmod>2025-09-04</lastmod>
+        <loc>https://jardineriaperez.com/pages/articles/tipospiscinas.html</loc>
+        <lastmod>2025-09-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <image:image>
-            <image:loc>https://jardineriaperez.netlify.app/images/piscina-privada.jpeg</image:loc>
+            <image:loc>https://jardineriaperez.com/images/piscina-privada.jpeg</image:loc>
             <image:title>Tipos de Piscinas para tu Hogar - Guía Completa</image:title>
         </image:image>
     </url>
     
     <!-- Páginas legales -->
     <url>
-        <loc>https://jardineriaperez.netlify.app/legal/politicaprivacidad.html</loc>
-        <lastmod>2025-01-16</lastmod>
+        <loc>https://jardineriaperez.com/legal/politicaprivacidad.html</loc>
+        <lastmod>2025-09-06</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
     
     <url>
-        <loc>https://jardineriaperez.netlify.app/legal/terminoscondiciones.html</loc>
-        <lastmod>2025-01-16</lastmod>
+        <loc>https://jardineriaperez.com/legal/terminoscondiciones.html</loc>
+        <lastmod>2025-09-06</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
     
     <url>
-        <loc>https://jardineriaperez.netlify.app/legal/cookies.html</loc>
-        <lastmod>2025-01-16</lastmod>
+        <loc>https://jardineriaperez.com/legal/cookies.html</loc>
+        <lastmod>2025-09-06</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>

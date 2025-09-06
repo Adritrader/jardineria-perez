@@ -13,6 +13,15 @@
   }
   .hero h1 { font-size: 2rem !important; }
   .hero h2 { font-size: 1.2rem !important; }
+  
+  /* Fix específico para el título de contacto */
+  #contacto .section-title {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+    display: block !important;
+  }
 }
 
 @media (max-width: 768px) {
