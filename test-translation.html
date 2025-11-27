@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Translation System</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .language-selector { 
+            background: #f0f0f0; 
+            padding: 10px; 
+            margin: 20px 0; 
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 5px;
+        }
+        .language-dropdown { 
+            background: white; 
+            border: 1px solid #ccc; 
+            padding: 10px;
+            margin-top: 5px;
+            display: none;
+        }
+        .language-option { 
+            padding: 5px; 
+            cursor: pointer; 
+            border-bottom: 1px solid #eee;
+        }
+        .language-option:hover { background: #f0f0f0; }
+        .test-content { 
+            margin: 20px 0; 
+            padding: 20px; 
+            border: 1px solid #ddd; 
+            border-radius: 5px;
+        }
+        .debug-panel {
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .debug-button {
+            background: #007cba;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            margin: 5px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌍 Test de Sistema de Traducción</h1>
+    
+    <!-- Language Selector -->
+    <div class="language-selector" onclick="toggleDropdown()">
+        <span class="current-flag">🇪🇸</span>
+        <span class="current-lang">ES</span>
+        <span>▼</span>
+        <div class="language-dropdown" id="languageDropdown">
+            <div class="language-option" data-lang="es">🇪🇸 Español</div>
+            <div class="language-option" data-lang="en">🇬🇧 English</div>
+            <div class="language-option" data-lang="de">🇩🇪 Deutsch</div>
+            <div class="language-option" data-lang="fr">🇫🇷 Français</div>
+            <div class="language-option" data-lang="nl">🇳🇱 Nederlands</div>
+        </div>
+    </div>
+
+    <!-- Test Content -->
+    <div class="test-content">
+        <h2 data-translate="articles.consejosbasicos.main_title">Título Principal</h2>
+        <p data-translate="articles.consejosbasicos.intro">Introducción del artículo...</p>
+        <h3 data-translate="articles.consejosbasicos.section_1_title">Sección 1</h3>
+        <p data-translate="articles.consejosbasicos.section_1_content">Contenido de sección 1...</p>
+    </div>
+
+    <!-- Debug Panel -->
+    <div class="debug-panel">
+        <h3>🛠️ Panel de Debug</h3>
+        <button class="debug-button" onclick="forceEnglish()">Force English</button>
+        <button class="debug-button" onclick="forceGerman()">Force German</button>
+        <button class="debug-button" onclick="forceFrench()">Force French</button>
+        <button class="debug-button" onclick="testAllLanguages()">Test All</button>
+        <button class="debug-button" onclick="debugTranslations()">Debug Info</button>
+    </div>
+
+    <!-- Load translations first -->
+    <script src="lang/translations.js"></script>
+    
+    <script>
+        // 🌍 SISTEMA DE TRADUCCIÓN DE PRUEBA
+        let currentLanguage = 'es';
+        let translationsReady = false;
+
+        function toggleDropdown() {
+            const dropdown = document.getElementById('languageDropdown');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function waitForTranslations() {
+            if (window.translations && Object.keys(window.translations).length > 0) {
+                console.log('✅ Translations loaded!');
+                console.log('Available languages:', Object.keys(window.translations));
+                translationsReady = true;
+                setupEventListeners();
+                changeLanguage('es'); // Load default
+            } else {
+                console.log('⏳ Waiting for translations...');
+                setTimeout(waitForTranslations, 100);
+            }
+        }
+
+        function getNestedValue(obj, path) {
+            return path.split('.').reduce((current, key) => {
+                return current && current[key] !== undefined ? current[key] : null;
+            }, obj);
+        }
+
+        function changeLanguage(lang) {
+            console.log(`🌍 Changing to: ${lang}`);
+            
+            if (!translationsReady || !window.translations[lang]) {
+                console.error('❌ Language not available:', lang);
+                return false;
+            }
+
+            const langData = window.translations[lang];
+            currentLanguage = lang;
+            
+            // Translate all elements
+            const elements = document.querySelectorAll('[data-translate]');
+            console.log(`Found ${elements.length} elements to translate`);
+
+            let success = 0;
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                const translation = getNestedValue(langData, key);
+                
+                if (translation) {
+                    element.textContent = translation;
+                    success++;
+                    console.log(`✅ ${key} → ${translation.substring(0, 30)}...`);
+                } else {
+                    console.warn(`⚠️ Missing: ${key}`);
+                }
+            });
+
+            console.log(`🎯 Translated ${success}/${elements.length} elements`);
+
+            // Update selector
+            const flags = { 'es': '🇪🇸', 'en': '🇬🇧', 'de': '🇩🇪', 'fr': '🇫🇷', 'nl': '🇳🇱' };
+            const codes = { 'es': 'ES', 'en': 'EN', 'de': 'DE', 'fr': 'FR', 'nl': 'NL' };
+            
+            document.querySelector('.current-flag').textContent = flags[lang];
+            document.querySelector('.current-lang').textContent = codes[lang];
+            
+            // Close dropdown
+            document.getElementById('languageDropdown').style.display = 'none';
+            
+            return true;
+        }
+
+        function setupEventListeners() {
+            document.addEventListener('click', function(e) {
+                const option = e.target.closest('.language-option[data-lang]');
+                if (option) {
+                    const lang = option.getAttribute('data-lang');
+                    changeLanguage(lang);
+                    return;
+                }
+                
+                // Close dropdown if clicking outside
+                if (!e.target.closest('.language-selector')) {
+                    document.getElementById('languageDropdown').style.display = 'none';
+                }
+            });
+        }
+
+        // Debug functions
+        window.forceEnglish = () => changeLanguage('en');
+        window.forceGerman = () => changeLanguage('de');
+        window.forceFrench = () => changeLanguage('fr');
+        window.forceSpanish = () => changeLanguage('es');
+        
+        window.testAllLanguages = function() {
+            const langs = ['es', 'en', 'de', 'fr', 'nl'];
+            let i = 0;
+            const test = setInterval(() => {
+                if (i < langs.length) {
+                    console.log(`Testing ${langs[i]}...`);
+                    changeLanguage(langs[i]);
+                    i++;
+                } else {
+                    clearInterval(test);
+                    console.log('✅ All tests completed');
+                }
+            }, 1500);
+        };
+
+        window.debugTranslations = function() {
+            console.log('=== DEBUG INFO ===');
+            console.log('Translations ready:', translationsReady);
+            console.log('Current language:', currentLanguage);
+            console.log('Available languages:', Object.keys(window.translations || {}));
+            
+            if (window.translations && window.translations[currentLanguage]) {
+                const testKey = 'articles.consejosbasicos.main_title';
+                const translation = getNestedValue(window.translations[currentLanguage], testKey);
+                console.log(`Test translation for "${testKey}":`, translation);
+            }
+        };
+
+        // Start when ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', waitForTranslations);
+        } else {
+            waitForTranslations();
+        }
+    </script>
+</body>
+</html>

@@ -13,6 +13,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Hreflang para SEO multiidioma -->
+    <link rel="alternate" hreflang="es" href="https://jardineriaperez.netlify.app/pages/articles/consejosbasicos.html">
+    <link rel="alternate" hreflang="en" href="https://jardineriaperez.netlify.app/pages/articles/consejosbasicos.html">
+    <link rel="alternate" hreflang="de" href="https://jardineriaperez.netlify.app/pages/articles/consejosbasicos.html">
+    <link rel="alternate" hreflang="fr" href="https://jardineriaperez.netlify.app/pages/articles/consejosbasicos.html">
+    <link rel="alternate" hreflang="nl" href="https://jardineriaperez.netlify.app/pages/articles/consejosbasicos.html">
+    <link rel="alternate" hreflang="x-default" href="https://jardineriaperez.netlify.app/pages/articles/consejosbasicos.html">
+    
     <!-- SEO optimizado -->
     <title>Consejos Básicos de Jardinería para Principiantes | Jardinería Pérez Dénia</title>
     <meta name="description" content="Descubre los mejores consejos básicos de jardinería para principiantes. Aprende técnicas de riego, poda y cuidado de plantas mediterráneas en Dénia. Guía completa.">
@@ -22,20 +30,13 @@
     <meta name="language" content="Spanish">
     <link rel="canonical" href="https://jardineriaperez.com/pages/articles/consejosbasicos.html">
     
-    <!-- Open Graph optimizado -->
+    <!-- Open Graph optimizado con soporte multiidioma -->
     <meta property="og:type" content="article">
     <meta property="og:locale" content="es_ES">
-    <meta property="og:title" content="Consejos Básicos de Jardinería para Principiantes">
-    <meta property="og:description" content="Aprende técnicas básicas de jardinería, riego y cuidado de plantas mediterráneas con consejos profesionales.">
-    <meta property="og:image" content="https://jardineriaperez.com/images/herramientas.jpg">
-    <meta property="og:url" content="https://jardineriaperez.com/pages/articles/consejosbasicos.html">
-    <meta property="og:site_name" content="Jardinería Pérez">
-    
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Consejos Básicos de Jardinería para Principiantes">
-    <meta name="twitter:description" content="Aprende técnicas básicas de jardinería y cuidado de plantas mediterráneas.">
-    <meta name="twitter:image" content="https://jardineriaperez.com/images/herramientas.jpg"
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="nl_NL">
     <meta property="og:site_name" content="Jardinería Pérez">
     <meta property="og:title" content="🌱 Consejos Básicos de Jardinería para Principiantes | Jardinería Pérez">
     <meta property="og:description" content="🌿 Descubre los mejores consejos básicos de jardinería. Técnicas profesionales de riego, poda y cuidado de plantas en el clima mediterráneo de Dénia.">
@@ -48,6 +49,13 @@
     <meta property="article:published_time" content="2025-01-16T10:00:00+01:00">
     <meta property="article:modified_time" content="2025-01-16T10:00:00+01:00">
     <meta property="article:section" content="Jardinería">
+    
+    <!-- Twitter Card optimizado -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="🌱 Consejos Básicos de Jardinería para Principiantes">
+    <meta name="twitter:description" content="🌿 Aprende técnicas básicas de jardinería y cuidado de plantas mediterráneas con consejos profesionales.">
+    <meta name="twitter:image" content="https://jardineriaperez.netlify.app/images/herramientas.jpg">
+    <meta name="twitter:image:alt" content="Herramientas básicas de jardinería">
     <meta property="article:tag" content="consejos jardinería">
     <meta property="article:tag" content="principiantes">
     <meta property="article:tag" content="Dénia">
@@ -125,6 +133,92 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    
+    <!-- Estilos específicos para el selector de idiomas -->
+    <style>
+        /* Asegurar que el selector de idiomas funcione */
+        #language-selector {
+            position: relative !important;
+            z-index: 9999 !important;
+        }
+        
+        .lang-dropdown {
+            position: relative !important;
+        }
+        
+        .lang-options {
+            position: absolute !important;
+            top: 100% !important;
+            left: 0 !important;
+            right: 0 !important;
+            background: white !important;
+            border: 1px solid #ddd !important;
+            border-radius: 8px !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+            overflow: hidden !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            transform: translateY(-10px) !important;
+            transition: all 0.3s ease !important;
+            z-index: 10000 !important;
+            min-width: 140px !important;
+        }
+        
+        .lang-options.open {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: translateY(0) !important;
+        }
+        
+        .lang-option {
+            display: flex !important;
+            align-items: center !important;
+            gap: 10px !important;
+            padding: 10px 15px !important;
+            color: #333 !important;
+            cursor: pointer !important;
+            transition: background-color 0.2s ease !important;
+            font-size: 14px !important;
+        }
+        
+        .lang-option:hover {
+            background-color: #f5f5f5 !important;
+        }
+        
+        .lang-current {
+            display: flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            background: rgba(255, 255, 255, 0.1) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            border-radius: 8px !important;
+            padding: 8px 12px !important;
+            color: white !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            font-size: 14px !important;
+            min-width: 70px !important;
+        }
+        
+        .lang-current:hover {
+            background: rgba(255, 255, 255, 0.2) !important;
+        }
+        
+        /* Banderas CSS básicas */
+        .flag-icon {
+            width: 20px !important;
+            height: 15px !important;
+            border-radius: 2px !important;
+            display: inline-block !important;
+            overflow: hidden !important;
+        }
+        
+        .flag-es { background: linear-gradient(to bottom, #c60b1e 33%, #ffc400 33%, #ffc400 66%, #c60b1e 66%) !important; }
+        .flag-gb { background: linear-gradient(135deg, #012169 25%, transparent 25%), linear-gradient(45deg, #012169 25%, transparent 25%), linear-gradient(-45deg, #012169 25%, transparent 25%), linear-gradient(-135deg, #012169 25%, transparent 25%), linear-gradient(to right, white 33%, #c8102e 33%, #c8102e 66%, white 66%) !important; }
+        .flag-de { background: linear-gradient(to bottom, #000 33%, #dd0000 33%, #dd0000 66%, #ffce00 66%) !important; }
+        .flag-fr { background: linear-gradient(to right, #002395 33%, white 33%, white 66%, #ed2939 66%) !important; }
+        .flag-nl { background: linear-gradient(to bottom, #ae1c28 33%, white 33%, white 66%, #21468b 66%) !important; }
+    </style>
     
     <!-- Estilos específicos para asegurar visibilidad del footer y optimización móvil -->
     <style>
@@ -579,13 +673,13 @@
     <header class="article-header">
         <div class="container">
             <nav class="breadcrumb">
-                <a href="../../" data-translate="article_breadcrumb_home">Inicio</a> > <a href="../blog.html" data-translate="article_breadcrumb_blog">Blog</a> > <span>Consejos Básicos de Jardinería</span>
+                <a href="../../" data-translate="breadcrumb_home">Inicio</a> > <a href="../blog.html" data-translate="breadcrumb_blog">Blog</a> > <span data-translate="articles.consejosbasicos.breadcrumb">Consejos Básicos de Jardinería</span>
             </nav>
-            <h1 class="article-title">🌱 Consejos Básicos de Jardinería para Principiantes</h1>
+            <h1 class="article-title" data-translate="articles.consejosbasicos.main_title">🌱 Consejos Básicos de Jardinería para Principiantes</h1>
             <div class="article-meta">
                 <span><i class="fas fa-calendar"></i> 16 de enero, 2025</span>
-                <span><i class="fas fa-clock"></i> 12 min lectura</span>
-                <span><i class="fas fa-tag"></i> Guía Principiantes</span>
+                <span><i class="fas fa-clock"></i> <span data-translate="articles.consejosbasicos.read_time">12 min lectura</span></span>
+                <span><i class="fas fa-tag"></i> <span data-translate="articles.consejosbasicos.category">Guía Principiantes</span></span>
             </div>
         </div>
     </header>
@@ -596,133 +690,133 @@
             <div class="content-wrapper">
                 <div class="article-image">
                     <img src="../../images/herramientas.jpg" alt="Herramientas básicas de jardinería para principiantes" loading="lazy">
-                    <figcaption data-translate="image_caption">Herramientas esenciales para comenzar en el mundo de la jardinería</figcaption>
+                    <figcaption data-translate="articles.consejosbasicos.image_caption">Herramientas esenciales para comenzar en el mundo de la jardinería</figcaption>
                 </div>
 
                 <div class="article-text">
-                    <p class="lead">🌿 <strong>Comenzar en el mundo de la jardinería</strong> puede parecer abrumador al principio, pero con los consejos adecuados y un poco de paciencia, cualquier persona puede crear y mantener un hermoso jardín. En <strong>Jardinería Pérez</strong>, con más de 15 años de experiencia en Dénia y la Marina Alta, compartimos contigo los consejos fundamentales que todo principiante debe conocer.</p>
+                    <p class="lead" data-translate="articles.consejosbasicos.intro">🌿 <strong>Comenzar en el mundo de la jardinería</strong> puede parecer abrumador al principio, pero con los consejos adecuados y un poco de paciencia, cualquier persona puede crear y mantener un hermoso jardín. En <strong>Jardinería Pérez</strong>, con más de 15 años de experiencia en Dénia y la Marina Alta, compartimos contigo los consejos fundamentales que todo principiante debe conocer.</p>
 
-                    <h2>🌱 1. Conoce Tu Espacio y Clima</h2>
-            <p>Antes de plantar cualquier cosa, es fundamental entender las características de tu jardín:</p>
+                    <h2 data-translate="articles.consejosbasicos.section_1_title">🌱 1. Conoce Tu Espacio y Clima</h2>
+            <p data-translate="articles.consejosbasicos.section_1_content">Antes de plantar cualquier cosa, es fundamental entender las características de tu jardín:</p>
             
             <ul class="tips-list">
-              <li><strong>Exposición solar:</strong> Observa cuántas horas de sol recibe cada área de tu jardín durante el día</li>
-              <li><strong>Tipo de suelo:</strong> Determina si tu suelo es arcilloso, arenoso o franco</li>
-              <li><strong>Drenaje:</strong> Verifica cómo se comporta el agua después de la lluvia</li>
-              <li><strong>Clima mediterráneo:</strong> En Dénia, aprovecha las ventajas del clima mediterráneo eligiendo plantas autóctonas</li>
+              <li data-translate="articles.consejosbasicos.tip_solar"><strong>Exposición solar:</strong> Observa cuántas horas de sol recibe cada área de tu jardín durante el día</li>
+              <li data-translate="articles.consejosbasicos.tip_soil"><strong>Tipo de suelo:</strong> Determina si tu suelo es arcilloso, arenoso o franco</li>
+              <li data-translate="articles.consejosbasicos.tip_drainage"><strong>Drenaje:</strong> Verifica cómo se comporta el agua después de la lluvia</li>
+              <li data-translate="articles.consejosbasicos.tip_climate"><strong>Clima mediterráneo:</strong> En Dénia, aprovecha las ventajas del clima mediterráneo eligiendo plantas autóctonas</li>
             </ul>
 
             <div class="tip-box">
-              <h3>💡 Consejo de Experto</h3>
-              <p>En la zona de Dénia y Marina Alta, las plantas mediterráneas como lavanda, romero, olivos y palmeras son ideales porque están adaptadas al clima local y requieren menos mantenimiento.</p>
+              <h3 data-translate="articles.consejosbasicos.expert_tip_title">💡 Consejo de Experto</h3>
+              <p data-translate="articles.consejosbasicos.expert_tip_content">En la zona de Dénia y Marina Alta, las plantas mediterráneas como lavanda, romero, olivos y palmeras son ideales porque están adaptadas al clima local y requieren menos mantenimiento.</p>
             </div>
 
-            <h2>🚿 2. Domina las Técnicas de Riego</h2>
-            <p>El riego es uno de los aspectos más críticos en la jardinería. Muchas plantas mueren por exceso de agua más que por falta de ella:</p>
+            <h2 data-translate="articles.consejosbasicos.section_2_title">🚿 2. Domina las Técnicas de Riego</h2>
+            <p data-translate="articles.consejosbasicos.section_2_content">El riego es uno de los aspectos más críticos en la jardinería. Muchas plantas mueren por exceso de agua más que por falta de ella:</p>
 
-            <h3>Reglas básicas del riego:</h3>
+            <h3 data-translate="articles.consejosbasicos.irrigation_rules_title">Reglas básicas del riego:</h3>
             <ul class="tips-list">
-              <li><strong>Riega profundo y menos frecuente:</strong> Es mejor un riego abundante cada 2-3 días que riegos superficiales diarios</li>
-              <li><strong>Mejor momento:</strong> Riega temprano en la mañana o al atardecer para evitar la evaporación</li>
-              <li><strong>Técnica del dedo:</strong> Introduce el dedo 2-3 cm en la tierra. Si está seca, es momento de regar</li>
-              <li><strong>Riego por goteo:</strong> Considera instalar un sistema de riego por goteo para mayor eficiencia</li>
+              <li data-translate="articles.consejosbasicos.irrigation_deep"><strong>Riega profundo y menos frecuente:</strong> Es mejor un riego abundante cada 2-3 días que riegos superficiales diarios</li>
+              <li data-translate="articles.consejosbasicos.irrigation_timing"><strong>Mejor momento:</strong> Riega temprano en la mañana o al atardecer para evitar la evaporación</li>
+              <li data-translate="articles.consejosbasicos.irrigation_finger"><strong>Técnica del dedo:</strong> Introduce el dedo 2-3 cm en la tierra. Si está seca, es momento de regar</li>
+              <li data-translate="articles.consejosbasicos.irrigation_drip"><strong>Riego por goteo:</strong> Considera instalar un sistema de riego por goteo para mayor eficiencia</li>
             </ul>
 
-            <h2>✂️ 3. Aprende los Fundamentos de la Poda</h2>
-            <p>La poda correcta estimula el crecimiento saludable y mantiene las plantas con buen aspecto:</p>
+            <h2 data-translate="articles.consejosbasicos.section_3_title">✂️ 3. Aprende los Fundamentos de la Poda</h2>
+            <p data-translate="articles.consejosbasicos.section_3_content">La poda correcta estimula el crecimiento saludable y mantiene las plantas con buen aspecto:</p>
 
-            <h3>Principios básicos de poda:</h3>
+            <h3 data-translate="articles.consejosbasicos.pruning_principles_title">Principios básicos de poda:</h3>
             <ul class="tips-list">
-              <li><strong>Timing:</strong> La mayoría de plantas se podan en invierno cuando están dormantes</li>
-              <li><strong>Herramientas limpias:</strong> Siempre usa tijeras afiladas y desinfectadas</li>
-              <li><strong>Regla del 1/3:</strong> Nunca cortes más del 30% de la planta de una vez</li>
-              <li><strong>Cortes limpios:</strong> Haz cortes en ángulo, justo por encima de un brote o nudo</li>
+              <li data-translate="articles.consejosbasicos.pruning_timing"><strong>Timing:</strong> La mayoría de plantas se podan en invierno cuando están dormantes</li>
+              <li data-translate="articles.consejosbasicos.pruning_tools"><strong>Herramientas limpias:</strong> Siempre usa tijeras afiladas y desinfectadas</li>
+              <li data-translate="articles.consejosbasicos.pruning_rule"><strong>Regla del 1/3:</strong> Nunca cortes más del 30% de la planta de una vez</li>
+              <li data-translate="articles.consejosbasicos.pruning_cuts"><strong>Cortes limpios:</strong> Haz cortes en ángulo, justo por encima de un brote o nudo</li>
             </ul>
 
             <div class="warning-box">
-              <h3>⚠️ Atención Especial</h3>
-              <p>Para la poda de palmeras en Dénia, es recomendable contactar profesionales debido a las regulaciones municipales y la prevención del picudo rojo.</p>
+              <h3 data-translate="articles.consejosbasicos.warning_title">⚠️ Atención Especial</h3>
+              <p data-translate="articles.consejosbasicos.warning_content">Para la poda de palmeras en Dénia, es recomendable contactar profesionales debido a las regulaciones municipales y la prevención del picudo rojo.</p>
             </div>
 
-            <h2>🌿 4. Selección de Plantas para Principiantes</h2>
-            <p>Comienza con plantas resistentes y fáciles de cuidar:</p>
+            <h2 data-translate="articles.consejosbasicos.section_4_title">🌿 4. Selección de Plantas para Principiantes</h2>
+            <p data-translate="articles.consejosbasicos.section_4_content">Comienza con plantas resistentes y fáciles de cuidar:</p>
 
-            <h3>Plantas ideales para principiantes en clima mediterráneo:</h3>
+            <h3 data-translate="articles.consejosbasicos.beginner_plants_title">Plantas ideales para principiantes en clima mediterráneo:</h3>
             <div class="plants-grid">
               <div class="plant-item">
-                <h4>Lavanda</h4>
-                <p>Aromática, resistente a la sequía, atrae polinizadores</p>
+                <h4 data-translate="articles.consejosbasicos.plant_lavender_name">Lavanda</h4>
+                <p data-translate="articles.consejosbasicos.plant_lavender_desc">Aromática, resistente a la sequía, atrae polinizadores</p>
               </div>
               <div class="plant-item">
-                <h4>Romero</h4>
-                <p>Perenne, comestible, muy resistente</p>
+                <h4 data-translate="articles.consejosbasicos.plant_rosemary_name">Romero</h4>
+                <p data-translate="articles.consejosbasicos.plant_rosemary_desc">Perenne, comestible, muy resistente</p>
               </div>
               <div class="plant-item">
-                <h4>Geranios</h4>
-                <p>Floración prolongada, fácil mantenimiento</p>
+                <h4 data-translate="articles.consejosbasicos.plant_geranium_name">Geranios</h4>
+                <p data-translate="articles.consejosbasicos.plant_geranium_desc">Floración prolongada, fácil mantenimiento</p>
               </div>
               <div class="plant-item">
-                <h4>Suculentas</h4>
-                <p>Mínimo riego, gran variedad de formas</p>
+                <h4 data-translate="articles.consejosbasicos.plant_succulent_name">Suculentas</h4>
+                <p data-translate="articles.consejosbasicos.plant_succulent_desc">Mínimo riego, gran variedad de formas</p>
               </div>
             </div>
 
-            <h2>🔧 5. Herramientas Esenciales</h2>
-            <p>No necesitas muchas herramientas para comenzar, pero asegúrate de que sean de calidad:</p>
+            <h2 data-translate="articles.consejosbasicos.section_5_title">🔧 5. Herramientas Esenciales</h2>
+            <p data-translate="articles.consejosbasicos.section_5_content">No necesitas muchas herramientas para comenzar, pero asegúrate de que sean de calidad:</p>
 
             <ul class="tips-list">
-              <li><strong>Pala de mano:</strong> Para plantar y transplantar</li>
-              <li><strong>Tijeras de podar:</strong> Para cortes limpios y precisos</li>
-              <li><strong>Regadera o manguera:</strong> Para el riego controlado</li>
-              <li><strong>Guantes:</strong> Protección básica para las manos</li>
-              <li><strong>Rastrillo pequeño:</strong> Para limpiar y airear la tierra</li>
+              <li data-translate="articles.consejosbasicos.tool_shovel"><strong>Pala de mano:</strong> Para plantar y transplantar</li>
+              <li data-translate="articles.consejosbasicos.tool_pruners"><strong>Tijeras de podar:</strong> Para cortes limpios y precisos</li>
+              <li data-translate="articles.consejosbasicos.tool_watering"><strong>Regadera o manguera:</strong> Para el riego controlado</li>
+              <li data-translate="articles.consejosbasicos.tool_gloves"><strong>Guantes:</strong> Protección básica para las manos</li>
+              <li data-translate="articles.consejosbasicos.tool_rake"><strong>Rastrillo pequeño:</strong> Para limpiar y airear la tierra</li>
             </ul>
 
-            <h2>🍂 6. Preparación del Suelo</h2>
-            <p>Un suelo saludable es la base de un jardín exitoso:</p>
+            <h2 data-translate="articles.consejosbasicos.section_6_title">🍂 6. Preparación del Suelo</h2>
+            <p data-translate="articles.consejosbasicos.section_6_content">Un suelo saludable es la base de un jardín exitoso:</p>
 
             <ul class="tips-list">
-              <li><strong>Añade compost:</strong> Mejora la estructura y fertilidad del suelo</li>
-              <li><strong>Aireación:</strong> Afloja la tierra compactada con una horquilla</li>
-              <li><strong>pH equilibrado:</strong> La mayoría de plantas prefieren un pH entre 6.0 y 7.0</li>
-              <li><strong>Drenaje:</strong> Asegúrate de que el agua no se acumule</li>
+              <li data-translate="articles.consejosbasicos.soil_compost"><strong>Añade compost:</strong> Mejora la estructura y fertilidad del suelo</li>
+              <li data-translate="articles.consejosbasicos.soil_aeration"><strong>Aireación:</strong> Afloja la tierra compactada con una horquilla</li>
+              <li data-translate="articles.consejosbasicos.soil_ph"><strong>pH equilibrado:</strong> La mayoría de plantas prefieren un pH entre 6.0 y 7.0</li>
+              <li data-translate="articles.consejosbasicos.soil_drainage"><strong>Drenaje:</strong> Asegúrate de que el agua no se acumule</li>
             </ul>
 
-            <h2>🐛 7. Control Natural de Plagas</h2>
-            <p>Prevenir es mejor que curar cuando se trata de plagas:</p>
+            <h2 data-translate="articles.consejosbasicos.section_7_title">🐛 7. Control Natural de Plagas</h2>
+            <p data-translate="articles.consejosbasicos.section_7_content">Prevenir es mejor que curar cuando se trata de plagas:</p>
 
             <ul class="tips-list">
-              <li><strong>Biodiversidad:</strong> Planta variedad de especies para atraer insectos beneficiosos</li>
-              <li><strong>Inspección regular:</strong> Revisa tus plantas semanalmente</li>
-              <li><strong>Métodos naturales:</strong> Usa jabón insecticida o aceite de neem</li>
-              <li><strong>Plantas repelentes:</strong> Albahaca, menta y caléndulas repelen muchas plagas</li>
+              <li data-translate="articles.consejosbasicos.pest_biodiversity"><strong>Biodiversidad:</strong> Planta variedad de especies para atraer insectos beneficiosos</li>
+              <li data-translate="articles.consejosbasicos.pest_inspection"><strong>Inspección regular:</strong> Revisa tus plantas semanalmente</li>
+              <li data-translate="articles.consejosbasicos.pest_natural"><strong>Métodos naturales:</strong> Usa jabón insecticida o aceite de neem</li>
+              <li data-translate="articles.consejosbasicos.pest_repellent"><strong>Plantas repelentes:</strong> Albahaca, menta y caléndulas repelen muchas plagas</li>
             </ul>
 
             <div class="tip-box">
-              <h3>🌍 Jardinería Sostenible</h3>
-              <p>En Jardinería Pérez promovemos prácticas sostenibles: recoge agua de lluvia, haz compost con restos orgánicos y elige plantas nativas que requieren menos recursos.</p>
+              <h3 data-translate="articles.consejosbasicos.sustainable_title">🌍 Jardinería Sostenible</h3>
+              <p data-translate="articles.consejosbasicos.sustainable_content">En Jardinería Pérez promovemos prácticas sostenibles: recoge agua de lluvia, haz compost con restos orgánicos y elige plantas nativas que requieren menos recursos.</p>
             </div>
 
-            <h2>📅 8. Planificación Estacional</h2>
-            <p>En el clima mediterráneo de Dénia, cada estación tiene sus tareas:</p>
+            <h2 data-translate="articles.consejosbasicos.section_8_title">📅 8. Planificación Estacional</h2>
+            <p data-translate="articles.consejosbasicos.section_8_content">En el clima mediterráneo de Dénia, cada estación tiene sus tareas:</p>
 
-            <h3>Calendario básico de jardinería:</h3>
+            <h3 data-translate="articles.consejosbasicos.seasonal_calendar_title">Calendario básico de jardinería:</h3>
             <ul class="tips-list">
-              <li><strong>Primavera:</strong> Época de plantación y inicio del riego regular</li>
-              <li><strong>Verano:</strong> Riego intensivo y protección del sol excesivo</li>
-              <li><strong>Otoño:</strong> Plantación de árboles y preparación para el invierno</li>
-              <li><strong>Invierno:</strong> Poda, planificación y mantenimiento de herramientas</li>
+              <li data-translate="articles.consejosbasicos.season_spring"><strong>Primavera:</strong> Época de plantación y inicio del riego regular</li>
+              <li data-translate="articles.consejosbasicos.season_summer"><strong>Verano:</strong> Riego intensivo y protección del sol excesivo</li>
+              <li data-translate="articles.consejosbasicos.season_autumn"><strong>Otoño:</strong> Plantación de árboles y preparación para el invierno</li>
+              <li data-translate="articles.consejosbasicos.season_winter"><strong>Invierno:</strong> Poda, planificación y mantenimiento de herramientas</li>
             </ul>
 
-            <h2>🏆 Conclusión</h2>
-            <p>La jardinería es un proceso de aprendizaje continuo que requiere <strong>paciencia, observación y práctica</strong>. No te desanimes si cometes errores al principio; incluso los jardineros más experimentados siguen aprendiendo.</p>
+            <h2 data-translate="articles.consejosbasicos.conclusion_title">🏆 Conclusión</h2>
+            <p data-translate="articles.consejosbasicos.conclusion_text1">La jardinería es un proceso de aprendizaje continuo que requiere <strong>paciencia, observación y práctica</strong>. No te desanimes si cometes errores al principio; incluso los jardineros más experimentados siguen aprendiendo.</p>
 
-            <p>Recuerda que cada jardín es único, y lo que funciona en un lugar puede no funcionar en otro. La clave está en observar, experimentar y adaptar estos consejos básicos a tu situación específica.</p>
+            <p data-translate="articles.consejosbasicos.conclusion_text2">Recuerda que cada jardín es único, y lo que funciona en un lugar puede no funcionar en otro. La clave está en observar, experimentar y adaptar estos consejos básicos a tu situación específica.</p>
 
             <div class="cta-box">
-              <h3>🌟 ¿Necesitas Ayuda Profesional?</h3>
-              <p>En <strong>Jardinería Pérez</strong> ofrecemos servicios profesionales de diseño, mantenimiento y asesoramiento para jardines en Dénia y toda la Marina Alta. ¡Contacta con nosotros para una consulta gratuita!</p>
-              <a href="../../index.html#contacto" class="cta-button">Solicitar Presupuesto Gratuito</a>
+              <h3 data-translate="articles.consejosbasicos.cta_title">🌟 ¿Necesitas Ayuda Profesional?</h3>
+              <p data-translate="articles.consejosbasicos.cta_text">En <strong>Jardinería Pérez</strong> ofrecemos servicios profesionales de diseño, mantenimiento y asesoramiento para jardines en Dénia y toda la Marina Alta. ¡Contacta con nosotros para una consulta gratuita!</p>
+              <a href="../../index.html#contacto" class="cta-button" data-translate="articles.consejosbasicos.cta_button">Solicitar Presupuesto Gratuito</a>
             </div>
         </div>
     </main>
@@ -822,7 +916,242 @@
   <!-- JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="../../lang/translations.js"></script>
-  <script src="../../lang/init-translations.js"></script>
+  <script>
+    // 🌍 SISTEMA DE TRADUCCIÓN OPTIMIZADO - VERSIÓN FINAL
+    console.log('🚀 Initializing translation system...');
+    
+    let currentLanguage = 'es';
+    let systemReady = false;
+    let loadAttempts = 0;
+    const MAX_LOAD_ATTEMPTS = 50; // 5 segundos máximo
+
+    // Verificar carga de traducciones
+    function checkTranslationsLoaded() {
+      loadAttempts++;
+      
+      if (window.translations && Object.keys(window.translations).length > 0) {
+        console.log('✅ Translations successfully loaded!');
+        console.log('📚 Available languages:', Object.keys(window.translations));
+        systemReady = true;
+        initializeSystem();
+      } else if (loadAttempts < MAX_LOAD_ATTEMPTS) {
+        console.log(`⏳ Loading translations... (${loadAttempts}/${MAX_LOAD_ATTEMPTS})`);
+        setTimeout(checkTranslationsLoaded, 100);
+      } else {
+        console.error('❌ CRITICAL: Failed to load translations after 5 seconds');
+        console.error('🔍 Check if translations.js file exists and is accessible');
+        console.error('🔍 Current path: ../../lang/translations.js');
+      }
+    }
+
+    // Función segura para obtener traducciones anidadas
+    function getNestedValue(obj, path) {
+      try {
+        return path.split('.').reduce((current, key) => {
+          return current && current[key] !== undefined ? current[key] : null;
+        }, obj);
+      } catch (error) {
+        console.error('Error accessing nested translation:', error);
+        return null;
+      }
+    }
+
+    // Función principal de cambio de idioma
+    function changeLanguage(targetLang) {
+      console.log(`🌍 === CHANGING LANGUAGE TO: ${targetLang.toUpperCase()} ===`);
+      
+      if (!systemReady) {
+        console.error('❌ Translation system not ready yet');
+        return false;
+      }
+
+      if (!window.translations || !window.translations[targetLang]) {
+        console.error(`❌ Language '${targetLang}' not found`);
+        console.log('Available languages:', Object.keys(window.translations || {}));
+        return false;
+      }
+
+      const translations = window.translations[targetLang];
+      currentLanguage = targetLang;
+      
+      // Procesar todos los elementos traducibles
+      const elements = document.querySelectorAll('[data-translate]');
+      console.log(`🔍 Processing ${elements.length} translatable elements...`);
+
+      let successCount = 0;
+      let errorCount = 0;
+
+      elements.forEach((element, index) => {
+        const translationKey = element.getAttribute('data-translate');
+        const translationText = getNestedValue(translations, translationKey);
+        
+        if (translationText) {
+          // Aplicar traducción según el tipo de elemento
+          if (element.tagName === 'INPUT' && element.type === 'submit') {
+            element.value = translationText;
+          } else if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+            element.placeholder = translationText;
+          } else {
+            element.textContent = translationText;
+          }
+          
+          successCount++;
+          console.log(`✅ ${index + 1}. ${translationKey} → "${translationText.substring(0, 40)}..."`);
+        } else {
+          errorCount++;
+          console.warn(`⚠️ ${index + 1}. Missing translation: ${translationKey}`);
+        }
+      });
+
+      console.log(`🎯 RESULT: ${successCount} translated, ${errorCount} failed`);
+
+      // Actualizar selector visual
+      updateLanguageDisplay(targetLang);
+      
+      // Guardar preferencia de idioma
+      localStorage.setItem('preferred-language', targetLang);
+      
+      return successCount > 0;
+    }
+
+    // Actualizar la apariencia del selector de idioma
+    function updateLanguageDisplay(lang) {
+      const languageFlags = {
+        'es': '🇪🇸', 'en': '🇬🇧', 'de': '🇩🇪', 'fr': '🇫🇷', 'nl': '🇳🇱'
+      };
+      
+      const languageCodes = {
+        'es': 'ES', 'en': 'EN', 'de': 'DE', 'fr': 'FR', 'nl': 'NL'
+      };
+
+      // Actualizar elementos del selector
+      const flagElement = document.querySelector('.lang-flag');
+      const codeElement = document.querySelector('.lang-code');
+      
+      if (flagElement) flagElement.textContent = languageFlags[lang] || '🇪🇸';
+      if (codeElement) codeElement.textContent = languageCodes[lang] || 'ES';
+
+      // Cerrar dropdown si está abierto
+      const dropdownOptions = document.querySelector('.lang-options');
+      if (dropdownOptions) {
+        dropdownOptions.classList.remove('open');
+      }
+    }
+
+    // Inicializar el sistema de eventos
+    function initializeSystem() {
+      console.log('🔧 Setting up event listeners...');
+      
+      // Configurar eventos de clic
+      document.addEventListener('click', function(event) {
+        // Clic en opción de idioma
+        const languageOption = event.target.closest('.lang-option[data-lang]');
+        if (languageOption) {
+          event.preventDefault();
+          event.stopPropagation();
+          const selectedLang = languageOption.getAttribute('data-lang');
+          console.log(`🖱️ Language option selected: ${selectedLang}`);
+          changeLanguage(selectedLang);
+          return;
+        }
+        
+        // Clic en selector para mostrar/ocultar opciones
+        const currentSelector = event.target.closest('.lang-current');
+        if (currentSelector) {
+          event.preventDefault();
+          event.stopPropagation();
+          const options = document.querySelector('.lang-options');
+          if (options) {
+            const isCurrentlyOpen = options.classList.contains('open');
+            options.classList.toggle('open');
+            console.log(`📋 Dropdown ${isCurrentlyOpen ? 'closed' : 'opened'}`);
+          }
+          return;
+        }
+        
+        // Clic fuera del selector para cerrar
+        if (!event.target.closest('#language-selector')) {
+          const options = document.querySelector('.lang-options');
+          if (options && options.classList.contains('open')) {
+            options.classList.remove('open');
+          }
+        }
+      });
+      
+      // Cargar idioma previamente seleccionado o usar español por defecto
+      const savedLanguage = localStorage.getItem('preferred-language') || 'es';
+      console.log(`📱 Loading preferred language: ${savedLanguage}`);
+      
+      // Aplicar idioma después de un breve retraso para asegurar que DOM esté listo
+      setTimeout(() => {
+        changeLanguage(savedLanguage);
+      }, 100);
+      
+      // Exponer funciones globales para depuración
+      window.changeLanguage = changeLanguage;
+      window.toSpanish = () => changeLanguage('es');
+      window.toEnglish = () => changeLanguage('en');
+      window.toGerman = () => changeLanguage('de');
+      window.toFrench = () => changeLanguage('fr');
+      window.toDutch = () => changeLanguage('nl');
+      
+      // Función de prueba completa
+      window.runLanguageTest = function() {
+        console.log('🧪 === RUNNING COMPLETE LANGUAGE TEST ===');
+        const testLanguages = ['es', 'en', 'de', 'fr', 'nl'];
+        let testIndex = 0;
+        
+        const testInterval = setInterval(() => {
+          if (testIndex < testLanguages.length) {
+            console.log(`🔄 Testing ${testLanguages[testIndex]}...`);
+            changeLanguage(testLanguages[testIndex]);
+            testIndex++;
+          } else {
+            clearInterval(testInterval);
+            console.log('✅ Language test completed successfully!');
+          }
+        }, 2000);
+      };
+      
+      // Función de diagnóstico
+      window.diagnoseTranslations = function() {
+        console.log('🔧 === TRANSLATION SYSTEM DIAGNOSIS ===');
+        console.log('System ready:', systemReady);
+        console.log('Current language:', currentLanguage);
+        console.log('Available languages:', Object.keys(window.translations || {}));
+        console.log('Total elements with data-translate:', document.querySelectorAll('[data-translate]').length);
+        
+        // Probar algunas claves específicas
+        const sampleKeys = [
+          'articles.consejosbasicos.main_title',
+          'articles.consejosbasicos.intro',
+          'nav_home',
+          'nav_services'
+        ];
+        
+        sampleKeys.forEach(key => {
+          const element = document.querySelector(`[data-translate="${key}"]`);
+          const translation = getNestedValue(window.translations[currentLanguage] || {}, key);
+          console.log(`🔑 Key: ${key}`);
+          console.log(`  📍 Element exists: ${!!element}`);
+          console.log(`  💬 Translation: ${translation ? 'Found' : 'Missing'}`);
+          if (translation) console.log(`  📝 Text: "${translation.substring(0, 50)}..."`);
+        });
+      };
+      
+      console.log('✅ Translation system fully initialized!');
+      console.log('🛠️ Available debug commands:');
+      console.log('   - toEnglish(), toGerman(), toFrench(), toDutch(), toSpanish()');
+      console.log('   - runLanguageTest(), diagnoseTranslations()');
+    }
+
+    // Iniciar el proceso de carga
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', checkTranslationsLoaded);
+    } else {
+      checkTranslationsLoaded();
+    }
+  </script>
   <script src="../../scripts.js"></script>
 
 </body>
