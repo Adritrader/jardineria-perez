@@ -64,9 +64,10 @@
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 Jardinería Pérez · Todos los derechos reservados</p>
+      <p>&copy; <span class="copyright-year">2025</span> Jardinería Pérez · Todos los derechos reservados</p>
     </div>
   </footer>
 
+  <script>document.querySelectorAll('.copyright-year').forEach(function(el){el.textContent=new Date().getFullYear()});</script>
 </body>
 </html>

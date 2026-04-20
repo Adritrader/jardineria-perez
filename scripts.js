@@ -1,3 +1,10 @@
+// --- COPYRIGHT YEAR ---
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.copyright-year').forEach(function(el) {
+    el.textContent = new Date().getFullYear();
+  });
+});
+
 // --- SCROLL ANIMATIONS ---
 AOS.init({
   duration: 800,
